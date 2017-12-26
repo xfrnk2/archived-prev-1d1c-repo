@@ -78,7 +78,7 @@ def print_left( x ):
 list = [ 1, 2, 3, 4, 5 ]
 list1 = [ 5, 4, 3, 2, 1 ]
 
-# TODO = 굳이 리스트를 만들어서 for 돌리지 않고 range(01, 6) 이렇게 쓰는 쪽이 좋겠죠?
+# TODO = 굳이 리스트를 만들어서 for 돌리지 않고 range(1, 6) 이렇게 쓰는 쪽이 좋겠죠?
 for x in list:
     print_left( x )
 print( "    " )
