@@ -51,12 +51,6 @@ stone = "*"
 block = " "
 field = [ " " for x in range( 6 ) ]
 
-def printleft( y ):
-    field[ y ] = block
-    field[ y - 1 ] = stone
-    fields = ''.join( field )
-    print(fields)
-
 
 def printField( x ):
     field[ x ] = stone
