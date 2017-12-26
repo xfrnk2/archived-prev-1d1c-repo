@@ -40,4 +40,35 @@ print( '*****' );
 
 for, list() 등의 기능을 적극 활용합니다.
 
+
+
+
 """
+
+
+
+stone = "*"
+block = " "
+field = [ " " for x in range( 6 ) ]
+
+def printleft( y ):
+    field[ y ] = block
+    field[ y - 1 ] = stone
+    fields = ''.join( field )
+    print(fields)
+
+
+def printField( x ):
+    field[ x ] = stone
+    field[ x - 1 ] = block
+    fields = ''.join( field )
+    print(fields)
+
+
+list = [5, 4, 3, 2, 1]
+for x in list:
+    printField(x)
+print("    ")
+for x in list:
+    printField(-x)
+print("    ")
