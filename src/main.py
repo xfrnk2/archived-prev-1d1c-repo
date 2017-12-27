@@ -1,4 +1,5 @@
 from time import sleep
+# time의 sleep을 불러옵니다
 import os
 
 # print("■■■■■■■")
@@ -28,7 +29,11 @@ field = [ "□" for x in range( 7 ) ]
 # print(fields )
 
 def clear():
+    """
+    주석을 달아봅니다. cls을 통해 출력화면을 백지상태로 만듭니다
+    """
     os.system('cls')
+
 
 def printField( x ):
     sleep( 1 )
