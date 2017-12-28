@@ -99,6 +99,22 @@ star = '*'
 whitespace = ' '
 
 
+def solve_1st() -> None:
+    """
+    1번째 문제를 풉니다.
+        """
+    for x in range( 5, 0, -1 ):
+        output = ''
+        for y in range( 6, 1, -1 ):
+            if x < y:
+                output += star
+            else:
+                output += whitespace
+        print( output )
+
+solve_1st()
+print('\n')
+
 def solve_2th() -> None:
     """
     2번째 문제를 풉니다.
@@ -119,6 +135,25 @@ def solve_2th() -> None:
 solve_2th()
 print( '\n' )
 
+def solve_3rd() -> None:
+    """
+    3번째 문제를 풉니다.
+    """
+    for x in range( 5, 0, -1 ):
+
+        output = ''
+
+        for y in range( 5, 0, -1 ):
+            if x < y:
+                output += whitespace
+
+            else:
+                output += star
+
+        print( output )
+
+solve_3rd()
+print( '\n' )
 
 def solve_4th() -> None:
     """
