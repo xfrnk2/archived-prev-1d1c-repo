@@ -41,6 +41,8 @@ print( '*****' );
 for, list() 등의 기능을 적극 활용합니다.
 
 """
+
+
 class Block:
     def __init__( self ):
         self.__data = ' '
@@ -74,9 +76,9 @@ class Field:
                 if solve_func( x, self.__size - 1 - y ):
                     block.set_data( '*' )
 
+
     def reset( self ):
         self.__data = [ [ Block() for _ in range( self.__size ) ] for _ in range( self.__size ) ]
-
 
 
 if __name__ == '__main__':

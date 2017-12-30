@@ -48,16 +48,19 @@ for, list() 등의 기능을 적극 활용합니다.
 """
 
 x = 4
-array=[[0]*x for _ in range(x)]
-#array = range(1,x*x)
-#for _ in range(1, x+1):
+array = [ [ 0 ] * x for _ in range( x ) ]
 
-#position =
+
+# array = range(1,x*x)
+# for _ in range(1, x+1):
+
+# position =
 def set_value_in_position( x, y, value ):
-    #array[ y * 3 + x ] = value
-    array[x][y] = value
+    # array[ y * 3 + x ] = value
+    array[ x ][ y ] = value
 
-#set_value_in_position(1,1,10)
+
+# set_value_in_position(1,1,10)
 
 """
 # 수평 방향으로 -1
@@ -90,7 +93,5 @@ a[0][1]=8
 a[0][0]=9
 
 """
-for j in range(0,x):
-    print(array[j])
-
-
+for j in range( 0, x ):
+    print( array[ j ] )
