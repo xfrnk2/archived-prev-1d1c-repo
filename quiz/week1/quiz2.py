@@ -45,7 +45,7 @@
 
 for, list() 등의 기능을 적극 활용합니다.
 
-"""
+
 
 x = 4
 array = [ [ 0 ] * x for _ in range( x ) ]
@@ -62,7 +62,7 @@ def set_value_in_position( x, y, value ):
 
 # set_value_in_position(1,1,10)
 
-"""
+
 # 수평 방향으로 -1
 set_value_in_position(1,0,v[1])
 # 수직 방향으로 +1
@@ -92,6 +92,130 @@ a[0][2]=7
 a[0][1]=8
 a[0][0]=9
 
-"""
+
 for j in range( 0, x ):
     print( array[ j ] )
+
+
+size = 5
+array = ['' for _ in range(25,0,-1)]
+
+
+def printfield() -> None:
+    for array in [["*" for _ in range(size)] for _ in range(size)]:
+        for block in array:
+            print(block, end='')
+        print('')
+
+    print()
+
+
+print(array[1])
+
+
+# set_value_in_position(1,1,10)
+
+
+def printfield(size):
+    for array in [["*" for _ in range(size)] for _ in range(size)]:
+        for block in array:
+            print(block, end='')
+        print('')
+
+    print()
+
+
+
+
+print(printfield(size))
+
+
+
+print(numbers())
+
+
+# position =
+
+while True:
+    size = int(input("출력할 크기는? :"))
+    if size == 0 :
+        print("good bye~")
+        break
+    if size<3 or size>9:
+        print("3에서 9 사이만 인정")
+        continue
+
+    a = [[0]*size for _ in range(size)]
+    start = (size-1)//2
+    c = -1
+    h = start
+    v = start
+    n = 0
+    n = n + 1
+    a[v][h]=n
+    for i in range(1, size + 1 ):
+        c = c * (-1)
+
+        for _ in range(0,i):
+            h = h+1*c
+            if size**2==n:
+
+                break
+            n = n+1
+            a[v][h]= n
+        for _ in range(0,i):
+            v=v+1*c
+            if size**2==n:
+                break
+            n=n+1
+            a[v][h]=n
+    print("")
+    for j in range(0, size):
+
+        print(a[j])
+
+
+"""
+
+#1~25까지의 숫자를 그룹을 만들거나 정해진 규칙으로 나타나게 한다.
+
+
+
+while True:
+    size = int(input("출력할 크기는? :"))
+    if size == 0 :
+        print("good bye~")
+        break
+    if size<3 or size>9:
+        print("3에서 9 사이만 인정")
+        continue
+
+    a = [[0]*size for _ in range(size)]
+    start = (size-1)//2
+    c = -1
+    h = start
+    v = start
+    n = 0
+    n = n + 1
+    a[v][h]=n
+    for i in range(1, size + 1 ):
+        c = c * (-1)
+
+        for _ in range(0,i):
+            h = h+1*c
+            if size**2==n:
+
+                break
+            n = n+1
+            a[v][h]= n
+        for _ in range(0,i):
+            v=v+1*c
+            if size**2==n:
+                break
+            n=n+1
+            a[v][h]=n
+    print("")
+    for j in range(0, size):
+
+        print(a[j])
+
