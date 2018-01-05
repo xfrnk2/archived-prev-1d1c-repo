@@ -17,7 +17,7 @@ def hanoi( first: int, second: int, third: int, amount: int ):
 
     # 종료 조건
     # TODO - 종료 조건을 적당히 수정해 주세요
-    if amount <= ? :
+    if amount <= 1 :
         # 가장 아래의 것(=amount)이 1개 남았을 경우, 현재 위치에서 목표 위치로 옮기고 종료
         print( f"원반 {amount}번을 {tags[first]} 고리에서 {tags[third]} 고리로 옮깁니다." )
 
@@ -30,7 +30,8 @@ def hanoi( first: int, second: int, third: int, amount: int ):
 
         # 아까 목표 옆에 치워뒀던 나머지(amount-1부터 1까지)를 옆에서 목표로 옮긴다.
         # TODO - 아래 부분을 수정해 주세요.
-        hanoi( ?, ?, ?, ?)
+        hanoi( second , first, third , amount - 1 )
+
 
 
 if __name__ == '__main__':

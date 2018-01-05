@@ -27,7 +27,7 @@ def factorial(n: int):
     if n == 0:
         return 0
 
-    assert n < 0, "Invalid argument, must n > 0"
+    assert n > 0, "Invalid argument, must n > 0"
 
     escape_condition = (n == 1)
     if escape_condition is True:
