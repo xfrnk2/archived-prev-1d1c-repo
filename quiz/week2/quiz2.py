@@ -1,5 +1,6 @@
 # coding=utf-8
 
+
 """
 quiz1의 앵무새 프로그램을 여기에서 수정합니다.
 
@@ -38,4 +39,34 @@ b.txt 에는
 위와 같이 저장해야 합니다.
 
 
+
 """
+
+#
+
+hello = input()
+
+while True:
+
+    parrot = input("(나) > ")
+    if parrot == "잘가":
+        print("(앵무새가 프로그램을 종료합니다)")
+        break
+
+    elif "저장" in parrot:
+
+        parrot.replace("저장", '')
+
+        f = open(" {parrot} .txt", 'a')
+        print("(여태까지의 대화내용을 {parrot} .txt 파일로 저장합니다)")
+
+        f.write(hello)
+
+        f.close()
+        break
+
+    else:
+        text = [print("(앵무새) > " + parrot)]
+        hello += parrot
+        hello += "\n"
+        continue
