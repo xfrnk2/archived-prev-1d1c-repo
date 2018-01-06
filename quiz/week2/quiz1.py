@@ -24,11 +24,12 @@
 잘가 라는 입력으로 프로그램을 종료하기 전까지 앵무새는 무한히 내가 하는 말을 따라합니다.
 
 """
-while True:
-    parrot = input("(나) > ")
-    if parrot == "잘가":
-        print("(앵무새가 프로그램을 종료합니다)")
-        break
-    else:
-        print("(앵무새) > " + parrot)
-        continue
+
+if __name__ == '__main__':
+    while True:
+        parrot = input("(나) > ")
+        if parrot == "잘가":
+            print("(앵무새가 프로그램을 종료합니다)")
+            break
+        else:
+            print("(앵무새) > " + parrot)
