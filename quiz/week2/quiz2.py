@@ -42,31 +42,41 @@ b.txt 에는
 
 """
 
+
 #
 
-hello = input()
+import os
 
-while True:
+outPath = os.path.join('C:\\', 'users', 'documents', 'kbs', 'test.txt')
+print(outPath)
 
-    parrot = input("(나) > ")
-    if parrot == "잘가":
-        print("(앵무새가 프로그램을 종료합니다)")
-        break
+def parrot():
+    flag = True
+    hello = ''
 
-    elif "저장" in parrot:
+    while flag:
 
-        parrot.replace("저장", '')
+        parrot = input("(나) > ")
+        if parrot == "잘가":
+            print("(앵무새가 프로그램을 종료합니다)")
 
-        f = open(" {parrot} .txt", 'a')
-        print("(여태까지의 대화내용을 {parrot} .txt 파일로 저장합니다)")
+            flag = False
+            continue
 
-        f.write(hello)
+        elif "저장" in parrot:
 
-        f.close()
-        break
+            parrot.replace("저장", '')
 
-    else:
-        text = [print("(앵무새) > " + parrot)]
-        hello += parrot
-        hello += "\n"
-        continue
+            with open(f'{parrot}.txt', 'a') as file:
+                print(f"(여태까지의 대화내용을 {parrot}.txt 파일로 저장합니다)")
+
+                file.write(hello)
+
+        else:
+            text = [print("(앵무새) > " + parrot)]
+            hello += parrot
+            hello += "\n"
+
+
+if __name__ == '__main__':
+    parrot()
