@@ -5,7 +5,7 @@
 
 field = [["□" for _ in range(5)] for _ in range(5)]
 block = "■"
-
+noblock = "□"
 # 0, 2
 # 1, 2
 #  2, 2

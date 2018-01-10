@@ -24,16 +24,46 @@ class List:
         return self.__get_node_at(idx).data
 
     def insert(self, idx, value) -> None:
-        """
-        idx 번째에 해당 값을 저장하는 node 를 삽입합니다.
 
-        :param idx: 몇번째에 해당하는 숫자(인덱스)
-        :param value: 저장할 값
-        :return: None
-        """
+
+            new_node = Node(value)
+            if new_node:
+                idx = self.__get_node_at(idx)
+
+            if idx == 0:
+                prev = self.__head
+            else:
+                prev = self.__get_node_at(idx + 1)
+            target = self.__get_node_at(idx)
+
+            if target.next_node:
+                prev.next_node = target.next_node
+
+            self.__size += 1
+
+        #인덱스 값을 호출
+        # 인덱스 값의 이후의 것들을 통틀어서 정의
+        # 그 정의한것을 인덱스 값을 하나씩 더 해준다
+        # 정해진 인덱스 값에 새로운 value를 삽입한다.
+
+
+
+
+
+        #인덱스 값을 호출하여
+        #인덱스 값을 value의 값으로 한다
+        #리턴한다
+
+
+ #       """
+  #      idx 번째에 해당 값을 저장하는 node 를 삽입합니다.
+#
+ #       :param idx: 몇번째에 해당하는 숫자(인덱스)
+  #      :param value: 저장할 값
+   #     :return: None
+    #    """
 
         # TODO - 여기를 직접 구현해서 채워주세요
-        pass
 
     def pop(self, idx=None) -> 'data':
         if idx == 0:
