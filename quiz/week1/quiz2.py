@@ -263,19 +263,17 @@ class Coordinator():
 
     def move_x(self):
 
+        self.__x_move_count -= 1
 
-
-            self.__x_move_count -= 1
-
-            if self.__x_move_count == 0:
-                self.__x_possitive = not self.__x_possitive
-                self.__current_turn = Y_TURN
-                self.__x_move_count = self.__x_move_counts.pop(0)
+        if self.__x_move_count == 0:
+            self.__x_possitive = not self.__x_possitive
+            self.__current_turn = Y_TURN
+            self.__x_move_count = self.__x_move_counts.pop(0)
+        else:
+            if self.__x_possitive:
+                self.__x_position += 1
             else:
-                if self.__x_possitive:
-                    self.__x_position += 1
-                else:
-                    self.__x_position -= 1
+                self.__x_position -= 1
 
     def move_y(self):
         self.__y_move_count -= 1
@@ -343,4 +341,3 @@ if __name__ == '__main__':
     for _ in range(25):
         print(coordinator.get_coord())
         coordinator.calc_coord()
-

@@ -45,8 +45,9 @@ def print_field(x):
     print(fields)
 
 
-i = 6
-print_field(i - 1)
-print_field(i - 2)
-print_field(i - 3)
-print_field(i - 4)
+if __name__ == '__main__':
+    i = 6
+    print_field(i - 1)
+    print_field(i - 2)
+    print_field(i - 3)
+    print_field(i - 4)
