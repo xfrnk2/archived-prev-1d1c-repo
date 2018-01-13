@@ -9,9 +9,12 @@
 from quiz.week3.custm_list import List
 
 
+
 class Stack:
     def __init__(self):
         self.__list = List()
+        # 실험 적용 self.__size = 0
+
 
     def push(self, value) -> None:
         """
@@ -20,8 +23,9 @@ class Stack:
         :return:None
         """
         # TODO - 채워주세요
-
-        pass
+        push_node = self.__list.append
+        if value:
+            push_node(value)
 
     def pop(self) -> 'data':
         """
@@ -30,7 +34,14 @@ class Stack:
         """
         # TODO - 채워주세요
 
-        pass
+        return self.__list.pop(self.size - 1)
+
+
+
+
+
+        #self.__list.pop(self.__size - 1)
+
 
     def print(self):
         self.__list.print()

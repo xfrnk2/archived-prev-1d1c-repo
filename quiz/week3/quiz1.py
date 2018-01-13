@@ -24,38 +24,34 @@ class List:
         return self.__get_node_at(idx).data
 
     def insert(self, idx, value) -> None:
+# 지정된 위치idx에 값value을 삽입한다
+#집주소
+
+        target = self.__get_node_at(idx)
+        to_replace = self.__get_node_at(idx+1)
 
 
-            new_node = Node(value)
-            if new_node:
-                idx = self.__get_node_at(idx)
+        self.__size += 1
 
-            if idx == 0:
-                prev = self.__head
-            else:
-                prev = self.__get_node_at(idx + 1)
-            target = self.__get_node_at(idx)
-
-            if target.next_node:
-                prev.next_node = target.next_node
-
-            self.__size += 1
-
-        #인덱스 값을 호출
-        # 인덱스 값의 이후의 것들을 통틀어서 정의
-        # 그 정의한것을 인덱스 값을 하나씩 더 해준다
-        # 정해진 인덱스 값에 새로운 value를 삽입한다.
+        if target:
+                target.next_node = to_replace.next_node
+        target.next_node = Node(value)
 
 
 
+#        target_node = self.__get_node_at(idx)
+#        to_replace_node = self.__get_node_at(idx+1)
+#        henkou_node = self.__get_node_at(idx-1)
+#        if to_replace_node :
+#            target_node.next_node = to_replace_node.next_node#
 
 
-        #인덱스 값을 호출하여
-        #인덱스 값을 value의 값으로 한다
-        #리턴한다
+#        self.__size += 1
+#        henkou_node.next_node = Node(value)
+
+         # 꼭 이 return이 있어야 할까..? 그렇다면 어떻게 써야 할까? 아직 잘 모르겠다.
 
 
- #       """
   #      idx 번째에 해당 값을 저장하는 node 를 삽입합니다.
 #
  #       :param idx: 몇번째에 해당하는 숫자(인덱스)

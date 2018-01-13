@@ -23,6 +23,7 @@ class Node:
 class List:
     def __init__(self):
         self.__head = Node()
+        self.head = Node() # 실험 적용
         self.__size = 0
 
     def append(self, value):
@@ -71,6 +72,20 @@ class List:
 
         return node
 
+    def get_node_at(self, idx):                 #실험 적용
+        assert isinstance(idx, int)
+
+        if idx < 0:
+            raise IndexError
+
+        if idx > self.__size - 1:
+            raise IndexError
+
+        node = self.__head
+        for _ in range(idx + 1):
+            node = node.next_node
+
+        return node
 
 if __name__ == '__main__':
     custom_list = List()

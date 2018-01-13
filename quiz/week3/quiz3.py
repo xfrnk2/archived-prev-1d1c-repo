@@ -7,6 +7,7 @@
 """
 
 from quiz.week3.custm_list import List
+from quiz.week3.custm_list import Node
 
 
 class Queue:
@@ -20,8 +21,23 @@ class Queue:
         :return:None
         """
         # TODO - 채워주세요
+        enqueue_node = self.__list.append
+        if value:
+            enqueue_node(value)
 
-        pass
+    #        target_node = self.__list.index(0)
+    #
+    #
+    #        if target_node == 0:
+    #            prev = self.__node
+    #        else:
+    #            prev = self.__list.get_node_at(target_node + 1)
+    #        kijyun = self.__list.get_node_at(target_node)#
+    #
+    #        if kijyun.next_node:
+    #            prev.next_node = kijyun.next_node
+    #        target_node.next_node = Node(value)
+    #        self.__size += 1
 
     def dequeue(self) -> 'data':
         """
@@ -29,11 +45,12 @@ class Queue:
         :return: 가장 오래 전에 넣은 값
         """
         # TODO - 채워주세요
+        return self.__list.pop(0)
 
-        pass
 
     def print(self):
         self.__list.print()
+
 
     @property
     def size(self):
