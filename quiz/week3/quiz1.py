@@ -24,8 +24,8 @@ class List:
         return self.__get_node_at(idx).data
 
     def insert(self, idx, value) -> None:
-# 지정된 위치 idx에 값 value를 삽입 한다
-#집주소
+# 지정된 위치 idx에 값 value를 삽입한다
+# 집주소
 
         target = self.__get_node_at(idx)
         to_replace = self.__get_node_at(idx+1)
