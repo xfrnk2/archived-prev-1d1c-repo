@@ -21,9 +21,7 @@ class Queue:
         :return:None
         """
         # TODO - 채워주세요
-        enqueue_node = self.__list.append
-        if value:
-            enqueue_node(value)
+        self.__list.append(value)
 
     #        target_node = self.__list.index(0)
     #
@@ -54,7 +52,7 @@ class Queue:
 
     @property
     def size(self):
-        return self.__list.size()
+        return self.__list.size
 
 
 if __name__ == '__main__':
@@ -64,13 +62,13 @@ if __name__ == '__main__':
     custom_queue.enqueue(2)
     custom_queue.print()
 
-    assert custom_queue.size == 2, "Queue.push() 함수를 정확하게 구현하지 않았습니다"
+    assert custom_queue.size == 2, "Queue.enqueue() 함수를 정확하게 구현하지 않았습니다"
 
     test_value1 = custom_queue.dequeue()
-    assert custom_queue.size == 1, "Queue.pop() 함수를 정확하게 구현하지 않았습니다"
+    assert custom_queue.size == 1, "Queue.dequeue() 함수를 정확하게 구현하지 않았습니다"
 
     test_value2 = custom_queue.dequeue()
-    assert custom_queue.size == 0, "Queue.pop() 함수를 정확하게 구현하지 않았습니다"
+    assert custom_queue.size == 0, "Queue.dequeue() 함수를 정확하게 구현하지 않았습니다"
 
     assert test_value1 == 1 and test_value2 == 2, \
-        "Queue.pop() 함수를 정확하게 구현하지 않았습니다"
+        "Queue.dequeue() 함수를 정확하게 구현하지 않았습니다"

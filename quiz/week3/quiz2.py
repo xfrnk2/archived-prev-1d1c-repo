@@ -23,9 +23,7 @@ class Stack:
         :return:None
         """
         # TODO - 채워주세요
-        push_node = self.__list.append
-        if value:
-            push_node(value)
+        self.__list.append(value)
 
     def pop(self) -> 'data':
         """
@@ -33,7 +31,6 @@ class Stack:
         :return: 가장 최근에 넣은 값
         """
         # TODO - 채워주세요
-
         return self.__list.pop(self.size - 1)
 
 

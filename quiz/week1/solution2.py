@@ -18,7 +18,6 @@ class Position:
     def get(self) -> (int, int):
         return self.x, self.y
 
-
 class Item:
     """
     숫자 데이터를 담당하는 객체

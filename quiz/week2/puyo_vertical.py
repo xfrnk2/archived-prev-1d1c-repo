@@ -3,14 +3,14 @@
 
 # 리스트를 만든다. 5x5의 리스트. 다음은 위치를 지정한다. 배열 만들기 -> 배열 순서 -> 클리어
 
-# https://docs.python.org/3/howto/curses.html
-import curses
-from curses import wrapper
 import time
+import os
 
-stdscr = curses.initscr()
+def clear():
+    os.system('cls')
 
-field = [["□" for _ in range(5)] for _ in range(5)]
+wall = "□"
+field = [[wall for _ in range(5)] for _ in range(5)]
 block = "■"
 
 
@@ -21,22 +21,19 @@ block = "■"
 #    4, 2
 
 
-def print_field(stdscr):
+def print_field():
     a = 0
     b = 2
 
     count_value = 6
-    stdscr.refresh()
-    stdscr.clear()
 
     for x in range(5):
         for y in range(0, 14, 3):
             if x == y:
+                clear()
                 for data in field:
                     output = ''.join(data) + '\n'
-
-                    stdscr.addstr(output)
-                    stdscr.refresh()
+                    print(output)
 
                 time.sleep(1)
                 count_value -= 1
@@ -44,11 +41,15 @@ def print_field(stdscr):
             if y:
                 field[a][b] = block
 
+                try:
+                    field[a - 2][b] = wall
+                except IndexError:
+                    pass
+
+                clear()
                 for data in field:
                     output = ''.join(data) + '\n'
-
-                    stdscr.addstr(output)
-                    stdscr.refresh()
+                    print(output)
 
                 time.sleep(1)
                 count_value -= 1
@@ -57,15 +58,14 @@ def print_field(stdscr):
             if count_value == 0:
                 break
 
-            stdscr.clear()
-
 
 if __name__ == '__main__':
-    wrapper(print_field)
-    # print_field()
+    print_field()
 
     # join의 사용법
-    result1 = ' '.join(['hello', 'world'])
+    l = [ 'hello', 'world', '1234']
+
+    result1 = ' '.join(l)
     result2 = ','.join(['a', 'b', 'c'])
 
     print(result1)

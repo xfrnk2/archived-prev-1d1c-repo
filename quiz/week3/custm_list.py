@@ -40,13 +40,15 @@ class List:
             prev = self.__head
         else:
             prev = self.__get_node_at(idx - 1)
-        target = self.__get_node_at(idx)
 
-        if target.next_node:
-            prev.next_node = target.next_node
+        current = self.__get_node_at(idx)
+        next_node = current.next_node
+
+        if next_node:
+            prev.next_node = next_node
 
         self.__size -= 1
-        return target.data
+        return current.data
 
     def print(self):
         node = self.__head.next_node
