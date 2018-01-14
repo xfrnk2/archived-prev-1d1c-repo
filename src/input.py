@@ -24,7 +24,6 @@ class InputManager:
             pass
 
         else:
-
             # Save the terminal settings
             self.fd = sys.stdin.fileno()
             self.new_term = termios.tcgetattr(self.fd)

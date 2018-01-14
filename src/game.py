@@ -9,15 +9,18 @@ from input import InputManager
 from field import Field
 from event import Event
 
+from puyo import Puyo
+
 
 class Game:
     def __init__(self):
         Timer.init()
         self.__input = InputManager()
         self.__game_objects = {}
+        self.__field = Field()
 
-    def init(self):
-        self.__game_objects['field'] = Field()
+        # 테스트용 임시 코드
+        self.__game_objects['test_block'] = Puyo()
 
     def run(self):
         is_continue = True
@@ -30,7 +33,6 @@ class Game:
 
     def __update(self) -> bool:
         Timer.capture_time()
-
         escape = False
 
         input_manager = self.__input
@@ -41,13 +43,15 @@ class Game:
 
         event = Event()
 
+        self.__field.update(event)
+
         for game_object in self.__game_objects.values():
             game_object.update(event)
 
         return not escape
 
     def __render(self):
-        Renderer.render_begin()
+        Renderer.render_begin(self.__field)
         for game_object in self.__game_objects.values():
             game_object.render()
         Renderer.render_end()

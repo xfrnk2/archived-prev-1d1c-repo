@@ -4,6 +4,7 @@
 import copy
 from event import Event
 from game_object import GameObject
+from timer import Timer
 
 
 class Block(GameObject):
@@ -15,6 +16,9 @@ class Block(GameObject):
 
     def __str__(self):
         return self.__data
+
+    def set(self, data):
+        self.__data = data
 
     def update(self, event: Event):
         pass
@@ -40,3 +44,11 @@ class Field(GameObject):
                 output += str(block)
 
             print(output)
+
+        print(Timer.get_elapsed())
+
+    def set_render_data(self, data, x, y):
+        try:
+            self.__render_target[self.__height - y - 1][x].set(data)
+        except IndexError:
+            pass
