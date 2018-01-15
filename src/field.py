@@ -28,7 +28,7 @@ class Block(GameObject):
 
 
 class Field(GameObject):
-    def __init__(self, width=25, height=30):
+    def __init__(self, width=13, height=20):
         self.__height = height
         self.__width = width
         self.__background = [[Block() for _ in range(width)] for _ in range(height)]

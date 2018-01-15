@@ -3,6 +3,7 @@
 import os
 
 from field import Field
+from timer import Timer
 
 # Windows
 if os.name == 'nt':
@@ -18,13 +19,32 @@ else:
 class Renderer:
     @staticmethod
     def init():
+        __class__.__fps_count = 0
         __class__.__fps = 0
+        __class__.__accumulated_elapsed_render_time = Timer.get_elapsed()
+        __class__.__prev_tick = 0.0
 
     @staticmethod
-    def render_begin(field: Field):
+    def render_begin(field: Field) -> bool:
+        elapsed_time = Timer.get_elapsed()
+        __class__.__accumulated_elapsed_render_time += elapsed_time
+        __class__.__prev_tick += elapsed_time
+
+        # 5FPS(1초에 5번) 화면에 그리기 위해서
+        if __class__.__accumulated_elapsed_render_time < 0.2:
+            return False
+
         __class__.__field = field
-        # __class__.__fps += 1
+        __class__.__accumulated_elapsed_render_time = 0.0
+        __class__.__fps_count += 1
+
+        if __class__.__prev_tick > 1.0:
+            __class__.__fps, __class__.__fps_count = __class__.__fps_count, 0
+            __class__.__prev_tick -= 1.0
+
         clear()
+
+        return True
 
     @staticmethod
     def render_end():
@@ -48,4 +68,7 @@ class Renderer:
     __screen = None
     __color = None
     __bg_color = None
+    __fps_count = 0
     __fps = 0
+    __accumulated_elapsed_render_time = 0.0
+    __prev_tick = 0.0
