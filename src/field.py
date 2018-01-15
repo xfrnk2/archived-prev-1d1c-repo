@@ -45,8 +45,6 @@ class Field(GameObject):
 
             print(output)
 
-        print(Timer.get_elapsed())
-
     def set_render_data(self, data, x, y):
         try:
             self.__render_target[self.__height - y - 1][x].set(data)

@@ -20,5 +20,5 @@ class Timer:
     def get_elapsed():
         return __class__.elapsed_time
 
-    prev_time = None
-    elapsed_time = None
+    prev_time = 0.0
+    elapsed_time = 0.0

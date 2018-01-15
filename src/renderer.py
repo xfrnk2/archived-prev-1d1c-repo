@@ -18,16 +18,18 @@ else:
 class Renderer:
     @staticmethod
     def init():
-        pass
+        __class__.__fps = 0
 
     @staticmethod
     def render_begin(field: Field):
         __class__.__field = field
+        # __class__.__fps += 1
         clear()
 
     @staticmethod
     def render_end():
         __class__.__field.render()
+        print(f"FPS : {__class__.__fps}")
         pass
 
     @staticmethod
@@ -46,3 +48,4 @@ class Renderer:
     __screen = None
     __color = None
     __bg_color = None
+    __fps = 0

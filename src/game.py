@@ -15,9 +15,11 @@ from puyo import Puyo
 class Game:
     def __init__(self):
         Timer.init()
+        Renderer.init()
         self.__input = InputManager()
         self.__game_objects = {}
         self.__field = Field()
+        self.__accumulated_elapsed_render_time = Timer.get_elapsed()
 
         # 테스트용 임시 코드
         self.__game_objects['test_block'] = Puyo()
@@ -51,6 +53,14 @@ class Game:
         return not escape
 
     def __render(self):
+        self.__accumulated_elapsed_render_time += Timer.get_elapsed()
+
+        # 5FPS(1초에 5번) 화면에 그리기 위해서
+        if self.__accumulated_elapsed_render_time < 0.2:
+            return
+
+        self.__accumulated_elapsed_render_time = 0.0
+
         Renderer.render_begin(self.__field)
         for game_object in self.__game_objects.values():
             game_object.render()
