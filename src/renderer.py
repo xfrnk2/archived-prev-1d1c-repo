@@ -2,7 +2,7 @@
 
 import os
 
-from field import Field
+from field import RenderField
 from timer import Timer
 
 # Windows
@@ -25,7 +25,7 @@ class Renderer:
         __class__.__prev_tick = 0.0
 
     @staticmethod
-    def render_begin(field: Field) -> bool:
+    def render_begin(field: RenderField) -> bool:
         elapsed_time = Timer.get_elapsed()
         __class__.__accumulated_elapsed_render_time += elapsed_time
         __class__.__prev_tick += elapsed_time
@@ -53,8 +53,9 @@ class Renderer:
         pass
 
     @staticmethod
-    def render(data, x, y):
-        __class__.__field.set_render_data(data, x, y)
+    def render(data, position: tuple):
+        assert isinstance(position, tuple)
+        __class__.__field.set_render_data(data, position)
 
     @staticmethod
     def set_color(color):

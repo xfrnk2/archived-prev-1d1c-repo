@@ -4,24 +4,23 @@
 from timer import Timer
 
 from renderer import Renderer
-from input import InputManager
+from event import EventManager
 
-from field import Field
-from event import Event
+from field import LogicField
+import event
 
-from puyo import Puyo
+from puyo import PuYo
 
 
 class Game:
     def __init__(self):
         Timer.init()
         Renderer.init()
-        self.__input = InputManager()
+        self.__event = EventManager()
         self.__game_objects = {}
-        self.__field = Field()
+        self.__field = LogicField()
 
-        # 테스트용 임시 코드
-        self.__game_objects['test_block'] = Puyo()
+        self.__current_pu_yo: PuYo = None
 
     def run(self):
         is_continue = True
@@ -30,29 +29,31 @@ class Game:
             self.__render()
 
     def close(self):
-        self.__input.set_normal_term()
+        self.__event.close()
 
     def __update(self) -> bool:
         Timer.capture_time()
-        escape = False
 
-        input_manager = self.__input
-        if input_manager.is_pressed():
-            c = input_manager.get_key()
-            if ord(c) == 27:  # ESC
-                escape = True
+        current_event = self.__event.get_event()
+        if isinstance(current_event, event.GameExitEvent):
+            return False
 
-        event = Event()
-
-        self.__field.update(event)
+        self.__field.update(current_event)
+        self.__field.set_game_objects(tuple(self.__game_objects.values()))
 
         for game_object in self.__game_objects.values():
-            game_object.update(event)
+            game_object.update(current_event)
 
-        return not escape
+        current_pu_yo = self.__current_pu_yo
+        if not current_pu_yo or not current_pu_yo.valid:
+            new_pu_yo = PuYo(self.__field)
+            self.__current_pu_yo = new_pu_yo
+            self.__game_objects[new_pu_yo.id] = new_pu_yo
+
+        return True
 
     def __render(self):
-        if not Renderer.render_begin(self.__field):
+        if not Renderer.render_begin(self.__field.renderer):
             return
 
         for game_object in self.__game_objects.values():
