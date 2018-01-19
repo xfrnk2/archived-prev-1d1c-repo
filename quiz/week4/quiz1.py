@@ -97,7 +97,7 @@ class Tree:
             self.__top = Node()
             next_data = self.__top.add_child(data)
             print(next_data)
-
+ 
 
     def find(self, data) -> bool:
         """

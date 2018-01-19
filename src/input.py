@@ -56,7 +56,7 @@ class InputManager:
         """
 
         if os.name == 'nt':
-            return msvcrt.getch().decode('utf-8')
+            return msvcrt.getch()
 
         else:
             return sys.stdin.read(1)
