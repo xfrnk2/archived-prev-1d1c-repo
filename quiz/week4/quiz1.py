@@ -23,6 +23,12 @@ class Node:
         :return: None
         """
 
+        if data < self.__data:
+            self.__left_node = Node(data)
+        if data > self.__data:
+            self.__right_node = Node(data)
+# 재귀는 노드가 합니다.
+    # in push, child는, 자신의 생성자에서, 자신이 생성되는 시점에 자신의 값을 설정한다.
     def find(self, data: int) -> bool:
         """
         자신 또는 자식에게 해당 값이 존재하는지 탐색합니다.
@@ -30,6 +36,10 @@ class Node:
         :param data: int
         :return: bool
         """
+        if data in self.__data or self.__left_node or self.__right_node:
+            return True
+        else:
+            return False
 
     def print_pre_order(self) -> None:
         """
@@ -37,9 +47,15 @@ class Node:
         자신 -> 왼쪽 -> 오른쪽 순서대로 출력하면 됩니다.
 
         자신이 맨 앞(前)에 위치(位置)하므로 이므로 전위(前位)순회 입니다.
-
+ # 재귀는 00순회 안에 있는게 아닐까?
         :return: None
         """
+        if self == None:
+            return
+
+        print(self.__data)
+        print_pre_order(self.__left_node)
+        print_pre_order(self.__right_node)
 
     def print_in_order(self) -> None:
         """
@@ -66,7 +82,7 @@ class Tree:
     def __init__(self):
         self.__top = None
 
-    def push(self, data) -> None:
+    def push(self, data: int) -> None:
         """
         TODO - 함수를 구현해 주세요.
 
@@ -75,6 +91,13 @@ class Tree:
         :param data: int
         :return: None
         """
+        if Tree.find is True:
+            pass
+        if Tree.find is False:
+            self.__top = Node()
+            next_data = self.__top.add_child(data)
+            print(next_data)
+ 
 
     def find(self, data) -> bool:
         """
@@ -84,24 +107,22 @@ class Tree:
         :param data: int
         :return: bool
         """
+        if Node.find is True:
+            return True
+        if Node.find is False:
+            return False
 
-    def print_pre_order(self) -> None:
-        """
-        TODO - 전위 순회로 출력합니다. Node 주석 참고
-        :return: None
-        """
+        def print_in_order(self) -> None:
+            """
+            TODO - 중위 순회로 출력합니다. Node 주석 참고
+            :return: None
+            """
 
-    def print_in_order(self) -> None:
-        """
-        TODO - 중위 순회로 출력합니다. Node 주석 참고
-        :return: None
-        """
-
-    def print_post_order(self) -> None:
-        """
-        TODO - 후위 순회로 출력합니다. Node 주석 참고
-        :return: None
-        """
+        def print_post_order(self) -> None:
+            """
+            TODO - 후위 순회로 출력합니다. Node 주석 참고
+            :return: None
+            """
 
 
 if __name__ == '__main__':
