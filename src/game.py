@@ -28,9 +28,6 @@ class Game:
             is_continue = self.__update()
             self.__render()
 
-    def close(self):
-        self.__event.close()
-
     def __update(self) -> bool:
         Timer.capture_time()
 

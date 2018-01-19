@@ -1,9 +1,9 @@
 # coding=utf-8
 
-
 from abc import ABC
 
-from input import InputManager
+# TODO - pip install pynput
+from pynput.keyboard import Key, Listener
 
 
 class Event(ABC):
@@ -18,18 +18,45 @@ class GameExitEvent(Event):
     pass
 
 
+class MoveLeftEvent(Event):
+    pass
+
+
+class MoveRightEvent(Event):
+    pass
+
+
+class RoundEvent(Event):
+    pass
+
+
+class FallEvent(Event):
+    pass
+
+
 class EventManager:
     def __init__(self):
-        self.__input = InputManager()
+        self.__listener = Listener(on_release=__class__.on_release)
+        self.__listener.start()
 
-    def close(self):
-        self.__input.set_normal_term()
+    @staticmethod
+    def on_release(key):
+        __class__.__current_key = key
+        # print('{0} pressed'.format(__class__.__current_key))
 
-    def get_event(self) -> Event:
-        input_manager = self.__input
-        if input_manager.is_pressed():
-            c = input_manager.get_key()
-            if ord(c) == 27:  # ESC
-                return GameExitEvent()
+    @staticmethod
+    def get_event() -> Event:
+        handlers = {
+            Key.esc: GameExitEvent,
+            Key.left: MoveLeftEvent,
+            Key.right: MoveRightEvent
+        }
 
-        return VoidEvent
+        try:
+            current_key = __class__.__current_key
+            __class__.__current_key = None
+            return handlers[current_key]()
+        except KeyError:
+            return VoidEvent()
+
+    __current_key = None

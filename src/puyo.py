@@ -3,7 +3,7 @@
 from uuid import uuid4
 
 from game_object import GameObject
-from event import Event
+from event import Event, MoveLeftEvent, MoveRightEvent
 from renderer import Renderer
 from timer import Timer
 from field import LogicField
@@ -24,6 +24,12 @@ class PuYo(GameObject):
 
     def update(self, event: Event):
         if self.__valid:
+            # TODO - 범위 벗어나는 예외 처리를 해야 한다
+            if isinstance(event, MoveLeftEvent):
+                self.__x -= 1
+            elif isinstance(event, MoveRightEvent):
+                self.__x += 1
+
             y = self.__y
             y -= self.__speed * Timer.get_elapsed()
             y = max(y, 0)
