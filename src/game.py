@@ -23,6 +23,9 @@ class Game:
         self.__current_pu_yo: PuYo = None
 
     def run(self):
+        a = 1 / 0
+        print(a)
+        
         is_continue = True
         while is_continue:
             is_continue = self.__update()

@@ -56,7 +56,7 @@ class PuYo(GameObject):
         self.__valid = valid
 
     @property
-    def id(self) -> str:
+    def id(self) -> uuid4:
         return self.__id
 
     @property
