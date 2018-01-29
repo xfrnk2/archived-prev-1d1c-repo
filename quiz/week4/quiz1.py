@@ -8,12 +8,14 @@
 
 
 class Node:
-    def __init__(self, data: int = None):
+    def __init__(self, data: int):
+        assert isinstance(data, int)
+
         self.__data: int = data
         self.__left_node: Node = None
         self.__right_node: Node = None
 
-    def add_child(self, data: int = None) -> None:
+    def add_child(self, data: int) -> None:
         """
         자신보다 작은 값은 자신의 왼쪽 노드에,
         자신보다 큰 값은 자신의 오른쪽 노드에 추가합니다.
@@ -22,12 +24,24 @@ class Node:
         :param data: int
         :return: None
         """
+        assert isinstance(data, int)
+
+        if self.find(data):
+            return
 
         if data < self.__data:
-            self.__left_node = Node(data)
+            if self.__left_node is None:
+                self.__left_node = Node(data)
+            else:
+                self.__left_node.add_child(data)
+
         if data > self.__data:
-            self.__right_node = Node(data)
-# 재귀는 노드가 합니다.
+            if self.__right_node is None:
+                self.__right_node = Node(data)
+            else:
+                self.__right_node.add_child(data)
+
+    # 재귀는 노드가 합니다.
     # in push, child는, 자신의 생성자에서, 자신이 생성되는 시점에 자신의 값을 설정한다.
     def find(self, data: int) -> bool:
         """
@@ -36,11 +50,13 @@ class Node:
         :param data: int
         :return: bool
         """
-        if data in self.__data or self.__left_node or self.__right_node:
-            return True
-        else:
-            return False
 
+        exist_in_self = data in self.__data
+        if exist_in_self:
+            return True
+
+        return self.__left_node.find(data) or self.__right_node.find(data)
+        
     def print_pre_order(self) -> None:
         """
         TODO - 전위 순회로 출력합니다.
@@ -50,12 +66,12 @@ class Node:
  # 재귀는 00순회 안에 있는게 아닐까?
         :return: None
         """
-        if self == None:
+        if self.__data is None:
             return
 
         print(self.__data)
-        print_pre_order(self.__left_node)
-        print_pre_order(self.__right_node)
+        self.__left_node.print_pre_order()
+        self.__left_node.print_pre_order()
 
     def print_in_order(self) -> None:
         """
@@ -91,13 +107,13 @@ class Tree:
         :param data: int
         :return: None
         """
-        if Tree.find is True:
-            pass
-        if Tree.find is False:
-            self.__top = Node()
-            next_data = self.__top.add_child(data)
-            print(next_data)
- 
+        if self.find(data) is True:
+            return
+
+        if self.__top is None:
+            self.__top = Node(data)
+        else:
+            self.__top.add_child(data)
 
     def find(self, data) -> bool:
         """
@@ -107,22 +123,32 @@ class Tree:
         :param data: int
         :return: bool
         """
-        if Node.find is True:
-            return True
-        if Node.find is False:
+
+        if self.__top is None:
             return False
 
-        def print_in_order(self) -> None:
-            """
-            TODO - 중위 순회로 출력합니다. Node 주석 참고
-            :return: None
-            """
+        if self.__top.find(data) is True:
+            return True
+        else:
+            return False
 
-        def print_post_order(self) -> None:
-            """
-            TODO - 후위 순회로 출력합니다. Node 주석 참고
-            :return: None
-            """
+    def print_pre_order(self) -> None:
+        """
+        TODO - 전위 순회로 출력합니다. Node 주석 참고
+        :return: None
+        """
+
+    def print_in_order(self) -> None:
+        """
+        TODO - 중위 순회로 출력합니다. Node 주석 참고
+        :return: None
+        """
+
+    def print_post_order(self) -> None:
+        """
+        TODO - 후위 순회로 출력합니다. Node 주석 참고
+        :return: None
+        """
 
 
 if __name__ == '__main__':

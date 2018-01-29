@@ -49,7 +49,8 @@ class EventManager:
         handlers = {
             Key.esc: GameExitEvent,
             Key.left: MoveLeftEvent,
-            Key.right: MoveRightEvent
+            Key.right: MoveRightEvent,
+            Key.space : RoundEvent
         }
 
         try:

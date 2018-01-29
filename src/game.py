@@ -3,6 +3,7 @@
 
 from timer import Timer
 
+from game_object import GameObject
 from renderer import Renderer
 from event import EventManager
 
@@ -23,8 +24,7 @@ class Game:
         self.__current_pu_yo: PuYo = None
 
     def run(self):
-        a = 1 / 0
-        print(a)
+
         
         is_continue = True
         while is_continue:
@@ -42,6 +42,7 @@ class Game:
         self.__field.set_game_objects(tuple(self.__game_objects.values()))
 
         for game_object in self.__game_objects.values():
+            assert isinstance(game_object, GameObject)
             game_object.update(current_event)
 
         current_pu_yo = self.__current_pu_yo
@@ -57,5 +58,7 @@ class Game:
             return
 
         for game_object in self.__game_objects.values():
+            assert isinstance(game_object, GameObject)
             game_object.render()
+
         Renderer.render_end()

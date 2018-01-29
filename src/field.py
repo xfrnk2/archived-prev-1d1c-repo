@@ -4,7 +4,7 @@
 import copy
 
 from block import Block
-from event import Event
+from event import Event, RoundEvent
 from game_object import GameObject
 
 WIDTH = 13
@@ -18,8 +18,18 @@ class RenderField(GameObject):
         self.__original = [[Block() for _ in range(width)] for _ in range(height)]
         self.__render_target = None
 
+        self.__temp = False
+
     def update(self, event: Event):
         self.__render_target = copy.deepcopy(self.__original)
+
+        if isinstance(event, RoundEvent):
+            self.__temp = not self.__temp
+
+        if self.__temp:
+            for line in self.__render_target:
+                for block in line:
+                    block.set('☆')
 
     def render(self):
         for line in self.__render_target:
