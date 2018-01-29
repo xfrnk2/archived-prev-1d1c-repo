@@ -24,7 +24,7 @@ class Game:
         self.__current_pu_yo: PuYo = None
 
     def run(self):
-  
+
         
         is_continue = True
         while is_continue:
