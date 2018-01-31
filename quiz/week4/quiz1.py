@@ -6,6 +6,8 @@
 아래의 TODO 항목을 읽어주세요.
 """
 
+from raven import Client
+
 
 class Node:
     def __init__(self, data: int):
@@ -56,22 +58,22 @@ class Node:
             return True
 
         return self.__left_node.find(data) or self.__right_node.find(data)
-        
+
     def print_pre_order(self) -> None:
         """
         TODO - 전위 순회로 출력합니다.
         자신 -> 왼쪽 -> 오른쪽 순서대로 출력하면 됩니다.
 
         자신이 맨 앞(前)에 위치(位置)하므로 이므로 전위(前位)순회 입니다.
- # 재귀는 00순회 안에 있는게 아닐까?
+
         :return: None
         """
         if self.__data is None:
-            return
+            pass
 
         print(self.__data)
         self.__left_node.print_pre_order()
-        self.__left_node.print_pre_order()
+        self.__right_node.print_pre_order()
 
     def print_in_order(self) -> None:
         """
@@ -82,6 +84,12 @@ class Node:
 
         :return: None
         """
+        if self.__data is None:
+            pass
+
+        self.__left_node.print_in_order()
+        print(self.__data)
+        self.__right_node.print_in_order()
 
     def print_post_order(self) -> None:
         """
@@ -92,6 +100,12 @@ class Node:
 
         :return: None
         """
+        if self.__data is None:
+            pass
+
+        self.__left_node.print_post_order()
+        self.__right_node.print_post_order()
+        print(self.__data)
 
 
 class Tree:
@@ -108,7 +122,7 @@ class Tree:
         :return: None
         """
         if self.find(data) is True:
-            return
+            pass
 
         if self.__top is None:
             self.__top = Node(data)
@@ -138,20 +152,24 @@ class Tree:
         :return: None
         """
 
+        self.__top.Node.print_pre_order()
+
     def print_in_order(self) -> None:
         """
         TODO - 중위 순회로 출력합니다. Node 주석 참고
         :return: None
         """
+        self.__top.Node.print_in_order()
 
     def print_post_order(self) -> None:
         """
         TODO - 후위 순회로 출력합니다. Node 주석 참고
         :return: None
         """
+        self.__top.Node.print_post_order()
 
 
-if __name__ == '__main__':
+def question() -> None:
     tree = Tree()
 
     #              5
@@ -190,3 +208,13 @@ if __name__ == '__main__':
 
     # 1 2 4 3 6 8 10 9 7 5
     tree.print_post_order()
+
+
+if __name__ == '__main__':
+    client = Client(
+        'https://65d575d59e1748299f322af362a6b529:c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+
+    try:
+        question()
+    except Exception:
+        client.captureException()
