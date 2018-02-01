@@ -55,8 +55,12 @@ class Node:
 
         if data is self.__data:
             return True
+
+        # FIXME - self.__data 가 None 일 수 없어요...
         if self.__data is None:
             return False
+
+        # FIXME - 아래 코드는 구멍이 있습니다.
         elif self.__left_node and self.__right_node is not None:
             return self.__left_node.find(data) or self.__right_node.find(data)
 
@@ -85,6 +89,7 @@ class Node:
 
         :return: None
         """
+
         if self.__left_node:
             self.__left_node.print_in_order()
         print(self.__data)
@@ -141,6 +146,7 @@ class Tree:
         if self.__top is None:
             return False
 
+        # FIXME - 아래 코드는 return self.__top.find(data) 한 줄로 표현 가능
         if self.__top.find(data) is True:
             return True
         else:
@@ -214,6 +220,7 @@ if __name__ == '__main__':
     client = Client(
         'https://65d575d59e1748299f322af362a6b529:c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
 
+    # noinspection PyBroadException
     try:
         question()
     except Exception:
