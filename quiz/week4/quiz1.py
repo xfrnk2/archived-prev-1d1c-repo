@@ -53,8 +53,7 @@ class Node:
         :return: bool
         """
 
-        exist_in_self = data in self.__data
-        if exist_in_self:
+        if data is self.__data:
             return True
 
         return self.__left_node.find(data) or self.__right_node.find(data)
