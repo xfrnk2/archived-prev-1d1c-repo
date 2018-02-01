@@ -69,7 +69,7 @@ class Node:
         :return: None
         """
         if self.__data is None:
-            pass
+            return
 
         print(self.__data)
         self.__left_node.print_pre_order()
@@ -85,7 +85,7 @@ class Node:
         :return: None
         """
         if self.__data is None:
-            pass
+            return
 
         self.__left_node.print_in_order()
         print(self.__data)
@@ -101,7 +101,7 @@ class Node:
         :return: None
         """
         if self.__data is None:
-            pass
+            return
 
         self.__left_node.print_post_order()
         self.__right_node.print_post_order()
@@ -122,7 +122,7 @@ class Tree:
         :return: None
         """
         if self.find(data) is True:
-            pass
+            return
 
         if self.__top is None:
             self.__top = Node(data)
@@ -152,21 +152,21 @@ class Tree:
         :return: None
         """
 
-        self.__top.Node.print_pre_order()
+        self.__top.print_pre_order()
 
     def print_in_order(self) -> None:
         """
         TODO - 중위 순회로 출력합니다. Node 주석 참고
         :return: None
         """
-        self.__top.Node.print_in_order()
+        self.__top.print_in_order()
 
     def print_post_order(self) -> None:
         """
         TODO - 후위 순회로 출력합니다. Node 주석 참고
         :return: None
         """
-        self.__top.Node.print_post_order()
+        self.__top.print_post_order()
 
 
 def question() -> None:
