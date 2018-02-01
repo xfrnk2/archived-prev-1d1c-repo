@@ -68,12 +68,12 @@ class Node:
 
         :return: None
         """
-        if self.__data is None:
-            return
 
         print(self.__data)
-        self.__left_node.print_pre_order()
-        self.__right_node.print_pre_order()
+        if self.__left_node:
+            self.__left_node.print_pre_order()
+        if self.__right_node:
+            self.__right_node.print_pre_order()
 
     def print_in_order(self) -> None:
         """
@@ -84,12 +84,11 @@ class Node:
 
         :return: None
         """
-        if self.__data is None:
-            return
-
-        self.__left_node.print_in_order()
+        if self.__left_node:
+            self.__left_node.print_in_order()
         print(self.__data)
-        self.__right_node.print_in_order()
+        if self.__right_node:
+            self.__right_node.print_in_order()
 
     def print_post_order(self) -> None:
         """
@@ -100,11 +99,11 @@ class Node:
 
         :return: None
         """
-        if self.__data is None:
-            return
 
-        self.__left_node.print_post_order()
-        self.__right_node.print_post_order()
+        if self.__left_node:
+            self.__left_node.print_post_order()
+        if self.__right_node:
+            self.__right_node.print_post_order()
         print(self.__data)
 
 
