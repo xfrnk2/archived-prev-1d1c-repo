@@ -55,8 +55,10 @@ class Node:
 
         if data is self.__data:
             return True
-
-        return self.__left_node.find(data) or self.__right_node.find(data)
+        if self.__data is None:
+            return False
+        elif self.__left_node and self.__right_node is not None:
+            return self.__left_node.find(data) or self.__right_node.find(data)
 
     def print_pre_order(self) -> None:
         """
