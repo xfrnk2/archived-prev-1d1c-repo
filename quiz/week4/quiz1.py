@@ -57,12 +57,19 @@ class Node:
             return True
 
         # FIXME - self.__data 가 None 일 수 없어요...
-        if self.__data is None:
-            return False
+       # if self.__data is None:
+       #     return False 삭제
 
         # FIXME - 아래 코드는 구멍이 있습니다.
-        elif self.__left_node and self.__right_node is not None:
-            return self.__left_node.find(data) or self.__right_node.find(data)
+        # left와 right node가 하나로써 or였던 상태에서 두 개로 나누고
+        #  Flase를 리턴하는 else를 추가함
+
+        elif self.__left_node:
+            return self.__left_node.find(data)
+        elif self.__right_node:
+            return self.__right_node.find(data)
+        else:
+            return False
 
     def print_pre_order(self) -> None:
         """
@@ -147,10 +154,8 @@ class Tree:
             return False
 
         # FIXME - 아래 코드는 return self.__top.find(data) 한 줄로 표현 가능
-        if self.__top.find(data) is True:
-            return True
-        else:
-            return False
+        # 한줄로 표현
+        return self.__top.find(data)
 
     def print_pre_order(self) -> None:
         """
