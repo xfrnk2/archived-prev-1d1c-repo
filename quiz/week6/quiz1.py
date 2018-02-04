@@ -12,7 +12,7 @@
 
 이 손님의 최대 대기 시간을 15분~40분까지 무작위로 설정합니다.
 레스토랑의 현재 운영 상태로부터 대기 시간을 계산해서,
-이 손님의 최대 대기 시간을 초과할 경우 손님은 주문을 하지 않고 그대로 돌아갑니다.
+이 손님의 최대 대기 시간을 초과할 경우 손님은 기다리지 않고 그대로 돌아갑니다.
 # TODO - 돌아갈 경우 화면에 이 손님이 돌아간다는 문구를 출력해야 합니다.
 # TODO - 손님이 기다릴 수 없어 돌아갑니다.
 # TODO - 현재 대기 시간 xx분 / 대기 가능 시간 xx분
@@ -63,9 +63,139 @@
 확장 가능하고 수정 및 유지보수가 편리하도록 고민해주세요.
 
 """
-
+import random
 from raven import Client
-client = Client('https://65d575d59e1748299f322af362a6b529:c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+
+
+class Guest:
+    def __init__(self):
+        self.__ArrivalTime: int = None
+        self.__MenuType: int = None
+        self.MaximumWatingTime: int = None
+
+    def SetMaximumWatingTime(self):
+        time = random.randrange(15, 41)
+        self.MaximumWatingTime = time()
+
+    def SetMenuType(self):
+        setmenu = random.randrange(0, 3)
+        return setmenu
+
+
+class GuestVisit:
+    def __init__(self):
+        self.__GuestElapsedTime = 0
+        self.__data = Guest()
+
+    def GuestVisitTimer(self) -> bool:
+
+        machine = random.randrange(5)
+        if machine == 2 or 3:
+            return True
+
+        else:
+            return False
+
+    def AddNewGuest(self):
+        if self.GuestVisitTimer() is True:
+            Time.elapsed_time += 1
+            self.__GuestElapsedTime += 1
+            GuestNumber.people += 1
+
+            self.WhenGuestVisited()
+        if self.GuestVisitTimer() is False:
+            Time.elapsed_time += 1
+            self.__GuestElapsedTime += 1
+
+    def WhenGuestVisited(self):
+        number = GuestNumber.people
+        time = Time.elapsed_time
+        print("f'{number}'번째 손님이 시각 f'{time}' 분에 레스토랑에 도착했습니다.")
+
+    def GuestGoHome(self):
+        maximum = self.__data.MaximumWatingTime
+        guestelapsedtime = self.__GuestElapsedTime
+        if maximum < guestelapsedtime:
+            print("손님이 기다릴 수 없어 돌아갑니다.")
+            print("현재 대기시간 f'{guestelapsedtime}'분, 대기 가능시간 f'{maximum}'분 ")
+        # 손님이 꽉 찼을때의 조건을 추가해야 한다.
+
+
+class TableManager:
+    def __init__(self):
+        self.__tables = None
+
+    def simulate(self):
+
+        max_table_quantity = 20
+        self.__tables = tables = [0 for _ in range(max_table_quantity)]
+        if GuestVisit.GuestVisitTimer is True:
+            for y in range(max_table_quantity):
+                if tables[y] == 1:
+                    continue
+                if y == max_table_quantity - 1:
+                    # TODO - 아직 어떻게 해야 할지 몰라 미구현. 일단 나중에 구현하자
+                    pass
+
+                # 더이상 손님을 받을 수 없는 상황이 발생한다.
+                else:
+                    tables[y] = 1
+
+
+class Counter:
+    pass
+
+
+class Menu:
+    def __init__(self):  # , '스파게티','마카로니','그라탱':'15'
+        self.__CookingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 10, '그라탱': 15}
+        self.__EatingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 15, '그라탱': 10}
+        self.__order = None
+
+    def get_cooking_time(self):
+        getvalue = self.__CookingTime
+        if self.__order == 0:
+            return getvalue.get('스테이크')
+        if self.__order == 1:
+            return getvalue.get('스파게티')
+        if self.__order == 2:
+            return getvalue.get('마카로니')
+        if self.__order == 3:
+            return getvalue.get('그라탱')
+        else:
+            pass
+
+    def get_eating_time(self):
+        getvalue = self.__EatingTime
+        if self.__order == 0:
+            return getvalue.get('스테이크')
+        if self.__order == 1:
+            return getvalue.get('스파게티')
+        if self.__order == 2:
+            return getvalue.get('마카로니')
+        if self.__order == 3:
+            return getvalue.get('그라탱')
+
+        else:
+            pass
+
+
+class Chef:
+    pass
+
+
+class Time:
+    elapsed_time = 0.0
+    current_time = 0.0
+
+
+class GuestNumber:
+    people = 0
+
+
+client = Client(
+    'https://65d575d59e1748299f322af362a6b529'
+    ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
 
 if __name__ == '__main__':
     # noinspection PyBroadException

@@ -15,6 +15,10 @@ from puyo import PuYo
 
 class Game:
     def __init__(self):
+        """
+
+        :rtype:
+        """
         Timer.init()
         Renderer.init()
         self.__event = EventManager()
