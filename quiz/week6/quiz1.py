@@ -69,17 +69,35 @@ from raven import Client
 
 class Guest:
     def __init__(self):
-        self.__ArrivalTime: int = None
-        self.__MenuType: int = None
-        self.MaxTime: int = None
+        self.__arrival_time: int = None
+        self.menu_type: int = None
+        self.max_waiting_time: int = None
+
+        self.__eating_time = 0
+
+        self.guest_number = 0
+
+        self.__menu = Menu()
+        self.__chef = Chef()
 
     def set_max_waiting_time(self):
         time = random.randrange(15, 41)
-        self.MaxTime = time()
+        self.max_waiting_time = time()
 
+    @property
     def set_menu_type(self):
-        setmenu = random.randrange(0, 3)
-        return setmenu
+        problem = random.randrange(0, 3)
+        return problem
+
+    def guest_simulate(self):
+        guest = Guest()
+        guest.set_menu_type()
+        value = guest.set_menu_type
+        self.menu_type = value
+
+        guest.set_max_waiting_time()
+
+        # 도착한 현재 시간도 얻어오자
 
 
 class GuestVisit:
@@ -87,7 +105,8 @@ class GuestVisit:
         self.__GuestElapsedTime = 0
         self.__data = Guest()
 
-    def checking_visited_guest(self) -> bool:
+    @staticmethod
+    def checking_visited_guest() -> bool:
 
         machine = random.randrange(5)
         if machine == 2 or 3:
@@ -97,71 +116,103 @@ class GuestVisit:
             return False
 
     def add_new_guest(self):
-        if self.checking_visited_guest() is True:
-            Time.elapsed_time += 1
-            self.__GuestElapsedTime += 1
-            GuestNumber.people += 1
+
+        self.checking_visited_guest()
+        value = self.checking_visited_guest()
+        if value is True:
+
+            self.__data.guest_number += 1
 
             self.when_guest_visited()
-        if self.checking_visited_guest() is False:
-            Time.elapsed_time += 1
-            self.__GuestElapsedTime += 1
+
+            table = TableManager()
+            table.simulate()
+
+        else:
+            pass
 
     def when_guest_visited(self):
-        number = GuestNumber.people
-        time = Time.elapsed_time
-        print("f'{number}'번째 손님이 시각 f'{time}' 분에 레스토랑에 도착했습니다.")
 
-    def guest_go_home(self):
-        maximum = self.__data.MaxTime
-        guest_elapsed_time = self.__GuestElapsedTime
-        if maximum < guest_elapsed_time:
-            print("손님이 기다릴 수 없어 돌아갑니다.")
-            print("현재 대기시간 f'{guest_elapsed_time}'분, 대기 가능시간 f'{maximum}'분 ")
-        # 손님이 꽉 찼을때의 조건을 추가해야 한다.
+        number = self.__data.guest_number
+        time = Time.elapsed_time
+        print(f"{number}번째 손님이 시각 '{time}' 분에 레스토랑에 도착했습니다.")
+
+
+class Table:
+    table = 20
 
 
 class TableManager:
+
     def __init__(self):
-        self.__tables = None
+
+        self.__tables = [0 for _ in range(Table.table)]
         self.__menu = Menu()
+        self.__data = Guest()
+
     def simulate(self):
-        number = GuestNumber.people
+        number = self.__data.guest_number
         menu = self.__menu.set_menu
         order_number = self.__menu.get_order_number
 
-        max_table_quantity = 20
-        self.__tables = tables = [0 for _ in range(max_table_quantity)]
-        if GuestVisit.checking_visited_guest is True:
-            for y in range(max_table_quantity):
+        tables = self.__tables
+
+        for y in range(Table.table):
+            if tables[y] == 1:
+                continue
+            if y == Table.table - 1:
                 if tables[y] == 1:
-                    continue
-                if y == max_table_quantity - 1:
-                    # TODO - 더이상 손님을 받을 수 없는 상황이 발생.  일단 나중에 구현하자
                     pass
-
-
+                # TODO - 더이상 손님을 받을 수 없는 상황이 발생.
+                # TODO - 요리사와 계산대의 소요 시간을 합산하여 총 대기시간을 계산한다.
                 else:
-
                     tables[y] = 1
                     self.__menu.place_order()
+                    print(f"{number}번 손님이 f{y}번 테이블에 앉습니다.")
 
-                    print("f'{number}'번 손님이 f'{y}'번 테이블에 앉습니다.")
+                    print(f"{y}번 손님이 {order_number}번 요리{menu})를 주문합니다.")
 
-                    print(
-                        "f'{y}'번 손님이 f'{order_number}'번 요리(f'{menu}')를 주문합니다.")
+
+            else:
+
+                tables[y] = 1
+                self.__menu.place_order()
+
+                print(f"{number}번 손님이 {y}번 테이블에 앉습니다.")
+
+                print(f"{y}번 손님이 {order_number}번 요리{menu}를 주문합니다.")
 
 
 class Counter:
-    pass
+    def __init__(self):
+        self.__own_time = 0
+        self.status_of_counter = None
+        self.__chef = Chef()
+
+    def simulate(self):
+        if self.status_of_counter is True:
+
+            self.__own_time += 5
+        else:
+            pass
+
+    def minus_time(self):
+        if self.__own_time > 0:
+
+            self.__own_time -= 1
+
+        else:
+            print("n번 손님이 계산을 마치고 레스토랑을 떠났습니다.")
+            self.status_of_counter = False
 
 
 class Menu:
     def __init__(self):  # , '스파게티','마카로니','그라탱':'15'
         self.__CookingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 10, '그라탱': 15}
-        self.__EatingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 10, '그라탱': 15}
+        self.__EatingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 15, '그라탱': 10}
         self.__menu = {0: "스테이크", 1: "스파게티", 2: "마카로니", 3: "그라탱"}
         self.__order = None
+        self.__guest = Guest()
 
     def get_cooking_time(self):
         getvalue = self.__CookingTime
@@ -199,77 +250,116 @@ class Menu:
         return self.__order
 
     def place_order(self):
-        menu = random.randrange(4)
+
+        menu = self.__guest.menu_type
 
         self.__order = menu
-        # 무작위의 주문을 실행
+
+
+class Chefs:
+    chefs = 3
+
 
 class Chef:
-    def __init__(self):
+    def __init__(self: int):
         self.__chef_first = None
         self.__chef_second = None
         self.__chef_third = None
-        self.__works = None
+        self.__works = [0 for _ in range(Chefs.chefs)]
         self.__menu = Menu()
+        self.__counter = Counter()
 
-    def cook(self):
-        pass
+    @staticmethod
+    def print_finished_cooking():
+        print("n번 손님의 i번 요리(oooo) 조리가 끝났습니다")
+        print("n번 손님이 식사를 시작합니다")
 
-    def set_menu_to_chef(self):
-        max_number_of_chef = 3
-        self.__works = works = [0 for _ in range(max_number_of_chef)]
-        for x in range(max_number_of_chef):
+    @staticmethod
+    def print_finished_eating():
+        print(" n번 손님이 식사를 마쳤습니다.")
+        print(" n번 손님이 계산대 앞에 줄을 섭니다.")
+
+    def reset_chef_time(self):
+        if self.__chef_first == 0:
+            self.__chef_first = None
+            __class__.print_finished_eating()
+            self.__counter.status_of_counter = True
+        if self.__chef_second == 0:
+            self.__chef_second = None
+            __class__.print_finished_eating()
+            self.__counter.status_of_counter = True
+        if self.__chef_third == 0:
+            self.__chef_third = None
+            __class__.print_finished_eating()
+            self.__counter.status_of_counter = True
+
+        else:
+            pass
+
+    def minus_time(self):
+        if self.__chef_first > 0:
+            self.__chef_first -= 1
+        if self.__chef_second > 0:
+            self.__chef_second -= 1
+        if self.__chef_third > 0:
+            self.__chef_third -= 1
+        else:
+            __class__.reset_chef_time(self)
+
+    def chef_simulate(self):
+
+        chef = Chefs.chefs
+
+        works = self.__works
+
+        group = [self.__chef_first, self.__chef_second,
+                 self.__chef_third]
+
+        value = self.__menu.get_cooking_time()
+
+        for x in range(chef):
             if works[x] == 1:
                 continue
-            if works[x] == 0:
-                works[x] = 1
-                # TODO - 요리사에게 요리를 배정하는데...
-                group = (self.__chef_first, self.__chef_second,
-                         self.__chef_third)
-                for y in group:
-                    if y is None:
-                        group_member = self.__menu.get_order_number()
-
-                        return group_member.calculate_time()
-                        # 요리사가 가진 시간이 다 달면, None으로 바꿔준다.
-                    #함수를 만들자
-                    else:
-                        continue
-
-            if x == max_number_of_chef - 1:
+            if x == chef - 1:
                 if works[x] == 1:
+                    # 꽉 찼다
                     pass
-                # 요리 주문이 꽉 찬상태이다
-                # 요리 주문이 꽉 찼으므로 시간을 반환한다. 시간을 반환하는
-                #함수를 만들자.
+                else:
+                    works[x] = 1
 
-    def calculate_time(self):
-        cooking_time = self.__menu.get_cooking_time()
-        eating_time = self.__menu.get_eating_time()
+                    group[x] = value
 
-        return cooking_time + eating_time
+            else:
+                works[x] = 1
 
+                group[x] = value
 
-def calculate_time(self):
-    # TODO - 걸리는 시간을 계산하고, 반환한다.(계산, 반환)
-    pass
 
 class Time:
-    elapsed_time = 0.0
-    current_time = 0.0
+    elapsed_time = 0
 
     def __init__(self):
-        self.time_tick = None
+        self.__chef = Chef()
+        self.__counter = Counter()
+        self.__guest = Guest()
+        self.__guest_visit = GuestVisit
 
-    def time_tick(self):
-        # for x in range(720)
+    def tick(self):
+        for x in range(720):
+            Time.elapsed_time += 1
+            print(f"현재시간 {Time.elapsed_time}/720분)")
 
-        # get 걸리는 시간을 얻어온다. 매 틱 마다 한번씩 모든 장소를 반복 실행함.
-        pass
+            self.__guest.guest_simulate()
+            self.__guest_visit.add_new_guest()
 
+            self.__chef.minus_time()
+            self.__counter.minus_time()
 
-class GuestNumber:
-    people = 0
+            self.__chef.chef_simulate()
+            self.__chef.reset_chef_time()
+            self.__counter.simulate()
+
+            # get 걸리는 시간을 얻어온다. 매 틱 마다 한번씩 모든 장소를 반복 실행함.
 
 
 client = Client(
