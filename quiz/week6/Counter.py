@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from week6.Chef import Chef
+from week6.chef import Chef
 
 class Counter:
     def __init__(self):

@@ -1,7 +1,7 @@
 # coding=utf-8
 
-from week6.Counter import Counter
-from week6.Menu import Menu
+from week6.counter import Counter
+from week6.menu import Menu
 
 
 class Chefs:

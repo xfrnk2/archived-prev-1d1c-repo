@@ -1,7 +1,8 @@
 # coding=utf-8
 
-from week6.Chef import Chef
-from week6.Menu import Menu
+from week6.chef import Chef
+from week6.menu import Menu
+import random
 
 class Guest:
     def __init__(self):

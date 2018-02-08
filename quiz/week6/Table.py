@@ -1,8 +1,8 @@
 # coding=utf-8
 
 
-from week6.Guest import Guest
-from week6.Menu import Menu
+from week6.guest import Guest
+from week6.menu import Menu
 
 class Table:
     table = 20

@@ -1,9 +1,9 @@
 # coding=utf-8
 
-from week6.Chef import Chef
-from week6.Counter import Counter
-from week6.Guest import Guest
-from week6.GuestVisit import GuestVisit
+from week6.chef import Chef
+from week6.counter import Counter
+from week6.guest import Guest
+from week6.guestvisit import GuestVisit
 
 class Time:
 

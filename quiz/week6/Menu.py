@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from week6.Guest import Guest
+from week6.guest import Guest
 
 
 class Menu:
