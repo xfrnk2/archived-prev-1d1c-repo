@@ -1,7 +1,10 @@
 # coding=utf-8
 
-from week6.Guest import Guest
-from week6.Table import TableManager
+from week6.guest import Guest
+from week6.table import TableManager
+from week6.time import Time
+import random
+
 
 class GuestVisit:
     def __init__(self):
