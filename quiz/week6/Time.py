@@ -7,18 +7,18 @@ from week6.guestvisit import GuestVisit
 
 class Time:
 
-    elapsed_time = 0
-
     def __init__(self):
         self.__chef = Chef()
         self.__counter = Counter()
         self.__guest = Guest()
         self.__guest_visit = GuestVisit
+        self.elapsed_time = 0
 
     def tick(self):
         for x in range(720):
-            Time.elapsed_time += 1
-            print(f"현재시간 {Time.elapsed_time}/720분)")
+            self.elapsed_time += 1
+            elapsed_time = self.elapsed_time
+            print(f"현재시간 {elapsed_time}/720분)")
 
             self.__guest.guest_simulate()
             self.__guest_visit.add_new_guest()

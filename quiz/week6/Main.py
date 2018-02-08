@@ -1,6 +1,5 @@
 # coding=utf-8
 
-
 from raven import Client
 
 client = Client(
@@ -10,6 +9,8 @@ client = Client(
 if __name__ == '__main__':
     # noinspection PyBroadException
     try:
-        pass
+        print("레스토랑을 시작합니다.")
+
+        print("레스토랑을 종료합니다.")
     except Exception:
         client.captureException()
