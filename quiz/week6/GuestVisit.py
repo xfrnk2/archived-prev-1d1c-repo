@@ -38,6 +38,7 @@ class GuestVisit:
             pass
 
     def when_guest_visited(self):
+        # FIXME - 여러가지 역할을 하는 복합 함수가 미묘하게 적당하지 않은 이름으로 정의 돼 있네요.
 
         number = self.__data.guest_number
         time = Time.elapsed_time

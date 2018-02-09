@@ -2,10 +2,13 @@
 
 from week6.chef import Chef
 
+
 class Counter:
     def __init__(self):
         self.__own_time = 0
         self.status_of_counter = None
+
+        # FIXME - Chef 안에 카운터가 있었는데, 카운터 안에는 Chef 가 있는 이상한 무한 순환 구조
         self.__chef = Chef()
 
     def simulate(self):

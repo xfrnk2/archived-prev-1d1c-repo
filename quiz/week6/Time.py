@@ -10,11 +10,16 @@ class Time:
     elapsed_time = 0
 
     def __init__(self):
+        # FIXME - 대체 이 Time 이라는 클래스는 요리사, 카운터, 손님 등과 어떻게 연관 관계를 맺고 있는 걸까요.
         self.__chef = Chef()
         self.__counter = Counter()
         self.__guest = Guest()
         self.__guest_visit = GuestVisit
 
+    # FIXME - 방향은 나쁘지 않았습니다.
+    # 매 틱마다 순차적으로 손님 / 주방장 / 카운터 등에 대한 처리를 한다는 접근은 괜찮았는데,
+    # 문제는 그런 루프를 왜 Time 에서 돌리고 있을까요?
+    # 과연 적절한 클래스 분배 및 클래스명 설정일까요?
     def tick(self):
         for x in range(720):
             Time.elapsed_time += 1
