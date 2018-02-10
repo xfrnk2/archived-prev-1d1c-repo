@@ -22,16 +22,24 @@ quiz1.py 에서 작성한 레스토랑을 조금 더 세빌하게 수정합니�
 """
 
 from raven import Client
-
+import random
 
 class Restaurant:
-    # TODO - 적절히 채워주세요.
-    pass
+    def __init__(self):
+        self.__continue = True
+        self.__guest_number = 0
+        self.__guest_time = 0
 
     def run(self):
-        pass
+        turn = 0
 
+        while self.__continue:
+            # TODO - 적절히 채워주세요.
 
+            turn += 1
+            assert turn <= 720
+
+            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')

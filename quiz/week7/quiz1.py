@@ -28,6 +28,8 @@ class Restaurant:
             turn += 1
             assert turn <= 720
 
+            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
+
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
