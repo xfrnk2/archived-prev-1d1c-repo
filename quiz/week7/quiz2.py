@@ -27,8 +27,13 @@ import random
 class Restaurant:
     def __init__(self):
         self.__continue = True
-        self.__guest_number = 0
-        self.__guest_time = 0
+        self.guest = 0
+
+    def guest(self, number, time):
+        pass
+
+    def set_time(self):
+        return random.randrange(1, 11)
 
     def run(self):
         turn = 0
@@ -37,9 +42,19 @@ class Restaurant:
             # TODO - 적절히 채워주세요.
 
             turn += 1
+            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
             assert turn <= 720
 
-            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
+            if turn % 3 == 0:
+                self.guest += 1
+                print(f"{self.guest}번째 손님이 도착했습니다")
+                __class__.guest(self, self.guest, __class__.set_time(self))
+            else:
+                pass
+
+
+
+
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
