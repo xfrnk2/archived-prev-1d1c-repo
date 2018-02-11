@@ -9,11 +9,6 @@ client = Client(
 if __name__ == '__main__':
     # noinspection PyBroadException
     try:
-<<<<<<< .merge_file_a10948
-        print("레스토랑을 시작합니다.")
-
-        print("레스토랑을 종료합니다.")
-=======
         # FIXME - 일단 어떻게든 돌아가는 형태로 만들어주세요.
         # 윤곽만이라도 돌아가는 척 하는 형태만이라도 좋습니다.
         # 그렇게 작은 규모로 간단, 단순하게 만들어 놓고 조금씩 살을 붙이는 연습을 해야 합니다.
@@ -27,7 +22,9 @@ if __name__ == '__main__':
         # 클래스부터 정의하고 역할을 부여하지 마시고,
         # 역할 명세를 먼저 정한 후에, 해당 역할을 수행해야 할 주체를 나눠주세요.
 
-        pass
->>>>>>> .merge_file_a11344
+        print("레스토랑을 시작합니다.")
+
+        print("레스토랑을 종료합니다.")
+
     except Exception:
         client.captureException()

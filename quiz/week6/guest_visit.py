@@ -44,4 +44,3 @@ class GuestVisit:
         number = self.__data.guest_number
         time = self.__time.elapsed_time
         print(f"{number}번째 손님이 시각 '{time}' 분에 레스토랑에 도착했습니다.")
-

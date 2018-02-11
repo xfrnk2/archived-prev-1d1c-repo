@@ -4,10 +4,8 @@
 from week6.guest import Guest
 from week6.menu import Menu
 
-<<<<<<< .merge_file_a08608
-=======
+
 # FIXME - Chef 와 Chefs 의 관계에 대해서 해당 파일에 적어놓은 주석을 참고하세요.
->>>>>>> .merge_file_a04324
 class Table:
     table = 20
 
@@ -42,11 +40,7 @@ class TableManager:
 
                     print(f"{y}번 손님이 {order_number}번 요리{menu})를 주문합니다.")
 
-
-<<<<<<< .merge_file_a08608
-=======
             # FIXME - 이와 같이 코드를 작성하고 실제 실행하면 무슨 일이 벌어질까요?
->>>>>>> .merge_file_a04324
             else:
 
                 tables[y] = 1
@@ -55,4 +49,3 @@ class TableManager:
                 print(f"{number}번 손님이 {y}번 테이블에 앉습니다.")
 
                 print(f"{y}번 손님이 {order_number}번 요리{menu}를 주문합니다.")
-

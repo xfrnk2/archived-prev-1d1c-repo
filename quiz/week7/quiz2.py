@@ -24,6 +24,7 @@ quiz1.py 에서 작성한 레스토랑을 조금 더 세빌하게 수정합니�
 from raven import Client
 import random
 
+
 class Restaurant:
     def __init__(self):
         self.__continue = True
@@ -51,8 +52,6 @@ class Restaurant:
                 __class__.guest(self, self.guest, __class__.set_time(self))
             else:
                 pass
-
-
 
 
 client = Client(

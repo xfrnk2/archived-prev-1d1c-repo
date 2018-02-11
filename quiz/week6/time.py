@@ -3,7 +3,8 @@
 from week6.chef import Chef
 from week6.counter import Counter
 from week6.guest import Guest
-from week6.guestvisit import GuestVisit
+from week6.guest_visit import GuestVisit
+
 
 class Time:
 
