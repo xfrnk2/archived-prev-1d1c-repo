@@ -36,6 +36,9 @@ class Restaurant:
     def set_time(self):
         return random.randrange(1, 11)
 
+    def print_current_tick(self):
+        pass
+
     def run(self):
         turn = 0
 
@@ -52,6 +55,7 @@ class Restaurant:
                 __class__.guest(self, self.guest, __class__.set_time(self))
             else:
                 pass
+
 
 
 client = Client(
