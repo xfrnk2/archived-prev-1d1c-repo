@@ -26,37 +26,64 @@ import random
 
 
 class Restaurant:
+
     def __init__(self):
         self.__continue = True
-        self.guest = 0
+        self.__list = {}
 
-    def guest(self, number, time):
-        pass
-
-    def set_time(self):
-        return random.randrange(1, 11)
-
-    def print_current_tick(self):
-        pass
 
     def run(self):
         turn = 0
-
+        number = 1
         while self.__continue:
             # TODO - 적절히 채워주세요.
 
             turn += 1
-            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
+
             assert turn <= 720
 
+            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
+
+            if self.__list:
+
+                for key, value in self.__list.items():
+
+                    if not value.tick():
+                        self.__list.pop(key)
+
+                        time = value.get_staying_time
+                        print(f"{key}번째 손님이 도착한지"
+                              f" {time}분 만에 돌아갑니다.")
+
             if turn % 3 == 0:
-                self.guest += 1
-                print(f"{self.guest}번째 손님이 도착했습니다")
-                __class__.guest(self, self.guest, __class__.set_time(self))
+                self.__list.update({number: Guest()})
+                number += 1
             else:
                 pass
 
+    def set_staying_time(self):
+        return random.randrange(1, 11)
 
+
+class Guest:
+    def __init__(self):
+        self.__number = 0
+        self.__time = 0
+        self.current_time = 0
+
+    def information(self, number, time):
+        self.__number = number
+        self.__time = time
+
+    def get_staying_time(self):
+        return self.__time
+
+    def tick(self):
+
+        if self.current_time == self.__time:
+            return False
+        else:
+            pass
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
