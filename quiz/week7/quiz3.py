@@ -27,14 +27,89 @@ quiz1.py 에서 작성한 레스토랑을 조금 더 세빌하게 수정합니�
 """
 
 from raven import Client
+import random
 
 
 class Restaurant:
-    # TODO - 적절히 채워주세요.
-    pass
+
+    def __init__(self):
+
+        self.__guest_number = 1
+        self.__list = {}
+        self.__continue = True
 
     def run(self):
-        pass
+        turn = 0
+        while self.__continue:
+            turn += 1
+            print(f"레스토랑 오픈 후 {turn}분 지났습니다. ")
+
+            for key, value in self.__list.items():
+
+                value.tick()
+
+                if value.check_tick() is False:
+                    del self.__list[key]
+                    time = value.get_staying_time()
+                    print(f"{key}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
+                    break
+
+                if value.check_number_time() is False:
+                    minute = value.get_random_term()
+                    number = value.get_random_number()
+                    print(f"{key}번째 손님이 {minute}분 고민을 하고,{number}라는 수를 말했습니다 ")
+                else:
+                    pass
+
+            if turn % 3 == 0:
+                number = self.__guest_number
+
+                self.__list.update({self.__guest_number: Guest()})
+
+                print(f"{number}번째 손님이 도착했습니다")
+
+                self.__guest_number += 1
+
+            if turn == 720:
+                self.__continue = False
+                print("레스토랑을 종료합니다")
+
+            else:
+                pass
+
+
+class Guest:
+
+    def __init__(self):
+        self.__time = random.randrange(1, 11)
+        self.__current_turn = 0
+        self.staying_time = 0
+        self.__random_turn = random.randrange(1, 3)
+        self.__random_number = random.randrange(1, 5)
+
+    def check_number_time(self):
+        if self.__random_turn == self.__current_turn:
+            return False
+        else:
+            return True
+
+    def get_random_term(self):
+        return self.__random_turn
+
+    def get_random_number(self):
+        return self.__random_number
+
+    def get_staying_time(self):
+        return self.__time + self.__random_turn
+
+    def tick(self):
+        self.__current_turn += 1
+
+    def check_tick(self):
+        if self.__current_turn == (self.__time + self.__random_turn):
+            return False
+        else:
+            return True
 
 
 client = Client(
