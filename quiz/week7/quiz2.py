@@ -26,64 +26,65 @@ import random
 
 
 class Restaurant:
-
     def __init__(self):
-        self.__continue = True
-        self.__list = {}
 
+        self.__guest_number = 1
+        self.__list = {}
+        self.__continue = True
 
     def run(self):
         turn = 0
-        number = 1
         while self.__continue:
-            # TODO - 적절히 채워주세요.
-
             turn += 1
+            print(f"레스토랑 오픈 후 {turn}분 지났습니다. ")
 
-            assert turn <= 720
+            for key, value in self.__list.items():
 
-            print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
+                value.tick()
 
-            if self.__list:
-
-                for key, value in self.__list.items():
-
-                    if not value.tick():
-                        self.__list.pop(key)
-
-                        time = value.get_staying_time
-                        print(f"{key}번째 손님이 도착한지"
-                              f" {time}분 만에 돌아갑니다.")
+                if value.check_tick() is False:
+                    del self.__list[key]
+                    time = value.get_staying_time()
+                    print(f"{key}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
+                    break
+                else:
+                    pass
 
             if turn % 3 == 0:
-                self.__list.update({number: Guest()})
-                number += 1
+                number = self.__guest_number
+
+                self.__list.update({self.__guest_number: Guest()})
+
+                print(f"{number}번째 손님이 도착했습니다")
+
+                self.__guest_number += 1
+
+            if turn == 720:
+                self.__continue = False
+                print("레스토랑을 종료합니다")
+
             else:
                 pass
 
-    def set_staying_time(self):
-        return random.randrange(1, 11)
-
 
 class Guest:
-    def __init__(self):
-        self.__number = 0
-        self.__time = 0
-        self.current_time = 0
 
-    def information(self, number, time):
-        self.__number = number
-        self.__time = time
+    def __init__(self):
+        self.__time = random.randrange(1, 11)
+        self.__current_turn = 0
+        self.staying_time = 0
 
     def get_staying_time(self):
         return self.__time
 
     def tick(self):
+        self.__current_turn += 1
 
-        if self.current_time == self.__time:
+    def check_tick(self):
+        if self.__time == self.__current_turn:
             return False
         else:
-            pass
+            return True
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
@@ -92,6 +93,7 @@ client = Client(
 if __name__ == '__main__':
     # noinspection PyBroadException
     try:
+        print("레스토랑을 시작합니다")
         r = Restaurant()
         r.run()
 
