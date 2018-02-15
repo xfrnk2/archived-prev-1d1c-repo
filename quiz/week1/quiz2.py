@@ -333,8 +333,6 @@ class Resolver():
 
 
 if __name__ == '__main__':
-    # resolver = Resolver()
-    # resolver.solve()
 
     coordinator = Coordinator(4)
 

@@ -78,7 +78,7 @@ class Field:
 
 
 if __name__ == '__main__':
-    # f = Field( 50 )
+
     #
     # f.change_data( lambda x, y: y >= 0.3 * x + 10 )
     # f.print() 

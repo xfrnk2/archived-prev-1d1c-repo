@@ -73,7 +73,7 @@ def parrot():
                 file.write(hello)
 
         else:
-            text = [print("(앵무새) > " + parrot)]
+
             hello += parrot
             hello += "\n"
 
