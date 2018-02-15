@@ -54,11 +54,11 @@ class Node:
         if data is self.__data:
             return True
 
-        # FIXME - self.__data 가 None 일 수 없어요...
-       # if self.__data is None:
-       #     return False 삭제
+        # self.__data 가 None 일 수 없어요...
+        # if self.__data is None:
+        #     return False 삭제
 
-        # FIXME - 아래 코드는 구멍이 있습니다.
+        # 아래 코드는 구멍이 있습니다.
         # left와 right node가 하나로써 or였던 상태에서 두 개로 나누고
         #  Flase를 리턴하는 else를 추가함
 
@@ -151,7 +151,6 @@ class Tree:
         if self.__top is None:
             return False
 
-        # FIXME - 아래 코드는 return self.__top.find(data) 한 줄로 표현 가능
         # 한줄로 표현
         return self.__top.find(data)
 
