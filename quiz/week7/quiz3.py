@@ -56,8 +56,7 @@ class Restaurant:
                     minute = value.get_random_term()
                     number = value.get_random_number()
                     print(f"{key}번째 손님이 {minute}분 고민을 하고,{number}라는 수를 말했습니다 ")
-                else:
-                    pass
+
 
             if turn % 3 == 0:
                 number = self.__guest_number
@@ -72,8 +71,7 @@ class Restaurant:
                 self.__continue = False
                 print("레스토랑을 종료합니다")
 
-            else:
-                pass
+
 
 
 class Guest:

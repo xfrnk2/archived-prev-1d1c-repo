@@ -45,8 +45,6 @@ class Restaurant:
                     time = value.get_staying_time()
                     print(f"{key}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
                     break
-                else:
-                    pass
 
             if turn % 3 == 0:
                 number = self.__guest_number
@@ -61,8 +59,6 @@ class Restaurant:
                 self.__continue = False
                 print("레스토랑을 종료합니다")
 
-            else:
-                pass
 
 
 class Guest:
