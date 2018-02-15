@@ -4,7 +4,7 @@ from week6.menu import Menu
 
 # FIXME - 쓸데 없이 분리 된 클래스. Chef 클래스 안에 선언 했어도 되었을텐데요...
 class Chefs:
-    chefs = 3
+  value = 3
 
 
 class Chef:
@@ -12,12 +12,12 @@ class Chef:
         self.__chef_first = None
         self.__chef_second = None
         self.__chef_third = None
-        self.__works = [0 for _ in range(Chefs.chefs)]
+        self.__works = [0 for _ in range(Chefs.value)]
         self.__menu = Menu()
 
         # FIXME - Chefs 가 쉐프를 모아둔 일종의 매니저 클래스라면...
         # Chefs 클래스는 한 명의 요리사 역할만 수행해야 할 것이 아닐런지?
-        self.__works = [0 for _ in range(Chefs.chefs)]
+        self.__works = [0 for _ in range(Chefs.value)]
 
         # FIXME - 어째서 여기에 메뉴가 있는지?
         self.__menu = Menu()
@@ -52,9 +52,6 @@ class Chef:
             self.__chef_third = None
             __class__.print_finished_eating()
             self.__counter.status_of_counter = True
-
-        else:
-            pass
 
     def minus_time(self):
 

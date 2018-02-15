@@ -6,13 +6,10 @@
 import time
 import os
 
+"""
 def clear():
     os.system('cls')
-
-wall = "□"
-field = [[wall for _ in range(5)] for _ in range(5)]
-block = "■"
-
+"""
 
 # 0, 2
 # 1, 2
@@ -20,53 +17,61 @@ block = "■"
 #   3, 2
 #    4, 2
 
+class Simulate():
+    def __init__(self):
+        self.__continue = True
+        self.__list = {}
 
-def print_field():
-    a = 0
-    b = 2
+    def __str__(self):
+        return '{}'.format(self.__list)
 
-    count_value = 6
+    def run(self):
+        turn = 0
+        while self.__continue:
 
-    for x in range(5):
-        for y in range(0, 14, 3):
-            if x == y:
-                clear()
-                for data in field:
-                    output = ''.join(data) + '\n'
-                    print(output)
+            if turn == 6:
+                print("종료합니다")
+                self.__continue = False
 
+            self.__list.update({0: Field()})
+            print(self.__list.values)
+
+            for key, value in self.__list.items():
+                del self.__list[0]
+                value.tick()
                 time.sleep(1)
-                count_value -= 1
+                turn += 1
 
-            if y:
-                field[a][b] = block
 
-                try:
-                    field[a - 2][b] = wall
-                except IndexError:
-                    pass
+class Field():
 
-                clear()
-                for data in field:
-                    output = ''.join(data) + '\n'
-                    print(output)
+    def __init__(self):
+        self.__array = [['□' for _ in range(5)] for _ in range(5)]
+        self.__block_area = 0
 
-                time.sleep(1)
-                count_value -= 1
-                a += 1
+    def tick(self):
+        self.__block_area += 1
 
-            if count_value == 0:
-                break
+    def that(self):
+        return ''.join(self.__array)
+
+
+
 
 
 if __name__ == '__main__':
-    print_field()
-
-    # join의 사용법
-    l = [ 'hello', 'world', '1234']
-
-    result1 = ' '.join(l)
-    result2 = ','.join(['a', 'b', 'c'])
-
-    print(result1)
-    print(result2)
+    """
+      # join의 사용법
+  
+      l = [ 'hello', 'world', '1234']
+  
+      result1 = ' '.join(l)
+      result2 = ','.join(['a', 'b', 'c'])
+  
+      print(result1)
+      print(result2)
+      
+      
+  """
+    aaa = Simulate()
+    aaa.run()

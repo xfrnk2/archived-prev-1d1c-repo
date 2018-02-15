@@ -77,7 +77,6 @@ class Field:
 
 if __name__ == '__main__':
 
-
     f = Field(5)
 
     f.reset()

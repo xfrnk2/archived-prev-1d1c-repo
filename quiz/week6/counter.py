@@ -13,8 +13,6 @@ class Counter:
         if self.status_of_counter is True:
 
             self.__own_time += 5
-        else:
-            pass
 
     def minus_time(self):
         if self.__own_time > 0:

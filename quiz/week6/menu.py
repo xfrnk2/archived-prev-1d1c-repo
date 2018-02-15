@@ -32,8 +32,6 @@ class Menu:
             return getvalue.get('마카로니')
         if self.__order == 3:
             return getvalue.get('그라탱')
-        else:
-            pass
 
     def get_eating_time(self):
         getvalue = self.__EatingTime
@@ -46,8 +44,6 @@ class Menu:
         if self.__order == 3:
             return getvalue.get('그라탱')
 
-        else:
-            pass
 
     def set_menu(self):
         menu_number = self.__order
