@@ -1,5 +1,3 @@
-# coding=utf-8
-
 """
 하노이의 탑
 - https://namu.wiki/w/하노이의%20탑

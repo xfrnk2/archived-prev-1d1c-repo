@@ -1,5 +1,3 @@
-# coding=utf-8
-
 from week6.chef import Chef
 from week6.menu import Menu
 import random

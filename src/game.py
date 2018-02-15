@@ -1,6 +1,3 @@
-# coding=utf-8
-
-
 from timer import Timer
 
 from game_object import GameObject
