@@ -1,5 +1,3 @@
-# coding=utf-8
-
 """
 Task Class 를 만듭니다.
 

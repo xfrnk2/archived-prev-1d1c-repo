@@ -1,5 +1,3 @@
-# coding=utf-8
-
 # TODO - pip install raven
 
 from raven import Client

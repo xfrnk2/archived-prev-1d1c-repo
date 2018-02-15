@@ -1,5 +1,3 @@
-# coding=utf-8
-
 from week6.guest import Guest
 
 
