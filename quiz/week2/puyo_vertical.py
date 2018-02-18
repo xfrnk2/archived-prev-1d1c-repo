@@ -37,8 +37,11 @@ class Simulate():
             print(self.__list.values)
 
             for key, value in self.__list.items():
-                del self.__list[0]
+
                 value.tick()
+                value.set_field()
+                value.change_area()
+                value.print_field()
                 time.sleep(1)
                 turn += 1
 
@@ -46,14 +49,35 @@ class Simulate():
 class Field():
 
     def __init__(self):
-        self.__array = [['□' for _ in range(5)] for _ in range(5)]
+        self.__value = ['□' for _ in range(5)]
+        self.__array1 = []
+        self.__array2 = []
+
         self.__block_area = 0
+        self.__block = "■"
+
+    def __str__(self):
+        return "{}".format(self.__block)
 
     def tick(self):
         self.__block_area += 1
 
-    def that(self):
-        return ''.join(self.__array)
+    def change_area(self):
+        #TODO -  스킬이 필요하다. 배열에 문자열을 직접 삽입은 못하지만 기술적인 방법으로 할 수 있을 것 같다. 우선 시간이 오래 걸릴것 같은이 보류.
+
+        self.__array2[self.__block_area][2] = self.__block
+
+    def set_field(self):
+        value = ' '.join(self.__value) + "\n"
+
+        self.__array1 = [value for _ in range(5)]
+
+        self.__array2 = ' '.join(self.__array1) + "\n"
+
+    def print_field(self):
+        print(self.__array2, end=" ")
+
+
 
 
 

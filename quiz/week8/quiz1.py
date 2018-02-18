@@ -29,6 +29,8 @@ TaskManager Class 를 만듭니다.
 """
 
 from raven import Client
+import time
+from collections import deque
 
 
 class Task:
@@ -39,28 +41,42 @@ class Task:
 
     def run(self, value: int):
         # TODO - 아래와 같이 출력한 이후 적절히 1초가 지난 시점에 TaskManager 의 대기 큐로 돌아가야 합니다.
-        print(f'{self.__idx} : value')
+        idx = self.__idx
+        print(f'{idx} : {value}')
+        time.sleep(1)
 
     @property
     def waiting(self) -> bool:
         # TODO - 출력 후 1초가 지났으면 True, 아니면 False
 
-        return False
+        start_time = time.time()
+        elapsed_time = time.time() - start_time
+        print(elapsed_time)
+
+        if elapsed_time >= 1:
+            return True
+        else:
+            return False
 
 
 class TaskManager:
+
     # TODO - 적절히 채워주세요.
 
     def __init__(self):
         # TODO - 아래의 리스트를 큐로 바꿔주세요.
-        # TODO - 다음 링크를 보고 공부해주세요 - https://docs.python.org/2/library/collections.html
-        self.__stand_by_queue = []
-        self.__working_queue = []
+        # TODO - 다음 링크를 보고 공부해주세요 https://docs.python.org/2/library/collections.html
+
+        self.__stand_by_queue = deque([])
+        self.__working_queue = deque([])
 
     def do_job(self, value: int):
         # TODO - 요구 명세에 맞춰 구현해 주세요.
+        to_be_relocated = self.__stand_by_queue[0]
+        self.__working_queue.append(to_be_relocated)
+        self.__stand_by_queue.popleft()
 
-        pass
+        self.__stand_by_queue[-1].run(value)
 
     def check(self):
         to_be_returned = []
@@ -88,14 +104,28 @@ client = Client(
 
 if __name__ == '__main__':
     # noinspection PyBroadException
+
     try:
         tm = TaskManager()
 
         for x in range(100):
+
             if tm.enable:
                 tm.do_job(x)
             else:
                 tm.check()
-                
+
     except Exception:
         client.captureException()
+
+
+"""
+잠시 보관
+    def add_tasks(self):
+            self.__stand_by_queue.append(Task(x))
+            
+            
+if x < 10:
+    tm.add_tasks()
+    continue
+   """
