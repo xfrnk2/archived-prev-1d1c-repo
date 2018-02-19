@@ -50,6 +50,8 @@ class Task:
 
         if self.__waiting_tick > 1:
             return True
+        if self.__waiting_tick == 0:
+            return True
         else:
             return False
 
@@ -65,7 +67,6 @@ class TaskManager:
         # TODO - 아래의 리스트를 큐로 바꿔주세요.
         # TODO - 다음 링크를 보고 공부해주세요 https://docs.python.org/2/library/collections.html
 
-        self.__continue = True
         self.__stand_by_queue = deque([])
         self.__working_queue = deque([])
 
@@ -113,23 +114,19 @@ if __name__ == '__main__':
     # noinspection PyBroadException
 
     try:
-        turn = 0
         tm = TaskManager()
         tm.append_task()
-
-        while True:
+        for x in range(100):
 
             if tm.enable:
-                tm.do_job(turn)
+                tm.do_job(x)
             else:
                 tm.check()
-            turn += 1
-            tm.change_tick()
-            if turn == 100:
-                break
 
     except Exception:
         client.captureException()
+
+
 
 """
 잠시 보관
@@ -140,4 +137,13 @@ if __name__ == '__main__':
 if x < 10:
     tm.add_tasks()
     continue
+    
+     for task in self.__stand_by_queue:
+
+            self.__working_queue.append(task)
+            self.__stand_by_queue.remove(task)
+            task.run(value)
+    
+    
+    
    """
