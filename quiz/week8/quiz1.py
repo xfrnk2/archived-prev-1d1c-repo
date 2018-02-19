@@ -38,22 +38,24 @@ class Task:
 
     def __init__(self, idx: int):
         self.__idx = idx
+        self.__elapsed_time = None
+        self.__start_time = None
 
     def run(self, value: int):
         # TODO - 아래와 같이 출력한 이후 적절히 1초가 지난 시점에 TaskManager 의 대기 큐로 돌아가야 합니다.
         idx = self.__idx
         print(f'{idx} : {value}')
-        time.sleep(1)
+        self.__start_time = time.time()
 
     @property
     def waiting(self) -> bool:
         # TODO - 출력 후 1초가 지났으면 True, 아니면 False
+        current_time = time.time()
+        self.__elapsed_time = (current_time - self.__start_time)
 
-        start_time = time.time()
-        elapsed_time = time.time() - start_time
-        print(elapsed_time)
-
-        if elapsed_time >= 1:
+        if self.__elapsed_time > 1:
+            return True
+        if self.__elapsed_time == 0:
             return True
         else:
             return False
@@ -76,7 +78,11 @@ class TaskManager:
         self.__working_queue.append(to_be_relocated)
         self.__stand_by_queue.popleft()
 
-        self.__stand_by_queue[-1].run(value)
+        self.__working_queue[-1].run(value)
+
+    def append_task(self):
+        for x in range(10):
+            self.__stand_by_queue.append(Task(x))
 
     def check(self):
         to_be_returned = []
@@ -98,6 +104,7 @@ class TaskManager:
         return len(self.__stand_by_queue) > 0
 
 
+
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
@@ -107,7 +114,7 @@ if __name__ == '__main__':
 
     try:
         tm = TaskManager()
-
+        tm.append_task()
         for x in range(100):
 
             if tm.enable:
