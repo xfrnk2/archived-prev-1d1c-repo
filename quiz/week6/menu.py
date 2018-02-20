@@ -13,8 +13,8 @@ from week6.guest import Guest
 
 class Menu:
     def __init__(self):  # , '스파게티','마카로니','그라탱':'15'
-        self.__CookingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 10, '그라탱': 15}
-        self.__EatingTime = {'스테이크': 30, '스파게티': 20, '마카로니': 15, '그라탱': 10}
+        self.__cookingtime = {'스테이크': 30, '스파게티': 20, '마카로니': 10, '그라탱': 15}
+        self.__eatingtime = {'스테이크': 30, '스파게티': 20, '마카로니': 15, '그라탱': 10}
         self.__menu = {0: "스테이크", 1: "스파게티", 2: "마카로니", 3: "그라탱"}
         self.__order = None
         self.__guest = Guest()

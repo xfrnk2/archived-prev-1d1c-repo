@@ -334,6 +334,6 @@ if __name__ == '__main__':
 
     coordinator = Coordinator(4)
 
-    for _ in range(25):
+    for _ in range(16):
         print(coordinator.get_coord())
         coordinator.calc_coord()

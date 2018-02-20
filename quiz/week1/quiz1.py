@@ -67,7 +67,7 @@ class Field:
     def change_data(self, solve_func):
         for y, array in enumerate(self.__data):
             for x, block in enumerate(array):
-                if solve_func(x, self.__size - 1 - y):
+                if solve_func(x, self.__size - y):
                     block.set_data('*')
 
     def reset(self):
