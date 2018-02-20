@@ -22,17 +22,9 @@ class Field:
             print('')
         print('--------------------')
 
-    def change_data(self):
-        for x, array in enumerate(self.__data):
+    def change_data(self, y):
 
-            for y, block in enumerate(array):
-
-                    if y == 2:
-                        block.set_data('■')
-
-
-
-
+        self.__data[y][2].set_data('■')
 
     def reset(self):
         self.__data = [[Block() for _ in range(self.__size)] for _ in
@@ -43,6 +35,7 @@ if __name__ == '__main__':
 
     f = Field(5)
 
-    f.reset()
-    f.change_data()
-    f.print()
+    for x in range(5):
+        f.reset()
+        f.change_data(x)
+        f.print()
