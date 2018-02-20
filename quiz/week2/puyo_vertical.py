@@ -24,10 +24,12 @@ class Field:
 
     def change_data(self):
         for x, array in enumerate(self.__data):
+
             for y, block in enumerate(array):
 
                     if y == 2:
                         block.set_data('■')
+
 
 
 

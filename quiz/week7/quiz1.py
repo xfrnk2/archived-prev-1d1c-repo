@@ -24,10 +24,11 @@ class Restaurant:
             # TODO - 적절히 채워주세요.
 
             turn += 1
-            assert turn <= 720
 
             print(f"레스토랑 오픈 후 {turn}분이 지났습니다.")
-
+            if turn == 720:
+                self.__continue = False
+                print("레스토랑을 종료합니다")
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
