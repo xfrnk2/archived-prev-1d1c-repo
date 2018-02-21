@@ -1,4 +1,4 @@
-
+from time import time
 class Block:
     def __init__(self):
         self.__data = '□'
@@ -14,7 +14,8 @@ class Field:
     def __init__(self, size):
         self.__size = size
         self.__data = [[Block() for _ in range(size)] for _ in range(size)]
-
+        self.__elapsed_time = 0
+        self.__start_time = 0
     def print(self):
         for array in self.__data:
             for block in array:
@@ -22,8 +23,17 @@ class Field:
             print('')
         print('--------------------')
 
-    def change_data(self, y):
+    def set_start_time(self):
+        self.__start_time = time()
 
+    def set_elapsed_time(self):
+        current_time = time()
+        self.__elapsed_time = current_time - self.__start_time
+
+    def get_elapsed_time(self):
+        return self.__elapsed_time
+
+    def change_data(self, y):
         self.__data[y][2].set_data('■')
 
     def reset(self):
@@ -35,7 +45,16 @@ if __name__ == '__main__':
 
     f = Field(5)
 
+while True:
     for x in range(5):
-        f.reset()
-        f.change_data(x)
-        f.print()
+
+        f.set_start_time()
+
+        f.set_elapsed_time()
+        if f.get_elapsed_time() >= 1:
+            f.reset()
+            f.change_data(x)
+            f.print()
+
+        if x == 5:
+            break

@@ -70,7 +70,7 @@ class Restaurant:
             if turn == 720:
                 self.__continue = False
                 print("레스토랑을 종료합니다")
-
+            assert turn <= 720
 
 
 

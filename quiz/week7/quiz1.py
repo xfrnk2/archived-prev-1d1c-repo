@@ -29,6 +29,7 @@ class Restaurant:
             if turn == 720:
                 self.__continue = False
                 print("레스토랑을 종료합니다")
+            assert turn <= 720
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
