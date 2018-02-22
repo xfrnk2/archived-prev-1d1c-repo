@@ -33,7 +33,7 @@ class Restaurant:
     def __init__(self):
 
         self.__guest_number = 1
-        self.__list = {}
+        self.__dic = {}
         self.__continue = True
 
     def run(self):
@@ -42,28 +42,28 @@ class Restaurant:
             turn += 1
             print(f"레스토랑 오픈 후 {turn}분 지났습니다. ")
 
-            for key, value in self.__list.items():
+            for number_of_guest, value_of_guest in self.__dic.items():
 
-                value.tick()
+                value_of_guest.tick()
 
-                if value.check_tick() is False:
-                    del self.__list[key]
-                    time = value.get_staying_time()
-                    print(f"{key}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
+                if value_of_guest.check_tick() is False:
+                    del self.__dic[number_of_guest]
+                    time = value_of_guest.get_staying_time()
+                    print(f"{number_of_guest}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
                     break
 
-                if value.check_number_time() is False:
-                    minute = value.get_random_term()
-                    number = value.get_random_number()
-                    print(f"{key}번째 손님이 {minute}분 고민을 하고,{number}라는 수를 말했습니다 ")
-
+                if value_of_guest.check_number_time() is False:
+                    term_of_guest = value_of_guest.get_random_term()
+                    random_number = value_of_guest.get_random_number()
+                    print(f"{number_of_guest}번째 손님이 {term_of_guest}분 고민을 하고,"
+                          f"{random_number}라는 수를 말했습니다 ")
 
             if turn % 3 == 0:
-                number = self.__guest_number
+                number_of_guest = self.__guest_number
 
-                self.__list.update({self.__guest_number: Guest()})
+                self.__dic.update({self.__guest_number: Guest()})
 
-                print(f"{number}번째 손님이 도착했습니다")
+                print(f"{number_of_guest}번째 손님이 도착했습니다")
 
                 self.__guest_number += 1
 
@@ -73,13 +73,11 @@ class Restaurant:
             assert turn <= 720
 
 
-
 class Guest:
 
     def __init__(self):
         self.__time = random.randrange(1, 11)
         self.__current_turn = 0
-        self.staying_time = 0
         self.__random_turn = random.randrange(1, 3)
         self.__random_number = random.randrange(1, 5)
 
@@ -102,7 +100,7 @@ class Guest:
         self.__current_turn += 1
 
     def check_tick(self):
-        if self.__current_turn == (self.__time + self.__random_turn):
+        if self.__current_turn == (self.get_staying_time()):
             return False
         else:
             return True

@@ -27,7 +27,7 @@ class Restaurant:
     def __init__(self):
 
         self.__guest_number = 1
-        self.__list = {}
+        self.__dic = {}
         self.__continue = True
 
     def run(self):
@@ -36,20 +36,20 @@ class Restaurant:
             turn += 1
             print(f"레스토랑 오픈 후 {turn}분 지났습니다. ")
 
-            for key, value in self.__list.items():
+            for number_of_guest, value_of_guest in self.__dic.items():
 
-                value.tick()
+                value_of_guest.tick()
 
-                if value.check_tick() is False:
-                    del self.__list[key]
-                    time = value.get_staying_time()
-                    print(f"{key}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
+                if value_of_guest.check_tick() is False:
+                    del self.__dic[number_of_guest]
+                    time = value_of_guest.get_staying_time()
+                    print(f"{number_of_guest}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
                     break
 
             if turn % 3 == 0:
                 number = self.__guest_number
 
-                self.__list.update({self.__guest_number: Guest()})
+                self.__dic.update({self.__guest_number: Guest()})
 
                 print(f"{number}번째 손님이 도착했습니다")
 
@@ -66,7 +66,6 @@ class Guest:
     def __init__(self):
         self.__time = random.randrange(1, 11)
         self.__current_turn = 0
-        self.staying_time = 0
 
     def get_staying_time(self):
         return self.__time
@@ -79,6 +78,7 @@ class Guest:
             return False
         else:
             return True
+
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
