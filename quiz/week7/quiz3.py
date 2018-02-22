@@ -33,7 +33,7 @@ class Restaurant:
     def __init__(self):
 
         self.__guest_number = 1
-        self.__dic = {}
+        self.__guest_details: dict = {}
         self.__continue = True
 
     def run(self):
@@ -42,26 +42,26 @@ class Restaurant:
             turn += 1
             print(f"레스토랑 오픈 후 {turn}분 지났습니다. ")
 
-            for number_of_guest, value_of_guest in self.__dic.items():
+            for number_of_guest, guest in self.__guest_details.items():
 
-                value_of_guest.tick()
+                guest.tick()
 
-                if value_of_guest.check_tick() is False:
-                    del self.__dic[number_of_guest]
-                    time = value_of_guest.get_staying_time()
+                if guest.check_tick() is False:
+                    del self.__guest_details[number_of_guest]
+                    time = guest.get_staying_time()
                     print(f"{number_of_guest}번째 손님이 도착한지 {time}분만에 돌아갑니다.")
                     break
 
-                if value_of_guest.check_number_time() is False:
-                    term_of_guest = value_of_guest.get_random_term()
-                    random_number = value_of_guest.get_random_number()
-                    print(f"{number_of_guest}번째 손님이 {term_of_guest}분 고민을 하고,"
+                if guest.check_number_time() is False:
+                    term = guest.get_random_term()
+                    random_number = guest.get_random_number()
+                    print(f"{number_of_guest}번째 손님이 {term}분 고민을 하고,"
                           f"{random_number}라는 수를 말했습니다 ")
 
             if turn % 3 == 0:
                 number_of_guest = self.__guest_number
 
-                self.__dic.update({self.__guest_number: Guest()})
+                self.__guest_details.update({self.__guest_number: Guest()})
 
                 print(f"{number_of_guest}번째 손님이 도착했습니다")
 
