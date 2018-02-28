@@ -1,5 +1,20 @@
-"""
+import asyncio
+import requests
+from bs4 import BeautifulSoup
 
+
+resp = requests.get('https://nipponsei.minglong.org/tracker/')
+html = resp.text
+
+bs = BeautifulSoup(html, 'html.parser')
+my_titles = bs.select(' tr > td.name > a')
+
+
+for title in my_titles:
+    print(title.text)
+    print(title.get('href'))
+
+"""
 https://nipponsei.minglong.org/tracker/
 
 이 주소에 http request - get 호출을 통해 해당 페이지의 내용을 읽습니다.
@@ -9,7 +24,6 @@ https://nipponsei.minglong.org/tracker/
 TODO - 아래와 같이 출력 해 주세요.
 
 [Nipponsei] Marchen Madchen ED Single - sleepland [Ueda Reina].zip / http://tracker.minglong.org/torrents/%5BNipponsei%5D%20Marchen%20Madchen%20ED%20Single%20-%20sleepland%20%5BUeda%20Reina%5D.zip.torrent
-
 
 TODO - http request 는 비동기로 동작하도록 작성해 주세요.
 
