@@ -1,5 +1,5 @@
 from time import time
-
+import os
 
 class Block:
     def __init__(self):
@@ -43,20 +43,21 @@ class Field:
                        range(self.__size)]
 
 
+def clear():
+    os.system('cls')
+
 if __name__ == '__main__':
 
     f = Field(5)
 
-while True:
     for x in range(5):
+        # f.set_start_time()
 
-        f.set_start_time()
-
-        f.set_elapsed_time()
-        if f.get_elapsed_time() >= 1:
+        # f.set_elapsed_time()
+        # if f.get_elapsed_time() > 0:
             f.reset()
             f.change_data(x)
             f.print()
 
-        if x == 5:
-            break
+            if x == 4:
+                break

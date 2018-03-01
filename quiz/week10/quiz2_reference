@@ -1,0 +1,72 @@
+제너레이터와 제너레이터 기반 코루틴
+- http://hamait.tistory.com/830
+
+
+파이썬 제너레이터는 특별한 함수 객체로, yield 구문을 통해서 특정 값을 리턴한 후에도 제거되지 않고 방금 리턴한 그 자리에서부터 이어서 계산을 반복하고 다시 값을 내놓을 수 있다.
+
+제네레이터는 말그래도 값을 생성하는 함수입니다. 알다시피 함수는 값을 반환한 다음 자신의 스코프를 소멸시키고 , 다시 함수를 호출하면, 처음부터 다시 시작됩니다. 즉 한 번 실행됩니다. 그러나 제네레이터 함수는 값을 생성하고 함수의 실행을 일시 중지 할 수 있습니다. 컨트롤이 호출 스코프로 반환되며 ,원하는 경우 실행을 다시 시작하여 다른 값 (있는 경우)을 얻을 수 있습니다.
+
+코루틴과 서브루틴 비교
+- https://blueshw.github.io/2016/01/25/python-co-routine-vs-sub-routine/
+
+서브루틴은 반복되는 특정 기능을 모아 별도로 묶어 놓아 이름을 붙여 놓은 것으로 메인루틴을 보조하는 역할을 합니다. 보통 언어에서는 함수나 메소드 등으로 불리며 사용됩니다. 어떤 특정 기능을 모아놓고 이름을 붙였다는 것으로 매크로와 비슷하지만 매크로의 경우 컴파일시에(C언어에서와 같이) 매크로를 호출하는 부분을 모두 매크로 본문으로 대체해 버리므로 메모리 사용이 비효율적입니다.
+
+
+코루틴도 서브루틴처럼 기능들을 별도의 공간에 모아 놓고 있다는 점에서는 동일합니다. 차이점이라 할 수 있는 것은, 서브루틴의 경우에는 메인루틴에서 특정 서브루틴의 공간으로 이동한 후에 리턴에 의해 호출자로 돌아와 다시 프로세스를 진행하는데 반해 코루틴의 경우에는 루틴을 진행하는 중간에 멈추어서 특정 위치로 돌아갔다가 다시 원래 위치로 돌아와 나머지 루틴을 수행할 수 있습니다. 또 한가지 차이점은 서브루틴은 진입점과 반환점이 단 하나밖에 없어 메인루틴에 종속적이지만, 코루틴은 진입지점이 여러개이기 때문에 메인루틴에 종속적이지 않아 대등하게 데이터를 주고 받을 수 있다는 특징이 있습니다. 코루틴은 주로 동시성을 필요로 하는 UNITY 등의 게임프로그래밍에서 많이 사용하는 개념이라고 합니다.
+
+
+비동기란
+- https://mingrammer.com/translation-asynchronous-python/
+
+
+비동기 프로그래밍이 어떻게 동작하는지에 대해 정리해보자. 비동기 프로그래밍을 하기위한 한 가지 방법은 이벤트 루프를 사용하는 것이다. 이벤트 루프란, 이벤트/잡(events/jobs)을 관리하는 큐가 있을 때, 단지 큐에서 지속적으로 잡을 빼내고 이들을 실행해주는 루프와 정확히 같은 말이다. 이 잡들을 코루틴이라고 부른다. 이들은 큐에 넣을 수 있는 그 어떤 이벤트들을 포함하는 명령어들의 작은 집합이다.
+
+
+비동기(Async)와 대기(Await)
+asyncio 라이브러리는 많은 지지를 얻었고, 파이썬은 이를 코어 라이브러리로 만들기로 결정하였다. 코어 라이브러리의 도입과 함께, Python 3.5에는 async와 await 키워드 또한 추가되었다. 이 키워드들은 코드가 비동기임을 더욱 명확하게 알 수 있도록 디자인 되었다. 따라서 당신의 메서드가 제너레이터로 혼동되는 일이 없다. async 키워드는 메서드가 비동기임을 알 수 있도록 def 앞에 위치한다. await 키워드는 yield from 를 대신하며 코루틴이 끝날때까지 대기하고 있음을 좀 더 명확하게 알 수 있다. 여기에 async/await 키워드를 사용한 위와 똑같은 예시가 있다.
+
+
+
+동기 , 비동기, 블록, 넌 블록
+- http://qnrdlqkrwhdgns.canxan.com/prob/post/250
+- https://okky.kr/article/442803
+
+블럭 기다린다
+넌 블록 기다리지 않는다
+동기 순차적이다
+비동기 일이 진행되는 여하에 따르고 기다릴수도 있다
+
+asyncio와 놀아보기
+- https://tech.ssut.me/2015/07/09/python-3-play-with-asyncio/
+
+asyncio
+- https://dojang.io/mod/page/view.php?id=1167
+loop = get_event_loop() 이벤트 루프를 얻음
+loop.run_until_complete(hello())  hello가 끝날 때까지 기다림
+loop.close() 이벤트 루프를 닫음
+
+코루틴 안에서 다른 코루틴을 실행할 때는 await를 사용
+
+변수 = await 코르틴/퓨처/태스크 객체
+ await 뒤에 코루틴 객체, 퓨처 객체, 태스크 객체를 지정하면 해당 객체가 끝날 때까지 기다린 뒤 결과를 반환합니다. await라는 단어 뜻 그대로 특정 객체가 끝날 때까지 기다립니다.
+
+
+
+
+ response = requests.get(URL)
+html_doc2 = response.text
+
+"""
+<html><head><title>The Dormouse's story</title></head> <body> <p class="title"><b>The Dormouse's story</b></p> <p class="story">Once upon a time there were three little sisters; and their names were <a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>, <a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and <a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>; and they lived at the bottom of a well.</p> <p class="story">...</p> """
+"""
+"""
+soup = BeautifulSoup(html_doc2, 'html.parser')
+
+print(soup.title.string)
+for link in soup.find_all('a class="download"'):
+    print(link.get('href'))
+"""
+
+"""
+print(response.status_code)
+print(response.text)
