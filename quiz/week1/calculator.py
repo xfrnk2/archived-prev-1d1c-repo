@@ -1,6 +1,6 @@
 def calculator():
     while True:
-        menu = int(input("원하는 계산은?"))
+        menu = int(input("원하는 계산은? 1. 더하기, 2. 빼기, 3. 곱하기, 4. 나누기, 5. 나가기"))
         if menu <= 4:
             num1 = int(input("첫번째 숫자"))
             num2 = int(input("두번째 숫자"))
