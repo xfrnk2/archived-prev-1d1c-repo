@@ -80,5 +80,17 @@ if __name__ == '__main__':
     f = Field(5)
 
     f.reset()
-    f.change_data(lambda x, y: y <= -x + 5)
+    f.change_data(lambda x, y: y < -x + 5)
+    f.print()
+
+    f.reset()
+    f.change_data(lambda x, y: y > x)
+    f.print()
+
+    f.reset()
+    f.change_data(lambda x, y:y < x + 2 )
+    f.print()
+
+    f.reset()
+    f.change_data(lambda x, y:y >= -x + 5 )
     f.print()
