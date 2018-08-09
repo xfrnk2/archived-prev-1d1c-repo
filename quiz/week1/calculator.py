@@ -53,13 +53,15 @@ def calculator():
 
         if flag is False:
             a = int(input("숫자를 입력하세요"))
+
             num1 = a
             background[0] += str(num1)
             background[1] += str(num1)
             flag = True
         else:
             menu = int(input("1.더한다 2.뺀다 3.곱한다 4.나눈다 5.초기화 6.나간다"))
-
+            assert menu is not int
+            # menu의 값이 정수가 아닐 경우 에러 발생
             if menu <= 4:
                 num2 = int(input("숫자를 입력하세요"))
                 if menu == 1:
