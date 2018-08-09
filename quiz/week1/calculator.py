@@ -36,7 +36,7 @@ def calculator():
             num1 = a
             flag = True
         else:
-            menu = int(input("1.더한다 2.뺀다 3.곱한다 4.나눈다 5.나간다"))
+            menu = int(input("1.더한다 2.뺀다 3.곱한다 4.나눈다 5.초기화 6.나간다"))
             if menu <= 4:
                 num2 = int(input("숫자를 입력하세요"))
                 if menu == 1:
@@ -52,6 +52,9 @@ def calculator():
                     num1 /= num2
                     print(num1)
             elif menu == 5:
+                flag = False
+                print("초기화 되었습니다")
+            elif menu == 6:
                 print("계산기를 끕니다")
                 break
             elif menu > 5:
