@@ -27,30 +27,30 @@
 #
 
 def calculator():
-    value = int()
-    value2 = False
+    num1 = int()
+    flag = False
 
     while True:
-        if value2 is False:
+        if flag is False:
             a = int(input("숫자를 입력하세요"))
-            value = a
-            value2 = True
+            num1 = a
+            flag = True
         else:
             menu = int(input("1.더한다 2.뺀다 3.곱한다 4.나눈다 5.나간다"))
             if menu <= 4:
-                num1 = int(input("숫자를 입력하세요"))
+                num2 = int(input("숫자를 입력하세요"))
                 if menu == 1:
-                    value += num1
-                    print(value)
+                    num1 += num2
+                    print(num1)
                 elif menu == 2:
-                    value -= num1
-                    print(value)
+                    num1 -= num2
+                    print(num1)
                 elif menu == 3:
-                    value *= num1
-                    print(value)
+                    num1 *= num2
+                    print(num1)
                 elif menu == 4:
-                    value /= num1
-                    print(value)
+                    num1 /= num2
+                    print(num1)
             elif menu == 5:
                 print("계산기를 끕니다")
                 break
