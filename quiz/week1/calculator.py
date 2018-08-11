@@ -187,12 +187,14 @@ def calculator():
         if '/' in value2:
             y = '/'
         if y is None:
-            print("올바른 연산자 입력")
+            print("올바른 연산자 또는 숫자를 입력하세요")
             continue
 
         location = value2.index(y)
-        a = (value2[location - 1])
-        b = (value2[location + 1])
+        a = ''.join(value2[0:location])
+        b = ''.join(value2[location+1:])
+        # a = (value2[location - 1])
+        # b = (value2[location + 1])
         if a.isdigit() and b.isdigit():
             a = int(a)
             b = int(b)
@@ -210,7 +212,15 @@ def calculator():
                 print(a / b)
         else:
             print("숫자를 입력하세요")
-
-
-
 calculator()
+# client = Client(
+#     'https://65d575d59e1748299f322af362a6b529'
+#     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+#
+# if __name__ == '__main__':
+#     # noinspection PyBroadException
+#
+#     try:
+#         calculator()
+#     except Exception:
+#         client.captureException()
