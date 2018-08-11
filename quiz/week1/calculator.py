@@ -146,6 +146,29 @@ from raven import Client
 #
 #
 # calculator()
+# if '+' in value2:
+#     x = value2.index('+')
+#     result = int(value2[x - 1]) + int(value[x + 1])
+#     assert result is int, '정수가 아니므로 에러 처리합니다'
+#     print(result)
+#
+# elif '-' in value2:
+#     x = value2.index('-')
+#     result = int(value2[x - 1]) + int(value[x + 1])
+#     print(result)
+#
+# elif '*' in value2:
+#     x = value2.index('*')
+#     result = int(value2[x - 1]) * int(value[x + 1])
+#     print(result)
+#
+# elif '/' in value2:
+#     x = value2.index('/')
+#     result = int(value2[x - 1]) / int(value[x + 1])
+#     print(result)
+#
+# else:
+#     print("올바른 계산이 아닙니다")
 
 
 def calculator():
@@ -153,26 +176,41 @@ def calculator():
 
         value = input("게산을 입력하세요 예) a+b, a-b, a*b, a/b")
         value2 = list(value)
+        y = None
 
         if '+' in value2:
-            x = value2.index('+')
-            result = int(value2[x - 1]) + int(value[x + 1])
-            print(result)
+            y = '+'
+        if '-' in value2:
+            y = '-'
+        if '*' in value2:
+            y = '*'
+        if '/' in value2:
+            y = '/'
+        if y is None:
+            print("올바른 연산자 입력")
+            continue
 
-        elif '-' in value2:
-            x = value2.index('-')
-            result = int(value2[x - 1]) + int(value[x + 1])
-            print(result)
+        location = value2.index(y)
+        a = (value2[location - 1])
+        b = (value2[location + 1])
+        if a.isdigit() and b.isdigit():
+            a = int(a)
+            b = int(b)
 
-        elif '*' in value2:
-            x = value2.index('*')
-            result = int(value2[x - 1]) * int(value[x + 1])
-            print(result)
+            if y is '+':
+                print(a + b)
 
-        elif '/' in value2:
-            x = value2.index('/')
-            result = int(value2[x - 1]) / int(value[x + 1])
-            print(result)
+            elif y is '-':
+                print(a - b)
+
+            elif y is '*':
+                print(a * b)
+
+            elif y is '/':
+                print(a / b)
+        else:
+            print("숫자를 입력하세요")
+
 
 
 calculator()
