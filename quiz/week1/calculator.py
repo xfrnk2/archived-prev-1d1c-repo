@@ -227,7 +227,8 @@ from raven import Client
 
 def calculator():
     while True:
-        Menu = input("계산을 입력하세요. 단 더하기, 빼기, 곱하기, 나누기가 사용 가능하고 숫자와 연산자 사이를 띄어쓰기(공백)으로 구분합니다")
+        Menu = input("계산을 입력하세요. 단 더하기, 빼기, 곱하기, 나누기가 사용 "
+                     "가능하고 숫자와 연산자 사이를 띄어쓰기(공백)으로 구분합니다")
         value = Menu.split(' ')
         for x in ['*', '/', '+', '-']:
             if x in value:
