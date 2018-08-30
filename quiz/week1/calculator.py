@@ -171,47 +171,84 @@ from raven import Client
 #     print("올바른 계산이 아닙니다")
 
 
+# def calculator():
+#     while True:
+#
+#         value = input("게산을 입력하세요 예) a+b, a-b, a*b, a/b")
+#         value2 = list(value)
+#         y = None
+#
+#         if '+' in value2:
+#             y = '+'
+#         if '-' in value2:
+#             y = '-'
+#         if '*' in value2:
+#             y = '*'
+#         if '/' in value2:
+#             y = '/'
+#         if y is None:
+#             print("올바른 연산자 또는 숫자를 입력하세요")
+#             continue
+#
+#         location = value2.index(y)
+#         a = ''.join(value2[0:location])
+#         b = ''.join(value2[location+1:])
+#         # a = (value2[location - 1])
+#         # b = (value2[location + 1])
+#         if a.isdigit() and b.isdigit():
+#             a = int(a)
+#             b = int(b)
+#
+#             if y is '+':
+#                 print(a + b)
+#
+#             elif y is '-':
+#                 print(a - b)
+#
+#             elif y is '*':
+#                 print(a * b)
+#
+#             elif y is '/':
+#                 print(a / b)
+#         else:
+#             print("숫자를 입력하세요")
+#
+# client = Client(
+#     'https://65d575d59e1748299f322af362a6b529'
+#     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+#
+# if __name__ == '__main__':
+#     # noinspection PyBroadException
+#
+#     try:
+#         calculator()
+#     except Exception:
+#         client.captureException()
+
 def calculator():
     while True:
+        Menu = input("계산을 입력하세요. 단 더하기, 빼기, 곱하기, 나누기가 사용 가능하고 숫자와 연산자 사이를 띄어쓰기(공백)으로 구분합니다")
+        value = Menu.split(' ')
+        for x in ['*', '/', '+', '-']:
+            if x in value:
+                location = value.index(x)
+                a = int(value[location - 1])
+                b = int(value[location + 1])
+                if x is '*':
+                    result = a * b
+                    print(result)
+                elif x is '/':
+                    result = a / b
+                    print(result)
+                elif x is '+':
+                    result = a + b
+                    print(result)
+                elif x is '-':
+                    result = a - b
+                    print(result)
+            else:
+                pass
 
-        value = input("게산을 입력하세요 예) a+b, a-b, a*b, a/b")
-        value2 = list(value)
-        y = None
-
-        if '+' in value2:
-            y = '+'
-        if '-' in value2:
-            y = '-'
-        if '*' in value2:
-            y = '*'
-        if '/' in value2:
-            y = '/'
-        if y is None:
-            print("올바른 연산자 또는 숫자를 입력하세요")
-            continue
-
-        location = value2.index(y)
-        a = ''.join(value2[0:location])
-        b = ''.join(value2[location+1:])
-        # a = (value2[location - 1])
-        # b = (value2[location + 1])
-        if a.isdigit() and b.isdigit():
-            a = int(a)
-            b = int(b)
-
-            if y is '+':
-                print(a + b)
-
-            elif y is '-':
-                print(a - b)
-
-            elif y is '*':
-                print(a * b)
-
-            elif y is '/':
-                print(a / b)
-        else:
-            print("숫자를 입력하세요")
 
 client = Client(
     'https://65d575d59e1748299f322af362a6b529'
