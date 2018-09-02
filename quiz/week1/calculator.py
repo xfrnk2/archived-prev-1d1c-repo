@@ -224,41 +224,84 @@ from raven import Client
 #         calculator()
 #     except Exception:
 #         client.captureException()
-
+#
+# def calculator():
+#     while True:
+#         Menu = input("계산을 입력하세요. 단 더하기, 빼기, 곱하기, 나누기가 사용 "
+#                      "가능하고 숫자와 연산자 사이를 띄어쓰기(공백)으로 구분합니다")
+#         value = Menu.split(' ')
+#         for x in ['*', '/', '+', '-']:
+#             if x in value:
+#                 location = value.index(x)
+#                 a = int(value[location - 1])
+#                 b = int(value[location + 1])
+#                 if x is '*':
+#                     result = a * b
+#                     print(result)
+#                 elif x is '/':
+#                     result = a / b
+#                     print(result)
+#                 elif x is '+':
+#                     result = a + b
+#                     print(result)
+#                 elif x is '-':
+#                     result = a - b
+#                     print(result)
+#             else:
+#                 pass
+#
+#
+# client = Client(
+#     'https://65d575d59e1748299f322af362a6b529'
+#     ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+#
+# if __name__ == '__main__':
+#     # noinspection PyBroadException
+#
+#     try:
+#         calculator()
+#     except Exception:
+#         client.captureException()
+import re
 def calculator():
+
     while True:
-        Menu = input("계산을 입력하세요. 단 더하기, 빼기, 곱하기, 나누기가 사용 "
-                     "가능하고 숫자와 연산자 사이를 띄어쓰기(공백)으로 구분합니다")
-        value = Menu.split(' ')
-        for x in ['*', '/', '+', '-']:
-            if x in value:
-                location = value.index(x)
-                a = int(value[location - 1])
-                b = int(value[location + 1])
-                if x is '*':
-                    result = a * b
-                    print(result)
-                elif x is '/':
-                    result = a / b
-                    print(result)
-                elif x is '+':
-                    result = a + b
-                    print(result)
-                elif x is '-':
-                    result = a - b
-                    print(result)
+        Menu = input("계산을 입력하세요")
+        Menu = Menu.replace(" ", "")
+        value = list(Menu)
+        data = None
+
+        while True:
+            flag = True
+            if data is None:
+                data = value
+                box: list = []
             else:
-                pass
+                for y in ['*', '/', '+', '-']:
+
+                    if flag is False:
+                        break
+
+                    elif y in data:
+                        location = data.index(y)
+                        a = ' '
+                        data.insert(location, a)
+                        data.insert(location + 2, a)
+                        box.extend((data[:location + 2]))
+                        data = data[location + 2:]
+
+                    elif len(data) < 3:
+                        flag = False
+
+                if flag is True:
+                    continue
+
+                box.extend(data)
 
 
-client = Client(
-    'https://65d575d59e1748299f322af362a6b529'
-    ':c4ba94596b824466a1a11631ec50623c@sentry.team504.co.kr//2')
+                result = ''.join(box)
+                break
 
-if __name__ == '__main__':
-    # noinspection PyBroadException
+        print(result)
 
-    try:
-        calculator()
-    except Exception:
-        client.captureException()
+calculator()
