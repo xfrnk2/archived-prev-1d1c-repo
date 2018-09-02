@@ -292,7 +292,7 @@ def calculator():
 
                     elif len(data) < 3:
                         flag = False
-
+                    # 괄호 미구현
                 if flag is True:
                     continue
 
