@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# 요구명세 link : https://github.com/TeamLab/introduction_to_python_TEAMLAB_MOOC/blob/5a9657ee91691e9e4cc09e6c041b81192ec668c8/lab_assignment/lab_7/lab_7.pdf
 import random
 
 you_win = 0
