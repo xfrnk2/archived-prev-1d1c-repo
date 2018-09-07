@@ -228,31 +228,18 @@ def get_strikes_or_ball(user_input_number, random_number):
     x = 0
     y = 0
 
-    flag1 = 0
-    flag2 = 0
-
-    # ball
     for a in range(3):
         for b in range(3):
+
             if a == b:
                 if value1[a] == value2[b]:
-                    flag1 = a
-                    flag2 = b
                     x += 1
 
-            if value1[a] == value2[b]:
-                if a == b:
-
-                    pass
-                elif value1[a] == value1[flag1]:
-                    pass
-                elif value1[b] == value2[flag2]:
-                    pass
-                else:
+            elif value1[a] == value2[b]:
                     y += 1
             else:
                 pass
-    # result = [f"strikes : {x}, ball : {y}"]
+
     result = [x, y]
     print(f"[strikes : {x}, ball : {y}]")
     return result
