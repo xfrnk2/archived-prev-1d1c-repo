@@ -69,52 +69,108 @@ class Guest:
     def __init__(self):
         self.arr_time = 0
         self.menu = random.randrange(1, 5)
-        self.waiting_time = random.randrange(15, 41)
+        self.waiting_time = random.randrange(1, 3)
         self.number = 0
+        self.table_number = 0
 
+    def __repr__(self):
+        return self.return_menu_name()
+
+    def return_menu_name(self):
+        if self.menu == 1:
+            return "스테이크"
+        if self.menu == 2:
+            return "스파게티"
+        if self.menu == 3:
+            return "마카로니"
+        if self.menu == 4:
+            return "그라탕"
 
 class Chef:
     def __init__(self):
-        self.menu = None
-        self.time = None
-        self.status = None
-
-    def check_status(self):
-        if self.status is True:
-            return True
-        else:
-            return False
-
-    def to_false(self):
-        if self.time == 0:
-            self.status = False
+        self.time = 1
 
 
 def simulator():
     timer = 1
-    table = 20
-    calculator = 5
+    cal_wating = {}
     guest_number = 0
     guests = {}
+    tables = {}
+    chefs = {}
+    chefs_number = 0
     while True:
         print(f"레스토랑 시작한지 {timer}분 흘렀습니다")
         if timer % 5 == 0 and timer >= 2:
-            print("손님이 도착하였습니다")
+
             guest_number += 1
             guests[guest_number] = Guest()
             guests[guest_number].arr_time = timer
             guests[guest_number].number = guest_number
+            print(f"{guest_number}번째 손님이 시각 {timer}분에 레스토랑에 도착하였습니다")
 
         if guests:
             for y in range(1, guest_number + 1):
+
                 target = guests.get(y)
+                if target is None:
+                    continue
                 target.waiting_time -= 1
 
                 if target.waiting_time == 0:
-                    print(f"{target.number}번째 손님이 기다릴 수 없어 돌아갑니다")
-                    del [y]
+                    if 20 == len(tables):
+                        print(f"{target.number}번째 손님이 기다릴 수 없어 돌아갑니다")
+                        del guests[y]
+                    else:
+                        for z in range(1, 21):
+
+                            if z in tables:
+                                continue
+                            else:
+                                tables[z] = target
+                                del guests[y]
+                                target.table_number = z
+                                print(
+                                    f"{target.number}번 손님이 {z}번 테이블에 앉습니다")
+                                print(
+                                    f"{target.number}번 손님이 {target.menu}번 요리"
+                                    f" {target.return_menu_name()}을(를) 주문하였습니다")
+                                for i in range(1, 4):
+                                    if i in chefs:
+                                        continue
+                                    else:
+                                        chefs[i] = Chef()
+
+                                        if target.menu == 1:
+                                            chefs[i].time += 3
+                                            break
+                                        if target.menu == 2:
+                                            chefs[i].time += 2
+                                            break
+                                        if target.menu == 3:
+                                            chefs[i].time += 5
+                                            break
+                                        if target.menu == 4:
+                                            chefs[i].time += 5
+                                            break
+                                        if chefs_number == i:
+                                            break
+                                break
+
+        if chefs:
+            for i in range(1, 4):
+                if i in chefs:
+                    chefs[i].time -= 1
+
+                    if chefs[i].time == 0:
+                        print(
+                            f"{target.number}번 손님의 {target.menu}번 요리"
+                            f" {target.return_menu_name()}의 조리가 끝났습니다")
+                        del chefs[i]
+                        continue
+                else:
+                    continue
 
         timer += 1
-
 
 simulator()
