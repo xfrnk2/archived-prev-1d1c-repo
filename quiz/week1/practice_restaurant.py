@@ -96,6 +96,20 @@ class Cooker:
         self.cooking_time = None
         self.what_is_number = None
         self.table_number = None
+
+class Counter:
+    def __init__(self):
+        self.time = 6
+
+    def check_time(self):
+        if self.time == 0:
+            return False
+        else:
+            return True
+
+    def minus_time(self):
+        self.time -= 1
+
 def main():
     tick = 1
     guest_go_you_number = 1
@@ -104,7 +118,8 @@ def main():
     table_box = {}
     table_cooking_waiting_box = {}
     cooker_box = {}
-
+    bill = None
+    bill_waiting = []
     while tick <= 720:
 
 
@@ -214,7 +229,7 @@ def main():
                             cooker_box[j].cooking_time = 26  # 요리시간 추가
                             cooker_box[j].what_is_number = target.my_number
                             cooker_box[j].table_number = target.table_number
-                        print(f"기다리던 {target.my_number}번 손님의 요리가 요리되기 시작했어요")
+                        print(f"{table_cooking_waiting_box[i].table_number}번 테이블에서 기다리던 {target.my_number}번 손님에게 {target.menu}번 요리를 주문받았어요")
                         table_cooking_waiting_box.pop(i)
 
                         break
@@ -312,7 +327,25 @@ def main():
 
                 if table_box[j].eating_time == 0:
                     print(f"{table_box[j].my_number}번째 손님이 {j}번 테이블에서 {table_box[j].menu}번째 요리를 다 먹었네요?")
+                    #계산대에 대기하러 간다
+
+
+                    bill_waiting.append(table_box[j])
+
+                    bill = Counter()
+
+
                     table_box.pop(j)
+
+
+        #계산대
+        if bill is not None:
+            bill.minus_time()
+            if bill.check_time() is False:
+                print(f"{bill_waiting[0].my_number}번 손님이 계산을 마치고 나갑니다")
+                bill_waiting.pop(0)
+                del bill
+                bill = None
 
         tick += 1
 
