@@ -69,6 +69,15 @@
 
 import random
 
+tick = 1
+guest_go_you_number = 1
+guest_box = []
+waiting_guest_box = {}
+table_box = {}
+table_cooking_waiting_box = {}
+cooker_box = {}
+bill = None
+bill_waiting = []
 
 def tic(minute):
     print(minute, "분이 지났습니다")
@@ -77,6 +86,71 @@ def anounce(guest_number):
     print(guest_number, "번 손님이 도착했어요")
 
 
+def set_menu(table_number, cooker_number):
+
+    cooker_box[y] = (Cooker())
+    if table_box[x].menu == 1:
+        table_box[x].eating_time = 11
+        cooker_box[y].cooking_time = 11  # 요리시간 추가
+        cooker_box[y].what_is_number = table_box[x].my_number
+        cooker_box[y].table_number = x
+    if table_box[x].menu == 2:
+        table_box[x].eating_time = 16
+        cooker_box[y].cooking_time = 16
+        cooker_box[y].what_is_number = table_box[
+            x].my_number
+        cooker_box[y].table_number = x
+    if table_box[x].menu == 3:
+        table_box[x].eating_time = 21
+        cooker_box[y].cooking_time = 21
+        cooker_box[y].what_is_number = table_box[
+            x].my_number
+        cooker_box[y].table_number = x
+    if table_box[x].menu == 4:
+        table_box[x].eating_time = 26
+        cooker_box[y].cooking_time = 26
+        cooker_box[y].what_is_number = table_box[
+            x].my_number
+        cooker_box[y].table_number = x
+
+    print(
+        f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 메뉴를 주문했어요")
+
+def waiting_set_menu(table_number, cooker_number):
+    cooker_box[j] = (Cooker())
+
+    target = table_box[table_cooking_waiting_box[i].table_number]
+
+    if target.menu == 1:
+        target.eating_time = 11
+        cooker_box[j].cooking_time = 11  # 요리시간 추가
+        cooker_box[j].what_is_number = target.my_number
+        cooker_box[j].table_number = target.table_number
+    if target.menu == 2:
+        target.eating_time = 16
+        cooker_box[j].cooking_time = 16  # 요리시간 추가
+        cooker_box[j].what_is_number = target.my_number
+        cooker_box[j].table_number = target.table_number
+    if target.menu == 3:
+        target.eating_time = 21
+        cooker_box[j].cooking_time = 21  # 요리시간 추가
+        cooker_box[j].what_is_number = target.my_number
+        cooker_box[j].table_number = target.table_number
+    if target.menu == 4:
+        target.eating_time = 26
+        cooker_box[j].cooking_time = 26  # 요리시간 추가
+        cooker_box[j].what_is_number = target.my_number
+        cooker_box[j].table_number = target.table_number
+    print(
+        f"{table_cooking_waiting_box[i].table_number}번 테이블에서 기다리던 {target.my_number}번 손님에게 {target.menu}번 요리를 주문받았어요")
+    table_cooking_waiting_box.pop(i)
+
+def table_waiting(table_number):
+    print(f"{x}번 테이블에 앉은 {table_box[x].my_number}번 손님은 기다려야해! 요리사가 모두 요리중")
+    for i in range(0, 50):  # 최대 대기 가능 인원 50명
+        if i not in table_cooking_waiting_box:
+            table_cooking_waiting_box[i] = table_box[x]
+            break
 
 class Guest():
     def __init__(self):
@@ -107,16 +181,9 @@ class Counter:
     def minus_time(self):
         self.time -= 1
 
-def main():
-    tick = 1
-    guest_go_you_number = 1
-    guest_box = []
-    waiting_guest_box = {}
-    table_box = {}
-    table_cooking_waiting_box = {}
-    cooker_box = {}
-    bill = None
-    bill_waiting = []
+
+if __name__ == '__main__':
+
     while tick <= 720:
 
 
@@ -147,46 +214,15 @@ def main():
 
                                     for y in range(3):
                                         if y not in cooker_box:
-                                            cooker_box[y] = (Cooker())
-                                            if table_box[x].menu == 1:
-                                                table_box[x].eating_time = 11
-                                                cooker_box[
-                                                    y].cooking_time = 11  # 요리시간 추가
-                                                cooker_box[y].what_is_number = \
-                                                table_box[x].my_number
-                                                cooker_box[y].table_number = x
-                                            if table_box[x].menu == 2:
-                                                table_box[x].eating_time = 16
-                                                cooker_box[y].cooking_time = 16
-                                                cooker_box[y].what_is_number = \
-                                                table_box[
-                                                    x].my_number
-                                                cooker_box[y].table_number = x
-                                            if table_box[x].menu == 3:
-                                                table_box[x].eating_time = 21
-                                                cooker_box[y].cooking_time = 21
-                                                cooker_box[y].what_is_number = \
-                                                table_box[
-                                                    x].my_number
-                                                cooker_box[y].table_number = x
-                                            if table_box[x].menu == 4:
-                                                table_box[x].eating_time = 26
-                                                cooker_box[y].cooking_time = 26
-                                                cooker_box[y].what_is_number = \
-                                                table_box[
-                                                    x].my_number
-                                                cooker_box[y].table_number = x
 
-                                    print(
-                                        f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 메뉴를 주문했어요")
+                                            set_menu(x, y)
+                                            break
+
                                     break
                                 if len(cooker_box) == 3:
-                                    print(
-                                        f"{x}번 테이블에 앉은 {table_box[x].my_number}번 손님은 기다려야해! 요리사가 모두 요리중")
-                                    for i in range(0, 50):  # 최대 대기 가능 인원 50명
-                                        if i not in table_cooking_waiting_box:
-                                            table_cooking_waiting_box[i] = table_box[x]
-                                            break
+                                   table_waiting(x)
+
+
 
                                 break
                         break
@@ -202,32 +238,7 @@ def main():
             if i in table_cooking_waiting_box:
                 for j in range(3):
                     if j not in cooker_box:
-                        cooker_box[j] = (Cooker())
-
-                        target = table_box[table_cooking_waiting_box[i].table_number]
-
-                        if target.menu == 1:
-                            target.eating_time = 11
-                            cooker_box[j].cooking_time = 11  # 요리시간 추가
-                            cooker_box[j].what_is_number = target.my_number
-                            cooker_box[j].table_number = target.table_number
-                        if target.menu == 2:
-                            target.eating_time = 16
-                            cooker_box[j].cooking_time = 16  # 요리시간 추가
-                            cooker_box[j].what_is_number = target.my_number
-                            cooker_box[j].table_number = target.table_number
-                        if target.menu == 3:
-                            target.eating_time = 21
-                            cooker_box[j].cooking_time = 21  # 요리시간 추가
-                            cooker_box[j].what_is_number = target.my_number
-                            cooker_box[j].table_number = target.table_number
-                        if target.menu == 4:
-                            target.eating_time = 26
-                            cooker_box[j].cooking_time = 26  # 요리시간 추가
-                            cooker_box[j].what_is_number = target.my_number
-                            cooker_box[j].table_number = target.table_number
-                        print(f"{table_cooking_waiting_box[i].table_number}번 테이블에서 기다리던 {target.my_number}번 손님에게 {target.menu}번 요리를 주문받았어요")
-                        table_cooking_waiting_box.pop(i)
+                        waiting_set_menu(i, j)
 
                         break
 
@@ -260,42 +271,13 @@ def main():
                         if len(cooker_box) < 3:
                             for y in range(3):
                                 if y not in cooker_box:
-                                    cooker_box[y] = (Cooker())
-                                    if table_box[x].menu == 1:
-                                        table_box[x].eating_time = 11
-                                        cooker_box[y].cooking_time = 11  # 요리시간 추가
-                                        cooker_box[y].what_is_number = table_box[x].my_number
-                                        cooker_box[y].table_number = x
-                                    if table_box[x].menu == 2:
-                                        table_box[x].eating_time = 16
-                                        cooker_box[y].cooking_time = 16
-                                        cooker_box[y].what_is_number = table_box[
-                                            x].my_number
-                                        cooker_box[y].table_number = x
-                                    if table_box[x].menu == 3:
-                                        table_box[x].eating_time = 21
-                                        cooker_box[y].cooking_time = 21
-                                        cooker_box[y].what_is_number = table_box[
-                                            x].my_number
-                                        cooker_box[y].table_number = x
-                                    if table_box[x].menu == 4:
-                                        table_box[x].eating_time = 26
-                                        cooker_box[y].cooking_time = 26
-                                        cooker_box[y].what_is_number = table_box[
-                                            x].my_number
-                                        cooker_box[y].table_number = x
 
+                                    set_menu(x, y)
                                     break
-                            print(
-                                f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 메뉴를 주문했어요")
                             break
                         if len(cooker_box) == 3:
 
-                            print(f"{x}번 테이블에 앉은 {table_box[x].my_number}번 손님은 기다려야해! 요리사가 모두 요리중")
-                            for i in range(0, 50): # 최대 대기 가능 인원 50명
-                                if i not in table_cooking_waiting_box:
-                                    table_cooking_waiting_box[i] = table_box[x]
-                                    break
+                            table_waiting(x)
                         break
                     else:
                         pass
@@ -346,5 +328,3 @@ def main():
 
         tick += 1
 
-
-main()
