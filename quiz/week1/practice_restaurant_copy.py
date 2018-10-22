@@ -78,6 +78,7 @@ table_cooking_waiting_box = {}
 cooker_box = {}
 bill = None
 bill_waiting = []
+menu_info = {1: '스테이크', 2: '스파게티', 3: '마카로니', 4: '그라탱'}
 
 
 def tic(minute):
@@ -115,7 +116,7 @@ def set_menu(table_number, cooker_number): # 손님의 메뉴를 요리사에게
         cooker_box[y].table_number = x
 
     print(
-        f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 메뉴를 주문했어요")
+        f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 요리({menu_info[table_box[x].menu]})를 주문합니다")
 
 
 def waiting_set_menu(table_number, cooker_number): # 테이블 대기손님의 메뉴 정보를 요리사에게 전달
@@ -144,7 +145,7 @@ def waiting_set_menu(table_number, cooker_number): # 테이블 대기손님의 �
         cooker_box[j].what_is_number = target.my_number
         cooker_box[j].table_number = target.table_number
     print(
-        f"{table_cooking_waiting_box[i].table_number}번 테이블에서 기다리던 {target.my_number}번 손님에게 {target.menu}번 요리를 주문받았어요")
+        f"{table_cooking_waiting_box[i].table_number}번 테이블에서 기다리던 {target.my_number}번 손님이 {target.menu}번 요리({menu_info[table_box[x].menu]})를 주문합니다")
     table_cooking_waiting_box.pop(i)
 
 
@@ -199,12 +200,11 @@ if __name__ == '__main__':
                 cooker_box[i].cooking_time -= 1
                 if cooker_box[i].cooking_time == -1:
                     # 요리완료
-                    table_box[
-                        cooker_box[i].table_number].eating_or_not_eating = True
-                    print(table_box[cooker_box[i].table_number].my_number,
-                          "번 손님 요리 완료되었어요")
+                    value = table_box[cooker_box[i].table_number]
+                    value.eating_or_not_eating = True
 
-
+                    print(cooker_box[i].what_is_number,f"번 손님의 {value.menu}번 요리 ({menu_info[value.menu]}) 조리가 끝났습니다")
+                    print(cooker_box[i].what_is_number,"번 손님이 식사를 시작합니다")
 
         for z in range(3):
             if z in cooker_box:
@@ -276,9 +276,10 @@ if __name__ == '__main__':
                                 if table_box[x].eating_or_not_eating is False:
 
                                     for y in range(3):
-                                        if cooker_box[y].what_is_number ==  table_box[x].my_number:
-                                            value[x] = table_box[x].eating_time + cooker_box[y].cooking_time
-                                            break
+                                        if y in cooker_box:
+                                            if cooker_box[y].what_is_number ==  table_box[x].my_number:
+                                                value[x] = table_box[x].eating_time + cooker_box[y].cooking_time
+                                                break
                                 elif table_box[x].eating_or_not_eating is True:
                                     value[x] = table_box[x].eating_time
 
@@ -290,16 +291,16 @@ if __name__ == '__main__':
                         for x in range(i):
                             target = i - (x + 1)
 
+
                             if target in table_box:
                                 if table_box[target].eating_or_not_eating is False:
-
 
                                     for y in range(3):
                                         if y in cooker_box:
                                             if cooker_box[y].what_is_number == table_box[target].my_number:
-
-                                                to_be_result_box += table_box[target].eating_time + cooker_box[x].cooking_time
-                                                break
+                                                if x in cooker_box:
+                                                    to_be_result_box += (table_box[target].eating_time + cooker_box[x].cooking_time)
+                                                    break
 
 
                                 elif table_box[target].eating_or_not_eating is True:
