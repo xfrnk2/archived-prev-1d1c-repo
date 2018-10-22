@@ -89,7 +89,7 @@ def anounce(guest_number):
     print(f"{guest_number}번 손님이 시각 {tick}분에 레스토랑에 도착했습니다")
 
 
-def set_menu(table_number, cooker_number): # 손님의 메뉴를 요리사에게 전달
+def set_menu(table_number, cooker_number):  # 손님의 메뉴를 요리사에게 전달
     cooker_box[y] = (Cooker())
     if table_box[x].menu == 1:
         table_box[x].eating_time = 30
@@ -119,7 +119,7 @@ def set_menu(table_number, cooker_number): # 손님의 메뉴를 요리사에게
         f"{table_box[x].my_number}번 손님이 {x}번 테이블에 앉아 {table_box[x].menu}번 요리({menu_info[table_box[x].menu]})를 주문합니다")
 
 
-def waiting_set_menu(table_number, cooker_number): # 테이블 대기손님의 메뉴 정보를 요리사에게 전달
+def waiting_set_menu(table_number, cooker_number):  # 테이블 대기손님의 메뉴 정보를 요리사에게 전달
     cooker_box[j] = (Cooker())
 
     target = table_box[table_cooking_waiting_box[i].table_number]
@@ -149,8 +149,9 @@ def waiting_set_menu(table_number, cooker_number): # 테이블 대기손님의 �
     table_cooking_waiting_box.pop(i)
 
 
-def table_waiting(table_number): # 요리사가 모두 요리중일때 대기 리스트로 보낸다
-    print(f"({x}번 테이블에 앉은 {table_box[x].my_number}번 손님, 모든 요리사가 요리중이므로 주문을 기다립니다)")
+def table_waiting(table_number):  # 요리사가 모두 요리중일때 대기 리스트로 보낸다
+    print(
+        f"({x}번 테이블에 앉은 {table_box[x].my_number}번 손님, 모든 요리사가 요리중이므로 주문을 기다립니다)")
     for i in range(50):  # 최대 대기 가능 인원 50명
         if i not in table_cooking_waiting_box:
             table_cooking_waiting_box[i] = table_box[x]
@@ -193,8 +194,6 @@ if __name__ == '__main__':
 
     while tick <= 720:
 
-
-
         for i in range(3):
             if i in cooker_box:
                 cooker_box[i].cooking_time -= 1
@@ -203,8 +202,9 @@ if __name__ == '__main__':
                     value = table_box[cooker_box[i].table_number]
                     value.eating_or_not_eating = True
 
-                    print(cooker_box[i].what_is_number,f"번 손님의 {value.menu}번 요리 ({menu_info[value.menu]}) 조리가 끝났습니다")
-                    print(cooker_box[i].what_is_number,"번 손님이 식사를 시작합니다")
+                    print(cooker_box[i].what_is_number,
+                          f"번 손님의 {value.menu}번 요리 ({menu_info[value.menu]}) 조리가 끝났습니다")
+                    print(cooker_box[i].what_is_number, "번 손님이 식사를 시작합니다")
 
         for z in range(3):
             if z in cooker_box:
@@ -246,7 +246,7 @@ if __name__ == '__main__':
                 else:
                     bill = None
 
-        #모든 요리사가 요리중이지 않을 때, 요리중이지 않은 요리사에게 주문 배정
+        # 모든 요리사가 요리중이지 않을 때, 요리중이지 않은 요리사에게 주문 배정
         for i in range(len(table_cooking_waiting_box)):
             if i in table_cooking_waiting_box:
                 for j in range(3):
@@ -254,8 +254,6 @@ if __name__ == '__main__':
                         waiting_set_menu(i, j)
 
                         break
-
-
 
         for i in range(50):  # 최대 대기가능인원 50명
             if i in waiting_guest_box:
@@ -266,11 +264,10 @@ if __name__ == '__main__':
                     print(
                         f"{waiting_guest_box[i].my_number}번 손님이 기다릴 수 없어 돌아갑니다")
 
-                    #대기 가능시간 계산
+                    # 대기 가능시간 계산
 
                     result = None
                     value = {}
-
 
                     if i == 0:
                         for x in range(5):
@@ -279,8 +276,12 @@ if __name__ == '__main__':
 
                                     for y in range(3):
                                         if y in cooker_box:
-                                            if cooker_box[y].what_is_number ==  table_box[x].my_number:
-                                                value[x] = table_box[x].eating_time + cooker_box[y].cooking_time
+                                            if cooker_box[y].what_is_number == \
+                                                    table_box[x].my_number:
+                                                value[x] = table_box[
+                                                               x].eating_time + \
+                                                           cooker_box[
+                                                               y].cooking_time
                                                 break
                                 elif table_box[x].eating_or_not_eating is True:
                                     value[x] = table_box[x].eating_time
@@ -293,24 +294,32 @@ if __name__ == '__main__':
                         for x in range(i):
                             target = i - (x + 1)
 
-
                             if target in table_box:
-                                if table_box[target].eating_or_not_eating is False:
+                                if table_box[
+                                    target].eating_or_not_eating is False:
 
                                     for y in range(3):
                                         if y in cooker_box:
-                                            if cooker_box[y].what_is_number == table_box[target].my_number:
+                                            if cooker_box[y].what_is_number == \
+                                                    table_box[target].my_number:
                                                 if x in cooker_box:
-                                                    to_be_result_box += (table_box[target].eating_time + cooker_box[x].cooking_time)
+                                                    to_be_result_box += (
+                                                            table_box[
+                                                                target].eating_time +
+                                                            cooker_box[
+                                                                x].cooking_time)
                                                     break
 
 
-                                elif table_box[target].eating_or_not_eating is True:
-                                    to_be_result_box += table_box[target].eating_time
+                                elif table_box[
+                                    target].eating_or_not_eating is True:
+                                    to_be_result_box += table_box[
+                                        target].eating_time
 
                         result = to_be_result_box
 
-                    print(f"현재 대기시간{waiting_guest_box[i].can_waiting_time_copy}분, 대기 가능시간은 {result}분 입니다")
+                    print(
+                        f"현재 대기시간{waiting_guest_box[i].can_waiting_time_copy}분, 대기 가능시간은 {result}분 입니다")
                     # 다되면 집에보내기
                     waiting_guest_box.pop(i)
 
@@ -379,6 +388,5 @@ if __name__ == '__main__':
                         break
                     else:
                         pass
-
 
         tick += 1
