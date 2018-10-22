@@ -150,7 +150,7 @@ def waiting_set_menu(table_number, cooker_number): # 테이블 대기손님의 �
 
 
 def table_waiting(table_number): # 요리사가 모두 요리중일때 대기 리스트로 보낸다
-    print(f"{x}번 테이블에 앉은 {table_box[x].my_number}번 손님은 기다려야해! 요리사가 모두 요리중")
+    print(f"({x}번 테이블에 앉은 {table_box[x].my_number}번 손님, 모든 요리사가 요리중이므로 주문을 기다립니다)")
     for i in range(50):  # 최대 대기 가능 인원 50명
         if i not in table_cooking_waiting_box:
             table_cooking_waiting_box[i] = table_box[x]
@@ -220,7 +220,9 @@ if __name__ == '__main__':
 
                 if table_box[j].eating_time == -1:
                     print(
-                        f"{table_box[j].my_number}번째 손님이 {j}번 테이블에서 {table_box[j].menu}번째 요리를 다 먹었네요?")
+                        f"{table_box[j].my_number}번 손님이 식사를 마쳤습니다")
+                    print(f"{table_box[j].my_number}번 손님이 계산대 앞에 줄을 섭니다")
+
                     # 계산대에 대기하러 간다
 
                     bill_waiting.append(table_box[j])
@@ -235,7 +237,7 @@ if __name__ == '__main__':
         if bill is not None:
             bill.minus_time()
             if bill.check_time() is False:
-                print(f"{bill_waiting[0].my_number}번 손님이 계산을 마치고 나갑니다")
+                print(f"{bill_waiting[0].my_number}번 손님이 계산을 마치고 레스토랑을 떠납니다")
                 bill_waiting.pop(0)
                 del bill
                 if 0 < len(bill_waiting):
@@ -354,7 +356,7 @@ if __name__ == '__main__':
                     if z not in waiting_guest_box:
                         waiting_guest_box[z] = (guest_box[-1])
                         guest_box.pop(-1)
-                        print(f"{waiting_guest_box[z].my_number}번 손님은 대기하기로 해요")
+                        print(f"{waiting_guest_box[z].my_number}번 손님이 대기합니다")
                         break
             elif len(table_box) < 5:  # 테이블 자리가 있을때
 
