@@ -33,3 +33,68 @@ return
 
 
 """
+
+import string
+
+
+def solution(commands):
+    assert 1 <= len(commands) <= 50, '매개변수 commands의 길이가 1~50의 범위를 벗어났습니다'
+    _value = commands[0]
+    i = commands[1][0]
+    j = commands[1][1]
+    k = commands[1][2]
+
+    value1 = _value[i-1:j]
+    print(value1)
+
+
+
+    # for x in range(_value[0]-1):
+    #     _value.pop(x)
+    # for y in range(((len((_value)-1)-(_value[1]-1)))):
+    #     _value.pop(y)
+    print(f"{_value}를 {i}번째부터 {j}번째까지 자른 후 정렬합니다")
+    print(f"{value1}의 {k}번째 숫자는 {value1[k-1]} 입니다.")
+
+
+def is_digit(num):
+
+   try:
+       int(num)
+       return True
+   except TypeError:
+       return False
+
+if __name__ == '__main__':
+    commands = []
+    array = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    assert 1 <= len(array) <= 100, '배열의 길이가 1~100의 범위를 벗어났습니다'
+    print("배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.")
+    print("숫자만 입력 가능합니다")
+    while True:
+        flag = True
+        ijk = (input("i, j, k를 입력하세요. 띄어쓰기(공백)으로 구분합니다"))
+        ijk = ijk.split()
+
+        #정수로 바꿔준다
+        for x in range(3):
+            ijk[x] = int(ijk[x])
+
+
+        if len(ijk) != 3:
+            print("숫자 3개를 제대로 입력하세요")
+            continue
+
+        if ijk[1] - ijk[0] < ijk[2] :
+            print("k의 입력이 올바르지 않습니다. k는 j에서 i를 뺀 수보다 같거나 작아야 합니다")
+            continue
+
+
+
+
+        else:
+
+            commands.append(array)
+            commands.append(ijk)
+            solution(commands)
+            break
