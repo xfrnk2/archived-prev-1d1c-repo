@@ -26,7 +26,7 @@ import random
 
 def get_numbers():
     numbers = ""
-    numbers_length = random.randrange(1, 8)
+    numbers_length = random.randrange(1, 4)
     for _ in range(numbers_length):
         y = random.randrange(0, 10)
         y = str(y)
@@ -36,31 +36,54 @@ def get_numbers():
 def main():
     numbers = get_numbers()
     numbers_len = len(numbers)
-    results1 = ""
+    results1 = []
 
     print(numbers)
     print(numbers_len)
 
+    value2 = list(numbers)
+    value2.sort(reverse=True)
 
-    for x in numbers:
-        x = int(x)
+    print(value2)
 
-        if x == 2:
-            results1 += str(2)
-        elif x > 2:
-            flag = True
+    value3 = "".join(value2)
+
+    print(value3)
+    value3 = int(value3)
+
+    for x in range(value3 + 1):
+        if x >= 2:
             for y in range(2, x):
-                if flag is False:
-                    break
+                if x == y + 1:
+                    results1.append(x)
                 if x % y == 0:
-                    flag = False # false면 소수가 아닌거로 친다
-            if flag:
-                x = str(x)
-                results1 += x
+                    break
+
+                else:
+                    continue
 
 
-    for i in results1:
-        print(i, " and ")
+    print(results1)
+    # for x in numbers:
+    #     x = int(x)
+    #
+    #     if x == 2:
+    #         results1 += str(2)
+    #     elif x > 2:
+    #         flag = True
+    #         for y in range(2, x):
+    #             if flag is False:
+    #                 break
+    #             if x % y == 0:
+    #                 flag = False # false면 소수가 아닌거로 친다
+    #         if flag:
+    #             x = str(x)
+    #             results1 += x
+    #
+    # print(results1)
+
+    # for i in results1:
+    #     print(i, " and ")
 
 
                     
