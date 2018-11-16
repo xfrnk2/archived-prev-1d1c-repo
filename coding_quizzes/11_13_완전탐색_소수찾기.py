@@ -20,15 +20,19 @@ numbers	return
 [0, 1, 1]으로는 소수 [11, 101]를 만들 수 있습니다.
 11과 011은 같은 숫자로 취급합니다.
 
+
+참고 사이트
+https://programmers.co.kr/learn/courses/4008/lessons/12836
+https://kkamikoon.tistory.com/90
 """
 import random
-
-
+import itertools
+import os
 def get_numbers():
     numbers = ""
-    numbers_length = random.randrange(1, 4)
+    numbers_length = random.randrange(1, 5)
     for _ in range(numbers_length):
-        y = random.randrange(0, 10)
+        y = random.randrange(0, 4)
         y = str(y)
         numbers += y
     return numbers
@@ -36,34 +40,43 @@ def get_numbers():
 def main():
     numbers = get_numbers()
     numbers_len = len(numbers)
-    results1 = []
+    results = []
 
     print(numbers)
     print(numbers_len)
 
     value2 = list(numbers)
-    value2.sort(reverse=True)
-
-    print(value2)
-
-    value3 = "".join(value2)
-
-    print(value3)
-    value3 = int(value3)
-
-    for x in range(value3 + 1):
-        if x >= 2:
-            for y in range(2, x):
-                if x == y + 1:
-                    results1.append(x)
-                if x % y == 0:
-                    break
-
-                else:
-                    continue
 
 
-    print(results1)
+    for i in range(1, numbers_len+1):
+        value = list(map(''.join, itertools.permutations(value2, i)))
+        value = list(set(value))
+
+        # for y in value:
+        #     if '0' in y:
+        #         if y[0] == '0':
+        #             y = y[:1]
+        #             # value.pop(value.index(y))
+        #
+        #             for i in range(numbers_len):
+        #                 if y[i] == '0':
+        #                     y = y[:i+1]
+        #                 else:
+        #                     break
+
+        # results.append(list(map(''.join, itertools.permutations(value2, i))))
+        results.append(value)
+        for y in results[i-1]:
+            if '0' in y:
+                if y[0] == "0":
+                    print(y, "0이 있네")
+                    abc = y[1:]
+                    y = abc
+                    print(y)
+        # i개의 갯수만큼의 원소로 수열 만들기
+        # 1~ numbers_len의 길이만큼 갯수로..
+
+    print(results)
     # for x in numbers:
     #     x = int(x)
     #
