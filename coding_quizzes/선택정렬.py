@@ -4,29 +4,51 @@
 # 하나의 원소만 남을 때까지 위의 1~3 과정을 반복한다.
 
 import random
-
-def selected_sort(random_list):
-  for sel in range( len(random_list)-1 ):
-    min = random_list[sel]
-    minindex = sel
-    # find min value
-    for step in range( sel+1, len(random_list) ):
-      if min > random_list[step]:
-        min = random_list[step]
-        minindex = step
-    # swap
-    random_list[minindex] = random_list[sel]
-    random_list[sel] = min
+#
+# def selected_sort(random_list):
+#   for sel in range( len(random_list)-1 ): // 총 길이의 - 1 횟수만큼 동작한다
+#     min = random_list[sel] // 해당 순서
+#     minindex = sel // 해당 순서의 인덱스
+#     # find min value
+#     for step in range( sel+1, len(random_list) ): // 가장 앞에서부터 두번째 인덱스~ 마지막 값까지 반복하는 반복문이다.
+#       if min > random_list[step]: // min(선
+#         min = random_list[step]
+#         minindex = step
+#     # swap
+#     random_list[minindex] = random_list[sel]
+#     random_list[sel] = min
+#
+# def Main():
+#   list = []
+#   for i in range(10):
+#     list.append( random.randint(1,10) )
+#   print("< Before Sort >")
+#   print(list)
+#
+#   selected_sort(list) # now sorting!
+#   print("< After Sort >")
+#   print(list)
+#
+# Main()
+import random
+def sel_sort(rand_list):
+    for sel in range(0, len(rand_list) - 1):
+        minvalue = sel
+        for loop in range(sel + 1, len(rand_list)):
+            if rand_list[loop] < rand_list[sel]:
+                minvalue = loop
+        temp = rand_list[minvalue]
+        rand_list[minvalue] = rand_list[sel]
+        rand_list[sel] = temp
 
 def Main():
-  list = []
-  for i in range(10):
-    list.append( random.randint(1,10) )
-  print("< Before Sort >")
-  print(list)
+    rand_list = []
+    for _ in range(1, 10):
+        rand_list.append(random.randint(1, 10))
+    print(rand_list)
 
-  selected_sort(list) # now sorting!
-  print("< After Sort >")
-  print(list)
+    sel_sort(rand_list)
+
+    print(rand_list)
 
 Main()
