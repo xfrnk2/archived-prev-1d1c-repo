@@ -7,13 +7,13 @@
 import random
 
 def bubble_sort(arr):
-    for i in range(len(arr), 0, -1): # 뒤에서부터 탐색하는 코드
+    for i in range(len(arr), 0, -1):
         for j in range(1, i):
             if arr[j] < arr[j - 1]:
                 arr[j], arr[j - 1] = arr[j - 1] , arr[j]
 
 
-    # for i in range(len(arr) - 1, 0, -1): #앞에서부터 탐색하는 코드
+    # for i in range(len(arr) - 1, 0, -1):
     #     for j in range(i):
     #         if arr[j] > arr[j + 1]:
     #             arr[j], arr[j + 1] = arr[j + 1], arr[j]
