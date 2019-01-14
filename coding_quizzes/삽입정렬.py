@@ -1,21 +1,14 @@
 import random
+
+
 def insert_sort(arr):
-    for i in range(0, len(arr)):
-        if i == 0:
-            pass
-        key = i
+    for i in range(1, len(arr)):
 
         for j in range(0, i):
-            if arr[i] > arr[j]:
+            if arr[i] < arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
+            else:
                 pass
-            elif arr[key] < arr[j]:
-                target =
-
-        if arr[i - 1] > arr[key]:
-            arr[i - 1], arr[key] = arr[key], arr[i - 1]
-        elif arr[i - 1] < arr[key]:
-
-
 
 
 def Main():
@@ -28,3 +21,4 @@ def Main():
 
     print(rand_list)
 
+Main()
