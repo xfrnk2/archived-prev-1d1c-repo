@@ -1,7 +1,12 @@
-height = 12
-width = 6
+from puyo.Block import Block
 
-for _ in range(height):
-    print("\n")
-    for _ in range(width):
-         print("□",end='')m
+width = 6
+height = 12
+
+
+
+class PrintField():
+    def __init__(self):
+        self.__width = width
+        self.__height = height
+        self.__original = [Block()for _ in range(width)for _ in range(height)]
