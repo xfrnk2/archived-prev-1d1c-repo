@@ -5,5 +5,5 @@ class Block():
     def __str__(self):
         return self.__data
 
-    def repr__(self):
+    def __repr__(self):
         return self.__data
