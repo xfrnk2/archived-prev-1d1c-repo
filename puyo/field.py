@@ -11,4 +11,4 @@ class PrintField:
         self.__original = [Block()for _ in range(width)for _ in range(height)]
 
     def test(self):
-        print(str(self.__original))
+        print((self.__original))

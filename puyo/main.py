@@ -3,6 +3,8 @@ from game import Game
 def Main():
 
     game = Game()
-    game.run()
 
+    while True:
+        game.run()
+        game.render()
 Main()
