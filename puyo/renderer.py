@@ -44,3 +44,7 @@ class renderer:
 
         return True
 
+    @staticmethod
+    def render_end():
+        __class__.__field.render()
+        print(f"FPS : {__class__.__fps}")

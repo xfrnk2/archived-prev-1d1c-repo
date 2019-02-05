@@ -3,15 +3,22 @@ from field import PrintField
 from renderer import renderer
 class Game():
 
-    aaa = PrintField()
+    field = None
+    time = None
 
     def __init__(self):
-        self.__time = Timer.init()
-        aaa = PrintField()
+        __class__.time = Timer.init()
+        __class__.field = PrintField()
+        renderer()
 
     def run(self):
-        __class__.aaa.test()
+        __class__.field.test()
+        renderer.render_end()
 
     def render(self):
-        if renderer.render_begin():
-            __class__.run(self)
+        while True:
+            if renderer.render_begin():
+                __class__.run()
+
+
+

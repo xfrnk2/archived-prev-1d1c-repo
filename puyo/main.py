@@ -5,6 +5,5 @@ def Main():
     game = Game()
 
     while True:
-        game.run()
         game.render()
 Main()
