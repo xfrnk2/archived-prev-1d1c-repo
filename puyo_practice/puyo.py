@@ -44,6 +44,7 @@ class timer:
     prev_time = 0.0
     elapsed_time = 0.0
 
+
     @staticmethod
     def init():
         __class__.prev_time = time()
@@ -67,8 +68,9 @@ class timer:
 
     @staticmethod
     def capture():
+        prev_time = __class__.prev_time
         current_time = time()
-        __class__.elapsed_time = current_time - __class__.prev_time
+        __class__.elapsed_time += (current_time - prev_time)
         __class__.prev_time = current_time
 
 
@@ -84,7 +86,8 @@ class renderer():
         if elapsed_time < 0.2:
             return False
 
-        self.__fps_count += 1
+        if elapsed_time > 0.2:
+            self.__fps_count += 1
 
         if elapsed_time > 1.0:
             timer.reset_elapsed_time()
@@ -100,18 +103,20 @@ class game():
     def __init__(self):
         self.__render = renderer()
         self.__field = field()
-        timer.init()
+
 
     def run(self):
         is_continue = True
-
+        timer.init()
         while is_continue:
             if not self.__render.render_begin():
                 pass
             else:
-                print(self.__field)
+                self.__field.print_field()
+                # TypeError: __str__ returned non-string (type list)
                 self.__render.render_end()
                 clear()
+                timer.reset_elapsed_time()
 
 
 def main():
