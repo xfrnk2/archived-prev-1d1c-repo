@@ -84,6 +84,7 @@ def solution(answers):
     return answer
 
 
+# 단일 함수의 코드 복잡도가 너무 높습니다. 분리 해 보세요.
 def main():
     _person1 = []
     _person2 = []
