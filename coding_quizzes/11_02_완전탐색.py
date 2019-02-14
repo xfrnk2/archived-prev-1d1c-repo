@@ -31,9 +31,9 @@ https://programmers.co.kr/learn/courses/30/lessons/42840
 랜덤인걸로 하고..
 """
 import random
+import operator
 
-
-def _answers():
+def answers():
     array = []
     for _ in range(1, 1001):
         array.append(random.randrange(1, 6))
@@ -80,23 +80,30 @@ def person3():
 
 
 def solution(answers):
-    answer = []
+    answer = [answers[max(answers.keys())]]
+
+    # 가장 높은 점수를 받는 사람이 여럿일 경우를 위해서 오름차순으로 정렬
+    answer.sort()
+    
     return answer
 
 
 # 단일 함수의 코드 복잡도가 너무 높습니다. 분리 해 보세요.
 def main():
+    _answers = answers()
     _person1 = []
     _person2 = []
     _person3 = []
 
     for x in range(1000):
 
-        if _answers()[x] == person1()[x]:
+        value = _answers[x]
+
+        if value == person1()[x]:
             _person1.append(x + 1)
-        if _answers()[x] == person2()[x]:
+        if value == person2()[x]:
             _person2.append(x + 1)
-        if _answers()[x] == person3()[x]:
+        if value == person3()[x]:
             _person3.append(x + 1)
 
         # 최종적으로 맞춘 개수
@@ -105,52 +112,8 @@ def main():
     print("수포자 2은", _person2, "번 문제를 맞췄습니다")
     print("수포자 3은", _person3, "번 문제를 맞췄습니다\n")
 
-    print("가장 높은 점수를 받은 사람 순서로 출력합니다")
-    a = len(_person1)
-    b = len(_person2)
-    c = len(_person3)
-    group = [0, 0, 0]
-    result = [0, 0, 0]
-    if a > b:
-        group[0] += 1
-    if a > c:
-        group[0] += 1
-    if b > c:
-        group[1] += 1
-    if b > a:
-        group[1] += 1
-
-    if c > a:
-        group[2] += 1
-    if c > b:
-        group[2] += 1
-
-    if group[0] > group[1] and group[0] > group[2]:
-        result[0] = 1
-        if group[1] > group[2]:
-            result[1] = 2
-            result[2] = 3
-        else:
-            result[2] = 2
-            result[1] = 3
-    if group[1] > group[0] and group[1] > group[2]:
-        result[0] = 2
-        if group[0] > group[2]:
-            result[1] = 1
-            result[2] = 3
-        else:
-            result[2] = 1
-            result[1] = 3
-    if group[2] > group[0] and group[2] > group[1]:
-        result[0] = 3
-        if group[0] > group[1]:
-            result[1] = 1
-            result[2] = 2
-        else:
-            result[2] = 1
-            result[1] = 2
-
-    print(result)
+    result = {len(_person1): 1, len(_person2): 2, len(_person3): 3}
+    print(f"{solution(result)}번째 사람이 제일 높은 점수를 받았습니다.")
 
 
 main()
