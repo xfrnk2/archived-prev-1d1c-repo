@@ -1,16 +1,50 @@
 # GUI로 조작과 입력이 가능한 계산기를 만들어보자. 괄호와 + , - , * , / 연산이 가능한 계산기 완성하기.
 import copy
+import tkinter
+from tkinter import messagebox
+
+# 연산자가 연속으로 입력되었을때 잘못된 계산식임을 알리고 작동을 중지시키기 위한 함수
+def check_sign_overlap(group, index):
+    if group[index + 1].isdigit() is False:
+        print("연산자가 연달아 입력되었으니 계산을 종료합니다. 올바른 계산식을 입력해 주세요")
+        exit()
+
+
+def calculating(group, sign, index):
+    value = 0
+    if sign == '+':
+        value = int(group[index - 1]) + int(group[index + 1])
+    if sign == '-':
+        value = int(group[index - 1]) - int(group[index + 1])
+    if sign == '*':
+        value = int(group[index - 1]) * int(group[index + 1])
+    if sign == '/':
+        value = int(group[index - 1]) / int(group[index + 1])
+        value = str(value)
+
+        if '.' in value:
+            float_test = value[value.find('.'):]
+            if float_test.find('0', -1) == -1:
+                print("정수가 아니잖아..")
+                exit()
+            else:
+                location = value.find('.')
+                value = (value[0:location])
+
+    _expression = group[:index - 1] + [str(value)] + group[
+                                                     index + 2:]
+
+    return _expression
 
 def add(expression):
     _expression = copy.deepcopy(expression)
     _expression = list(_expression)
     flag = True
-    flag0 = True
     sign = None
     index = 0
     index_group = {}
     target = None
-
+    signs = ['+', '-', '*', '/']
     # 연산자 기호가 2개 이상일 경우 다시 찾을때 이미 찾은 값 다음의 인덱스부터 찾을수 있도록 제한두기위한 변수
     plus_limit = 0
     minus_limit = 0
@@ -25,50 +59,50 @@ def add(expression):
         if x == '+':
 
             value = _expression.index('+', plus_limit)
+
+            check_sign_overlap(_expression, value)
+
             if _expression.count('+') >= 2:
                 plus_limit = value + 4
-                #공백이 두개 늘어나기 때문에 value + 1이어서는 정확한 위치를 설정하기 어려우므로
-                #value가 3 이상이어야 하는데 기호의 위치부터인 4를 더하기로 했다.
+                # 공백이 두개 늘어나기 때문에 value + 1이어서는 정확한 위치를 설정하기 어려우므로
+                # value가 3 이상이어야 하는데 기호의 위치부터인 4를 더하기로 했다.
 
-            _expression.insert(value, ' ')
-            _expression.insert(value + 2, ' ')
-
-            continue
-
-        if x == '-':
+        elif x == '-':
 
             value = _expression.index('-', minus_limit)
+
+            check_sign_overlap(_expression, value)
+
             if _expression.count('-') >= 2:
                 minus_limit = value + 4
 
-            _expression.insert(value, ' ')
-            _expression.insert(value + 2, ' ')
-            continue
-
-        if x == '*':
+        elif x == '*':
 
             value = _expression.index('*', plus_limit)
+
+            check_sign_overlap(_expression, value)
+
             if _expression.count('*') >= 2:
                 multi_limit = value + 4
 
-            _expression.insert(value, ' ')
-            _expression.insert(value + 2, ' ')
-            continue
-
-        if x == '/':
+        elif x == '/':
 
             value = _expression.index('/', plus_limit)
+
+            check_sign_overlap(_expression, value)
+
             if _expression.count('/') >= 2:
                 div_limit = value + 4
 
-            _expression.insert(value, ' ')
-            _expression.insert(value + 2, ' ')
-            continue
+        _expression.insert(value, ' ')
+        _expression.insert(value + 2, ' ')
+
+
 
     _expression = ''.join(_expression)
     _expression = _expression.split()
-    # return _expression
 
+    #
     while flag:
 
         plus_limit = 0
@@ -109,7 +143,6 @@ def add(expression):
                 index_group[value] = '-'
                 continue
 
-
         to_test = copy.deepcopy(index_group)
         for key, signal in to_test.items():
 
@@ -135,33 +168,39 @@ def add(expression):
             break
         sign = index_group[target]
         index = _expression.index(sign)
-#나눗셈에 의해 값이 소수점으로 떨어지게 되면 인덱스를 한 문자 단위로만 인식하기 때문에 올바른 계산이 되지 않는다.
-        if sign == '+':
-            value = int(_expression[index - 1]) + int(_expression[index + 1])
-        if sign == '-':
-            value = int(_expression[index - 1]) - int(_expression[index + 1])
-        if sign == '*':
-            value = int(_expression[index - 1]) * int(_expression[index + 1])
-        if sign == '/':
-            value = int(_expression[index - 1]) / int(_expression[index + 1])
-            value = str(value)
-            if '.' in value:
-                float_test = value[value.find('.'):]
-                if float_test.find('0') == -1:
-                    print("정수가 아니잖아..")
-                    exit()
-                else:
-                    location = value.find('.')
-                    value = (value[0:location])
 
-        _expression = _expression[:index - 1] + [str(value)] + _expression[
-                                                             index + 2:]
-        # assert value is int, f"나눗셈에 의한 결과값 {int(value)}이 정수가 아니여서 프로그램 종료"
+        _expression = calculating(_expression, sign, index)
+
         index_group = {}
         if ''.join(_expression).isdigit():
             flag = False
 
     return _expression
 
-# 나눗셈에 의해 정수가 아닌 값이 출현하는 예 -> 1+2/8*2-5 -> assert 에러 발생
+
+
+
+window = tkinter.Tk()
+window.title("계산기")
+window.geometry("640x400+100+100")
+window.resizable(False, False)
+
+lbl = tkinter.Label(window, text="식")
+lbl.grid(row=0, column=0)
+txt = tkinter.Entry(window)
+txt.grid(row=0, column=1)
+
+
+def call_back():
+    total = txt.get()
+    result = add(total)
+    tkinter.messagebox.showinfo("결과값!", f"{result}입니다")
+
+
+btn = tkinter.Button(window, text="OK", width=15, command=call_back)
+btn.grid(row=1, column=1)
+
+window.mainloop()
+
+# 나눗셈에 의해 정수가 아닌 값이 출현하는 예 -> 1+2/8*2-5 -> 정수가 아니므로 실행 종료
 print(add('1+8/2*2-50-1+7'))
