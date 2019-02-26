@@ -10,7 +10,6 @@ def insert_sort(arr):
             else:
                 pass
 
-
 def Main():
     rand_list = []
     for _ in range(1, 10):
