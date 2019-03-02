@@ -44,7 +44,6 @@ def add(expression):
     index = 0
     index_group = {}
     target = None
-    signs = ['+', '-', '*', '/']
     # 연산자 기호가 2개 이상일 경우 다시 찾을때 이미 찾은 값 다음의 인덱스부터 찾을수 있도록 제한두기위한 변수
     plus_limit = 0
     minus_limit = 0

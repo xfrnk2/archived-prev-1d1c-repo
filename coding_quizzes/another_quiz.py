@@ -82,19 +82,12 @@ def is_duplicated_number(three_digit):
     # Input:
     #   - three_digit : 문자열로 된 세자리 양의 정수 값
     #                   문자열로 된 세자리 양의 정수값의 입력이 보장된다.
-    result = None
 
     b = str(three_digit)
     a = list(b)
-    if a[0] == a[1]:
+    if a[0] == a[1] or  a[0] == a[2] or a[1] == a[2] or a[0] == a[1] == a[2]:
         result = True
 
-    elif a[0] == a[2]:
-        result = True
-    elif a[1] == a[2]:
-        result = True
-    elif a[0] == a[1] == a[2]:
-        result = True
     else:
         result = False
 

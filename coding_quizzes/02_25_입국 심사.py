@@ -34,16 +34,16 @@ times = [x for x in range(1, random.randrange(2, 6))]
 # 1. 사람이 할 일 : 숫자만 있음 됨
 # 2. 심사대가 할 일 : 비어있는지 여부 보존(true와 false로), 남은 시간을 가지고 있기. 걸리는 시간 보존
 
-class simsadae:
+class examination:
     def __init__(self):
         #비어있으면 False, 차있으면 True
-        self.__data = True
+        self.__data = False
         self.__left_time = 0
 
     def get_information(self):
         return self.__data
 
-    def min_time(self):
+    def check_time(self):
         self.__left_time -= 1
         if self.__left_time == 0:
             self.__data = False
@@ -51,12 +51,14 @@ class simsadae:
     def set_time(self, time):
         self.__left_time = time
 
+
 def solution(n, times):
-    n_count = 1
+
     sims = []
+    time_tick = 0
 
     for i in range(len(times)):
-        sim = simsadae()
+        sim = examination()
         sim.set_time(times[i])
         sims.append(sim)
 
@@ -66,11 +68,16 @@ def solution(n, times):
 
     flag = True
     while flag:
+        n_count = 1
         for x in sims:
-            if not x.get_imformation:
-               print(f"{}")
+            x.check_time()
+            if not x.get_information():
+                print(f"{time_tick}분이 지났을 때, {sims.index(x)}번째 심사대가 비고, {n_count}번째 사람이 심사를 받습니다")
+                n_count += 1
 
+        if n_count >= 120:
+            flag = False
 
+        time_tick += 1
 
-
-
+solution(n, times)

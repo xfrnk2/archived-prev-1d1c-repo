@@ -89,8 +89,6 @@ def simulate(val):
         result = check_num(abc[x], y)  # 소수 확인을 위한 함수 호출
         if result:
             real.append(abc[x])  # 소수이면 리스트에 저장
-        else:
-            pass
 
     real.sort()
     return real

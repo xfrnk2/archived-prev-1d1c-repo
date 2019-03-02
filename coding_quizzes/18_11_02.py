@@ -48,11 +48,6 @@ def solution(commands):
     print(value1)
 
 
-
-    # for x in range(_value[0]-1):
-    #     _value.pop(x)
-    # for y in range(((len((_value)-1)-(_value[1]-1)))):
-    #     _value.pop(y)
     print(f"{_value}를 {i}번째부터 {j}번째까지 자른 후 정렬합니다")
     print(f"{value1}의 {k}번째 숫자는 {value1[k-1]} 입니다.")
 
