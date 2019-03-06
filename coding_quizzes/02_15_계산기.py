@@ -3,6 +3,7 @@ import copy
 import tkinter
 from tkinter import messagebox
 
+
 # 연산자가 연속으로 입력되었을때 잘못된 계산식임을 알리고 작동을 중지시키기 위한 함수
 def check_sign_overlap(group, index):
     if group[index + 1].isdigit() is False:
@@ -36,71 +37,51 @@ def calculating(group, sign, index):
 
     return _expression
 
-def add(expression):
-    _expression = copy.deepcopy(expression)
-    _expression = list(_expression)
-    flag = True
-    sign = None
-    index = 0
-    index_group = {}
-    target = None
-    # 연산자 기호가 2개 이상일 경우 다시 찾을때 이미 찾은 값 다음의 인덱스부터 찾을수 있도록 제한두기위한 변수
-    plus_limit = 0
-    minus_limit = 0
-    multi_limit = 0
-    div_limit = 0
 
+def add_space(expression, _expression):
+    sign = ['+', '-', '*', '/']
+    sign_limit = [0, 0, 0, 0]
+    number = None
     for x in expression:
 
         if x.isdigit():
             continue
 
         if x == '+':
-
-            value = _expression.index('+', plus_limit)
-
-            check_sign_overlap(_expression, value)
-
-            if _expression.count('+') >= 2:
-                plus_limit = value + 4
-                # 공백이 두개 늘어나기 때문에 value + 1이어서는 정확한 위치를 설정하기 어려우므로
-                # value가 3 이상이어야 하는데 기호의 위치부터인 4를 더하기로 했다.
-
+            number = 0
         elif x == '-':
-
-            value = _expression.index('-', minus_limit)
-
-            check_sign_overlap(_expression, value)
-
-            if _expression.count('-') >= 2:
-                minus_limit = value + 4
-
+            number = 1
         elif x == '*':
-
-            value = _expression.index('*', plus_limit)
-
-            check_sign_overlap(_expression, value)
-
-            if _expression.count('*') >= 2:
-                multi_limit = value + 4
-
+            number = 2
         elif x == '/':
+            number = 3
 
-            value = _expression.index('/', plus_limit)
-
-            check_sign_overlap(_expression, value)
-
-            if _expression.count('/') >= 2:
-                div_limit = value + 4
+        value = _expression.index(sign[number], sign_limit[number])
+        check_sign_overlap(_expression, value)
+        if _expression.count(sign[number]) >= 2:
+            sign_limit[number] = value + 4
+            # 공백이 두개 늘어나기 때문에 value + 1이어서는 정확한 위치를 설정하기 어려우므로
+            # value가 3 이상이어야 하는데 기호의 위치부터인 4를 더하기로 했다.
 
         _expression.insert(value, ' ')
         _expression.insert(value + 2, ' ')
 
+    return _expression
 
+
+def add(expression):
+    _expression = copy.deepcopy(expression)
+    _expression = list(_expression)
+    # 연산자 기호가 2개 이상일 경우 다시 찾을때 이미 찾은 값 다음의 인덱스부터 찾을수 있도록 제한두기위한 변수
+
+    # 문자열로된 식을 받아와서 연산자와 숫자 끼리 나눌 수 있도록 공백을 넣어주는 함수 add_space를 호출한다.
+    _expression = add_space(expression, _expression)
 
     _expression = ''.join(_expression)
     _expression = _expression.split()
 
+    flag = True
+    index_group = {}
     #
     while flag:
 
@@ -108,7 +89,7 @@ def add(expression):
         minus_limit = 0
         multi_limit = 0
         div_limit = 0
-        value = 0
+
         for y in _expression:
 
             if y.isdigit():
@@ -175,8 +156,6 @@ def add(expression):
             flag = False
 
     return _expression
-
-
 
 
 window = tkinter.Tk()
