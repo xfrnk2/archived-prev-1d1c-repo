@@ -5,9 +5,12 @@
 class IsNotNumberError:
     pass
 
+class DoublesignError:
+    def __init__(self):
+        print("연산자가 연속 입력되었습니다")
 
 def check_str(x):
-    value = x
+    box = list(x)
     sign = ['+', '-', '*', '/']
     sign_limit = 0
     for i in x:
@@ -15,10 +18,21 @@ def check_str(x):
         if i.isdigit():
             continue
         assert i in sign, "정수가 아니거나, 연산자가 아닌 값이 입력되었습니다"
-        # if i in sign:
+
+        #i의 인덱스
+        value = box.index(i, sign_limit)
+
+        if x[x.index(i)+1] in sign:
+            raise DoublesignError()
+
+        if x.count(i) >= 2:
+            sign_limit = value + 3
+
+        box.insert(value, '')
+        box.insert(value + 2, '')
 
 
-    return value
+    return box
 
 def main():
     expression = None
