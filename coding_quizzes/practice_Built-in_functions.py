@@ -112,7 +112,7 @@ print(round(5.223, 2 )) #2번째 자리까지만
 
 #sorted
 
-print(sorted(['a', 'b', 'd', 'c'])
+print(sorted(['a', 'b', 'd', 'c']))
 
 
 #sum 은 모든값을 합해 리턴하는 함수다. 리스트나 튜플의 모든 요소..
