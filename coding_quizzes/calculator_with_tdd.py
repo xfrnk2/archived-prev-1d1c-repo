@@ -1,6 +1,6 @@
 # https://python.bakyeono.net/chapter-9-4.html
 
-
+import copy
 #에러종류모음 : https://docs.python.org/ko/3/library/exceptions.html
 class IsNotNumberError:
     pass
@@ -22,14 +22,14 @@ def check_str(x):  # x is str
 
             if i.isdigit():
                 continue
-            assert i in sign, "정수가 아니거나, 연산자가 아닌 값이 입력되었습니다"
+            assert i in sign, "정수가 아니거나, 연산자가d 아닌 값이 입력되었습니다"
 
             # i의 인덱스
             value = box.index(i, sign_limit)
-
+            # 연산자 연속 입력시 에러 발생
             if x[x.index(i) + 1] in sign:
                 raise DoublesignError()
-
+            # 연산자가 2개이상일때 탐색시작지점을 sign_limit으로 적용
             if x.count(i) >= 2:
                 sign_limit = value + 3
 
@@ -44,23 +44,43 @@ def check_str(x):  # x is str
         result = result.split()
         return result
 
+
 def get_priority_sign(expression): # list를 받아온다
     assert expression, "입력된 식이 없습니다"
-    sign = ['+', '-', '*', '/']
+
     priority_sign = ['*', '/']
-    sign_index_group = {}
+    priority_group = {}
+    not_priority_group = {}
 
-    for i in expression:
-        if i in sign:
-            sign_index_group[expression.index(i)] = i
+    try:
 
-    for index, signal in sign_index_group.items():
-        if signal in priority_sign:
-            sign_index_group.pop(index)
+        for i in expression:
+
+            index = expression.index(i)
+            if i.isdigit():
+                continue
+            if i in priority_sign:
+                priority_group[index] = i
+            if not i in priority_sign:
+                not_priority_group[index] = i
+
+    except TypeError as e:
+        print(e)
+
+    except IndexError as e:
+        print(e)
+
+    except KeyError as e:
+        print(e)
+
+    return priority_group, not_priority_group
 
 
+def calculating(expression, priority_sign, not_priority_sign):
+    example = copy.deepcopy(expression)
+ 
 
-
+    return example
 
 def main():
 
@@ -70,9 +90,14 @@ def main():
         assert expression != "", "입력된 식이 없습니다"
 
         result = check_str(expression)
-        get_priority_sign(result)
+        priority_sign, not_priority_sign = get_priority_sign(result)
+
+        print(calculating(result, priority_sign, not_priority_sign))
+
+
 
     finally:
         print(result)
+
 
 main()
