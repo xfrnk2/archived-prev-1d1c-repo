@@ -54,9 +54,8 @@ def get_priority_sign(expression): # list를 받아온다
 
     try:
 
-        for i in expression:
+        for index, i in enumerate(expression):
 
-            index = expression.index(i)
             if i.isdigit():
                 continue
             if i in priority_sign:
@@ -77,14 +76,46 @@ def get_priority_sign(expression): # list를 받아온다
 
 
 def calculating(expression, priority_sign, not_priority_sign):
-    example = copy.deepcopy(expression)
- 
+    limit = 0
+    #우선순위 기호(*,/)그룹인 priority_sign을 순회한다. index가 가장 작은 것부터 계산한다.
+    for v in range(len(priority_sign)):
+        minimum_value = min(priority_sign)
+        minimum_index = priority_sign[minimum_value]
+        value = expression.index(minimum_index, limit)
 
-    return example
+        if minimum_index == '*':
+            expression[value - 1] = int(expression[value-1]) * int(expression[value+1])
+        if minimum_index == '/':
+            expression[value - 1] = int(expression[value - 1]) / int(
+                expression[value + 1])
+
+        limit = value-1
+
+        expression.pop(value), expression.pop(value)
+
+    #비우선순위 기호 순회
+    for v in range(len(not_priority_sign)):
+        minimum_value = min(not_priority_sign)
+        minimum_index = not_priority_sign[minimum_value]
+        value = expression.index(minimum_index, limit)
+
+        if minimum_index == '+':
+            expression[value - 1] = int(expression[value - 1]) + int(
+                expression[value + 1])
+        if minimum_index == '-':
+            expression[value - 1] = int(expression[value - 1]) - int(
+                expression[value + 1])
+
+        limit = value - 1
+
+        expression.pop(value), expression.pop(value)
+
+    print(expression)
+
 
 def main():
 
-    result = None
+    result = 0
     try:
         expression = input("식을 입력하세요")
         assert expression != "", "입력된 식이 없습니다"
@@ -92,7 +123,7 @@ def main():
         result = check_str(expression)
         priority_sign, not_priority_sign = get_priority_sign(result)
 
-        print(calculating(result, priority_sign, not_priority_sign))
+        result = calculating(result, priority_sign, not_priority_sign)
 
 
 
