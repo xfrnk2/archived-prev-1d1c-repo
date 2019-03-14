@@ -1,6 +1,6 @@
 # https://python.bakyeono.net/chapter-9-4.html
 
-import copy
+import string
 #에러종류모음 : https://docs.python.org/ko/3/library/exceptions.html
 class IsNotNumberError:
     pass
@@ -22,7 +22,7 @@ def check_str(x):  # x is str
 
             if i.isdigit():
                 continue
-            assert i in sign, "정수가 아니거나, 연산자가d 아닌 값이 입력되었습니다"
+            assert i in sign, "정수가 아니거나, 연산자가 아닌 값이 입력되었습니다"
 
             # i의 인덱스
             value = box.index(i, sign_limit)
@@ -37,6 +37,10 @@ def check_str(x):  # x is str
             box.insert(value + 2, ' ')
 
     except DoublesignError as e:
+        print(e)
+    except TypeError as e:
+        print(e)
+    except IndexError as e:
         print(e)
 
     finally:
@@ -77,40 +81,43 @@ def get_priority_sign(expression): # list를 받아온다
 
 def calculating(expression, priority_sign, not_priority_sign):
     limit = 0
-    #우선순위 기호(*,/)그룹인 priority_sign을 순회한다. index가 가장 작은 것부터 계산한다.
-    for v in range(len(priority_sign)):
-        minimum_value = min(priority_sign)
-        minimum_index = priority_sign[minimum_value]
-        value = expression.index(minimum_index, limit)
+    try:
+        #우선순위 기호(*,/)그룹인 priority_sign을 순회한다. index가 가장 작은 것부터 계산한다.
+        for v in range(len(priority_sign)):
+            minimum_value = min(priority_sign)
+            minimum_index = priority_sign[minimum_value]
+            value = expression.index(minimum_index, limit)
 
-        if minimum_index == '*':
-            expression[value - 1] = int(expression[value-1]) * int(expression[value+1])
-        if minimum_index == '/':
-            expression[value - 1] = int(expression[value - 1]) / int(
-                expression[value + 1])
+            if minimum_index == '*':
+                expression[value - 1] = int(expression[value-1]) * int(expression[value+1])
+            if minimum_index == '/':
+                expression[value - 1] = int(expression[value - 1]) / int(
+                    expression[value + 1])
 
-        limit = value-1
+            limit = value-1
 
-        expression.pop(value), expression.pop(value)
+            expression.pop(value), expression.pop(value)
 
-    #비우선순위 기호 순회
-    for v in range(len(not_priority_sign)):
-        minimum_value = min(not_priority_sign)
-        minimum_index = not_priority_sign[minimum_value]
-        value = expression.index(minimum_index, limit)
+        #비우선순위 기호 순회
+        for v in range(len(not_priority_sign)):
+            minimum_value = min(not_priority_sign)
+            minimum_index = not_priority_sign[minimum_value]
+            value = expression.index(minimum_index, limit)
 
-        if minimum_index == '+':
-            expression[value - 1] = int(expression[value - 1]) + int(
-                expression[value + 1])
-        if minimum_index == '-':
-            expression[value - 1] = int(expression[value - 1]) - int(
-                expression[value + 1])
+            if minimum_index == '+':
+                expression[value - 1] = int(expression[value - 1]) + int(
+                    expression[value + 1])
+            if minimum_index == '-':
+                expression[value - 1] = int(expression[value - 1]) - int(
+                    expression[value + 1])
 
-        limit = value - 1
+            limit = value - 1
 
-        expression.pop(value), expression.pop(value)
-
-    print(expression)
+            expression.pop(value), expression.pop(value)
+    except IndexError as e:
+        print(e)
+    finally:
+        print(expression)
 
 
 def main():
@@ -125,7 +132,8 @@ def main():
 
         result = calculating(result, priority_sign, not_priority_sign)
 
-
+    except IndexError as e:
+        print(e)
 
     finally:
         print(result)
