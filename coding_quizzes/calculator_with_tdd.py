@@ -4,7 +4,7 @@ import unittest
 class IsNotNumberError:
     pass
 
-class DoublesignError:
+class DoublesignError(Exception):
     def __init__(self):
         print("에러메세지 : 연산자가 연속 입력되었습니다")
 
@@ -35,7 +35,7 @@ class Calcuator(unittest.TestCase):
                 box.insert(value + 2, ' ')
 
         except:
-            print("정수가 아니거나, 연산자가 아닌 값이 입력되었습니다")
+            print("계산 도중 문제가 발생했습니다")
 
 
         finally:
@@ -100,9 +100,11 @@ class Calcuator(unittest.TestCase):
                 limit = value - 1
 
                 expression.pop(value), expression.pop(value)
-        except IndexError as e:
-            print(e)
+        except IndexError:
+            print("멤버함수 calculating에서 허용 가능한 인덱스 범위를 벗어났습니다")
+
         except Exception as e:
+            print("연산자가 두번 입력되었습니다")
             print(e)
         finally:
             print(expression)
