@@ -1,6 +1,5 @@
 # https://python.bakyeono.net/chapter-9-4.html
 
-import string
 #에러종류모음 : https://docs.python.org/ko/3/library/exceptions.html
 class IsNotNumberError:
     pass
