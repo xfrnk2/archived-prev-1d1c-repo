@@ -37,12 +37,11 @@ import os
 import random
 import re
 import sys
-
+from collections import Counter
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-
-    # 첫번째 풀이 
+    # 첫번째 풀이 / 성공
     # all_count = 0
     # array = list(set(ar))
     # for x in array:
@@ -52,12 +51,20 @@ def sockMerchant(n, ar):
     # return all_count
 
 
-    # 두번째 풀이 -  두번째 풀이도 흐름은 똑같은데..
-    setted_ar = list(set(ar))
-    a = list(map(lambda x: ar.count(setted_ar[x]), range(len(setted_ar))))
-    b = list(map(lambda x: x // 2, a))
-    return sum(int(i) for i in b)
+    # 두번째 풀이 -  두번째 풀이도 흐름은 똑같은데.. / 성공
+    # setted_ar = list(set(ar))
+    # a = list(map(lambda x: ar.count(setted_ar[x]), range(len(setted_ar))))
+    # b = list(map(lambda x: x // 2, a))
+    # return sum(int(i) for i in b)
 
+    # 3번째 풀이 - collections의 Counter 모듈을 사용해 풀어보다. / 성공
+
+    count = 0
+    mycounter = Counter(ar)
+    for x in mycounter.values():
+        count += x // 2
+
+    return count
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
