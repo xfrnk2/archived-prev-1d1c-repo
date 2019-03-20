@@ -41,14 +41,22 @@ import sys
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-    all_count = 0
-    array = list(set(ar))
-    for x in array:
-        if ar.count(x) >= 2:
-            all_count += ar.count(x) // 2
 
-    return all_count
+    # 첫번째 풀이 
+    # all_count = 0
+    # array = list(set(ar))
+    # for x in array:
+    #     if ar.count(x) >= 2:
+    #         all_count += ar.count(x) // 2
+    #
+    # return all_count
 
+
+    # 두번째 풀이 -  두번째 풀이도 흐름은 똑같은데..
+    setted_ar = list(set(ar))
+    a = list(map(lambda x: ar.count(setted_ar[x]), range(len(setted_ar))))
+    b = list(map(lambda x: x // 2, a))
+    return sum(int(i) for i in b)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
