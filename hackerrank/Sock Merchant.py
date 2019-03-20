@@ -59,12 +59,20 @@ def sockMerchant(n, ar):
 
     # 3번째 풀이 - collections의 Counter 모듈을 사용해 풀어보다. / 성공
 
-    count = 0
-    mycounter = Counter(ar)
-    for x in mycounter.values():
-        count += x // 2
+    # count = 0
+    # mycounter = Counter(ar)
+    # for x in mycounter.values():
+    #     count += x // 2
+    #
+    # return count
 
-    return count
+    # 4번째 풀이 - 더 단순화하기 / 성공
+    X = set(ar)
+    c = 0
+    for x in X:
+        c += ar.count(x) // 2
+
+    return c
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
