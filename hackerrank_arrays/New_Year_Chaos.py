@@ -1,34 +1,21 @@
 import copy
 def minimumBribes(q):
-    q = list(q)
-    original = copy.deepcopy(q)
-    s = q.index(1)
-    m = q.index(max(q))
+    e = copy.deepcopy(q)
+    count = 0
+    for i in range(len(q), 0, -1):
+        for j in range(1, i):
+            if q[j] < q[j - 1]:
+                q[j], q[j - 1] = q[j - 1], q[j]
+                count += 1
 
-    m_c = len(q) - (m + 1)
-    s_c = s
-    counts = 0
+    e.sort()
+    if count > len(q) - 1:
+        print("Too Chaotic")
+        exit()
+    if e == q:
+        print(count)
 
-    while m_c > 0:
+q = [5, 1, 2, 3, 7, 8, 6, 4]
 
-        q[m], q[m + 1] = q[m + 1], q[m]
-        m += 1
-        m_c -= 1
-        counts += 1
-
-    while s_c > 0:
-
-        q[s], q[s - 1] = q[s - 1], q[s]
-        s -= 1
-        s_c -= 1
-        counts += 1
-
-    original.sort()
-    if q == original:
-        return counts
-    else:
-        return 'Too chaotic'
-
-q = 2, 5, 1, 3, 4
 
 print(minimumBribes(q))
