@@ -9,9 +9,9 @@ import sys
 # Complete the repeatedString function below.
 def repeatedString(s, n):
 
-    # value = s*(n//len(s)) + s[:n % len(s)]
-    # return value.count('a')
-    return s.count('a') * (n//len(s)) + s[:n % len(s)].count('a')
+    l = len(s)
+    findTarget = 'a'
+    return s.count(findTarget) * (n // l) + s[:n % l].count(findTarget)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

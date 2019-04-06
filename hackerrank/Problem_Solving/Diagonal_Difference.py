@@ -6,17 +6,21 @@ import random
 import re
 import sys
 
+
 # Complete the diagonalDifference function below.
 def diagonalDifference(arr):
-    v = [x for x in range(0, len(arr))]
-    v2 = list(reversed(v))
+    i = 0
+    i2 = l = len(arr)
 
     a, b = 0, 0
-    for x, y in zip(v, v2):
-        a += arr[x][x]
-        b += arr[x][y]
 
-    return abs(a-b)
+    for _ in range(l):
+        a += arr[i][i]
+        b += arr[i][i2 - 1]
+        i += 1
+        i2 -= 1
+
+    return abs(a - b)
 
 
 if __name__ == '__main__':
