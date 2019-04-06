@@ -6,9 +6,21 @@ import random
 import re
 import sys
 
+
 # Complete the birthdayCakeCandles function below.
 def birthdayCakeCandles(ar):
-    return ar.count(max(ar))
+    max = ar[0]
+    candles = {max: 0}
+
+    for x in ar:
+
+        if max < x:
+            max = x
+            candles[max] = 1
+        elif max == x:
+            candles[max] += 1
+
+    return candles[max]
 
 
 if __name__ == '__main__':
