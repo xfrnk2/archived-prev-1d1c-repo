@@ -15,14 +15,17 @@ import copy
 def minimumBribes(q):
     count = 0
     group = {}
-    for x in range(len(q)):
+    l = len(q)
+    for x in range(l):
         group[q[x]] = 0
 
-    for i in range(len(q), 0, -1):
+    for i in range(l, 0, -1):
         for j in range(1, i):
 
             if q[j] < q[j - 1]:
                 q[j], q[j - 1] = q[j - 1], q[j]
+                if not q[j] in group:
+                    group[q[j]] = 0
                 count += 1
                 group[q[j]] += 1
                 if group[q[j]] > 2:
