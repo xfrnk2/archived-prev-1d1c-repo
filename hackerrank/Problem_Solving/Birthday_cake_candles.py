@@ -9,18 +9,17 @@ import sys
 
 # Complete the birthdayCakeCandles function below.
 def birthdayCakeCandles(ar):
-    max = ar[0]
-    candles = {max: 0}
-
+    mx = ar[0]
+    candle = 0
     for x in ar:
 
-        if max < x:
-            max = x
-            candles[max] = 1
-        elif max == x:
-            candles[max] += 1
+        if mx < x:
+            mx = x
+            candle = 0
+        if mx == x:
+            candle += 1
 
-    return candles[max]
+    return candle
 
 
 if __name__ == '__main__':

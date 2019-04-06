@@ -23,15 +23,11 @@ def minimumBribes(q):
 
             if q[j] < q[j - 1]:
                 q[j], q[j - 1] = q[j - 1], q[j]
-                group[q[j]] += 1
                 count += 1
+                group[q[j]] += 1
+                if group[q[j]] > 2:
+                    return "Too chaotic"
 
-    for y in group.values():
-        if y > 2:
-            return "Too chaotic"
-
-        else:
-            pass
 
     return count
 

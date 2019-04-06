@@ -9,9 +9,7 @@ import sys
 # Complete the rotLeft function below.
 def rotLeft(a, d):
     for _ in range(d):
-        temp = a[0]
-        a.pop(0)
-        a.append(temp)
+        a.append(a.pop(0))
     return a
 
 if __name__ == '__main__':
