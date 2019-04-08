@@ -6,16 +6,27 @@ import random
 import re
 import sys
 
+
 # Complete the rotLeft function below.
 def rotLeft(a, d):
     size = len(a)
-    if size <= 1 or not 1 <= d <= size:
+
+    if size <= 1:
+        pass
+
+    if size < d:
         print("Wrong Input")
         exit()
 
-    for _ in range(d):
-        a.append(a.pop(0))
+    else:
+        temp = a[:d]
+        a = a[d:]
+
+        a.extend(temp)
+        values = ' '.join(str(v) for v in a)
+
     return a
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
