@@ -8,6 +8,11 @@ import sys
 
 # Complete the rotLeft function below.
 def rotLeft(a, d):
+    size = len(a)
+    if size <= 1 or not 1 <= d <= size:
+        print("Wrong Input")
+        exit()
+
     for _ in range(d):
         a.append(a.pop(0))
     return a
