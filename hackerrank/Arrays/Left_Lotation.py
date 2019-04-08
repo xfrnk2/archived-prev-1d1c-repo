@@ -23,7 +23,6 @@ def rotLeft(a, d):
         a = a[d:]
 
         a.extend(temp)
-        values = ' '.join(str(v) for v in a)
 
     return a
 
