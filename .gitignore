@@ -234,4 +234,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#custom_ingore_file
+*.xlsx
+
 # End of https://www.gitignore.io/api/python,windows,pycharm
