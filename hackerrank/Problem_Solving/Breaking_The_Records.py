@@ -25,9 +25,16 @@ def breakingRecords(scores):
             if j < lv:
                 lv = j
                 low += 1
+<<<<<<< HEAD
 
     return high, low
 
+=======
+ 
+    return high, low
+
+
+>>>>>>> Breaking_The_Records (성공)
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
