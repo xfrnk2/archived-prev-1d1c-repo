@@ -86,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -407,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554996944812</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Divisible_Sum_Pairs (성공)">
+      <created>1555256083643</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555256083643</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -910,7 +917,7 @@
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
