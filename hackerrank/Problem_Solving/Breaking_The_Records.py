@@ -26,11 +26,15 @@ def breakingRecords(scores):
                 lv = j
                 low += 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return high, low
 
 =======
  
+=======
+
+>>>>>>> Pytest 학습, 테스트 가능한 구조로 만들기
     return high, low
 
 
