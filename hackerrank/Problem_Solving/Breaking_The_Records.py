@@ -25,7 +25,7 @@ def breakingRecords(scores):
             if j < lv:
                 lv = j
                 low += 1
- 
+
     return high, low
 
 
