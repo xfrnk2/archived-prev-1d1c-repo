@@ -494,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555841417391</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="pip install -r requirements.txt [Errno 2] No such file or directory: 'requirements.txt' 에러 처리">
+      <created>1555845487876</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1555845487876</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -544,7 +551,8 @@
     <MESSAGE value="Migratory_Birds (성공)" />
     <MESSAGE value="Kangaroo (성공)" />
     <MESSAGE value="yml 파일 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="yml 파일 생성" />
+    <MESSAGE value="pip install -r requirements.txt [Errno 2] No such file or directory: 'requirements.txt' 에러 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="pip install -r requirements.txt [Errno 2] No such file or directory: 'requirements.txt' 에러 처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
