@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce7d044-a5b1-4621-a67e-344ab2e8c122" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tdd/pytest_test.py" afterPath="$PROJECT_DIR$/tdd/pytest_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -509,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555846117548</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="에러 발생시 travis-ci에 검출되지 않도록 예외처리 구현을위해 작성한 코드를 주석처리">
+      <created>1555846631968</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1555846631968</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -560,7 +566,8 @@
     <MESSAGE value="Kangaroo (성공)" />
     <MESSAGE value="yml 파일 생성" />
     <MESSAGE value="pip install -r requirements.txt [Errno 2] No such file or directory: 'requirements.txt' 에러 처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="pip install -r requirements.txt [Errno 2] No such file or directory: 'requirements.txt' 에러 처리" />
+    <MESSAGE value="에러 발생시 travis-ci에 검출되지 않도록 예외처리 구현을위해 작성한 코드를 주석처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="에러 발생시 travis-ci에 검출되지 않도록 예외처리 구현을위해 작성한 코드를 주석처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
