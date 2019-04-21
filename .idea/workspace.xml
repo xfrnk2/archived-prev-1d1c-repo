@@ -97,8 +97,8 @@
       <file leaf-file-name="Kangaroo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1015">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="406">
+              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -480,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555732942227</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Kangaroo (성공)">
+      <created>1555827366102</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555827366103</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -528,7 +535,8 @@
     <MESSAGE value="Breaking_The_Records (성공)" />
     <MESSAGE value="Pytest 학습, 테스트 가능한 구조로 만들기" />
     <MESSAGE value="Migratory_Birds (성공)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migratory_Birds (성공)" />
+    <MESSAGE value="Kangaroo (성공)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kangaroo (성공)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -942,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="406">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
