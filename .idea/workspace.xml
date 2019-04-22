@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ce7d044-a5b1-4621-a67e-344ab2e8c122" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/Calculator.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/Calculator_test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/pytest_test.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py" />
-      <change beforePath="$PROJECT_DIR$/tdd/Calculator.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tdd/Calculator_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tdd/pytest_test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Divisible_Sum_Pairs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Divisible_Sum_Pairs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+            <state relative-caret-position="319">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -60,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Breaking_The_Records.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Breaking_The_Records.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="754">
+              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -75,7 +67,7 @@
       <file leaf-file-name="Kangaroo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="290">
               <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
@@ -87,7 +79,7 @@
       <file leaf-file-name="Migratory_Birds.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Migratory_Birds.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="812">
               <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -140,7 +132,6 @@
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Mini-Max_Sum.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Grading_Students.py" />
         <option value="$PROJECT_DIR$/hackerrank/Arrays/Left_Lotation.py" />
-        <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py" />
         <option value="$PROJECT_DIR$/tdd/pytest.py" />
         <option value="$PROJECT_DIR$/tdd/.pytest_cache/Calculator_test.py" />
         <option value="$PROJECT_DIR$/tdd/Calculator_test.py" />
@@ -149,6 +140,7 @@
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py" />
         <option value="$PROJECT_DIR$/tdd/pytest_test.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py" />
+        <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py" />
       </list>
     </option>
   </component>
@@ -502,7 +494,28 @@
       <option name="project" value="LOCAL" />
       <updated>1555846899687</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="폴더명을 tdd -&gt; tests로 변경, Travi-ci와 Coverall 뱃지 추가">
+      <created>1555852471944</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1555852471944</updated>
+    </task>
+    <task id="LOCAL-00023" summary="코드리뷰를 참고해서 반영시킴(빠른 반환으로 코드의 뎁스를 줄이기)">
+      <created>1555949446057</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1555949446057</updated>
+    </task>
+    <task id="LOCAL-00024" summary="gitignore에 workspace.xml을 추가">
+      <created>1555950022985</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1555950022985</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -556,7 +569,9 @@
     <MESSAGE value="에러 발생시 travis-ci에 검출되지 않도록 예외처리 구현을위해 작성한 코드를 주석처리" />
     <MESSAGE value="에러 발생시 travis-ci에 검출되지 않도록 예외처리 코드를 주석처리" />
     <MESSAGE value="폴더명을 tdd -&gt; tests로 변경, Travi-ci와 Coverall 뱃지 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="폴더명을 tdd -&gt; tests로 변경, Travi-ci와 Coverall 뱃지 추가" />
+    <MESSAGE value="코드리뷰를 참고해서 반영시킴(빠른 반환으로 코드의 뎁스를 줄이기)" />
+    <MESSAGE value="gitignore에 workspace.xml을 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore에 workspace.xml을 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -882,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,16 +905,6 @@
         <state relative-caret-position="841">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,7 +927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Migratory_Birds.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="812">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
@@ -931,7 +935,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="290">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
@@ -939,34 +943,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tdd/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tdd/Calculator_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tdd/pytest_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tdd/Calculator.py" />
+    <entry file="file://$PROJECT_DIR$/tdd/Calculator_test.py" />
+    <entry file="file://$PROJECT_DIR$/tdd/pytest_test.py" />
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="754">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
