@@ -6,10 +6,18 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
     <option name="PROJECT_TEST_RUNNER" value="py.test" />
   </component>
+<<<<<<< HEAD
 =======
 >>>>>>> b66b1bb9cf90e94f6f1325604832ee91cf111046
+=======
+>>>>>>> test
+>>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
 </module>

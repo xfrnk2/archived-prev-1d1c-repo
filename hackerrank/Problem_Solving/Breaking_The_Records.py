@@ -25,9 +25,29 @@ def breakingRecords(scores):
             if j < lv:
                 lv = j
                 low += 1
+<<<<<<< HEAD
 
     return high, low
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    return high, low
+
+<<<<<<< HEAD
+=======
+ 
+=======
+
+>>>>>>> Pytest 학습, 테스트 가능한 구조로 만들기
+    return high, low
+
+
+>>>>>>> Breaking_The_Records (성공)
+=======
+>>>>>>> 폴더명을 tdd -> tests로 변경, Travi-ci와 Coverall 뱃지 추가
+>>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
