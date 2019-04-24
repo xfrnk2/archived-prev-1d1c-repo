@@ -9,15 +9,27 @@
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
+=======
+>>>>>>> master
+>>>>>>> 624d87241b727c354febfb9d7c0e15647bb6b805
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
     <option name="PROJECT_TEST_RUNNER" value="py.test" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b66b1bb9cf90e94f6f1325604832ee91cf111046
 =======
 >>>>>>> test
 >>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
+=======
+>>>>>>> test
+=======
+=======
+>>>>>>> b66b1bb9cf90e94f6f1325604832ee91cf111046
+>>>>>>> master
+>>>>>>> 624d87241b727c354febfb9d7c0e15647bb6b805
 </module>
