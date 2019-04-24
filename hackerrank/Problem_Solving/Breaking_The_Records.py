@@ -27,6 +27,7 @@ def breakingRecords(scores):
                 low += 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return high, low
 
@@ -42,6 +43,11 @@ def breakingRecords(scores):
 >>>>>>> Breaking_The_Records (성공)
 =======
 >>>>>>> 폴더명을 tdd -> tests로 변경, Travi-ci와 Coverall 뱃지 추가
+=======
+
+    return high, low
+
+>>>>>>> master
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
