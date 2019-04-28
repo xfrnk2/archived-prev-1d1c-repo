@@ -235,53 +235,7 @@ $RECYCLE.BIN/
 *.lnk
 
 #workspace.xml
-<<<<<<< HEAD
-<<<<<<< HEAD
-\.idea/workspace.xml
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 624d87241b727c354febfb9d7c0e15647bb6b805
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 workspace.xml
-=======
-.idea/workspace.xml
-<<<<<<< HEAD
->>>>>>> gitignore에 workspace.xml을 추가
-=======
-workspace.xml
->>>>>>> test
-=======
-.idea/workspace.xml
->>>>>>> workspace.xml파일을 gitignore에 추가
-=======
-**/.idea/workspace.xml
-<<<<<<< HEAD
->>>>>>> gitignore 수정
-=======
-workspace.xml
-workspace.*
->>>>>>> test
-=======
-\.idea/workspace.xml
->>>>>>> idea 폴더를 없애고 gitignore에 \.idea/workspace.xml 문장을 추가
-<<<<<<< HEAD
->>>>>>> 49f55fc8a24e7d557566eca47ca1dcfcb471c0dc
-=======
-=======
-\.idea/workspace.xml
->>>>>>> master
-=======
-workspace.xml
->>>>>>> test
-=======
-.idea/workspace.xml
->>>>>>> workspace.xml파일을 gitignore에 추가
->>>>>>> 624d87241b727c354febfb9d7c0e15647bb6b805
 
 # how to write .gitlgnore http://www.itpaper.co.kr/gitignore-%ED%8C%8C%EC%9D%BC%EC%9D%84-%ED%86%B5%ED%95%9C-%EB%AC%B4%EC%8B%9C%EB%AA%A9%EB%A1%9D-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/
 # End of https://www.gitignore.io/api/python,windows,pycharm
