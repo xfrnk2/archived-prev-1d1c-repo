@@ -32,6 +32,5 @@ def test_needsfiles(tmpdir):
     print(tmpdir)
     assert 0
 
-# 테스트가 예외처리를 잘 하므로 travis ci에 검출되지 않도록 주석 처리
-# if __name__ == 'main__':
-#     test_answer()
+if __name__ == 'main__':
+    test_answer()
