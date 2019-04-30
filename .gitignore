@@ -235,6 +235,10 @@ $RECYCLE.BIN/
 *.lnk
 
 #workspace.xml
+workspace.xml
+.idea/workspace.xml
+**/.idea/workspace.xml
+workspace.*
 \.idea/workspace.xml
 
 
