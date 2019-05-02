@@ -14,21 +14,20 @@ def divisibleSumPairs(n, k, ar):
     count = 0
 
     if n < 2:
-        pass
+        return 0
 
     elif k == 1:
         v = list(permutations(ar, 2))
-        count = len(v)
+        return len(v)
 
     elif n == 2:
         if sum(ar) % k == 0:
-            count += 1
+            return 1
 
-    else:
-        for x in range(n):
-            for y in range(x + 1, n):
-                if (ar[x] + ar[y]) % k == 0:
-                    count += 1
+    for x in range(n):
+        for y in range(x + 1, n):
+            if (ar[x] + ar[y]) % k == 0:
+                count += 1
 
     return count
 
