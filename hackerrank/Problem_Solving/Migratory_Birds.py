@@ -18,7 +18,7 @@ def migratoryBirds(arr):
     temp = temp_num = 0
 
     for x in arr:
-        if not x in box:
+        if x not in box:
             box[x] = 0
         box[x] += 1
 
@@ -26,7 +26,7 @@ def migratoryBirds(arr):
         if val > temp:
             temp = val
             temp_num = num
-        if val == temp:
+        elif val == temp:
             if num < temp_num:
                 temp_num = num
                 temp = val
