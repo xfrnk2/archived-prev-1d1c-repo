@@ -3,5 +3,12 @@ python:
 - "3.6.4"
 install:
 - pip install -r requirements.txt
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install coveralls
+
 script:
-- pytest -vv
+  - pytest -vv
+  - pytest --cov=YourModule/
+after_success:
+  - coveralls
