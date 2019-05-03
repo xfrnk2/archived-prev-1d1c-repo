@@ -16,7 +16,7 @@ def breakingRecords(scores):
     if size == 1:
         return 0, 0
 
-    for i, j in enumerate(scores):
+    for j in scores:
 
             if hv < j:
                 hv = j
