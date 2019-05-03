@@ -4,7 +4,6 @@ python: 3.7
 install:
 - make bootstrap
 script:
-- make lint
 - make test
 after_script:
 - make cover
