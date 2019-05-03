@@ -16,13 +16,12 @@ def divisibleSumPairs(n, k, ar):
     if n < 2:
         return 0
 
-    elif k == 1:
+    if k == 1:
         v = list(permutations(ar, 2))
         return len(v)
 
-    elif n == 2:
-        if sum(ar) % k == 0:
-            return 1
+    if n == 2 and sum(ar) % k == 0:
+        return 1
 
     for x in range(n):
         for y in range(x + 1, n):
