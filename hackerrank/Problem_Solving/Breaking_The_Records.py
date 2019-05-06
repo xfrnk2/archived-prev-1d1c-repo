@@ -16,13 +16,13 @@ def breakingRecords(scores):
     if size == 1:
         return 0, 0
 
-    for j in scores:
+    for x in scores:
 
-            if hv < j:
-                hv = j
+            if hv < x:
+                hv = x
                 high += 1
-            if j < lv:
-                lv = j
+            if x < lv:
+                lv = x
                 low += 1
 
     return high, low
