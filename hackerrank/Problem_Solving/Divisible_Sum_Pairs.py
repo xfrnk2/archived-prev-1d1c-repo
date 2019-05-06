@@ -17,8 +17,7 @@ def divisibleSumPairs(n, k, ar):
         return 0
 
     if k == 1:
-        v = list(permutations(ar, 2))
-        return len(v)
+        return len(list(permutations(ar, 2)))
 
     if n == 2 and sum(ar) % k == 0:
         return 1
