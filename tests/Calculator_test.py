@@ -1,4 +1,5 @@
 from Calculator import parse, eval
+import pytest
 class TestClass(object):
     def test_parse(self):
         assert parse("1 + 3") == ("+", 1, 3), "공백을 잘 처리한다"
@@ -11,3 +12,5 @@ class TestClass(object):
         assert eval(("-", 1, 2)) == -1
         assert eval(("*", 1, 2)) == 2
         assert eval(("/", 1, 2)) == 0.5
+        with pytest.raises(ZeroDivisionError):
+            eval(("/", 1, 0))
