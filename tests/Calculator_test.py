@@ -1,4 +1,4 @@
-from Calculator import parse, eval
+from Calculator import parse, calc
 import pytest
 class TestClass(object):
     def test_parse(self):
@@ -7,10 +7,10 @@ class TestClass(object):
         assert parse("1/ 3") == ("/", 1, 3)
         assert parse("1-3") == ("-", 1, 3), "공백이 없을 경우에도 파싱 성공한다."
 
-    def test_eval(self):
-        assert eval(("+", 1, 2)) == 3,"에러"
-        assert eval(("-", 1, 2)) == -1,"에러"
-        assert eval(("*", 1, 2)) == 2,"에러"
-        assert eval(("/", 1, 2)) == 0.5,"에러"
+    def test_calc(self):
+        assert calc(("+", 1, 2)) == 3,"에러"
+        assert calc(("-", 1, 2)) == -1,"에러"
+        assert calc(("*", 1, 2)) == 2,"에러"
+        assert calc(("/", 1, 2)) == 0.5,"에러"
         with pytest.raises(ZeroDivisionError):
-            eval(("/", 1, 0))
+            calc(("/", 1, 0))
