@@ -14,4 +14,12 @@ def parse(s: str) -> tuple:
     return op, val1, val2
 
 def eval(t: tuple) -> (int or float):
-    pass
+    op_map = {
+        "+": lambda x, y: x + y,
+        "-": lambda x, y: x - y,
+        "*": lambda x, y: x * y,
+        "/": lambda x, y: x / y,
+    }
+
+    op, val1, val2 = t
+    return op_map[op](val1, val2)
