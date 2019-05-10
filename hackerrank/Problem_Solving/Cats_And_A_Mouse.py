@@ -15,11 +15,11 @@ def catAndMouse(x, y, z):
     c1 = abs(y - z)
     c2 = abs(x - z)
 
+    if c1 == c2:
+        return ("Mouse C")
     if c1 > c2:
         return ("Cat A")
-    elif c1 < c2:
-        return ("Cat B")
-    return ("Mouse C")
+    return ("Cat B")
 
 
 if __name__ == '__main__':
