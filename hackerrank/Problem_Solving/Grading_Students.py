@@ -11,7 +11,9 @@ def gradingStudents(grades):
 
     for k, x in enumerate(grades):
 
-        if not 1 <= k + 1 <= 60 or not 0 <= x <= 100:
+        validSize = 1 <= k + 1 <= 60
+        validScoreRange = 0 <= x <= 100
+        if not (validSize and validScoreRange):
             print("Wrong Input")
             exit()
 

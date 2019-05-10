@@ -16,7 +16,7 @@ def bonAppetit(bill, k, b):
         else:
             v += j
 
-    v = int(v / 2)
+    v = v // 2
 
     if b == v:
         print("Bon Appetit")
