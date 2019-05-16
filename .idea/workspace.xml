@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/Electronics_Shop.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/calculator/function.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/calculator/pytest_test.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/calculator/tree.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/tests/Calculator.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/Calculator_test.py" afterPath="$PROJECT_DIR$/tests/Calculator_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/pytest_test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,16 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Between_Two_Sets.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Between_Two_Sets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Two_Strings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Dictionaries_And_HashMaps/Two_Strings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,18 +53,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bon_Appétit.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Bon_Appétit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="e#16#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Mini-Max_Sum.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Mini-Max_Sum.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Electronics_Shop.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Electronics_Shop.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Electronics_Shop.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="e#16#25#0" expanded="true" />
               </folding>
@@ -102,8 +85,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Staircase.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Staircase.py">
+      <file leaf-file-name="calculator_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/calculator_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculator/function.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -112,12 +107,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Very_Big_Sum.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Very_Big_Sum.py">
+      <file leaf-file-name="pytest_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculator/pytest_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tree.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/calculator/tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +155,6 @@
         <option value="$PROJECT_DIR$/hackerrank/Dictionaries_And_HashMaps/Two_Strings.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py" />
-        <option value="$PROJECT_DIR$/tests/Calculator.py" />
-        <option value="$PROJECT_DIR$/tests/Calculator_test.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Bon_Appétit.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Cats_And_A_Mouse.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Grading_Students.py" />
@@ -157,6 +162,9 @@
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Drawing_Book.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Birthday_Chocolate.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Electronics_Shop.py" />
+        <option value="$PROJECT_DIR$/tests/Calculator.py" />
+        <option value="$PROJECT_DIR$/tests/tree.py" />
+        <option value="$PROJECT_DIR$/tests/Calculator_test.py" />
       </list>
     </option>
   </component>
@@ -187,12 +195,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
               <item name="1d1c" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
@@ -226,7 +240,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -385,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557844227383</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Electronics_shop (성공)">
+      <created>1558014518729</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1558014518729</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -440,41 +460,14 @@
     <MESSAGE value="Drawing_Book (성공)" />
     <MESSAGE value="코드리뷰를 참고해서 코드를 수정" />
     <MESSAGE value="Electronics_shop (성공)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Electronics_shop (성공)" />
+    <MESSAGE value="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)" />
+    <option name="LAST_COMMIT_MESSAGE" value="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Warm_Up/Time_Conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Diagonal_Difference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Breaking_The_Records.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -482,13 +475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Calculator.py" />
     <entry file="file://$PROJECT_DIR$/hackerrank/Dictionaries_And_HashMaps/Two_Strings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -520,10 +507,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/calculator_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,27 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/pytest_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Cats_And_A_Mouse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
@@ -728,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,9 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,9 +775,48 @@
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Electronics_Shop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <element signature="e#16#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tree.py" />
+    <entry file="file://$PROJECT_DIR$/tests/pytest_test.py" />
+    <entry file="file://$PROJECT_DIR$/tests/Calculator.py" />
+    <entry file="file://$PROJECT_DIR$/tests/calculator_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator/pytest_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator/tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
