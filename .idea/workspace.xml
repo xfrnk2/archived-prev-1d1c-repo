@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)">
+    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,18 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Drawing_Book.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Drawing_Book.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-              <folding>
-                <element signature="e#16#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Kangaroo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Kangaroo.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,7 +93,7 @@
       <file leaf-file-name="tree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculator/tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="203">
               <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -114,11 +102,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Picking_Numbers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Picking_Numbers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Picking_Numbers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding>
+                <element signature="e#16#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utopian_Tree.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Utopian_Tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="789">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -163,6 +163,7 @@
         <option value="$PROJECT_DIR$/tests/tree.py" />
         <option value="$PROJECT_DIR$/tests/Calculator_test.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Picking_Numbers.py" />
+        <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Utopian_Tree.py" />
       </list>
     </option>
   </component>
@@ -193,6 +194,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -238,7 +240,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558016858959</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Picking_Numbers (성공)">
+      <created>1558444542592</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1558444542592</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +455,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -492,7 +500,8 @@
     <MESSAGE value="코드리뷰를 참고해서 코드를 수정" />
     <MESSAGE value="Electronics_shop (성공)" />
     <MESSAGE value="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)" />
-    <option name="LAST_COMMIT_MESSAGE" value="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)" />
+    <MESSAGE value="Picking_Numbers (성공)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Picking_Numbers (성공)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,12 +510,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Calculator.py" />
     <entry file="file://$PROJECT_DIR$/hackerrank/Dictionaries_And_HashMaps/Two_Strings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,9 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
           <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="e#16#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculator/tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="203">
           <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -845,8 +849,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Picking_Numbers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Utopian_Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
