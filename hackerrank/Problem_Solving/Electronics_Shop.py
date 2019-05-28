@@ -9,16 +9,13 @@ import itertools
 # Complete the getMoneySpent function below.
 #
 def getMoneySpent(keyboards, drives, b):
-    values = []
+    values = [-1]
     mx = 0
-    for x in keyboards:
-        for y in drives:
+    for x, y in itertools.product(keyboards, drives):
             z = x + y
             if 0 <= z <= b and mx < z:
                 values.append(z)
                 mx = z
-    if not values:
-        return -1
     return max(values)
 
 
