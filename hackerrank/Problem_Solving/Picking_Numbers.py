@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 #
 # Complete the 'pickingNumbers' function below.
 #
@@ -13,11 +14,9 @@ import sys
 # The function accepts INTEGER_ARRAY a as parameter.
 #
 def pickingNumbers(a):
-
     if len(a) <= 1:
         return len(a)
 
-    a.sort()
     numbers = set(a)
     result = 0
 
@@ -25,13 +24,15 @@ def pickingNumbers(a):
         if num < 2:
             continue
         count = 0
-        for y in a:
-            if y == num or num - 1 == y:
-                count += 1
+
+        for _ in filter(lambda x: x == num or x == num - 1, a):
+            count += 1
+
         if result < count:
             result = count
 
     return (result)
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
