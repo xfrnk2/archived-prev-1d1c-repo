@@ -9,10 +9,10 @@ import sys
 
 # Complete the hurdleRace function below.
 def hurdleRace(k, height):
-    mx = max(height)
-    if k > mx:
-        return 0 
-    return mx - k
+    max_value = max(height)
+    if k > max_value:
+        return 0
+    return max_value - k
 
 
 if __name__ == '__main__':
