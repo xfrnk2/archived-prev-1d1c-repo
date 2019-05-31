@@ -10,12 +10,12 @@ import itertools
 #
 def getMoneySpent(keyboards, drives, b):
     values = [-1]
-    mx = 0
+    max_value = 0
     for x, y in itertools.product(keyboards, drives):
             z = x + y
-            if 0 <= z <= b and mx < z:
+            if max_value < z <= b:
                 values.append(z)
-                mx = z
+                max_value = z
     return max(values)
 
 
