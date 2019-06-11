@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/cutTheSticks_test.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -501,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559796770751</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="CutTheSticks의 테스트코드를 작성">
+      <created>1560264199300</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1560264199301</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -537,7 +545,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cats_And_A_Mouse (성공)" />
     <MESSAGE value="https://github.com/zrma/tdd 저장소를 보고 베끼기" />
     <MESSAGE value="코드 리뷰를 참고해서 코드를 수정" />
     <MESSAGE value="-make lint를 삭제.." />
@@ -562,7 +569,8 @@
     <MESSAGE value="코드 리뷰를 참고해 코드를 수정, Beautiful_Days_at_the_Movies (성공)" />
     <MESSAGE value="Find_Digits 문제 풀이 후 해당 문제의 테스트케이스를 tests 폴더 안에 작성하여 테스트 실행. 성공" />
     <MESSAGE value="Minimum_Distances 문제 풀이 후 해당 문제의 테스트케이스를 tests 폴더 안에 작성하여 테스트 실행. 성공" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimum_Distances 문제 풀이 후 해당 문제의 테스트케이스를 tests 폴더 안에 작성하여 테스트 실행. 성공" />
+    <MESSAGE value="CutTheSticks의 테스트코드를 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="CutTheSticks의 테스트코드를 작성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
