@@ -11,7 +11,7 @@ def cutTheSticks(arr):
 
         if n == front_num:
             continue
-
+ 
         count = 1
         for x in arr:
             if n == x:
