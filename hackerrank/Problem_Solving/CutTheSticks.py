@@ -11,7 +11,7 @@ def cutTheSticks(arr):
 
         if n == front_num:
             continue
- 
+
         count = 1
         for x in arr:
             if n == x:
@@ -23,5 +23,3 @@ def cutTheSticks(arr):
 
     return answer
 
-
-print(cutTheSticks([8, 8, 14, 10, 3, 5, 14, 12]))
