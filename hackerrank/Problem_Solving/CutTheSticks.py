@@ -1,18 +1,27 @@
 #https://www.hackerrank.com/challenges/cut-the-sticks/problem
 
 def cutTheSticks(arr):
-    c = len(arr)
-    answer = [c]
+    arr = sorted(arr)
+    length = len(arr)
+    answer = [length]
+    front_num = 0
 
-    if c == 1:
-        return answer
+    while 1 < length:
+        n = arr.pop(0)
 
-    a = sorted(list(set(arr)))
-    a.pop(-1)
+        if n == front_num:
+            continue
 
-    for i in a:
-        to_cut = list(filter(lambda j: i == j, arr))
-        v = c - len(to_cut)
-        answer.append(v)
-        c = v
+        count = 1
+        for x in arr:
+            if n == x:
+                count += 1
+
+        length -= count
+        answer.append(length)
+        front_num = n
+
     return answer
+
+
+print(cutTheSticks([8, 8, 14, 10, 3, 5, 14, 12]))
