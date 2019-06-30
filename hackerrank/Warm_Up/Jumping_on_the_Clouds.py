@@ -9,6 +9,8 @@ import sys
 
 # Complete the jumpingOnClouds function below.
 def jumpingOnClouds(c):
+
+
     steps = 0
     point = 0
 
@@ -32,7 +34,6 @@ def jumpingOnClouds(c):
             steps += 1
 
         return steps
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')

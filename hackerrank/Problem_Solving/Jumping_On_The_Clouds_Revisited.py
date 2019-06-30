@@ -3,16 +3,14 @@
 
 def jumpingOnClouds(c, k):
     n = 0
-    v = len(c) % k > 0
     num = 100
 
     times = len(c) // k
 
-    if not v:
-        if c[0] == 0:
-            num -= 1
-        else:
-            num -= 3
+    if c[0] == 0:
+        num -= 1
+    else:
+        num -= 3
 
     for _ in range(times):
 
@@ -25,5 +23,4 @@ def jumpingOnClouds(c, k):
             num -= 1
 
     return num
-
 

@@ -6,14 +6,14 @@ def equalizeArray(arr):
     box = Counter(arr)
 
     size = 0
- 
+
     maxValue = 0
 
-    for x in box:
+    for value in box.values():
 
-        size += box[x]
+        size += value
 
-        if maxValue < box[x]:
-            maxValue = box[x]
+        if maxValue < value:
+            maxValue = value
 
     return size - maxValue
