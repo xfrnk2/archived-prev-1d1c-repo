@@ -3,6 +3,7 @@ from collections import Counter
 
 # Complete the equalizeArray function below.
 def equalizeArray(arr):
+
     box = Counter(arr)
 
     size = 0
@@ -16,3 +17,6 @@ def equalizeArray(arr):
         max_value = max(max_value, value)
 
     return size - max_value
+
+ab = [2]
+print(equalizeArray(ab))
