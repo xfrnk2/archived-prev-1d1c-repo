@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +23,8 @@
       <file leaf-file-name="Equalize_The_Array_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Equalize_The_Array_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="87">
+              <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -51,17 +52,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Equalize_The_Array.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Equalize_The_Array.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -172,9 +173,9 @@
         <option value="$PROJECT_DIR$/tests/calculator_test.py" />
         <option value="$PROJECT_DIR$/tests/Equalize_The_Array_test.py" />
         <option value="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" />
-        <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py" />
         <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" />
         <option value="$PROJECT_DIR$/hackerrank/Warm_Up/Jumping_on_the_Clouds.py" />
+        <option value="$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py" />
       </list>
     </option>
   </component>
@@ -654,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561905581034</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가">
+      <created>1561987790425</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1561987790425</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,7 +698,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="모든 테스트 케이스에 대해 성공하도록 요구 조건을 만족하는 로직 구현" />
     <MESSAGE value="리팩토링 - eval 이라는 함수명이 built-in 함수명을 가리므로(shadowing) 적절하게 함수명 변경" />
     <MESSAGE value="Bon.Appetit (성공)" />
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
@@ -715,7 +722,8 @@
     <MESSAGE value="Equalize_The_Array 의 문제 풀이와 테스트 케이스를 작성. 테스트가 성공한다." />
     <MESSAGE value="Equalize_The_Array 코드리뷰를 참고하여 코드의 일부를 수정" />
     <MESSAGE value="실패되던 테스트가 성공할수 있도록 코드를 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="실패되던 테스트가 성공할수 있도록 코드를 수정" />
+    <MESSAGE value=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,14 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Equalize_The_Array_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1025,14 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1073,6 +1065,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Equalize_The_Array_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding />
         </state>
       </provider>
