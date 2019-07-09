@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py" />
-      <change beforePath="$PROJECT_DIR$/tests/Beautiful_Triplets_test.py" afterPath="$PROJECT_DIR$/tests/Beautiful_Triplets_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -710,7 +708,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562684929052</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Beautiful Triplets의 테스트가 성공한다">
+      <created>1562684997151</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1562684997151</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -746,7 +751,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Between_Two_Sets (성공)" />
     <MESSAGE value="Drawing_Book (성공)" />
     <MESSAGE value="코드리뷰를 참고해서 코드를 수정" />
     <MESSAGE value="Electronics_shop (성공)" />
@@ -771,7 +775,8 @@
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
     <MESSAGE value="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지" />
     <MESSAGE value="Beautiful Triplets의 테스트케이스를 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beautiful Triplets의 테스트케이스를 작성" />
+    <MESSAGE value="Beautiful Triplets의 테스트가 성공한다" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beautiful Triplets의 테스트가 성공한다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
