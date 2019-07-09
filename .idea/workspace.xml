@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py" />
+      <change beforePath="$PROJECT_DIR$/tests/Beautiful_Triplets_test.py" afterPath="$PROJECT_DIR$/tests/Beautiful_Triplets_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beautiful_Triplets_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Beautiful_Triplets_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -52,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beautiful_Triplets.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Beautiful_Triplets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="232">
+              <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -701,7 +703,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561989385472</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Beautiful Triplets의 테스트케이스를 작성">
+      <created>1562684929052</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1562684929052</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -737,7 +746,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bon.Appetit (성공)" />
     <MESSAGE value="Between_Two_Sets (성공)" />
     <MESSAGE value="Drawing_Book (성공)" />
     <MESSAGE value="코드리뷰를 참고해서 코드를 수정" />
@@ -762,7 +770,8 @@
     <MESSAGE value=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가" />
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
     <MESSAGE value="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지" />
-    <option name="LAST_COMMIT_MESSAGE" value="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지" />
+    <MESSAGE value="Beautiful Triplets의 테스트케이스를 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beautiful Triplets의 테스트케이스를 작성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,21 +1126,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
+    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="232">
+          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Beautiful_Triplets.py">
+    <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="377">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
