@@ -7,6 +7,5 @@ from hackerrank.Problem_Solving.Service_Lane import serviceLane
 
 class TestClass(object):
     def test_func(self):
-        assert serviceLane(0, [(0,3), (1, 4)]) == 0, "width 그룹의 길이가 2 이상이다. 아닌 경우 에러 발생"
-        assert serviceLane(5, [(0, 6), (1, 4)]) == 0, "cases의 case 범위의 상한이 width를 초과하지 않는다. 초과하는 경우 에러 발생"
-        
+        assert serviceLane(8,[(0, 3), (4, 6), (6, 7), (3, 5), (0, 7)],[2, 3, 1, 2, 3, 2, 3,
+                                                 3]) == [1, 2, 3, 2, 1], "코드가 잘 동작한다"
