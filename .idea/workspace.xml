@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py" afterPath="$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,18 +48,40 @@
         <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Service_Lane.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mark_And_Toys.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mark_And_Toys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="406">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alternating_Characters.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/String_Manipulation/Alternating_Characters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alternating_Characters_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,21 +99,11 @@
       <file leaf-file-name="Mark_And_Toys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="232">
               <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Minimum_Distances_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Minimum_Distances_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -110,21 +121,9 @@
       <file leaf-file-name="Calculator_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="377">
               <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cutTheSticks_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -189,6 +188,8 @@
         <option value="$PROJECT_DIR$/tests/Service_Lane_test.py" />
         <option value="$PROJECT_DIR$/tests/Mark_And_Toys.py" />
         <option value="$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py" />
+        <option value="$PROJECT_DIR$/tests/Alternating_Characters_test.py" />
+        <option value="$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/String_Manipulation/Alternating_Characters.py" />
       </list>
     </option>
   </component>
@@ -259,6 +260,13 @@
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
               <item name="1d1c" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
+              <item name="Interview_Preparation_Kit" type="462c0819:PsiDirectoryNode" />
+              <item name="String_Manipulation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
+              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
               <item name="Problem_Solving" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,8 +284,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,13 +429,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00001" summary="코드리뷰를 참고해서 코드를 수정, .coveralls.yml 파일을 생성">
-      <created>1556801750028</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556801750028</updated>
     </task>
     <task id="LOCAL-00002" summary="travis.yml 파일을 수정">
       <created>1556803973131</created>
@@ -765,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563198753105</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Mark_And_Toys 코드를 작성. 테스트가 성공한다.">
+      <created>1563198834457</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1563198834458</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -801,7 +809,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Picking_Numbers (성공)" />
     <MESSAGE value="Utopian_Tree (성공)" />
     <MESSAGE value="코드리뷰를 참고해 이전에 풀었던 문제들 코드를 수정" />
     <MESSAGE value="The Hurdle Race (성공)" />
@@ -826,7 +833,8 @@
     <MESSAGE value="Service_Lane의 테스트케이스를 작성" />
     <MESSAGE value="Service_Lane의 테스트케이스를 수정, 코드를 완성" />
     <MESSAGE value="Mark_And_Toys 테스트케이스를 작성. 테스트가 실패한다" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mark_And_Toys 테스트케이스를 작성. 테스트가 실패한다" />
+    <MESSAGE value="Mark_And_Toys 코드를 작성. 테스트가 성공한다." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mark_And_Toys 코드를 작성. 테스트가 성공한다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -847,14 +855,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hackerrank/Dictionaries_And_HashMaps/Two_Strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tree.py" />
     <entry file="file://$PROJECT_DIR$/tests/pytest_test.py" />
     <entry file="file://$PROJECT_DIR$/tests/Calculator.py" />
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Mini-Max_Sum.py">
@@ -1101,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15457">
           <caret line="534" column="0" lean-forward="false" selection-start-line="534" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,7 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,7 +1158,7 @@
     <entry file="file://$PROJECT_DIR$/hackerrank/Problem_Solving/Service_Lane.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1169,6 +1167,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1183,28 +1207,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py">
+    <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
-          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
+    <entry file="file://$PROJECT_DIR$/hackerrank/Interview_Preparation_Kit/String_Manipulation/Alternating_Characters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="29">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="8" />
           <folding />
         </state>
       </provider>

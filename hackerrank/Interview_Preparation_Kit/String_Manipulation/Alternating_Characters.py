@@ -1,0 +1,2 @@
+def alternatingCharacters(s):
+    pass
