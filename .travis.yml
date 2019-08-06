@@ -12,7 +12,7 @@ after_script:
 # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
 - sonar-scanner
 
-dist : trusty
+# dist : trusty
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
