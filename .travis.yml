@@ -14,7 +14,7 @@ after_script:
 
 # dist : trusty
 addons:
-  sonarcloud:
+  sonarcloud: true
     organization: "xfrnk2-github"
     token:
       secure: "**************************" # encrypted value of your token
