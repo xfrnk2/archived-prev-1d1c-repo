@@ -429,13 +429,6 @@
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
     </task>
-    <task id="LOCAL-00008" summary="Birthday_Chocolate (성공)">
-      <created>1557151759026</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1557151759026</updated>
-    </task>
     <task id="LOCAL-00009" summary="코드리뷰 반영">
       <created>1557154585274</created>
       <option name="number" value="00009" />
@@ -772,7 +765,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565275249968</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="The_Time_In_Words 테스트케이스를 추가, 수정">
+      <created>1565278153039</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1565278153039</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -780,7 +780,7 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281768" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
@@ -808,7 +808,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CutTheSticks의 테스트코드를 작성" />
     <MESSAGE value="CutTheSticks 테스트코드에 문제가 없음." />
     <MESSAGE value="CutTheSticks 코드가 잘 실행됨.(성공)" />
     <MESSAGE value="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)" />
@@ -833,7 +832,8 @@
     <MESSAGE value="The_Time_In_Words 테스트코드 작성, 테스트가 실패한다" />
     <MESSAGE value="The_Time_In_Words 코드 미구현" />
     <MESSAGE value="The_Time_In_Words 테스트케이스를 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="The_Time_In_Words 테스트케이스를 추가" />
+    <MESSAGE value="The_Time_In_Words 테스트케이스를 추가, 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="The_Time_In_Words 테스트케이스를 추가, 수정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
