@@ -9,3 +9,5 @@ class TestClass(object):
     def test_func(self):
         assert timeInWords(5, 47) == "thirteen minutes to six", "연산을 잘 수행한다"
         assert timeInWords(3, 00) == "three o' clock", "연산을 잘 수행한다"
+        assert timeInWords(10, 57) == "three minutes to three", "연산을 잘 수행한다"
+        assert timeInWords(1, 1) == "one minute past one", "연산을 잘 수행한다"
