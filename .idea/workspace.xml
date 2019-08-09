@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/Problem_Solving/The_Time_In_Words.py" afterPath="$PROJECT_DIR$/hackerrank/Problem_Solving/The_Time_In_Words.py" />
-      <change beforePath="$PROJECT_DIR$/tests/The_Time_In_Words_test.py" afterPath="$PROJECT_DIR$/tests/The_Time_In_Words_test.py" />
-    </list>
+    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -429,13 +425,6 @@
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
     </task>
-    <task id="LOCAL-00009" summary="코드리뷰 반영">
-      <created>1557154585274</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1557154585274</updated>
-    </task>
     <task id="LOCAL-00010" summary="코드리뷰 반영">
       <created>1557154648885</created>
       <option name="number" value="00010" />
@@ -772,15 +761,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565278153039</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다.">
+      <created>1565278203963</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1565278203963</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281768" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
@@ -808,7 +803,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CutTheSticks 테스트코드에 문제가 없음." />
     <MESSAGE value="CutTheSticks 코드가 잘 실행됨.(성공)" />
     <MESSAGE value="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)" />
     <MESSAGE value="코드 리뷰를 참고하여 코드를 수정.(Minimum_Distances)" />
@@ -833,7 +827,8 @@
     <MESSAGE value="The_Time_In_Words 코드 미구현" />
     <MESSAGE value="The_Time_In_Words 테스트케이스를 추가" />
     <MESSAGE value="The_Time_In_Words 테스트케이스를 추가, 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="The_Time_In_Words 테스트케이스를 추가, 수정" />
+    <MESSAGE value="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다." />
+    <option name="LAST_COMMIT_MESSAGE" value="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

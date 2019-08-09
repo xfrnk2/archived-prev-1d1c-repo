@@ -6,13 +6,13 @@ install:
 
 script:
 - make test
+- sonar-scanner 
 after_script:
 - make cover
 
 # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-- sonar-scanner -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_TOKEN
 
-# dist : trusty
+
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
