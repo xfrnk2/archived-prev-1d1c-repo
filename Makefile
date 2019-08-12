@@ -5,8 +5,11 @@ ifdef update
   u=-u
 endif
 
-VENV ?= ..\venv\Scripts\activate.bat
-
+#LinuxwindowsScript.bat test 
+#Windows
+#VENV ?= ..\venv\Scripts\activate.bat
+#Linux
+#VENV ?= . venv/Scripts/activate.bat
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
@@ -53,7 +56,7 @@ lint:
 	flake8 src tests
 
 test:
-	$(VENV) ;\
+	cmd /C LinuxWindowsScript.bat
 	python setup.py test $(TEST_ARGS)
 
 jenkins: test
