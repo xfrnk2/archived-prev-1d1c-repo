@@ -5,14 +5,7 @@ ifdef update
   u=-u
 endif
 
-CONFIG_DIR = "LinuxWindowsScript.bat"
-
-#test
-#cmd /C LinuxWindowsScript.bat
-#Windows
-#VENV ?= ..\venv\Scripts\activate.bat
-#Linux
-#VENV ?= . venv/Scripts/activate.bat
+VENV ?= ..\venv\Scripts\activate.bat
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
@@ -31,9 +24,6 @@ help:
 
 bootstrap:
 	python -m venv env
-	#test
-	#!/bin/bash
-	@echo $(CONFIG_DIR)
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
@@ -64,6 +54,7 @@ lint:
 	flake8 src tests
 
 test:
+	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
 jenkins: test
