@@ -5,7 +5,8 @@ ifdef update
   u=-u
 endif
 
-#LinuxwindowsScript.bat test 
+#test
+cmd /C LinuxWindowsScript.bat
 #Windows
 #VENV ?= ..\venv\Scripts\activate.bat
 #Linux
@@ -56,7 +57,6 @@ lint:
 	flake8 src tests
 
 test:
-	cmd /C LinuxWindowsScript.bat
 	python setup.py test $(TEST_ARGS)
 
 jenkins: test
