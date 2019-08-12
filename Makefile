@@ -28,7 +28,7 @@ help:
 bootstrap:
 	python -m venv env
 	#test
-	cmd /C LinuxWindowsScript.bat
+	@CALL LinuxWindowsScript.bat
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
