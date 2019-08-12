@@ -24,9 +24,7 @@ def timeInWords(h, m):
     minutes = words[m]
     hours = words[h]
 
-    if m % 15 == 0:
-        pass
-    else:
+    if m % 15 != 0:
         v = " minute"
         if 1 < m <= 60:
             v += "s"
