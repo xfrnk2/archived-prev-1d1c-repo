@@ -6,7 +6,7 @@ ifdef update
 endif
 
 #test
-cmd /C LinuxWindowsScript.bat
+#cmd /C LinuxWindowsScript.bat
 #Windows
 #VENV ?= ..\venv\Scripts\activate.bat
 #Linux
@@ -27,6 +27,8 @@ help:
 
 bootstrap:
 	python -m venv env
+	#test
+	cmd /C LinuxWindowsScript.bat
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
