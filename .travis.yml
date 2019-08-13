@@ -31,8 +31,3 @@ env:
 
 after_success: codecov --token="743d65b6-55bf-431f-aec8-045e22922fa1"
 
-[testenv]
-passenv =
-  CI
-  TRAVIS
-  TRAVIS_*
