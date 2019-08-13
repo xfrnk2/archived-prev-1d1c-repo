@@ -3,8 +3,7 @@ language: python
 python: 3.7
 install:
 - make bootstrap
-- pip install flake8 pytest-cov codecov
-- pip install -r requirements.txt
+
 
 addons:
   sonarcloud:
@@ -15,10 +14,8 @@ addons:
 script:
 - sonar-scanner 
 - make test
-- py.test  --cov-report term --cov=\
 
 after_script:
-- codecov
 - make cover
 
 env:
