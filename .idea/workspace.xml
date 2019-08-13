@@ -196,7 +196,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-19" />
     <option name="y" value="9" />
     <option name="width" value="1938" />
@@ -426,13 +426,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00011" summary="parse 함수의 결과 tuple의 내용을 실제 적용(계산=eval) 하는 함수의 테스트 코드를 작성. 아직 테스트는 실패.">
-      <created>1557408624022</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1557408624022</updated>
     </task>
     <task id="LOCAL-00012" summary="0으로 나눌 경우 에러가 발생해야 하므로 이에 대한 테스트 코드 추가">
       <created>1557408950204</created>
@@ -770,11 +763,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565615140526</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성">
+      <created>1565702588618</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1565702588619</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -806,7 +806,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)" />
     <MESSAGE value="코드 리뷰를 참고하여 코드를 수정.(Minimum_Distances)" />
     <MESSAGE value="코드 리뷰를 참고하여 코드를 수정.(CutTheSticks) 1회 순회가 가능하도록..." />
     <MESSAGE value="Equalize_The_Array 의 문제 풀이와 테스트 케이스를 작성. 테스트가 성공한다." />
@@ -831,7 +830,8 @@
     <MESSAGE value="The_Time_In_Words 테스트케이스를 추가, 수정" />
     <MESSAGE value="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다." />
     <MESSAGE value="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정" />
+    <MESSAGE value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
