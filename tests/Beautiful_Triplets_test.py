@@ -14,6 +14,6 @@ class TestClass(object):
         assert beautifulTriplets(3,
                                  [1, 6, 7, 7, 8, 10, 12, 13, 14, 19]) == 2, "연산을 잘 처리한다"
         assert beautifulTriplets(10,
-                                 [1, 6, 7;;, 7, 8, 10, 12, 13, 14,
+                                 [1, 6, 7, 7, 8, 10, 12, 13, 14,
                                   19]) == 0, "연산을 잘 처리한다"
 
