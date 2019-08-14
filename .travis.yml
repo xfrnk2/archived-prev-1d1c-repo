@@ -9,15 +9,13 @@ install:
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
-    token:
-      secure: "877f66e7dc3247bee0da93e4b392ece1de66dd53"
 
 script:
 - make test
 - sonar-scanner 
 
 after_script:
-- codecov --token="743d65b6-55bf-431f-aec8-045e22922fa1"
+- codecov 
 - make cover
 
 
