@@ -15,9 +15,9 @@ addons:
 script:
 - py.test  --cov-report=xml --cov=..\1d1c\
 - make test
-- codecov
 - sonar-scanner 
 after_script:
+- codecov
 - make cover
 
 
