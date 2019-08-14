@@ -13,11 +13,12 @@ addons:
       secure: ${sonarcloud_token}
 script:
 - make test
+- make cover
 - sonar-scanner 
 
 after_script:
 - codecov --token=${codecov_token}
-- make cover
+
 
 
 env:
