@@ -4,7 +4,9 @@ python: 3.7
 install:
 - make bootstrap
 - pip install flake8 pytest-cov codecov
+- pip install coveralls
 - pip install -r requirements.txt
+
 
 addons:
   sonarcloud:
@@ -13,12 +15,11 @@ addons:
       secure: ${sonarcloud_token}
 script:
 - make test
-- make cover
 - sonar-scanner 
 
 after_script:
 - codecov --token=${codecov_token}
-
+- make cover
 
 
 env:
