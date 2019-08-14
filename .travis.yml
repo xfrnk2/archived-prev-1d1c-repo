@@ -14,11 +14,11 @@ addons:
 
 script:
 - sonar-scanner 
-- make test
 - py.test  --cov-report=xml --cov=..\1d1c\
+- codecov
 
 after_script:
-- codecov
+- make test
 - make cover
 
 env:

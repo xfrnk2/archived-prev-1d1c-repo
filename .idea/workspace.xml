@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tests/cutTheSticks_test.py" afterPath="$PROJECT_DIR$/tests/cutTheSticks_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -431,13 +430,6 @@
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
     </task>
-    <task id="LOCAL-00013" summary="모든 테스트 케이스에 대해 성공하도록 요구 조건을 만족하는 로직 구현">
-      <created>1557409209624</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1557409209624</updated>
-    </task>
     <task id="LOCAL-00014" summary="리팩토링 - eval 이라는 함수명이 built-in 함수명을 가리므로(shadowing) 적절하게 함수명 변경">
       <created>1557409416180</created>
       <option name="number" value="00014" />
@@ -774,12 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565707286544</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나옴..">
+      <created>1565707479494</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1565707479494</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281768" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
@@ -810,7 +808,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="코드 리뷰를 참고하여 코드를 수정.(CutTheSticks) 1회 순회가 가능하도록..." />
     <MESSAGE value="Equalize_The_Array 의 문제 풀이와 테스트 케이스를 작성. 테스트가 성공한다." />
     <MESSAGE value="Equalize_The_Array 코드리뷰를 참고하여 코드의 일부를 수정" />
     <MESSAGE value="실패되던 테스트가 성공할수 있도록 코드를 수정" />
@@ -835,7 +832,8 @@
     <MESSAGE value="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정" />
     <MESSAGE value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
     <MESSAGE value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나오므로 일부러 에러 발생시키기 위해 커밋" />
-    <option name="LAST_COMMIT_MESSAGE" value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나오므로 일부러 에러 발생시키기 위해 커밋" />
+    <MESSAGE value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나옴.." />
+    <option name="LAST_COMMIT_MESSAGE" value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나옴.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
