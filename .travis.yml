@@ -13,14 +13,14 @@ addons:
       secure: "877f66e7dc3247bee0da93e4b392ece1de66dd53"
 
 script:
-- make test
-- sonar-scanner 
 - py.test  --cov-report=xml --cov=..\1d1c\
-
-
-after_script:
+- make test
 - codecov
+- sonar-scanner 
+after_script:
 - make cover
+
+
 
 env:
   global:
