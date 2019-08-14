@@ -77,4 +77,4 @@ cover:
 	$(VENV) ;\
 	coverage run --source=src setup.py test
 	coverage xml -i
-	COVERALLS_TOKEN=${COVERALLS_TOKEN} coveralls --service=travis-ci
+	COVERALLS_TOKEN=${coveralls_token} coveralls --service=travis-ci
