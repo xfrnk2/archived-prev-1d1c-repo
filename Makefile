@@ -61,7 +61,7 @@ jenkins: test
 
 coverage: test
 	$(VENV) ;\
-	coverage run --source src setup.py test ;\
+	coverage run --source=\ test ;\
 	coverage report -m ;\
 	coverage html ;\
 	open htmlcov/index.html ;\
@@ -75,7 +75,7 @@ install: clean
 
 cover:
 	$(VENV) ;\
-	coverage run --source=src setup.py test
+	coverage run --source=\ test
 	coverage xml -i
 	coveralls --token=${coveralls_token} --service=travis-ci
 	#COVERALLS_TOKEN=${coveralls_token} coveralls --service=travis-ci
