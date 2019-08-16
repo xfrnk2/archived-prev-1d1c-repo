@@ -20,16 +20,3 @@ def countingValleys(n, s):
             H -= 1
     return V
 
-
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    n = int(input())
-
-    s = input()
-
-    result = countingValleys(n, s)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()

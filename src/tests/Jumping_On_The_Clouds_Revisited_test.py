@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumpingOnClouds
+from src.hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumpingOnClouds
 
 
 class TestClass(object):
