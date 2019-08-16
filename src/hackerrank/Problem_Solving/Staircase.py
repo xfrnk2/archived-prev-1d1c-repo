@@ -16,9 +16,3 @@ def staircase(n):
             else:
                 print(" ", end="")
         print()
-
-
-if __name__ == '__main__':
-    n = int(input())
-
-    staircase(n)

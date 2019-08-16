@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from hackerrank.Problem_Solving.Equalize_The_Array import equalizeArray
+from src.hackerrank.Problem_Solving.Equalize_The_Array import equalizeArray
 
 
 class TestClass(object):
