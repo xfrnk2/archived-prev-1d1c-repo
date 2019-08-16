@@ -16,10 +16,10 @@ addons:
 script:
 - make test
 - sonar-scanner 
-
+- make cover
 after_script:
 - codecov --token=${codecov_token}
-- make cover
+
 
 
 env:
