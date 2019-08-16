@@ -61,7 +61,7 @@ jenkins: test
 
 coverage: test
 	$(VENV) ;\
-	coverage run --source hackerrank setup.py test ;\
+	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
 	open htmlcov/index.html ;\
@@ -75,8 +75,9 @@ install: clean
 
 cover:
 	$(VENV) ;\
-	coverage run --source hackerrank setup.py test ;\
+	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
-	coveralls_token=${coveralls_token} coveralls --service=travis-ci 	
-	#coveralls --token=${coveralls_token} --service=travis-ci ;\
+	coveralls --service=travis-ci ;\	
+	#coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
+	
 	
