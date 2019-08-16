@@ -1,7 +1,5 @@
 import os
 import sys
-
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from hackerrank.Problem_Solving.The_Time_In_Words import timeInWords
 
 
