@@ -2,7 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from hackerrank.Problem_Solving.Service_Lane import serviceLane
+from src.hackerrank.Problem_Solving.Service_Lane import serviceLane
 
 
 class TestClass(object):
