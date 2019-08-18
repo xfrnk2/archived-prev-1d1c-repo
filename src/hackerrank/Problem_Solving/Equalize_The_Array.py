@@ -17,6 +17,3 @@ def equalizeArray(arr):
         max_value = max(max_value, value)
 
     return size - max_value
-
-ab = [2]
-print(equalizeArray(ab))
