@@ -1,7 +1,7 @@
 #https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem
 #Jumping_On_The_Clouds:Revisited
 
-def jumpingOnClouds(c, k):
+def jumping_on_clouds(c, k):
     n = 0
     num = 100
 
