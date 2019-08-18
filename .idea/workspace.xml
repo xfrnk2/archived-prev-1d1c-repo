@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/LinuxWindowsScript.bat" afterPath="$PROJECT_DIR$/LinuxWindowsScript.bat" />
-      <change beforePath="$PROJECT_DIR$/src/calculator/function.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/calculator/pytest_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/calculator/tree.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tests/Calculator_test.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,12 +52,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CutTheSticks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CutTheSticks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/CutTheSticks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="464">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ice_Cream_Parlor_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Ice_Cream_Parlor_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +102,16 @@
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ice_Cream_Parlor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/tests/Service_Lane_test.py" />
         <option value="$PROJECT_DIR$/src/tests/The_Time_In_Words_test.py" />
         <option value="$PROJECT_DIR$/src/tests/Maximum_Perimeter_Triangle_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
         <option value="$PROJECT_DIR$/src/tests/Ice_Cream_Parlor_test.py" />
         <option value="$PROJECT_DIR$/tests/Equalize_The_Array_test.py" />
         <option value="$PROJECT_DIR$/tests/Alternating_Characters_test.py" />
@@ -181,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Picking_Numbers.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Equalize_The_Array.py" />
         <option value="$PROJECT_DIR$/src/calculator/tree.py" />
+        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
       </list>
     </option>
   </component>
@@ -434,13 +452,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00015" summary="코드리뷰를 참고하여 코드를 수정">
-      <created>1557497411324</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1557497411324</updated>
     </task>
     <task id="LOCAL-00016" summary="Between_Two_Sets (성공)">
       <created>1557502645739</created>
@@ -778,7 +789,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566115612810</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="사용하지 않는 파일, 폴더를 지움">
+      <created>1566115942117</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1566115942117</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -786,7 +804,7 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32779622" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32707182" sideWeight="0.5083333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
@@ -1009,16 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Ice_Cream_Parlor_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Maximum_Perimeter_Triangle_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1127,14 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-87">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1255,8 +1255,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/CutTheSticks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="464">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Ice_Cream_Parlor_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>
