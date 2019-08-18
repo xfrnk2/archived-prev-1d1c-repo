@@ -5,10 +5,11 @@ ifdef update
   u=-u
 endif
 
-VENV ?= . venv/Scripts/activate.bat
-
+VENV ?= ..\venv\Scripts\activate.bat
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
+
+
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -74,6 +75,9 @@ install: clean
 
 cover:
 	$(VENV) ;\
-	coverage run --source=src setup.py test
-	coverage xml -i
-	COVERALLS_TOKEN=${COVERALLS_TOKEN} coveralls --service=travis-ci
+	coverage run --source src setup.py test ;\
+	coverage xml -i ;\
+	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
+	#coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
+	
+	
