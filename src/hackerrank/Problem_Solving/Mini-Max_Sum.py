@@ -30,8 +30,3 @@ def miniMaxSum(arr):
     mn, mx = all - mx, all - mn
     print(mn, mx)
 
-
-if __name__ == '__main__':
-    arr = list(map(int, input().rstrip().split()))
-
-    miniMaxSum(arr)

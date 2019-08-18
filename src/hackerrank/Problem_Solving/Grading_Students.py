@@ -23,22 +23,3 @@ def gradingStudents(grades):
                 grades[k] = value
 
     return grades
-
-
-if __name__ == '__main__':
-    f = open(os.environ['OUTPUT_PATH'], 'w')
-
-    n = int(input())
-
-    grades = []
-
-    for x in range(n):
-        grades_item = int(input())
-        grades.append(grades_item)
-
-    result = gradingStudents(grades)
-
-    f.write('\n'.join(map(str, result)))
-    f.write('\n')
-
-    f.close()

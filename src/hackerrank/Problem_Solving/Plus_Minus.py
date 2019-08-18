@@ -24,10 +24,3 @@ def plusMinus(arr):
         float("%0.6f" % positive), float("%0.6f" % negative), float("%0.6f" % zero_value)
     print(f"{positive}\n{negative}\n{zero_value}")
 
-
-if __name__ == '__main__':
-    n = int(input())
-
-    arr = list(map(int, input().rstrip().split()))
-
-    plusMinus(arr)
