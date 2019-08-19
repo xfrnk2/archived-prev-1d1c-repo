@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" />
-      <change beforePath="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" afterPath="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" />
+      <change beforePath="$PROJECT_DIR$/sonar-project.properties" afterPath="$PROJECT_DIR$/sonar-project.properties" />
+      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ice_Cream_Parlor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ice_Cream_Parlor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="435">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -106,7 +106,7 @@
       <file leaf-file-name="Birthday_cake_candles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="551">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -165,7 +165,6 @@
         <option value="$PROJECT_DIR$/tests/Minimum_Distances_test.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Equalize_The_Array.py" />
         <option value="$PROJECT_DIR$/src/calculator/tree.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Beautiful_Days_at_the_Movies.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Between_Two_Sets.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py" />
@@ -196,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" />
         <option value="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" />
+        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
       </list>
     </option>
   </component>
@@ -205,7 +205,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-19" />
     <option name="y" value="9" />
     <option name="width" value="1938" />
@@ -449,13 +449,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00018" summary="코드리뷰를 참고해서 코드를 수정">
-      <created>1557844227383</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1557844227383</updated>
     </task>
     <task id="LOCAL-00019" summary="Electronics_shop (성공)">
       <created>1558014518729</created>
@@ -793,11 +786,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566117859019</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고.">
+      <created>1566140658128</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1566140658128</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -829,7 +829,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가" />
     <MESSAGE value="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지" />
     <MESSAGE value="Beautiful Triplets의 테스트케이스를 작성" />
     <MESSAGE value="Beautiful Triplets의 테스트가 성공한다" />
@@ -854,7 +853,8 @@
     <MESSAGE value="사용하지 않는 파일, 폴더를 지움" />
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
     <MESSAGE value="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제" />
+    <MESSAGE value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
+    <option name="LAST_COMMIT_MESSAGE" value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,31 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Sock Merchant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,7 +1172,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="551">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -1215,6 +1190,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Sock Merchant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding />
         </state>
       </provider>
