@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="" />
+    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,41 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Sock Merchant.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Sock Merchant.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Time_Conversion.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Ice_Cream_Parlor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
               <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kangaroo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Kangaroo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jumping_On_The_Clouds_Revisited_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
@@ -78,6 +50,60 @@
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cavity_Map_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Beautiful_Triplets_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cutTheSticks_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cavity_Map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alternating_Characters_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,26 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Find_Digits_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Find_Digits_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Maximum_Perimeter_Triangle.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Maximum_Perimeter_Triangle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -146,8 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/Alternating_Characters_test.py" />
-        <option value="$PROJECT_DIR$/src/tests/Find_Digits_test.py" />
         <option value="$PROJECT_DIR$/src/tests/Jumping_On_The_Clouds_Revisited_test.py" />
         <option value="$PROJECT_DIR$/src/tests/Minimum_Distances_test.py" />
         <option value="$PROJECT_DIR$/src/tests/Service_Lane_test.py" />
@@ -197,6 +201,8 @@
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
         <option value="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" />
+        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
+        <option value="$PROJECT_DIR$/tests/Cavity_Map_test.py" />
       </list>
     </option>
   </component>
@@ -447,13 +453,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Electronics_shop (성공)">
-      <created>1558014518729</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1558014518729</updated>
     </task>
     <task id="LOCAL-00020" summary="복잡한 형태의 수식을 처리하기 위한 골격으로 선회, 테스트 코드 새로 작성(따라하기)">
       <created>1558016858959</created>
@@ -791,7 +790,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566140658128</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현">
+      <created>1566315272010</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1566315272010</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -835,7 +841,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지" />
     <MESSAGE value="Beautiful Triplets의 테스트케이스를 작성" />
     <MESSAGE value="Beautiful Triplets의 테스트가 성공한다" />
     <MESSAGE value="Beautiful Triplets의 테스트가 성공. 코드가 정상동작함" />
@@ -860,7 +865,8 @@
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
     <MESSAGE value="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제" />
     <MESSAGE value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
-    <option name="LAST_COMMIT_MESSAGE" value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
+    <MESSAGE value="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -881,35 +887,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Equalize_The_Array_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py" />
     <entry file="file://$PROJECT_DIR$/src/calculator/pytest_test.py" />
     <entry file="file://$PROJECT_DIR$/src/calculator/function.py" />
     <entry file="file://$PROJECT_DIR$/src/calculator/tree.py" />
@@ -1228,6 +1205,50 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
