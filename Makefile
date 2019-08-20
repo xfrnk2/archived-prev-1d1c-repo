@@ -23,7 +23,7 @@ help:
 	@echo "install - install the package to the active Python's site-packages"
 
 bootstrap:
-
+	$LinuxWindowsScript.bat ;\
 	python -m venv env
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
