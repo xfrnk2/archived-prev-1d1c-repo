@@ -5,8 +5,8 @@ ifdef update
   u=-u
 endif
 
-VENV ?= ..\venv\Scripts\activate.bat
-
+#VENV ?= ..\venv\Scripts\activate.bat
+EXE ?= LinuxWindowsScript.bat
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
 
@@ -23,8 +23,9 @@ help:
 	@echo "install - install the package to the active Python's site-packages"
 
 bootstrap:
-	$LinuxWindowsScript.bat ;\
+	
 	python -m venv env
+	$(EXE) ;\
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
