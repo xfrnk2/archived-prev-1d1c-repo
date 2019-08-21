@@ -1,5 +1,5 @@
-echo >/dev/null # >nul & GOTO WINDOWS & rem ^
-echo 'Processing for Linux'
+@echo >/dev/null # >nul & GOTO WINDOWS & rem ^
+@echo 'Processing for Linux'
 
 # ***********************************************************
 # * NOTE: If you modify this content, be sure to remove carriage returns (\r) 
@@ -11,7 +11,7 @@ echo 'Processing for Linux'
 
 # Do Linux Bash commands here... for example:
 StartDir="$(pwd)"
-VENV ?= . venv/bin/activate
+VENV_SET ?= . venv/bin/activate
 
 # Then, when all Linux commands are complete, end the script with 'exit'...
 exit 0
@@ -19,10 +19,10 @@ exit 0
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 :WINDOWS
-echo "Processing for Windows"
+@echo "Processing for Windows"
 
 REM Do Windows CMD commands here... for example:
 SET StartDir=%cd%
-VENV ?= ..\venv\Scripts\activate.bat
+VENV_SET ?= ..\venv\Scripts\activate.bat
 
 REM Then, when all Windows commands are complete... the script is done.
