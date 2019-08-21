@@ -1,6 +1,5 @@
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from src.hackerrank.Problem_Solving.Find_Digits import findDigits
 
 class TestClass(object):

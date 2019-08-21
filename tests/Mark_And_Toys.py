@@ -1,7 +1,6 @@
 import os
 import sys
 
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from src.hackerrank.Interview_Preparation_Kit.Sorting.Mark_And_Toys import maximumToys
 
 
