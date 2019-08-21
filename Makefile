@@ -10,7 +10,6 @@ EXCU ?= LinuxWindowsScript.bat
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
 
-
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
 	@echo "clean-build - remove build artifacts"
