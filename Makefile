@@ -24,7 +24,9 @@ help:
 
 bootstrap:
 	
-	open LinuxWindowsScript.bat
+	cmd /c start "LinuxWindowsScript.bat"
+	xdg-open ~LinuxWindowsScript.bat
+	xdg-open ~LinuxWindowsScript
 	python -m venv env
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
