@@ -1,12 +1,7 @@
 import sys
-from os import path
+import os
 
-if __package__ is None:
-    print(path.dirname( path.dirname( path.abspath(__file__) ) ))
-    sys.path.append(path.dirname( path.dirname( path.abspath(__file__) ) ))
-    from src.hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumping_on_clouds
-else:
-    from ..src.hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumping_on_clouds
+from src.hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumping_on_clouds
 
 
 class TestClass(object):
