@@ -51,17 +51,17 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	$(VENV_SET) ;\
+	$(VENV) ;\
 	flake8 src tests
 
 test:
-	$(VENV_SET) ;\
+	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
 jenkins: test
 
 coverage: test
-	$(VENV_SET) ;\
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -71,11 +71,11 @@ release: clean
 	fullrelease
 
 install: clean
-	$(VENV_SET) ;\
+	$(VENV) ;\
 	python setup.py install
 
 cover:
-	$(VENV_SET) ;\
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
