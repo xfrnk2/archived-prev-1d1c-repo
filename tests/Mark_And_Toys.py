@@ -1,6 +1,3 @@
-import os
-import sys
-
 from src.hackerrank.Interview_Preparation_Kit.Sorting.Mark_And_Toys import maximumToys
 
 

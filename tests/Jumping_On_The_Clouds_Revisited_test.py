@@ -1,6 +1,3 @@
-import sys
-import os
-
 from src.hackerrank.Problem_Solving.Jumping_On_The_Clouds_Revisited import jumping_on_clouds
 
 

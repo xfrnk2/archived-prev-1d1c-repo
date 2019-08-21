@@ -1,7 +1,3 @@
-import os
-import sys
-
-
 from src.hackerrank.Interview_Preparation_Kit.String_Manipulation.Alternating_Characters import alternatingCharacters
 
 

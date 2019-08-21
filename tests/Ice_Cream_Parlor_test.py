@@ -1,6 +1,3 @@
-import os
-import sys
-
 from src.hackerrank.Problem_Solving.Ice_Cream_Parlor import icecreamParlor
 
 

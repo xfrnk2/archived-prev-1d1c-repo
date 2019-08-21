@@ -1,5 +1,3 @@
-import os
-import sys
 from src.hackerrank.Problem_Solving.Find_Digits import findDigits
 
 class TestClass(object):

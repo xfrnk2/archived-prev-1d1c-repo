@@ -1,7 +1,3 @@
-import os
-import sys
-
-
 from src.hackerrank.Problem_Solving.Beautiful_Triplets import beautifulTriplets
 
 
