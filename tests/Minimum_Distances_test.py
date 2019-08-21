@@ -1,6 +1,3 @@
-import os
-import sys
-
 from src.hackerrank.Problem_Solving.Minimum_Distances import minimumDistances
 
 #https://www.hackerrank.com/challenges/minimum-distances/problem

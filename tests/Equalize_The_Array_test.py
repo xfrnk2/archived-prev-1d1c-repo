@@ -1,6 +1,3 @@
-import os
-import sys
-
 from src.hackerrank.Problem_Solving.Equalize_The_Array import equalizeArray
 
 
