@@ -6,7 +6,7 @@ ifdef update
 endif
 
 #VENV ?= ..\venv\Scripts\activate.bat
-EXE ?= \LinuxWindowsScript.bat
+EXE ?= open LinuxWindowsScript.bat
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
 
