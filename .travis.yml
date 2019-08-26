@@ -15,7 +15,7 @@ addons:
       secure: ${sonarcloud_token}
 script:
 - make test
-- sonar-scanner -Dsonar.login=$sonarcloud_token
+- sonar-scanner 
 - make cover
 after_script:
 - codecov --token=${codecov_token}
