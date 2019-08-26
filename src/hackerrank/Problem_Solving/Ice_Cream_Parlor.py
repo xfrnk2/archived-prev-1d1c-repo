@@ -1,6 +1,6 @@
 def icecreamParlor(m, arr):
     a_value = b_value = 0
-    answer = 0
+    answer = 0, 0
 
     for i, j in enumerate(arr):
         if (m - j) in arr[i+1:]:
