@@ -6,7 +6,7 @@ ifdef update
 endif
 
 VENV ?= ..\venv\Scripts\activate.bat
-#EXCU ?= LinuxWindowsScript.bat
+EXCU ?= LinuxWindowsScript.bat
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
 
@@ -57,6 +57,7 @@ lint:
 test:
 	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
+	$(EXCU) ;\	
 
 jenkins: test
 
