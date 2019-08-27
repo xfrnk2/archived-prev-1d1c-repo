@@ -15,6 +15,8 @@ ECHO Welcome to %COMSPEC%
 
 
 
+
+
 echo >/dev/null # >nul & GOTO WINDOWS & rem ^
 echo 'Processing for Linux'
 
