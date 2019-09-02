@@ -77,8 +77,8 @@
       <file leaf-file-name="Cavity_Map.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="667">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -226,6 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,7 +305,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -446,13 +446,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00024" summary="The Hurdle Race (성공)">
-      <created>1559054336908</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1559054336908</updated>
     </task>
     <task id="LOCAL-00025" summary="The Hurdle Race (성공)">
       <created>1559054403955</created>
@@ -790,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566825298257</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.">
+      <created>1567349464890</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1567349464891</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -837,7 +837,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Service_Lane의 테스트케이스를 수정, 코드를 완성" />
     <MESSAGE value="Mark_And_Toys 테스트케이스를 작성. 테스트가 실패한다" />
     <MESSAGE value="Mark_And_Toys 코드를 작성. 테스트가 성공한다." />
     <MESSAGE value="Alternating Characters 테스트 케이스를 작성, 테스트가 실패한다." />
@@ -862,7 +861,8 @@
     <MESSAGE value="*_test.py 파일의 import sys와 os를 모두 제거" />
     <MESSAGE value="replace를 사용해서 코드를 수정, 아직 실패한다." />
     <MESSAGE value="코드리뷰를 참고해 Ice_Cream_parlor.py 코드를 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="코드리뷰를 참고해 Ice_Cream_parlor.py 코드를 수정" />
+    <MESSAGE value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1214,8 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="667">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
