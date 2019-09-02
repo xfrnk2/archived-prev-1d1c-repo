@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
       <change beforePath="$PROJECT_DIR$/tests/Cavity_Map_test.py" afterPath="$PROJECT_DIR$/tests/Cavity_Map_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -448,13 +447,6 @@
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
     </task>
-    <task id="LOCAL-00026" summary="코드 리뷰를 참고해 코드를 수정, Beautiful_Days_at_the_Movies (성공)">
-      <created>1559320574373</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1559320574373</updated>
-    </task>
     <task id="LOCAL-00027" summary="Find_Digits 문제 풀이 후 해당 문제의 테스트케이스를 tests 폴더 안에 작성하여 테스트 실행. 성공">
       <created>1559750476157</created>
       <option name="number" value="00027" />
@@ -791,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567434462039</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Cavity map 테스트 케이스 변경 및 추가">
+      <created>1567435004339</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1567435004339</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -838,7 +837,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mark_And_Toys 코드를 작성. 테스트가 성공한다." />
     <MESSAGE value="Alternating Characters 테스트 케이스를 작성, 테스트가 실패한다." />
     <MESSAGE value="Alternating Characters 코드 작성" />
     <MESSAGE value="The_Time_In_Words 테스트파일과 코드파일 생성" />
@@ -863,7 +861,8 @@
     <MESSAGE value="코드리뷰를 참고해 Ice_Cream_parlor.py 코드를 수정" />
     <MESSAGE value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다." />
     <MESSAGE value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.2" />
+    <MESSAGE value="Cavity map 테스트 케이스 변경 및 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cavity map 테스트 케이스 변경 및 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1217,7 +1216,7 @@
     <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
           <folding />
         </state>
       </provider>
