@@ -1,28 +1,30 @@
 def cavityMap(grid):
-    if not 2 < len(grid):
-        return grid
-
-    valuebox = []
-    for z in grid[1:-1]:
-        if not 2 < len(z):
+    def cavityMap(grid):
+        if len(grid) <= 2:
             return grid
+        v = 0
+        f = True
+        grid_ = grid[1:-1]
 
-        for y in z[1:-1]:
-            valuebox += y
-    max_value = max(valuebox)
+        for j in grid_:
+            if f:
+                if len(j) <= 2:
+                    return grid
+                f = False
 
-    box = []
-    for a, x in enumerate(grid):
-        value = x
-        if a == 0 or a == len(grid) - 1:
-            pass
-        else:
-            for i, j in enumerate(x):
+            max_value = int(max(j))
+            if v < max_value:
+                v = max_value
+        v = str(v)
 
-                if i == 0 or i == len(x) - 1:
-                    continue
-                if j == max_value:
-                    value = x[:i] + 'X' + x[i + 1:]
+        result = [grid[0], grid[-1]]
+        n = 1
+        for x in grid_:
+            t = x[1:-1]
 
-        box.append(value)
-    return box
+            result.insert(n, x[0] + t.replace(v, "X") + x[-1])
+            n += 1
+
+        ''.join(result)
+
+        return result
