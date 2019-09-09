@@ -1,3 +1,5 @@
+import copy
+
 def cavityMap(grid):
     length = len(grid)
     if length < 3:
