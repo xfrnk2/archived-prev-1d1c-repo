@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +57,8 @@
       <file leaf-file-name="Cavity_Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -103,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cavity_Map_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cavity_Map_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -193,9 +194,9 @@
         <option value="$PROJECT_DIR$/tests/Service_Lane_test.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
         <option value="$PROJECT_DIR$/tests/Cavity_Map_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
         <option value="$PROJECT_DIR$/tests/Fair_Rations_test.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" />
+        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
       </list>
     </option>
   </component>
@@ -445,13 +446,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00029" summary="CutTheSticks의 테스트코드를 작성">
-      <created>1560264199300</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1560264199301</updated>
     </task>
     <task id="LOCAL-00030" summary="CutTheSticks 테스트코드에 문제가 없음.">
       <created>1560264292963</created>
@@ -789,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567953366932</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Fair_Rations 의 테스트 케이스 생성, 코드 구현, 그러나 아직 일부 테스트가 실패한다. &quot;NO&quot;를 반환하는 경우가 어떤 경우가 있는지 고민해보기.">
+      <created>1568041792734</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1568041792735</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -836,7 +837,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The_Time_In_Words 테스트파일과 코드파일 생성" />
     <MESSAGE value="The_Time_In_Words 테스트코드 작성, 테스트가 실패한다" />
     <MESSAGE value="The_Time_In_Words 코드 미구현" />
     <MESSAGE value="The_Time_In_Words 테스트케이스를 추가" />
@@ -861,7 +861,8 @@
     <MESSAGE value="Cavity map 테스트 케이스 변경 및 추가" />
     <MESSAGE value="Cavity map 테스트 케이스 추가, 테스트가 아직 실패한다." />
     <MESSAGE value="Cavity map 이전에 짠 코드를 지우고 새롭게 변경." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cavity map 이전에 짠 코드를 지우고 새롭게 변경." />
+    <MESSAGE value="Fair_Rations 의 테스트 케이스 생성, 코드 구현, 그러나 아직 일부 테스트가 실패한다. &quot;NO&quot;를 반환하는 경우가 어떤 경우가 있는지 고민해보기." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fair_Rations 의 테스트 케이스 생성, 코드 구현, 그러나 아직 일부 테스트가 실패한다. &quot;NO&quot;를 반환하는 경우가 어떤 경우가 있는지 고민해보기." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1167,26 +1168,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="89" lean-forward="false" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1217,8 +1202,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding />
         </state>
       </provider>
