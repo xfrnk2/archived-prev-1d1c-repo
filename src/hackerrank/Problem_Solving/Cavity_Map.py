@@ -1,4 +1,5 @@
 import copy
+
 def cavityMap(grid):
     length = len(grid)
     if length < 3:
@@ -14,8 +15,7 @@ def cavityMap(grid):
                    [(i - 1, j), (i + 1, j), (i, j + 1), (i, j - 1)]):
                 r[i][j] = 'X'
 
-    for x in r:
-        x = [str(value) for value in x]
+    result = [''.join(map(str, x)) for x in r]
+    ''.join(result)
 
-        x = ''.join(x)
-    return r
+    return result
