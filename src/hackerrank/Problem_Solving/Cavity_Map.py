@@ -1,5 +1,5 @@
 import copy
-
+import itertools
 def cavityMap(grid):
     length = len(grid)
     if length < 3:
@@ -9,8 +9,7 @@ def cavityMap(grid):
 
     r = copy.deepcopy(grid)
 
-    for i in range(1, length - 1):
-        for j in range(1, length - 1):
+    for i, j in itertools.product(range(1, length - 1), range(1, length - 1)):
             if all(int(grid[i][j]) > int(grid[k][l]) for k, l in
                    [(i - 1, j), (i + 1, j), (i, j + 1), (i, j - 1)]):
                 r[i][j] = 'X'
