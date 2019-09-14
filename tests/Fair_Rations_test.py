@@ -6,5 +6,8 @@ class TestClass(object):
         assert fairRations([1, 2]) == "NO", "리스트 길이가 2인 조건에서 연산을 잘 수행한다."
         assert fairRations([2, 2]) == 0, "리스트 길이가 2인 조건에서 연산을 잘 수행한다."
         assert fairRations([1, 1]) == 2, "리스트 길이가 2인 조건에서 연산을 잘 수행한다."
+        assert fairRations([2, 3]) == "NO" , "리스트 길이가 2인 조건에서 연산을 잘 수행한다."
+        assert fairRations([1, 2]) == "NO", "리스트 길이가 2인 조건에서 연산을 잘 수행한다."
         assert fairRations([1, 2, 4]) == "NO", "연산을 잘 수행한다"
         assert fairRations([1, 3, 6]) == 2, "연산을 잘 수행한다"
+        assert fairRations([2, 3, 4, 5, 6]) == 4, "연산을 잘 수행한다"
