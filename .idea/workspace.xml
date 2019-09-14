@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tests/Fair_Rations_test.py" afterPath="$PROJECT_DIR$/tests/Fair_Rations_test.py" />
+      <change beforePath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" afterPath="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,21 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fair_Rations_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fair_Rations_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            <state relative-caret-position="377">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -196,9 +196,9 @@
         <option value="$PROJECT_DIR$/tests/Service_Lane_test.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
         <option value="$PROJECT_DIR$/tests/Cavity_Map_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
         <option value="$PROJECT_DIR$/tests/Fair_Rations_test.py" />
+        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" />
       </list>
     </option>
   </component>
@@ -448,13 +448,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00033" summary="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)">
-      <created>1560436233623</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1560436233623</updated>
     </task>
     <task id="LOCAL-00034" summary="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)">
       <created>1560436368107</created>
@@ -792,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568129369920</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Fair_Rations의 테스트 케이스를 추가">
+      <created>1568435584288</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1568435584288</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -839,7 +839,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The_Time_In_Words 테스트케이스를 추가, 수정" />
     <MESSAGE value="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다." />
     <MESSAGE value="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정" />
     <MESSAGE value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
@@ -864,7 +863,8 @@
     <MESSAGE value="코드 리뷰를 참고해 Cavity_Map 코드를 수정, Cavity_Map 의 모든 테스트가 성공한다." />
     <MESSAGE value="Cavity_map - import copy 추가" />
     <MESSAGE value="Cavity_map - 코드리뷰를 참고해 코드를 수정. itertools 제대로 학습하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cavity_map - 코드리뷰를 참고해 코드를 수정. itertools 제대로 학습하기" />
+    <MESSAGE value="Fair_Rations의 테스트 케이스를 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fair_Rations의 테스트 케이스를 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1208,18 +1208,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
+    <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="377">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="435">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
