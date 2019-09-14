@@ -1,36 +1,20 @@
-def fairRations(C):
-    length = len(C)
-
-    c = 0
-    task = 0
-
-    if length == 1:
-        return 1
-
-    if length == 2:
-        if C[0] % 2 == 0 and C[1] % 2 == 0:
-            return c
-        elif C[0] % 2 == 1 and C[1] % 2 == 1:
-            c += 2
-            return c
-        else:
-            return "NO"
-
+def fairRations(B):
+    length = len(B)
+    count = 0
     for x in range(length - 1, 0, -1):
 
-        # if C[x] % 2 == 0 and C[x-1] % 2 == 0:
-        #     task += 1
-        #     if task == 2:
-        #         return "NO"
-        #     continue
-        # task = 0
-        if C[x] % 2 == 1 and C[x - 1] % 2 == 1:
-            C[x], C[x - 1] = C[x] + 1, C[x - 1] + 1
-            c += 2
-        if C[x] % 2 == 1 and C[x - 1] % 2 == 0:
-            C[x], C[x - 1] = C[x] + 1, C[x - 1] + 1
-            c += 2
-        if C[x] % 2 == 0 and C[x - 1] % 2 == 1:
+        if B[x] % 2 == 0 and B[x - 1] % 2 == 0:
             continue
-    return c
+        if B[x] % 2 == 1 and B[x - 1] % 2 == 1:
+            B[x], B[x - 1] = B[x] + 1, B[x - 1] + 1
+            count += 2
+            continue
+        if B[x] % 2 == 1 and B[x - 1] % 2 == 0:
+            B[x], B[x - 1] = B[x] + 1, B[x - 1] + 1
+            count += 2
+    if B[0] % 2 == 1:
+        return "NO"
+    else:
+        return count
+
 
