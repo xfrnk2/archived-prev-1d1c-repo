@@ -79,8 +79,8 @@
       <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="348">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -228,8 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,6 +306,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,13 +448,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00034" summary="코드 리뷰를 참고하여 코드들을 수정. (Cut TheSTicks는 아직 3개의 테스트 케이스가 실패한다)">
-      <created>1560436368107</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1560436368107</updated>
     </task>
     <task id="LOCAL-00035" summary="코드 리뷰를 참고하여 코드를 수정.(Minimum_Distances)">
       <created>1560779167601</created>
@@ -792,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568435584288</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Fair_Rations의 모든 테스트 케이스가 성공한다.">
+      <created>1568435693869</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1568435693869</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -839,7 +839,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다." />
     <MESSAGE value="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정" />
     <MESSAGE value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
     <MESSAGE value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나오므로 일부러 에러 발생시키기 위해 커밋" />
@@ -864,7 +863,8 @@
     <MESSAGE value="Cavity_map - import copy 추가" />
     <MESSAGE value="Cavity_map - 코드리뷰를 참고해 코드를 수정. itertools 제대로 학습하기" />
     <MESSAGE value="Fair_Rations의 테스트 케이스를 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fair_Rations의 테스트 케이스를 추가" />
+    <MESSAGE value="Fair_Rations의 모든 테스트 케이스가 성공한다." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fair_Rations의 모든 테스트 케이스가 성공한다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1218,8 +1218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="348">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding />
         </state>
       </provider>
