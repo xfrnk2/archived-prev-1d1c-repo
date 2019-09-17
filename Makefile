@@ -5,8 +5,14 @@ ifdef update
   u=-u
 endif
 
-VENV ?= ..\venv\Scripts\activate.bat
-EXCU ?= LinuxWindowsScript
+ifdef OS
+    #Windows stuff
+    VENV ?= ..\venv\Scripts\activate.bat
+else
+    VENV ?= . venv/bin/activate
+endif
+
+
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
 
