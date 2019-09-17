@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -448,13 +449,6 @@
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
     </task>
-    <task id="LOCAL-00036" summary="코드 리뷰를 참고하여 코드를 수정.(CutTheSticks) 1회 순회가 가능하도록...">
-      <created>1561130120400</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1561130120400</updated>
-    </task>
     <task id="LOCAL-00037" summary="Equalize_The_Array 의 문제 풀이와 테스트 케이스를 작성. 테스트가 성공한다.">
       <created>1561639548990</created>
       <option name="number" value="00037" />
@@ -791,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568647002014</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Bubble_Sort의 테스트 케이스 작성">
+      <created>1568731089397</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1568731089397</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -810,7 +811,7 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31712708" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31782946" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
@@ -838,8 +839,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성" />
-    <MESSAGE value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나오므로 일부러 에러 발생시키기 위해 커밋" />
     <MESSAGE value="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나옴.." />
     <MESSAGE value="필요 없는 부분을 지움, sonar-cloud의 Settings에서 SCM-Disable the SCM Sensor를 활성화 시킴.( Missing blame information for the following files:에러 해결을 위해서)" />
     <MESSAGE value="사용하지 않는 파일, 폴더를 지움" />
@@ -863,7 +862,9 @@
     <MESSAGE value="Fair_Rations의 테스트 케이스를 추가" />
     <MESSAGE value="Fair_Rations의 모든 테스트 케이스가 성공한다." />
     <MESSAGE value="코드리뷰를 참고해 Fair_Rations 코드를 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="코드리뷰를 참고해 Fair_Rations 코드를 수정" />
+    <MESSAGE value="Bubble_Sort의 테스트 케이스 작성" />
+    <MESSAGE value="Bubble_Sort의 코드를 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bubble_Sort의 코드를 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
