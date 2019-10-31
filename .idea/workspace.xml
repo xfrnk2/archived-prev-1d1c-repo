@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/Quicksort.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py" afterPath="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Ice_Cream_Parlor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Fair_Rations_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,11 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Merge_Sort_Counting_Inversions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Merge_Sort_Counting_Inversions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="464">
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Quicksort.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algorithms/Quicksort.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -88,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Between_Two_Sets.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_Chocolate.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Bon_Appétit.py" />
@@ -197,6 +196,7 @@
         <option value="$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions.py" />
         <option value="$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions_test.py" />
         <option value="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py" />
+        <option value="$PROJECT_DIR$/src/Algorithms/Quicksort.py" />
       </list>
     </option>
   </component>
@@ -227,7 +227,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +243,12 @@
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
               <item name="1d1c" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,63 +258,16 @@
               <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
               <item name="Arrays" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Dictionaries_And_HashMaps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Interview_Preparation_Kit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Interview_Preparation_Kit" type="462c0819:PsiDirectoryNode" />
-              <item name="Sorting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Interview_Preparation_Kit" type="462c0819:PsiDirectoryNode" />
-              <item name="String_Manipulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem_Solving" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Warm_Up" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/Documents and Settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -446,13 +404,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556799365598</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Equalize_The_Array 코드리뷰를 참고하여 코드의 일부를 수정">
-      <created>1561903512900</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1561903512900</updated>
     </task>
     <task id="LOCAL-00040" summary="실패되던 테스트가 성공할수 있도록 코드를 수정">
       <created>1561905581034</created>
@@ -790,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568731502349</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Merge_Sort_Counting_Inversions 코드 추가(미구현).">
+      <created>1568989403958</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1568989403960</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -809,12 +767,12 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3127072" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31229237" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -837,8 +795,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="필요 없는 부분을 지움, sonar-cloud의 Settings에서 SCM-Disable the SCM Sensor를 활성화 시킴.( Missing blame information for the following files:에러 해결을 위해서)" />
-    <MESSAGE value="사용하지 않는 파일, 폴더를 지움" />
     <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
     <MESSAGE value="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제" />
     <MESSAGE value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
@@ -862,7 +818,9 @@
     <MESSAGE value="Bubble_Sort의 테스트 케이스 작성" />
     <MESSAGE value="Bubble_Sort의 코드를 구현" />
     <MESSAGE value="Merge_Sort_Counting_Inversions의 테스트 케이스를 작성, 테스트가 아직 실패한다." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge_Sort_Counting_Inversions의 테스트 케이스를 작성, 테스트가 아직 실패한다." />
+    <MESSAGE value="Merge_Sort_Counting_Inversions 코드 추가(미구현)." />
+    <MESSAGE value="퀵 정렬 미구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="퀵 정렬 미구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,13 +841,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Migratory_Birds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Mini-Max_Sum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1126,6 +1077,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions.py" />
+    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py" />
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -1150,44 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions.py" />
-    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py" />
     <entry file="file://$PROJECT_DIR$/tests/Bubble_Sort_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1200,10 +1119,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="464">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithms/Quicksort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
