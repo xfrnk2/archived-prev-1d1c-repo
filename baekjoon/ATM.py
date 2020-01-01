@@ -22,11 +22,10 @@
 
 #코드
 
-def func(array):
+def func(array): 
     total_time = waiting_time = 0
     array.sort()
     for x in array:
         waiting_time += x
         total_time += waiting_time
     return total_time
- 
