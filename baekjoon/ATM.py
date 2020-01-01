@@ -29,4 +29,3 @@ def func(array):
         waiting_time += x
         total_time += waiting_time
     return total_time
-  
