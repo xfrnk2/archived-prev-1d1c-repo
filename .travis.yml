@@ -1,7 +1,21 @@
+dist: xenial
 language: python
-python:
-- "3.6.4"
+python: 3.7
 install:
+- make bootstrap
+- pip install flake8 pytest-cov codecov
+- pip install coveralls
 - pip install -r requirements.txt
+
+
+addons:
+  sonarcloud:
+    organization: "xfrnk2-github"
+    token:
+      secure: ${sonarcloud_token}
 script:
-- pytest -vv
+- make test
+- sonar-scanner 
+- make cover
+after_script:
+- codecov --token=${codecov_token}
