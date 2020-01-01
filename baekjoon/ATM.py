@@ -20,11 +20,12 @@
 # 예제 출력 1
 # 32
 
+#코드
+
 def func(array):
-    result = value = 0
+    total_time = waiting_time = 0
     array.sort()
     for x in array:
-        value += x
-        result += value
-    return result
-
+        waiting_time += x
+        total_time += waiting_time
+    return total_time
