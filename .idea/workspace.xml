@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algorithms/Quicksort.py" />
+    <list default="true" id="f768fc18-278b-4445-8946-1dfcf3af8811" name="Default" comment="백준/11399번/ATM문제 풀기">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/ATM.py" afterPath="$PROJECT_DIR$/baekjoon/ATM.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,112 +13,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/1d1c$Equalize_The_Array.coverage" NAME="Equalize_The_Array Coverage Results" MODIFIED="1565190443827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$py_test_in_Jumping_On_The_Clouds_Revisited_test_py.coverage" NAME="py.test in Jumping_On_The_Clouds_Revisited_test.py Coverage Results" MODIFIED="1566481713825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/1d1c$Find_Digits.coverage" NAME="Find_Digits Coverage Results" MODIFIED="1560435698008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$Minimum_Distances.coverage" NAME="Minimum_Distances Coverage Results" MODIFIED="1560778148200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$The_Time_In_Words.coverage" NAME="The_Time_In_Words Coverage Results" MODIFIED="1565190579759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$Cavity_Map.coverage" NAME="Cavity_Map Coverage Results" MODIFIED="1566487651795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$Picking_Numbers.coverage" NAME="Picking_Numbers Coverage Results" MODIFIED="1558444150816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-    <SUITE FILE_PATH="coverage/1d1c$CutTheSticks.coverage" NAME="CutTheSticks Coverage Results" MODIFIED="1561128196680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hackerrank/Problem_Solving" />
+    <SUITE FILE_PATH="coverage/1d1c$ATM.coverage" NAME="ATM Coverage Results" MODIFIED="1577890344255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baekjoon" />
+    <SUITE FILE_PATH="coverage/1d1c$py_test_in__pytest_cache.coverage" NAME="py.test in .pytest_cache Coverage Results" MODIFIED="1556637161923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/.pytest_cache" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="1d1c" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Fair_Rations_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
+      <file leaf-file-name="1d1c.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/1d1c.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="116">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fair_Rations.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
+      <file leaf-file-name="ATM.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/baekjoon/ATM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bubble_Sort_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Bubble_Sort_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Merge_Sort_Counting_Inversions_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Merge_Sort_Counting_Inversions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Quicksort.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algorithms/Quicksort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mark_And_Toys_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cavity_Map_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bubble_Sort.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mark_And_Toys.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -133,70 +50,45 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>eval</find>
-      <find>mx</find>
-      <find>filter</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_Chocolate.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Bon_Appétit.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Breaking_The_Records.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cats_And_A_Mouse.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Compare_the_tripets.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Diagonal_Difference.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Divisible_Sum_Pairs.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Drawing_Book.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Electronics_Shop.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Grading_Students.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Kangaroo.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Migratory_Birds.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Mini-Max_Sum.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Picking_Numbers.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Plus_Minus.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/simple_array_sum.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Staircase.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/The_Hurdle_Race.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Utopian_Tree.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Very_Big_Sum.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Counting_valleys.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Jumping_on_the_Clouds.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Repeated String.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Sock Merchant.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py" />
-        <option value="$PROJECT_DIR$/tests/__init__.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/__init__.py" />
-        <option value="$PROJECT_DIR$/tests/The_Time_In_Words_test.py" />
-        <option value="$PROJECT_DIR$/tests/Alternating_Characters_test.py" />
-        <option value="$PROJECT_DIR$/tests/Beautiful_Triplets_test.py" />
-        <option value="$PROJECT_DIR$/tests/cutTheSticks_test.py" />
-        <option value="$PROJECT_DIR$/tests/Equalize_The_Array_test.py" />
-        <option value="$PROJECT_DIR$/tests/Find_Digits_test.py" />
-        <option value="$PROJECT_DIR$/tests/Ice_Cream_Parlor_test.py" />
-        <option value="$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py" />
-        <option value="$PROJECT_DIR$/tests/Mark_And_Toys.py" />
-        <option value="$PROJECT_DIR$/tests/Minimum_Distances_test.py" />
-        <option value="$PROJECT_DIR$/tests/Service_Lane_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py" />
-        <option value="$PROJECT_DIR$/tests/Cavity_Map_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
-        <option value="$PROJECT_DIR$/tests/Fair_Rations_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py" />
-        <option value="$PROJECT_DIR$/tests/Bubble_Sort_test.py" />
-        <option value="$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions.py" />
-        <option value="$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions_test.py" />
-        <option value="$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py" />
-        <option value="$PROJECT_DIR$/src/Algorithms/Quicksort.py" />
+        <option value="$PROJECT_DIR$/patch.diff" />
+        <option value="$PROJECT_DIR$/.idea/1d1c.iml" />
+        <option value="$PROJECT_DIR$/tdd/pytest_test.py" />
+        <option value="$PROJECT_DIR$/tdd/Calculator_test.py" />
+        <option value="$PROJECT_DIR$/tests/pytest_test.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/baekjoon/ATM.py" />
       </list>
     </option>
   </component>
@@ -207,10 +99,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="572" />
-    <option name="width" value="1340" />
-    <option name="height" value="1038" />
+    <option name="x" value="106" />
+    <option name="y" value="-16" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -226,7 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,37 +131,25 @@
             <path>
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
               <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baekjoon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
               <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="1d1c" type="b2602c69:ProjectViewProjectNode" />
-              <item name="1d1c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
-              <item name="Arrays" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Documents and Settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -281,89 +163,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Cavity_Map">
-    <configuration name="Cavity_Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ATM">
+    <configuration name="ATM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/hackerrank/Problem_Solving" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baekjoon" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="1d1c" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baekjoon/ATM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="CutTheSticks" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="1d1c" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hackerrank/Problem_Solving/CutTheSticks.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Equalize_The_Array" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="1d1c" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="The_Time_In_Words" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hackerrank/Problem_Solving" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="1d1c" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hackerrank/Problem_Solving/The_Time_In_Words.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="py.test in Jumping_On_The_Clouds_Revisited_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="py.test in .pytest_cache" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/.pytest_cache" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -371,23 +196,17 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/.pytest_cache&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.CutTheSticks" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Equalize_The_Array" />
-      <item index="2" class="java.lang.String" itemvalue="Python.The_Time_In_Words" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in Jumping_On_The_Clouds_Revisited_test.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Cavity_Map" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in .pytest_cache" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ATM" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Cavity_Map" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in Jumping_On_The_Clouds_Revisited_test.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.The_Time_In_Words" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Equalize_The_Array" />
-        <item index="4" class="java.lang.String" itemvalue="Python.CutTheSticks" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.ATM" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in .pytest_cache" />
       </list>
     </recent_temporary>
   </component>
@@ -399,394 +218,125 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c71ca266-bcff-43b9-ba30-4090f0fb08ed" name="Default" comment="" />
-      <created>1556799365598</created>
+      <changelist id="f768fc18-278b-4445-8946-1dfcf3af8811" name="Default" comment="" />
+      <created>1556110160031</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1556799365598</updated>
+      <updated>1556110160031</updated>
     </task>
-    <task id="LOCAL-00040" summary="실패되던 테스트가 성공할수 있도록 코드를 수정">
-      <created>1561905581034</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+    <task id="LOCAL-00001" summary="사용하지 않는 파일들을 삭제, 불필요한 코드 삭제, 불필요한 폴더(이름을 변경했으나 하나 더 존재하는) 삭제">
+      <created>1556637240705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1561905581034</updated>
+      <updated>1556637240705</updated>
     </task>
-    <task id="LOCAL-00041" summary=".flake8 파일을 생성, 한줄 최대의 길이를 120으로 설정하는 내용을 추가">
-      <created>1561987790425</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
+    <task id="LOCAL-00002" summary="workspace를 제외하기 위해 gitignore 에 문장 추가">
+      <created>1556637328205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1561987790425</updated>
+      <updated>1556637328205</updated>
     </task>
-    <task id="LOCAL-00042" summary="코드리뷰를 참고하여 코드를 수정">
-      <created>1561988378925</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
+    <task id="LOCAL-00003" summary="백준/11399번/ATM문제 풀기">
+      <created>1577890052743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1561988378925</updated>
+      <updated>1577890052743</updated>
     </task>
-    <task id="LOCAL-00043" summary="테스트케이스의 내용에 보다 구체적으로 어떤 내용을 실험하고 있는지를 알 수 있는 내용 추가 - 아무값도 들어오지 않더라도 잘 동작하는지, 빈 배열을 인자로 받는다면 0을 리턴하는지">
-      <created>1561989385472</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
+    <task id="LOCAL-00004" summary="백준/11399번/ATM문제 풀기">
+      <created>1577890357867</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1561989385472</updated>
+      <updated>1577890357867</updated>
     </task>
-    <task id="LOCAL-00044" summary="Beautiful Triplets의 테스트케이스를 작성">
-      <created>1562684929052</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
+    <task id="LOCAL-00005" summary="백준/11399번/ATM문제 풀기">
+      <created>1577890650485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1562684929052</updated>
+      <updated>1577890650485</updated>
     </task>
-    <task id="LOCAL-00045" summary="Beautiful Triplets의 테스트가 성공한다">
-      <created>1562684997151</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
+    <task id="LOCAL-00006" summary="백준/11399번/ATM문제 풀기">
+      <created>1577891032507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1562684997151</updated>
+      <updated>1577891032507</updated>
     </task>
-    <task id="LOCAL-00046" summary="Beautiful Triplets의 테스트가 성공. 코드가 정상동작함">
-      <created>1562685027379</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
+    <task id="LOCAL-00007" summary="백준/11399번/ATM문제 풀기">
+      <created>1577891259441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1562685027379</updated>
+      <updated>1577891259441</updated>
     </task>
-    <task id="LOCAL-00047" summary="Service_Lane의 테스트케이스를 작성">
-      <created>1563117514991</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1563117514991</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Service_Lane의 테스트케이스를 수정, 코드를 완성">
-      <created>1563117924220</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1563117924220</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Mark_And_Toys 테스트케이스를 작성. 테스트가 실패한다">
-      <created>1563198753104</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1563198753105</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Mark_And_Toys 코드를 작성. 테스트가 성공한다.">
-      <created>1563198834457</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1563198834458</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Alternating Characters 테스트 케이스를 작성, 테스트가 실패한다.">
-      <created>1563369920284</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1563369920284</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Alternating Characters 코드 작성">
-      <created>1563369970585</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1563369970585</updated>
-    </task>
-    <task id="LOCAL-00053" summary="The_Time_In_Words 테스트파일과 코드파일 생성">
-      <created>1565185811526</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1565185811527</updated>
-    </task>
-    <task id="LOCAL-00054" summary="The_Time_In_Words 테스트코드 작성, 테스트가 실패한다">
-      <created>1565186678607</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1565186678607</updated>
-    </task>
-    <task id="LOCAL-00055" summary="The_Time_In_Words 코드 미구현">
-      <created>1565190776015</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1565190776016</updated>
-    </task>
-    <task id="LOCAL-00056" summary="The_Time_In_Words 테스트케이스를 추가">
-      <created>1565275249967</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1565275249968</updated>
-    </task>
-    <task id="LOCAL-00057" summary="The_Time_In_Words 테스트케이스를 추가, 수정">
-      <created>1565278153039</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1565278153039</updated>
-    </task>
-    <task id="LOCAL-00058" summary="The_Time_In_Words 코드를 리팩토링, 문제없이 돌아간다.">
-      <created>1565278203963</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1565278203963</updated>
-    </task>
-    <task id="LOCAL-00059" summary="The_Time_in_Words 의 코드리뷰 내용을 참고해 코드를 수정">
-      <created>1565615140525</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1565615140526</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Maximum_Perimeter_Triangle 코드, 테스트케이스 파일 생성">
-      <created>1565702588618</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1565702588619</updated>
-    </task>
-    <task id="LOCAL-00061" summary="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나오므로 일부러 에러 발생시키기 위해 커밋">
-      <created>1565707286544</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1565707286544</updated>
-    </task>
-    <task id="LOCAL-00062" summary="여전히 travis-ci리포트중 Codecov에서 coverage.xml 파일을 찾을수 없다는 내용이 나옴..">
-      <created>1565707479494</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1565707479494</updated>
-    </task>
-    <task id="LOCAL-00063" summary="필요 없는 부분을 지움, sonar-cloud의 Settings에서 SCM-Disable the SCM Sensor를 활성화 시킴.( Missing blame information for the following files:에러 해결을 위해서)">
-      <created>1566115612809</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1566115612810</updated>
-    </task>
-    <task id="LOCAL-00064" summary="사용하지 않는 파일, 폴더를 지움">
-      <created>1566115942117</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1566115942117</updated>
-    </task>
-    <task id="LOCAL-00065" summary="코드리뷰를 참고하여 코드를 수정">
-      <created>1566116007975</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1566116007976</updated>
-    </task>
-    <task id="LOCAL-00066" summary="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제">
-      <created>1566117859018</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1566117859019</updated>
-    </task>
-    <task id="LOCAL-00067" summary="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고.">
-      <created>1566140658128</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1566140658128</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현">
-      <created>1566315272010</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1566315272010</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Cavity_Map 코드 작성. 테스트 실패.">
-      <created>1566399194677</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1566399194678</updated>
-    </task>
-    <task id="LOCAL-00070" summary="*_test.py 파일의 import sys와 os를 모두 제거">
-      <created>1566399318310</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1566399318310</updated>
-    </task>
-    <task id="LOCAL-00071" summary="replace를 사용해서 코드를 수정, 아직 실패한다.">
-      <created>1566487831793</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1566487831794</updated>
-    </task>
-    <task id="LOCAL-00072" summary="코드리뷰를 참고해 Ice_Cream_parlor.py 코드를 수정">
-      <created>1566825298256</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1566825298257</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.">
-      <created>1567349464890</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1567349464891</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.2">
-      <created>1567434462038</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1567434462039</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Cavity map 테스트 케이스 변경 및 추가">
-      <created>1567435004339</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1567435004339</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Cavity map 테스트 케이스 추가, 테스트가 아직 실패한다.">
-      <created>1567435141866</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1567435141866</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Cavity map 이전에 짠 코드를 지우고 새롭게 변경.">
-      <created>1567953366932</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1567953366932</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Fair_Rations 의 테스트 케이스 생성, 코드 구현, 그러나 아직 일부 테스트가 실패한다. &quot;NO&quot;를 반환하는 경우가 어떤 경우가 있는지 고민해보기.">
-      <created>1568041792734</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1568041792735</updated>
-    </task>
-    <task id="LOCAL-00079" summary="코드 리뷰를 참고해 Cavity_Map 코드를 수정, Cavity_Map 의 모든 테스트가 성공한다.">
-      <created>1568042070068</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1568042070068</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Cavity_map - import copy 추가">
-      <created>1568042141677</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1568042141677</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Cavity_map - 코드리뷰를 참고해 코드를 수정. itertools 제대로 학습하기">
-      <created>1568129369919</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1568129369920</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Fair_Rations의 테스트 케이스를 추가">
-      <created>1568435584288</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1568435584288</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Fair_Rations의 모든 테스트 케이스가 성공한다.">
-      <created>1568435693869</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1568435693869</updated>
-    </task>
-    <task id="LOCAL-00084" summary="코드리뷰를 참고해 Fair_Rations 코드를 수정">
-      <created>1568647002014</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1568647002014</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Bubble_Sort의 테스트 케이스 작성">
-      <created>1568731089397</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1568731089397</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Bubble_Sort의 코드를 구현">
-      <created>1568731121347</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1568731121347</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Merge_Sort_Counting_Inversions의 테스트 케이스를 작성, 테스트가 아직 실패한다.">
-      <created>1568731502348</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1568731502349</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Merge_Sort_Counting_Inversions 코드 추가(미구현).">
-      <created>1568989403958</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1568989403960</updated>
-    </task>
-    <option name="localTasksCounter" value="89" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_Jumping_On_The_Clouds_Revisited_test_py - 2019.08.20 at 22h 41m 55s.xml">
-      <configuration name="py.test in Jumping_On_The_Clouds_Revisited_test.py" configurationId="tests" />
+    <history-entry file="py_test_in__pytest_cache - 2019.05.01 at 00h 12m 43s.xml">
+      <configuration name="py.test in .pytest_cache" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_Jumping_On_The_Clouds_Revisited_test_py - 2019.08.20 at 22h 42m 09s.xml">
-      <configuration name="py.test in Jumping_On_The_Clouds_Revisited_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_Jumping_On_The_Clouds_Revisited_test_py - 2019.08.22 at 22h 48m 39s.xml">
-      <configuration name="py.test in Jumping_On_The_Clouds_Revisited_test.py" configurationId="tests" />
-    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31229237" sideWeight="0.5125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281768" sideWeight="0.4875" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39645627" sideWeight="0.49166667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50576603" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33001107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50576603" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -795,355 +345,165 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="코드리뷰를 참고하여 코드를 수정" />
-    <MESSAGE value="해커랭크 사이트의 코드를 통째로 복사해 오면서 같이 들어간 if __name__ == '__main__': 함수를 모두 삭제" />
-    <MESSAGE value="시범삼아 1개의 코드파일과 테스트파일에 들어갈 함수명을 파스칼 표기법에서 팟홀 표기법으로 변경 (jumpoin_on_clouds), sonarcloud의 리포트를 참고." />
-    <MESSAGE value="Cavity_Map 테스트 케이스와 코드 파일을 생성,  테스트가 아직 실패, 코드 미구현" />
-    <MESSAGE value="Cavity_Map 코드 작성. 테스트 실패." />
-    <MESSAGE value="*_test.py 파일의 import sys와 os를 모두 제거" />
-    <MESSAGE value="replace를 사용해서 코드를 수정, 아직 실패한다." />
-    <MESSAGE value="코드리뷰를 참고해 Ice_Cream_parlor.py 코드를 수정" />
-    <MESSAGE value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다." />
-    <MESSAGE value="Cavity map 코드 재구성, 아직 일부의 테스트(테스트케이스가 너무 길어서 포함시키기 않은 상태)가 실패한다.2" />
-    <MESSAGE value="Cavity map 테스트 케이스 변경 및 추가" />
-    <MESSAGE value="Cavity map 테스트 케이스 추가, 테스트가 아직 실패한다." />
-    <MESSAGE value="Cavity map 이전에 짠 코드를 지우고 새롭게 변경." />
-    <MESSAGE value="Fair_Rations 의 테스트 케이스 생성, 코드 구현, 그러나 아직 일부 테스트가 실패한다. &quot;NO&quot;를 반환하는 경우가 어떤 경우가 있는지 고민해보기." />
-    <MESSAGE value="코드 리뷰를 참고해 Cavity_Map 코드를 수정, Cavity_Map 의 모든 테스트가 성공한다." />
-    <MESSAGE value="Cavity_map - import copy 추가" />
-    <MESSAGE value="Cavity_map - 코드리뷰를 참고해 코드를 수정. itertools 제대로 학습하기" />
-    <MESSAGE value="Fair_Rations의 테스트 케이스를 추가" />
-    <MESSAGE value="Fair_Rations의 모든 테스트 케이스가 성공한다." />
-    <MESSAGE value="코드리뷰를 참고해 Fair_Rations 코드를 수정" />
-    <MESSAGE value="Bubble_Sort의 테스트 케이스 작성" />
-    <MESSAGE value="Bubble_Sort의 코드를 구현" />
-    <MESSAGE value="Merge_Sort_Counting_Inversions의 테스트 케이스를 작성, 테스트가 아직 실패한다." />
-    <MESSAGE value="Merge_Sort_Counting_Inversions 코드 추가(미구현)." />
-    <MESSAGE value="퀵 정렬 미구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="퀵 정렬 미구현" />
+    <MESSAGE value="사용하지 않는 파일들을 삭제, 불필요한 코드 삭제, 불필요한 폴더(이름을 변경했으나 하나 더 존재하는) 삭제" />
+    <MESSAGE value="workspace를 제외하기 위해 gitignore 에 문장 추가" />
+    <MESSAGE value="백준/11399번/ATM문제 풀기" />
+    <option name="LAST_COMMIT_MESSAGE" value="백준/11399번/ATM문제 풀기" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hackerrank/Problem_Solving/CutTheSticks.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hackerrank/Problem_Solving/Equalize_The_Array.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Mini-Max_Sum.py">
+    <entry file="file://$PROJECT_DIR$/.idea/1d1c.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="116">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Minimum_Distances.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Picking_Numbers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Plus_Minus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Service_Lane.py">
+    <entry file="file://$PROJECT_DIR$/hackerrank/Arrays/2D_Array_DS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/simple_array_sum.py">
+    <entry file="file://$PROJECT_DIR$/baekjoon/ATM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="870">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/The_Hurdle_Race.py">
+    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="87">
+          <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/The_Time_In_Words.py">
+    <entry file="file://$PROJECT_DIR$/tests/pytest_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="957">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Utopian_Tree.py">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Staircase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Very_Big_Sum.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Jumping_on_the_Clouds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Between_Two_Sets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Birthday_cake_candles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Sock Merchant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Time_Conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Kangaroo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Maximum_Perimeter_Triangle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test/Jumping_On_The_Clouds_Revisited_test.py" />
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Jumping_On_The_Clouds_Revisited.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/The_Time_In_Words_test.py" />
-    <entry file="file://$PROJECT_DIR$/tests/tes/Jumping_On_The_Clouds_Revisited_test.py" />
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Maximum_Perimeter_Triangle_test.py" />
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Beautiful_Days_at_the_Movies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Alternating_Characters_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Beautiful_Triplets_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Find_Digits_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Jumping_On_The_Clouds_Revisited_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Minimum_Distances_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Service_Lane_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Counting_valleys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Ice_Cream_Parlor_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/cutTheSticks_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Warm_Up/Repeated String.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Equalize_The_Array_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Cavity_Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions.py" />
-    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys.py" />
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Ice_Cream_Parlor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fair_Rations_test.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/1d1c.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Problem_Solving/Fair_Rations.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="6931">
+          <caret line="239" column="22" lean-forward="true" selection-start-line="239" selection-start-column="22" selection-end-line="239" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/patch.diff" />
+    <entry file="file://$PROJECT_DIR$/.pytest_cache/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/tdd/pytest_test.py" />
+    <entry file="file://$PROJECT_DIR$/tdd/Calculator.py" />
+    <entry file="file://$PROJECT_DIR$/tdd/Calculator_test.py" />
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Bubble_Sort_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/Calculator_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="87">
+          <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Merge_Sort_Counting_Inversions_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/pytest_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Mark_And_Toys_test.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="3021">
+          <caret line="231" column="5" lean-forward="true" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Cavity_Map_test.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Bubble_Sort.py">
+    <entry file="file://$PROJECT_DIR$/tests/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/1d1c.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Mark_And_Toys.py">
+    <entry file="file://$PROJECT_DIR$/baekjoon/ATM(GREEDY)/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/hackerrank/Arrays/2D_Array_DS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1151,18 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerrank/Interview_Preparation_Kit/Sorting/Merge_Sort_Counting_Inversions.py">
+    <entry file="file://$PROJECT_DIR$/baekjoon/ATM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithms/Quicksort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        <state relative-caret-position="317">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding />
         </state>
       </provider>
