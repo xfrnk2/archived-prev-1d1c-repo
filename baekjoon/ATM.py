@@ -22,10 +22,11 @@
 
 #코드
 
-def func(array):
-    total_time = waiting_time = 0 
-    array.sort()
-    for x in array:
-        waiting_time += x
-        total_time += waiting_time
-    return total_time
+from itertools import accumulate
+from operator import add
+from typing import Sequence
+
+
+def func(arr: Sequence[int]) -> int:
+    arr.sort()
+    return sum(accumulate(arr, add))
