@@ -274,6 +274,13 @@ $RECYCLE.BIN/
 
 *.swp
 
-#workspace
+workspace
 \.idea/workspace.xml
 \.idea/**/workspace.xml
+.idea
+.idea/
+.idea/workspace.xml
+\.idea
+\.idea/
+\.idea/workspace.xml
+
