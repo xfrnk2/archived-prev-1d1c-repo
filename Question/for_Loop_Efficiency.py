@@ -35,7 +35,3 @@ if __name__ == "__main__":
         assert deck1 == deck2
         print(time1, time2, "\n")
 
-
-    #result
-    #simulation1 = 6.825436353683472
-    #simulation2 = 5.459356069564819
