@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/8958
 number = int(input())
 quizs = [input() for _ in range(number)]
 
