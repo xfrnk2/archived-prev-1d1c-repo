@@ -40,25 +40,21 @@
 # 예제 출력 2
 # 12
 
-from typing import Sequence
-import numpy as np
+from typing import List
+from itertools import chain
 
-
-def greedy(n: int, total_amount: int, values: Sequence[int]) -> int:
-    coin_count = 0
-    while 0 < total_amount:
-        for value in reversed(values):
-            if total_amount < value:
-                continue
-            q, r = divmod(total_amount, value)
-            coin_count, total_amount = coin_count + q, r
-    return int(coin_count)
-
+def greedy(coin_count: int, total_amount: int, coins: List[int]):
+    for value in reversed(coins):
+        if total_amount < value:
+            continue
+        q, r = divmod(total_amount, value)
+        coin_count, total_amount = coin_count + q, r
+    if total_amount == 0 :
+        return coin_count
+    return greedy(coin_count, total_amount, coins)
 
 if __name__ == "__main__":
     n, k = map(int, input().split())
-    coins = [list(map(int, input().split())) for _ in range(n)]
-    arr = np.array(coins)
-    arr.ravel()
-
-    print(greedy(n, k, arr))
+    values = [list(map(int, input().split())) for _ in range(n)]
+    values = list(chain(*values))
+    print(greedy(0, k, values))
