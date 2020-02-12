@@ -13,4 +13,4 @@ for x in group:
 
 for x in group:
     if x not in arr:
-        print(x)
+        print(x) 
