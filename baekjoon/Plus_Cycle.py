@@ -1,19 +1,14 @@
 #https://www.acmicpc.net/problem/1110
-number = int(input())
-if number < 10:
-    number *= 10
-value = number
-value_count = 0
-while True:
-    value = value%10*10 + (value//10+value%10)%10
+
+def func(number, value, value_count):
     value_count += 1
+    value = value % 10 * 10 + (value // 10 + value % 10) % 10
     if value == number:
-        break
-print(value_count)
+        return value_count
+    return func(number, value, value_count)
 
-
-
-
-
-
-
+if __name__ == "__main__":
+    num = int(input())
+    if num < 10:
+        num *= 10
+    print(func(num, num, 0))
