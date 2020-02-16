@@ -3,14 +3,15 @@ number = int(input())
 quizs = [input() for _ in range(number)]
 
 for quiz in quizs:
-    score = o_count = 0
-    temp = ""
+    score = 0
+    o_count = 1
+    flag: bool = False
     for v in quiz:
         if v == "O":
-            score += (1 + o_count)
-            if temp == "O":
+            if flag:
                 o_count += 1
-            temp = "O"
+            score += o_count
+            flag = True
         else:
             o_count = 0
     print(score)
