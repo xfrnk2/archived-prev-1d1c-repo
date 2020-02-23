@@ -1,5 +1,4 @@
 def gcd(m: int, n: int) -> int:
-
     if m < n:
         m, n = n, m
 
