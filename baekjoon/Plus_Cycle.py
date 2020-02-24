@@ -9,6 +9,10 @@ def func(number, value, value_count):
 
 if __name__ == "__main__":
     num = int(input())
+
+    assert 0 <= num <= 99
+
     if num < 10:
         num *= 10
+
     print(func(num, num, 0))
