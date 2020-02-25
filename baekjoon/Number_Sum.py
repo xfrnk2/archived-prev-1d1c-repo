@@ -7,7 +7,6 @@ def func(n, num):
 def func2(num):
     return eval('+'.join(num))
 
-
 if __name__ == '__main__':
    value = [int(input()) for _ in range(2)]
    print(func(value[0], value[1]))
