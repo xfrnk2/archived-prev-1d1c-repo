@@ -22,6 +22,7 @@ def func(x:int, y:int):
         return False
     elif x== n-1 and y==n-1:
         maze[x][y] = path
+        print("success")
         return True
     else:
         maze[x][y] = path
