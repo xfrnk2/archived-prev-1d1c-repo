@@ -26,7 +26,7 @@ def func(x:int, y:int):
         return True
     else:
         maze[x][y] = path
-        if func(x-1, y) or func(x, y+1) or func(x+1, y) or func(x, y-1):
+        if func(x-1, y) or func(x, y+1) or func(x+1, y) or func(x, y-1): #북-동-남-서 방향으로 순회
             return True
         maze[x][y] = blocked
         return False
