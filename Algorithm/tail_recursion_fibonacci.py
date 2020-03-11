@@ -12,9 +12,7 @@ print(fiboTail(8))
 def fiboTail2(n):
     return fibo(n, 0, 1)
 def fibo(n, left, right):
-    if 0 == n:
-        return 0
-    elif n == 1:
+    if n == 1:
         return right
     else:
         return fibo(n-1, right, right+left)
