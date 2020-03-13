@@ -4,4 +4,15 @@ def fibonacci(n: int) -> int:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
 
-print(fibonacci(10))
+print(fibonacci(13))
+
+
+
+
+def fibo_tail(n : int, lhs: int, rhs: int):
+
+    if n == 1:
+        return rhs
+    return fibo_tail(n-1, rhs, lhs + rhs)
+
+print(fibo_tail(13, 0, 1))
