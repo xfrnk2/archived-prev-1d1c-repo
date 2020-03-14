@@ -1,10 +1,11 @@
-n = 8
-cols = [x for x in range(n+1)]
 
-def queens(level) -> bool:
+n = 8
+cols = [0 for _ in range(n)]
+def queens(level):
+    print(cols)
     if not promising(level):
         return False
-    elif level == n:
+    elif level==n:
         return True
     else:
         for i in range(1, n+1):
@@ -13,15 +14,13 @@ def queens(level) -> bool:
                 return True
         return False
 
-
-
-def promising(level)-> bool:
-    for i in range(1, level+1):
-        if cols[i]==cols[level]:
+def promising(level):
+    for x in range(1, level):
+        if cols[x] == cols[level]: #x는 말의 번호이다. level번째 말과 열이 겹치는지 확인한다.
             return False
-        elif level-1 == abs(cols[level-cols[i]]):
+        elif level-x == abs(cols[level]-cols[x]): # level-x는 곧 행의 차이다.
             return False
     return True
 
-queens(0)
+queens(n)
 print(cols)
