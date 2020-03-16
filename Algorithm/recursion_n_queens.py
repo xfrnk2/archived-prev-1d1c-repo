@@ -32,10 +32,10 @@ c = [0 for x in range(size+1)]
 
 def queen_func(value: int):
     if prom(value):
-
+        pass
 def prom(value: int):
     for i in range(1, size+1):
-        if 
+        pass
 
 
 
