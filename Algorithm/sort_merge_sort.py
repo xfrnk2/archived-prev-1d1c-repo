@@ -6,13 +6,12 @@ def merge_sort(arr):
 
         left = merge_sort(l)
         right = merge_sort(r)
+
         return merge(left, right)
     return arr
 
 def merge(left, right):
-    i, j = 0, 0
-    temp = []
-
+    i, j, temp = 0, 0, []
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             temp.append(left[i])
@@ -23,10 +22,11 @@ def merge(left, right):
     while i < len(left):
         temp.append(left[i])
         i+=1
-    while i < len(left):
+    while j < len(left):
         temp.append(right[j])
         j+=1
+
     return temp
 
-arr = [5, 3, 4, 2, 1]
+arr = [5, 3, 4, 100, 2, 1]
 print(merge_sort(arr))
