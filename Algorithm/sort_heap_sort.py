@@ -22,13 +22,14 @@ def heapify(arr, i):
             arr[i], arr[index*2-1] = arr[index*2-1], arr[i]
             return heapify(arr, index*2-2)
 
-arr = [15, 3, 16, 4, 2]
+arr = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
 heapify(arr, 0)
 print(arr)
 
 def heap_sort(arr):
     size = len(arr)-1
     while 0 < size:
+
         arr[0], arr[size] = arr[size], arr[0]
         size -= 1
         heapify(arr, 0)
@@ -36,7 +37,6 @@ def heap_sort(arr):
 
 heap_sort(arr)
 print(arr)
-
 
 
 
