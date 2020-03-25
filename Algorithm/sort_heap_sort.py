@@ -7,7 +7,7 @@ def max_heapify(arr, current_index, size):
     target_index = left_child_index
 
     # 자식 노드가 없을 경우 종료한다.
-    if size - current_index <= 2:
+    if size - current_index <= 2 or size <= left_child_index:
         return
 
     # 왼쪽 노드만 있는 경우 1:1 비교연산을 한다.
@@ -42,7 +42,7 @@ def heap_sort(arr, size):
         #제일 마지막 위치에 최댓값이 저장되면 더이상 비교연산이 필요없어지므로 전체 범위(size)를 'max_index'로 한다.
         max_heapify(arr, 0, max_index)
 
-
-arr = [4, 16, 15, 8, 7, 13, 14, 2, 5]
-heap_sort(arr, len(arr))
-print(arr)
+if __name__ == '__main__':
+    arr = [4, 16, 15, 8, 7, 13, 14, 2, 5]
+    heap_sort(arr, len(arr))
+    print(arr)
