@@ -7,10 +7,11 @@ def counting_sort(arr):
     for x in arr:
         if max_value < x :
             max_value = x
+        if max_value >= array_length:
+            return 0
         values[x] += 1
 
-    # if max_value < array_length:#생각
-    #
+
     result = []
     for value, value_count in enumerate(values):
 
@@ -18,7 +19,8 @@ def counting_sort(arr):
             while 0 < value_count:
                 result.append(value)
                 value_count -=1
-    print(result)
+    return result
 
-arr = [1, 4, 2, 3, 5, 3]
-counting_sort(arr)
+
+arr = [1, 4, 2, 3, 5, 5]
+print(counting_sort(arr))
