@@ -8,7 +8,7 @@ install:
 
 addons:
   sonarcloud:
-    organization: "pepstock-org"
+    organization: "xfrnk2-github"
     token: ${SONAR_TOKEN}
 script:
 - make test
