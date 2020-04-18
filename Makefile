@@ -6,7 +6,7 @@ ifdef update
 endif
 OsConf= ./LinuxWindowsScript.sh
 VENV=${test_path}
-VTEST = . venv/Scripts/activate.bat
+VTEST ?= . venv/Scripts/activate.bat
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
 help:
@@ -57,9 +57,8 @@ lint:
 	flake8 src tests
 
 test:	
-	#$(OsConf)
-	#$(VENV)
-	$(VTEST)
+	$(OsConf)
+	$(VENV)
 	python setup.py test $(TEST_ARGS)
 
 
