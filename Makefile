@@ -53,8 +53,7 @@ lint:
 	$(VENV) ;\
 	flake8 src tests
 
-test:
-	$(EXCU) ;\	
+test:	
 	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
