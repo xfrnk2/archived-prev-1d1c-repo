@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 
 __version__ = '0.0.1'
-name = 'tdd-practice'
+name = '1d1c'
 
 
 def read_long_description(filename="README.md"):
@@ -29,6 +29,17 @@ setup(
     keywords='1 day 1 coding',
     long_description=read_long_description(),
     install_requires=[
+                'mamba',
+            'expects',
+            'coveralls',
+            'coverage',
+            'pytest',
+            'pytest-bdd',
+            'pytest-runner',
+            'pytest-cov',
+            'py',                
+            'flake8',
+            'pyflakes',
     ],
     zip_safe=False,
     classifiers=[

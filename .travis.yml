@@ -13,7 +13,7 @@ install:
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
-    token: ${SONAR_TOKEN}
+    token: ${sonarcloud_token}
 script:
 - make test
 - sonar-scanner 
