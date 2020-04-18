@@ -11,8 +11,12 @@ echo 'Processing for Linux'
 
 # Do Linux Bash commands here... for example:
 StartDir="$(pwd)"
-VENV ?= . venv/bin/activate
+PATH_NAME= . venv/bin/activate
+#VENV ?= . venv/bin/activate
 # Then, when all Linux commands are complete, end the script with 'exit'...
+echo $(PATH_NAME)
+export $(PATH_NAME)
+
 exit 0
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
