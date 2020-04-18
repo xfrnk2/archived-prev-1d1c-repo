@@ -15,7 +15,7 @@ StartDir="$(pwd)"
 #VENV ?= . venv/bin/activate
 # Then, when all Linux commands are complete, end the script with 'exit'...
 
-export test_path= . venv/bin/activate
+export test_path=venv/bin/activate
 
 exit 0
 
@@ -26,5 +26,5 @@ echo "Processing for Windows"
 
 REM Do Windows CMD commands here... for example:
 SET StartDir=%cd%
-export test_path= . venv/bin/activate
+export test_path=venv/Scripts/activate.bat
 REM Then, when all Windows commands are complete... the script is done.
