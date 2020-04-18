@@ -52,12 +52,12 @@ clean-test:
 
 lint:
 	$(OsConf) ;\
-	$(VENV) ;\
+	$(VENV)\
 	flake8 src tests
 
 test:	
-	$(OsConf) ;\
-	$(VENV) ;\
+	$(OsConf)\
+	$(VENV)\
 	python setup.py test $(TEST_ARGS)
 
 
