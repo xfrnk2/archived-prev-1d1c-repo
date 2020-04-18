@@ -23,6 +23,7 @@ bootstrap:
 
 	python -m venv env
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
 	pip install -r requirements.txt ;\
@@ -49,10 +50,12 @@ clean-test:
 
 lint:
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	flake8 src tests
 
 test:	
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
 
@@ -60,6 +63,7 @@ jenkins: test
 
 coverage: test
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -70,10 +74,12 @@ release: clean
 
 install: clean
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	python setup.py install
 
 cover:
 	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
