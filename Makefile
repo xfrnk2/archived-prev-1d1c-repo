@@ -4,6 +4,7 @@ BUILD_LDFLAGS = "-X github.com/xfrnk2/1d1c.revision=$(CURRENT_REVISION)"
 ifdef update
   u=-u
 endif
+VENV ?= ./LinuxWindowsScript.sh
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
@@ -23,7 +24,7 @@ bootstrap:
 
 	python -m venv env
 	# $(VENV) ;\
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
 	pip install -r requirements.txt ;\
@@ -49,18 +50,18 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	flake8 src tests
 
 test:	
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
 
 jenkins: test
 
 coverage: test
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -70,11 +71,11 @@ release: clean
 	fullrelease
 
 install: clean
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	python setup.py install
 
 cover:
-	./LinuxWindowsScript.sh
+	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
