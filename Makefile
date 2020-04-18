@@ -1,13 +1,11 @@
-﻿SHELL = cmd
-VERSION = $(shell gobump show -r)
+﻿VERSION = $(shell gobump show -r)
 CURRENT_REVISION = $(shell git rev-parse --short HEAD)
 BUILD_LDFLAGS = "-X github.com/xfrnk2/1d1c.revision=$(CURRENT_REVISION)"
 ifdef update
   u=-u
 endif
 
-.PHONY: help bootstrap clean lint test coverage docs release install jenkins
-
+.PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -24,7 +22,7 @@ bootstrap:
 	
 
 	python -m venv env
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
 	pip install -r requirements.txt ;\
@@ -50,18 +48,18 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	flake8 src tests
 
 test:	
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	python setup.py test $(TEST_ARGS)
 
 
 jenkins: test
 
 coverage: test
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -71,11 +69,11 @@ release: clean
 	fullrelease
 
 install: clean
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	python setup.py install
 
 cover:
-	cmd //C ./LinuxWindowsScript.sh
+	./LinuxWindowsScript.sh
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
