@@ -7,7 +7,7 @@ ifdef update
 endif
 
 
-	./LinuxWindowsScript.sh
+./LinuxWindowsScript.sh
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
