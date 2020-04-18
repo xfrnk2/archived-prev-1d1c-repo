@@ -29,7 +29,6 @@ setup(
     keywords='1 day 1 coding',
     long_description=read_long_description(),
     install_requires=[
-                'mamba',
             'expects',
             'coveralls',
             'coverage',
@@ -51,23 +50,6 @@ setup(
     test_suite='tests',
     extras_require={
         'tests': [
-            'mamba',
-            'expects',
-            'coveralls',
-            'coverage',
-            'pytest',
-            'pytest-bdd',
-            'pytest-runner',
-            'pytest-cov',
-            'py',                   # via pytest
-            'flake8',
-            'pyflakes',             # via flake8
-            'pep8',                 # via flake8
-            'mccabe',               # via flake8
-            'mock',
-            'six',                  # via mock
-            'pbr',                  # via mock
-            'funcsigs',             # via mock
         ],
     }
 )
