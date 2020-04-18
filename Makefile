@@ -1,12 +1,13 @@
-﻿VERSION = $(shell gobump show -r)
+﻿SHELL = cmd
+VERSION = $(shell gobump show -r)
 CURRENT_REVISION = $(shell git rev-parse --short HEAD)
 BUILD_LDFLAGS = "-X github.com/xfrnk2/1d1c.revision=$(CURRENT_REVISION)"
 ifdef update
   u=-u
 endif
 
-call	"LinuxWindowsScript.bat"
 
+	./LinuxWindowsScript.sh
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins
 
