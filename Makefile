@@ -4,8 +4,8 @@ BUILD_LDFLAGS = "-X github.com/xfrnk2/1d1c.revision=$(CURRENT_REVISION)"
 ifdef update
   u=-u
 endif
-OsConf ?= ./LinuxWindowsScript.sh
-VENV ?=${test_path}
+OsConf= ./LinuxWindowsScript.sh
+VENV=${test_path}
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
 help:
@@ -56,8 +56,8 @@ lint:
 	flake8 src tests
 
 test:	
-	$(OsConf)\
-	$(VENV)\
+	$(OsConf)
+	$(VENV)
 	python setup.py test $(TEST_ARGS)
 
 
