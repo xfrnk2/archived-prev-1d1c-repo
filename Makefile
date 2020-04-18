@@ -4,8 +4,8 @@ BUILD_LDFLAGS = "-X github.com/xfrnk2/1d1c.revision=$(CURRENT_REVISION)"
 ifdef update
   u=-u
 endif
-VENV ?= ./LinuxWindowsScript.sh
-
+OsConf ?= ./LinuxWindowsScript.sh
+VENV ?=${test_path}
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
 help:
@@ -24,6 +24,7 @@ bootstrap:
 
 	python -m venv env
 	# $(VENV) ;\
+	$(OsConf) ;\
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
@@ -50,10 +51,12 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
+	$(OsConf) ;\
 	$(VENV) ;\
 	flake8 src tests
 
 test:	
+	$(OsConf) ;\
 	$(VENV) ;\
 	python setup.py test $(TEST_ARGS)
 
@@ -61,6 +64,7 @@ test:
 jenkins: test
 
 coverage: test
+	$(OsConf) ;\
 	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
@@ -71,10 +75,12 @@ release: clean
 	fullrelease
 
 install: clean
+	$(OsConf) ;\
 	$(VENV) ;\
 	python setup.py install
 
 cover:
+	$(OsConf) ;\
 	$(VENV) ;\
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\

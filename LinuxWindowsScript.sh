@@ -11,11 +11,11 @@ echo 'Processing for Linux'
 
 # Do Linux Bash commands here... for example:
 StartDir="$(pwd)"
-PATH_NAME= . venv/bin/activate
+
 #VENV ?= . venv/bin/activate
 # Then, when all Linux commands are complete, end the script with 'exit'...
-echo $(PATH_NAME)
-export $(PATH_NAME)
+
+export test_path= . venv/bin/activate
 
 exit 0
 
@@ -26,5 +26,5 @@ echo "Processing for Windows"
 
 REM Do Windows CMD commands here... for example:
 SET StartDir=%cd%
-VENV ?= . venv/Scripts/activate.bat 
+export test_path= . venv/bin/activate
 REM Then, when all Windows commands are complete... the script is done.
