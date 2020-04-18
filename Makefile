@@ -5,16 +5,7 @@ ifdef update
   u=-u
 endif
 
-ifdef OS
-    #Windows stuff
-    VENV ?= ..\venv\Scripts\activate.bat
-else
-    VENV ?= . venv/bin/activate
-endif
-
-
-.PHONY: help bootstrap clean lint test coverage docs release install jenkins
-
+.PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -31,7 +22,7 @@ bootstrap:
 	
 
 	python -m venv env
-	$(VENV) ;\
+	./LinuxWindowsScript.sh
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
 	pip install -r requirements.txt ;\
@@ -57,19 +48,18 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	$(VENV) ;\
+	./LinuxWindowsScript.sh
 	flake8 src tests
 
-test:
-	$(EXCU) ;\	
-	$(VENV) ;\
+test:	
+	./LinuxWindowsScript.sh
 	python setup.py test $(TEST_ARGS)
 
 
 jenkins: test
 
 coverage: test
-	$(VENV) ;\
+	./LinuxWindowsScript.sh
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -79,11 +69,11 @@ release: clean
 	fullrelease
 
 install: clean
-	$(VENV) ;\
+	./LinuxWindowsScript.sh
 	python setup.py install
 
 cover:
-	$(VENV) ;\
+	./LinuxWindowsScript.sh
 	coverage run --source src setup.py test ;\
 	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\

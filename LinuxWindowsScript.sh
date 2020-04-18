@@ -1,25 +1,5 @@
-:<<"::CMDLITERAL"
-@ECHO OFF
-GOTO :CMDSCRIPT
-::CMDLITERAL
-
-echo "I can write free-form ${SHELL} now!"
-if :; then
-  echo "This makes conditional constructs so much easier because"
-  echo "they can now span multiple lines."
-fi
-exit $?
-
-:CMDSCRIPT
-ECHO Welcome to %COMSPEC%
-
-
-
-
-
 echo >/dev/null # >nul & GOTO WINDOWS & rem ^
 echo 'Processing for Linux'
-
 
 # ***********************************************************
 # * NOTE: If you modify this content, be sure to remove carriage returns (\r) 
@@ -31,7 +11,6 @@ echo 'Processing for Linux'
 
 # Do Linux Bash commands here... for example:
 StartDir="$(pwd)"
-
 VENV ?= . venv/bin/activate
 
 # Then, when all Linux commands are complete, end the script with 'exit'...
@@ -39,14 +18,11 @@ exit 0
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-:WINDOWS\r\n
-@echo "Processing for Windows"
+:WINDOWS
 echo "Processing for Windows"
 
 REM Do Windows CMD commands here... for example:
 SET StartDir=%cd%
-
 VENV ?= ..\venv\Scripts\activate.bat
-
 
 REM Then, when all Windows commands are complete... the script is done.
