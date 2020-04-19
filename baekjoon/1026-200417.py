@@ -6,4 +6,9 @@ if __name__ == '__main__':
     get_input()
     print(sum(list(map(lambda x, y : x * y, get_input(), get_input()[::-1]))))
 
-
+#또는
+    '''
+    get_input = lambda:sorted(map(int, input().split()))
+    get_input()
+    print(sum(x*y for x, y in zip(get_input(), get_input()[::-1])))
+    '''
