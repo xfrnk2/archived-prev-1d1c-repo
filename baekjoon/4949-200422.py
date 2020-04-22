@@ -24,9 +24,9 @@ def get_result(sentence: str) -> bool:
             except IndexError:
                 return False
 
-    if bracket_stack:
+    if len(bracket_stack) == 0:
         return True
-        #if stack is empty, return True
+
 
 
 if __name__ == '__main__':
