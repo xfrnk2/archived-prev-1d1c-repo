@@ -1,3 +1,6 @@
+# 주소 : https://www.acmicpc.net/problem/4949
+
+
 def get_result(sentence: str) -> bool:
     bracket_stack = []
 
