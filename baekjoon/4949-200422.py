@@ -27,8 +27,7 @@ def get_result(sentence: str) -> bool:
             except IndexError:
                 return False
 
-    if len(bracket_stack) == 0:
-        return True
+    return not bracket_stack
 
 
 
