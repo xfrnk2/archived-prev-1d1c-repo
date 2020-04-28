@@ -4,6 +4,8 @@ def fibonacci(n: int) -> int:
         return n
     return fibonacci(n-1) + fibonacci(n-2)
 
+for x in range(10):
+    print(fibonacci(x))
 print(fibonacci(13))
 
 
