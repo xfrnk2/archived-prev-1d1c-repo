@@ -17,22 +17,25 @@ S2 = "THISISIT"
 # S2 = "ACBDEA"
 print(lcs(S1, S2))
 
-def lcs2(a, b):
-    arr = [[] for _ in range(len(a)) for _ in range(len(b))]
+def lcs_standard(lhs, rhs):
+    if lhs < rhs:
+        lhs, rhs = rhs, lhs
 
-    for x in range(len(a)):
-        for y in range(len(b)):
-            if a[x] == 0 or b[y] == 0:
+    m, n = len(lhs), len(rhs)
+
+    arr = [[0]*(n+1) for _ in range(m+1)]
+
+    for x in range(m+1):
+        for y in range(n+1):
+            if x == 0 or y == 0:
                 arr[x][y] = 0
-            elif a[x] == b[y]:
-                arr[x][y] = arr[x-1][y-1]
-            elif a[x] != b[y]:
-                arr[x][y] = max(a[x-1][y], a[x][y-1])
-    return arr[-1][-1]
+            elif lhs[x-1] == rhs[y-1]:
+                arr[x][y] = arr[x-1][y-1] + 1
+            elif lhs[x-1] != rhs[y-1]:
+                arr[x][y] = max(arr[x-1][y], arr[x][y-1])
+    return arr[m][n]
 
-print(lcs(S1, S2))
-
-
+print(lcs_standard(S1, S2))
 
 
 
