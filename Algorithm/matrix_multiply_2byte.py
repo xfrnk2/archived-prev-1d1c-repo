@@ -1,4 +1,7 @@
 def matrixMul2Byte(a, b):
+
+    assert len(a[0]) == len(b), "앞 행렬의 열 갯수, 뒤 행렬의 행 갯수가 불일치"
+
     matrix = []
     for k in range(2):
         answer = []
