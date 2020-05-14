@@ -1,5 +1,5 @@
 def pre_order(node):
-    print(node.item, end=' ')
+    print(node.item, end='')
     if node.left_child != '.':
         pre_order(tree[node.left_child])
     if node.right_child != '.':
@@ -9,7 +9,7 @@ def in_order(node):
 
     if node.left_child != '.':
         in_order(tree[node.left_child])
-    print(node.item, end=' ')
+    print(node.item, end='')
     if node.right_child != '.':
         in_order(tree[node.right_child])
 
@@ -19,7 +19,7 @@ def post_order(node):
         post_order(tree[node.left_child])
     if node.right_child != '.':
         post_order(tree[node.right_child])
-    print(node.item, end=' ')
+    print(node.item, end='')
 class Node:
     def __init__(self, item, left_child, right_child):
         self.item = item
