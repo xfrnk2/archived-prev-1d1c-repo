@@ -7,10 +7,9 @@ default_values = list(map(int, input().split()))
 set_list = sorted(set(default_values))
 pair = {}
 
-def put_pair(value, index):
+for index, value in enumerate(set_list):
     pair[value] = index
 
-generate_result = [put_pair(value, index) for index, value in enumerate(set_list)]
 print(' '.join([str(pair[x]) for x in default_values]))
 
 

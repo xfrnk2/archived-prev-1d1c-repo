@@ -23,17 +23,17 @@ def postorder(node):
     print(node.item, end='')
 
 class Node:
-    def __init__(self, item, lchild, rchild):
+    def __init__(self, item, left_child, right_child):
         self.item = item
-        self.lchild = lchild
-        self.rchild = rchild
+        self.left_child = left_child
+        self.right_child = right_child
 
 if __name__ == '__main__':
     n = int(input())
     tree = {}
     for _ in range(n):
         data = input().split()
-        tree[data[0]] = Node(item = data[0], lchild=data[1], rchild=data[2])
+        tree[data[0]] = Node(item = data[0], left_child=data[1], right_child=data[2])
     preorder(tree['A'])
     print()
     inorder(tree['A'])
