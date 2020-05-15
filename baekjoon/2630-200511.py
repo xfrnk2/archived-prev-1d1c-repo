@@ -65,7 +65,7 @@ if __name__ == '__main__':
     for _ in range(n):
         arr.append(list(map(int,input().split())))
 
-
+    origami_func2(arr, 0, 0, n)
     for _ in range(10):
         start = time.time()
         for _ in range(5000):
