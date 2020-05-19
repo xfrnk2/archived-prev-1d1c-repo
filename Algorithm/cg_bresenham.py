@@ -1,22 +1,35 @@
-def func(n, x, y):
+def func(n, point1, point2):
     field = [["."] * n for i in range(n)]
 
-    xs, ys = x
-    xe, ye = y
-    yv = ys
-    h, w = ye - ys, xe - xs
-    f = 2 * h - w
-    df1 = 2 * h
-    df2 = 2 * (h - w)
+    xs, ys = point1
+    xe, ye = point2
 
-    for xv in range(xs, xe+1):
-        field[yv][xv] = '@'
-        if f < 0:
-            f += df1
-        else:
-            yv += 1
-            f += df2
+    dy, dx = ye - ys, xe - xs # x,y 좌표별 간격의 값
+    yv = n - ys - 1 # 좌표평면화
+    if 1 <= dy/dx: #기울기 1 이상
+        xv = xs
+        f = 2 * dx - dy
+        for yvv in range(yv, yv - dy - 1, -1):
+            field[yvv][xv] = '@'
+            if f < 0:
+                f += 2 * dx
+            else:
+                f += 2 * (dx - dy)
+                xv += 1
 
+
+    elif 0 < dy/dx < 1:
+        f = 2 * dy - dx
+        for xv in range(xs, xe+1):
+            field[yv][xv] = '@'
+            if f < 0:
+                f += 2 * dy
+            else:
+                yv -= 1
+                f += 2 * (dy - dx)
+
+    else:
+        raise Exception('기울기가 음수라면 취급하지 않음')
 
     for i in field:
         print(i)
@@ -25,14 +38,14 @@ def func(n, x, y):
 
 if __name__ == "__main__":
     n = int(input())
-    x = list(map(int, input().split()))
-    y = list(map(int, input().split()))
-    func(n, x, y)
+    point1 = list(map(int, input().split()))
+    point2 = list(map(int, input().split()))
+    func(n, point1, point2)
 
 
 
 '''
 10
 1 1
-6 4
+5 8 
 '''
