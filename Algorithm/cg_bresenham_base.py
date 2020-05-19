@@ -10,6 +10,7 @@ def func(n, point1, point2):
     if 1 <= dy/dx: #기울기 1 이상
         xv = xs
         f = 2 * dx - dy
+        print("results->", 2 * dx, 2*(dx-dy), 2*dx - dy)
         for yvv in range(yv, ye+1):
             print(f, xv, yvv)
             field[yvv][xv] = '@'
@@ -21,6 +22,7 @@ def func(n, point1, point2):
 
 
     elif 0 < dy/dx < 1:
+
         f = 2 * dy - dx
         for xv in range(xs, xe+1):
             field[yv][xv] = '@'
