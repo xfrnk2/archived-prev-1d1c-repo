@@ -3,34 +3,22 @@ import os
 from enum import Enum
 from random import randrange
 
-class Block(Enum):
-    block_none = "·"
-    blockA = "●"
-    blockB = "◆"
-    blockC = "▲"
-
 def run():
-    # randrange(len(Block.__members__))
-
-
+    blocks = {0 : '·', 1 : '●', 2 : '◆', 3 : '▲'}
     cursorX, cursorY = 0, 0
-    c = 0
+    field_width, field_height = 8, 8
+    field = [[blocks[randrange(1,4)] for _ in range(field_width)] for _ in range(field_height)]
+
     while True:
-
         os.system('cls')
-
-        field_width = 8
-        field_height = 8
 
         for y in range(field_height):
             for x in range(field_width):
                 if x == cursorX and y == cursorY:
                     print("◎", end='')
                 else:
-                    print("·", end='')
+                    print(field[y][x], end='')
             print("")
-        c += 1
-        print(c)
 
         if keyboard.is_pressed('d'):
             cursorX += 1
@@ -43,3 +31,4 @@ def run():
 
 def main():
     run()
+main()
