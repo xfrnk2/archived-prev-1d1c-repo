@@ -1,13 +1,28 @@
 # 도움을 얻은 곳 : 리스트 컴프리헨션 구성을 위해 열람 : https://doorbw.tistory.com/174
 import os
+from functools import reduce
+# 실수일때는 나중에(소수점 아래로 존재시)
+
+
 def binaryToDecimal(num:str) -> int:
     result = 0
     for i,j in enumerate(num[::-1]):
         result += int(j)*(2**i)
     return result
-    #실수일때는 나중에(소수점 아래로 존재시)
-def binaryToOctal(num):
-    pass
+
+
+def binaryToOctal(num: str) -> int:
+    result = ''
+    temp = ''
+    for i, j in enumerate(num[::-1]):
+       if j == '1':
+            temp += str(2 **(i%3))
+
+       if (i+1) % 3 == 0 or i == len(num)-1:
+            result += str(reduce(lambda x, y: int(x) + int(y), temp))
+            temp = ''
+    return int(result[::-1])
+
 def decimalToBinary(num):
     pass
 def decimalToOctal(num):
