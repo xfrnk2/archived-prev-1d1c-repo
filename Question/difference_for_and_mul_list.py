@@ -12,5 +12,6 @@ f[0][1] = 1 의 경우는 처음 접하다보니 기묘하다.
 어째서일까?
 
 for와 multiply(*) 사이에 아직 알지못하는 사실이 숨어 있는 걸까?
-
+관련된 stackoverflow 글을 찾았다.!
+https://stackoverflow.com/questions/240178/list-of-lists-changes-reflected-across-sublists-unexpectedly
 '''
