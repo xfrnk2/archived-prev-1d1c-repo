@@ -8,6 +8,5 @@ regex = re.fullmatch('(100+1+|01)+', text)
 
 if regex:
     print("SUBMARINE")
-    print(regex.group())
 else:
     print("NOISE")
