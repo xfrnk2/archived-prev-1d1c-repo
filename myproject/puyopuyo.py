@@ -72,25 +72,25 @@ def func():
                     for y in range(subCursorY+1, field_height):
                         if y == field_height - 1:
                             field[y][subCursorX] = another_block
-                            break
+
 
                         elif field[y+1][subCursorX] == another_block:
                             field[y][subCursorX] = another_block
-                            break
+
 
 
                 elif field[subCursorY+1][subCursorX] == another_block and field[cursorY+1][cursorX] != another_block:
                     field[subCursorY][subCursorX] = another_block
 
-                    for y in range(cursorY, field_height):
+                    for y in range(cursorY+1, field_height):
 
                         if y == field_height - 1:
                             field[y][cursorX] = another_block
-                            break
 
-                        elif field[y][cursorX] == another_block:
-                            field[y-1][cursorX] = another_block
-                            break
+
+                        elif field[y+1][cursorX] == another_block:
+                            field[y][cursorX] = another_block
+
 
             else:
                 if cursorY == 11 or subCursorY == 11 or field[cursorY+1][cursorX] == another_block or field[subCursorY+1][cursorX] == another_block:
