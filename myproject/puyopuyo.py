@@ -14,6 +14,7 @@ class Block:
 field_width, field_height = 6, 12
 field = [[Block() for _ in range(field_width)] for _ in range(field_height)]
 cursorX, cursorY = 2, 0
+subCursorX, subCursorY = cursorX, cursorY-1
 checked = deepcopy(field)
 another_block = "■"
 
@@ -22,8 +23,9 @@ class AsyncTask:
     def __init__(self):
         pass
     def TaskA(self):
-        global cursorY
+        global cursorY, subCursorY
         cursorY += 1
+        subCursorY += 1
         threading.Timer(1,self.TaskA).start()
 
     def TaskB(self):
@@ -32,7 +34,7 @@ class AsyncTask:
 
 
 def func():
-    global checked, cursorX, cursorY
+    global checked, cursorX, cursorY, subCursorX, subCursorY
 
     at = AsyncTask()
     at.TaskA()
@@ -43,6 +45,8 @@ def func():
             for x in range(field_width):
                 if x == cursorX and y == cursorY:
                     print("■", end='')
+                elif x == subCursorX and y == subCursorY:
+                    print("■", end='')
                 else:
                     print(field[y][x], end='')
             print('')
@@ -50,19 +54,100 @@ def func():
         if set(field[x][2] for x in range(field_height)) == set(another_block):
             print("game over")
 
-        if cursorY == 11 or field[cursorY+1][cursorX] == another_block:
+
+
+        if cursorY == 11 or subCursorY == 11 or field[cursorY+1][cursorX] == another_block :
+
+
             field[cursorY][cursorX] = another_block
+            field[subCursorY][subCursorX] = another_block
+
+
             cursorX, cursorY = 2, -2
+            subCursorX, subCursorY = cursorX, cursorY-1
+        #
+        # #가로
+        # elif field[cursorY + 1][cursorX] == another_block or field[subCursorY + 1][subCursorX] == another_block:
+        #
+        #     if abs(cursorX - subCursorX) == 1:
+        #
+        #         if field[subCursorY + 1][subCursorX] == another_block:
+        #             field[subCursorY][subCursorX] = another_block
+        #             for y in range(cursorY, field_height):
+        #                 if field[y][cursorX] == another_block:
+        #                     field[y-1][cursorX] = another_block
+        #         else:
+        #             field[cursorY][cursorX] = another_block
+        #             for y in range(subCursorY, field_height):
+        #                 if field[y][subCursorX] == another_block:
+        #                     field[y - 1][subCursorX] = another_block
+        #     else:
+        #         field[cursorY][cursorX] = another_block
+        #         field[subCursorY][subCursorX] = another_block
+        #     cursorX, cursorY = 2, -2
+        #     subCursorX, subCursorY = cursorX, cursorY-1
+        #
+
+        if keyboard.is_pressed('RIGHT'):
+            if subCursorY + 1 == cursorY:
+
+                if cursorX != field_width-1 and field[cursorY][cursorX+1] != another_block:
+                    cursorX += 1
+                    subCursorX += 1
+            else:
+                if cursorX - 1 == subCursorX:
+                    if 0 < cursorX < field_width - 1 and field[cursorY][cursorX + 1] != another_block:
+                        cursorX += 1
+                        subCursorX += 1
+                else:
+                    if 0 < subCursorX <= field_width - 1 and field[subCursorY][subCursorX + 1] != another_block:
+                        cursorX += 1
+                        subCursorX += 1
 
 
-        if keyboard.is_pressed('d'):
-            if cursorX != field_width-1 and field[cursorY][cursorX+1] != another_block:
-                cursorX += 1
-        elif keyboard.is_pressed('a'):
-            if cursorX != 0 and field[cursorY][cursorX-1] != another_block:
-                cursorX -= 1
-        elif keyboard.is_pressed('s'):
+        elif keyboard.is_pressed('LEFT'):
+
+
+
+            if subCursorY + 1 == cursorY:
+
+                if cursorX != 0 and field[cursorY][cursorX-1] != another_block:
+                    cursorX -= 1
+                    subCursorX -= 1
+            else:
+                if cursorX - 1 == subCursorX:
+                    if 0 < subCursorX < field_width-1 and field[subCursorY][subCursorX - 1] != another_block:
+                        cursorX -= 1
+                        subCursorX -= 1
+                else:
+                    if 0 <= cursorX < field_width-1 and field[cursorY][cursorX - 1] != another_block:
+                        cursorX -= 1
+                        subCursorX -= 1
+
+
+
+
+        elif keyboard.is_pressed('DOWN'):
             cursorY += 1
+            subCursorY += 1
+
+        if keyboard.is_pressed('z'):
+            if cursorY-1 == subCursorY:
+                if 0 < cursorX and field[cursorY][cursorX - 1] != another_block and field[cursorY-1][cursorX-1] != another_block:
+                    subCursorX, subCursorY = subCursorX - 1, subCursorY + 1
+            elif cursorY+1 == subCursorY:
+                if 0 < cursorX and field[cursorY][cursorX - 1] != another_block and field[cursorY-1][cursorX-1] != another_block:
+                    subCursorX, subCursorY = subCursorX + 1, subCursorY - 1
+            elif cursorY == subCursorY and abs(cursorX-subCursorX)==1:
+                if subCursorX + 1 == cursorX:
+                    if cursorY != 0:
+                        subCursorX, subCursorY = subCursorX +1, subCursorY +1
+                        # subCursorX, cursorX = cursorX, subCursorX
+                        # subCursorY, cursorY = cursorY, subCursorY
+
+                elif subCursorX - 1 == cursorX:
+                    if field[subCursorY - 1][subCursorX] != another_block:
+                        subCursorX, subCursorY = subCursorX - 1, subCursorY - 1
 
 if __name__ == '__main__':
     func()
