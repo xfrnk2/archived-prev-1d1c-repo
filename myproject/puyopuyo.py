@@ -4,7 +4,7 @@ import keyboard
 from copy import deepcopy
 from pynput.keyboard import Listener, Key
 from time import sleep
-
+from random import randrange
 class Block:
     def __init__(self):
         self.__block = "□"
@@ -17,7 +17,6 @@ cursorX, cursorY = 2, 0
 subCursorX, subCursorY = cursorX, cursorY-1
 checked = deepcopy(field)
 another_block = "■"
-
 
 class AsyncTask:
 
@@ -41,15 +40,17 @@ def func():
     at = AsyncTask()
     at.TaskA()
 
+    colors = {0: '♥', 1: '◆', 2: '●', 3: '♣'}
+    current_block = (colors[randrange(4)], colors[randrange(4)])
     while True:
         os.system('cls')
 
         for y in range(field_height):
             for x in range(field_width):
                 if x == cursorX and y == cursorY:
-                    print("■", end='')
+                    print(current_block[0], end='')
                 elif x == subCursorX and y == subCursorY:
-                    print("■", end='')
+                    print(current_block[1], end='')
                 else:
                     print(field[y][x], end='')
             print('')
@@ -88,9 +89,13 @@ def func():
                         break
 
 
+
+
+
+
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
-
+            current_block = (colors[randrange(4)], colors[randrange(4)])
 
         if keyboard.is_pressed('RIGHT'):
             if abs(cursorY - subCursorY) == 1:
