@@ -2,40 +2,39 @@ import os
 import threading
 import keyboard
 from copy import deepcopy
-from pynput.keyboard import Listener, Key
-from time import sleep
 from random import randrange
+import sys
 class Block:
     def __init__(self):
         self.__block = "□"
     def __str__(self):
         return self.__block
 
+lock = threading.Lock()
 field_width, field_height = 6, 12
-field = [[Block() for _ in range(field_width)] for _ in range(field_height)]
+empty_field = [[Block() for _ in range(field_width)] for _ in range(field_height)]
+field = deepcopy(empty_field)
 cursorX, cursorY = 2, 0
 subCursorX, subCursorY = cursorX, cursorY-1
-checked = deepcopy(field)
 another_block = "■"
+
+
 
 class AsyncTask:
 
     def __init__(self):
-        pass
+        self.__timer = None
     def TaskA(self):
         global cursorY, subCursorY
         cursorY += 1
         subCursorY += 1
-        threading.Timer(1,self.TaskA).start()
-
-    def TaskB(self):
-        print('Precess B')
-        threading.Timer(3, self.TaskB).start()
-
+        self.__timer = threading.Timer(1,self.TaskA)
+        self.__timer.start()
+        # threading.Timer(1,self.TaskA).start()
 
 
 def func():
-    global checked, cursorX, cursorY, subCursorX, subCursorY
+    global cursorX, cursorY, subCursorX, subCursorY, field
 
     at = AsyncTask()
     at.TaskA()
@@ -55,8 +54,12 @@ def func():
                     print(field[y][x], end='')
             print('')
 
-        if set(field[x][2] for x in range(field_height)) == set(another_block):
-            print("game over")
+
+
+
+
+
+
 
         if cursorY == 11 or subCursorY == 11 or field[subCursorY+1][subCursorX] == another_block or field[cursorY+1][cursorX] == another_block:
 
@@ -96,6 +99,27 @@ def func():
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
             current_block = (colors[randrange(4)], colors[randrange(4)])
+
+
+
+        if set(field[x][2] for x in range(field_height)) == set(another_block):
+
+
+                while True:
+                    flag = input("game over. Retry? (Y/N)")
+                    if flag == "N":
+
+                        sys.exit()
+                    elif flag == "Y":
+                        field = deepcopy(empty_field)
+                        cursorX, cursorY = 2, -1
+                        subCursorX, subCursorY = cursorX, cursorY + 1
+                        break
+                    else:
+                        print("You should input Y or N")
+
+
+
 
         if keyboard.is_pressed('RIGHT'):
             if abs(cursorY - subCursorY) == 1:
