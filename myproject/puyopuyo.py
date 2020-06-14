@@ -31,7 +31,8 @@ class AsyncTask:
         self.__timer = threading.Timer(1,self.TaskA)
         self.__timer.start()
         # threading.Timer(1,self.TaskA).start()
-
+    def stopTaskA(self):
+        self.__timer.cancel()
 
 def func():
     global cursorX, cursorY, subCursorX, subCursorY, field
@@ -75,7 +76,7 @@ def func():
                 field[cursorY][cursorX] = another_block
                 field[subCursorY][subCursorX] = another_block
 
-            elif field[cursorY+1][cursorX] == another_block:
+            elif field[cursorY+1][cursorX] == another_block and field[subCursorY+1][subCursorX] != another_block:
                 field[cursorY][cursorX] = another_block
 
                 for v in range(field_height-1, subCursorY, -1):
@@ -83,18 +84,13 @@ def func():
                     if field[v][subCursorX] != another_block:
                         field[v][subCursorX] = another_block
                         break
-            elif field[cursorY+1][cursorX] != another_block:
+            elif field[subCursorY+1][subCursorX] == another_block and field[cursorY+1][cursorX] != another_block:
                 field[subCursorY][subCursorX] = another_block
 
                 for v in range(field_height - 1, subCursorY, -1):
                     if field[v][cursorX] != another_block:
                         field[v][cursorX] = another_block
                         break
-
-
-
-
-
 
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
@@ -108,7 +104,7 @@ def func():
                 while True:
                     flag = input("game over. Retry? (Y/N)")
                     if flag == "N":
-
+                        at.stopTaskA()
                         sys.exit()
                     elif flag == "Y":
                         field = deepcopy(empty_field)
