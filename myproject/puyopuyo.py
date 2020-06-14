@@ -178,16 +178,16 @@ def func():
         if keyboard.is_pressed('RIGHT'):
             if abs(cursorY - subCursorY) == 1:
 
-                if cursorX != field_width-1 and field[cursorY][cursorX+1] != another_block:
+                if cursorX != field_width-1 and field[cursorY][cursorX+1].get_shape() not in blocks:
                     cursorX += 1
                     subCursorX += 1
             else:
                 if cursorX > subCursorX:
-                    if cursorX != field_width - 1 and field[cursorY][cursorX+1] != another_block:
+                    if cursorX != field_width - 1 and field[cursorY][cursorX+1].get_shape() not in blocks:
                         cursorX += 1
                         subCursorX += 1
                 elif cursorX < subCursorX:
-                    if subCursorX != field_width - 1 and field[subCursorY][subCursorX + 1] != another_block:
+                    if subCursorX != field_width - 1 and field[subCursorY][subCursorX + 1].get_shape() not in blocks:
                         cursorX += 1
                         subCursorX += 1
 
@@ -198,16 +198,16 @@ def func():
 
             if abs(cursorY - subCursorY) == 1:
 
-                if cursorX != 0 and field[cursorY][cursorX-1] != another_block:
+                if cursorX != 0 and field[cursorY][cursorX-1].get_shape() not in blocks:
                     cursorX -= 1
                     subCursorX -= 1
             else:
                 if cursorX > subCursorX:
-                    if subCursorX != 0 and field[subCursorY][subCursorX - 1] != another_block:
+                    if subCursorX != 0 and field[subCursorY][subCursorX - 1].get_shape() not in blocks:
                         cursorX -= 1
                         subCursorX -= 1
                 elif cursorX < subCursorX:
-                    if cursorX != 0 and field[cursorY][cursorX - 1] != another_block:
+                    if cursorX != 0 and field[cursorY][cursorX - 1].get_shape() not in blocks:
                         cursorX -= 1
                         subCursorX -= 1
 
@@ -220,15 +220,15 @@ def func():
 
         if keyboard.is_pressed('z'):
             if cursorY > subCursorY:
-                if 0 < cursorX and field[cursorY][cursorX - 1] != another_block:
+                if 0 < cursorX and field[cursorY][cursorX - 1].get_shape() not in blocks:
                     subCursorX, subCursorY = subCursorX - 1, subCursorY + 1
             elif cursorY < subCursorY:
-                if cursorX < field_width-1  and field[cursorY][cursorX + 1] != another_block:
+                if cursorX < field_width-1  and field[cursorY][cursorX + 1].get_shape() not in blocks:
                     subCursorX, subCursorY = subCursorX + 1, subCursorY - 1
             elif cursorY == subCursorY:
 
                 if subCursorX < cursorX:
-                    if cursorY != field_height-1 and field[cursorY+1][cursorX] != another_block:
+                    if cursorY != field_height-1 and field[cursorY+1][cursorX].get_shape() not in blocks:
                         subCursorX, subCursorY = subCursorX +1, subCursorY +1
 
                 elif subCursorX > cursorX:
@@ -236,10 +236,10 @@ def func():
 
         if keyboard.is_pressed('x'):
             if cursorY > subCursorY:
-                if cursorX < field_width-1 and field[cursorY][cursorX + 1] != another_block:
+                if cursorX < field_width-1 and field[cursorY][cursorX + 1].get_shape() not in blocks:
                     subCursorX, subCursorY = subCursorX + 1, subCursorY + 1
             elif cursorY < subCursorY:
-                if 0 <cursorX and field[cursorY][cursorX - 1] != another_block:
+                if 0 <cursorX and field[cursorY][cursorX - 1].get_shape() not in blocks:
                     subCursorX, subCursorY = subCursorX - 1, subCursorY - 1
             elif cursorY == subCursorY:
 
@@ -247,7 +247,7 @@ def func():
                     subCursorX, subCursorY = subCursorX +1, subCursorY -1
 
                 elif subCursorX > cursorX:
-                    if cursorY != field_height - 1 and field[cursorY + 1][cursorX] != another_block:
+                    if cursorY != field_height - 1 and field[cursorY + 1][cursorX].get_shape() not in blocks:
                         subCursorX, subCursorY = subCursorX - 1, subCursorY + 1
 
 if __name__ == '__main__':
