@@ -7,6 +7,13 @@ import sys
 class Block:
     def __init__(self):
         self.__block = "□"
+
+    def set_block(self, shape):
+        self.__block = shape
+
+    def get_shape(self):
+        return self.__block
+
     def __str__(self):
         return self.__block
 
@@ -34,14 +41,27 @@ class AsyncTask:
     def stopTaskA(self):
         self.__timer.cancel()
 
+
+def checkField(x, y):
+    # if x < 0 or y < 0 or n-1 < x or n-1 < y:
+    #     return False
+    # if grid[x][y] != imaged_pixel:
+    #     return False
+    # else:
+    #     grid[x][y] = already_checked
+    #     return 1+ func(x-1, y) + func(x-1, y+1) + func(x, y+1) + func(x+1, y+1) + func(x+1, y) + func(x+1, y-1) + func(x, y-1) + func(x-1, y-1)
+    #
+    pass
+
+
 def func():
     global cursorX, cursorY, subCursorX, subCursorY, field
 
     at = AsyncTask()
     at.TaskA()
 
-    colors = {0: '♥', 1: '◆', 2: '●', 3: '♣'}
-    current_block = (colors[randrange(4)], colors[randrange(4)])
+    blocks = ["♥", "◆", "●", "♣"]
+    current_block = (blocks[randrange(4)], blocks[randrange(4)])
     while True:
         os.system('cls')
 
@@ -62,44 +82,44 @@ def func():
 
 
 
-        if cursorY == 11 or subCursorY == 11 or field[subCursorY+1][subCursorX] == another_block or field[cursorY+1][cursorX] == another_block:
+        if cursorY == 11 or subCursorY == 11 or field[subCursorY+1][subCursorX].get_shape() in blocks or field[cursorY+1][cursorX].get_shape() in blocks:
 
             if cursorY == 11 or subCursorY == 11:
-                field[cursorY][cursorX] = another_block
-                field[subCursorY][subCursorX] = another_block
+                field[cursorY][cursorX].set_block(current_block[0])
+                field[subCursorY][subCursorX].set_block(current_block[1])
 
             elif abs(subCursorY-cursorY) == 1:
-                field[cursorY][cursorX] = another_block
-                field[subCursorY][subCursorX] = another_block
+                field[cursorY][cursorX].set_block(current_block[0])
+                field[subCursorY][subCursorX].set_block(current_block[1])
 
-            elif field[cursorY+1][cursorX] == another_block and field[subCursorY+1][subCursorX] == another_block:
-                field[cursorY][cursorX] = another_block
-                field[subCursorY][subCursorX] = another_block
+            elif field[cursorY+1][cursorX].get_shape() in blocks and field[subCursorY+1][subCursorX].get_shape() in blocks:
+                field[cursorY][cursorX].set_block(current_block[0])
+                field[subCursorY][subCursorX].set_block(current_block[1])
 
-            elif field[cursorY+1][cursorX] == another_block and field[subCursorY+1][subCursorX] != another_block:
-                field[cursorY][cursorX] = another_block
+            elif field[cursorY+1][cursorX].get_shape() in blocks and field[subCursorY+1][subCursorX].get_shape() not in blocks:
+                field[cursorY][cursorX].set_block(current_block[0])
 
                 for v in range(field_height-1, subCursorY, -1):
 
-                    if field[v][subCursorX] != another_block:
-                        field[v][subCursorX] = another_block
+                    if field[v][subCursorX] not in blocks:
+                        field[v][subCursorX].set_block(current_block[1])
                         break
-            elif field[subCursorY+1][subCursorX] == another_block and field[cursorY+1][cursorX] != another_block:
-                field[subCursorY][subCursorX] = another_block
+            elif field[subCursorY+1][subCursorX].get_shape() in blocks and field[cursorY+1][cursorX].get_shape() not in blocks:
+                field[subCursorY][subCursorX].set_block(current_block[1])
 
                 for v in range(field_height - 1, subCursorY, -1):
-                    if field[v][cursorX] != another_block:
-                        field[v][cursorX] = another_block
+                    if field[v][cursorX] not in blocks:
+                        field[v][cursorX].set_block(current_block[0])
                         break
 
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
-            current_block = (colors[randrange(4)], colors[randrange(4)])
+            current_block = (blocks[randrange(4)], blocks[randrange(4)])
 
 
 
-        if set(field[x][2] for x in range(field_height)) == set(another_block):
-
+        # if set(field[x][2] for x in range(field_height)) == set(another_block):
+        if "□" not in [field[x][2].get_shape() for x in range(field_height)]:
 
                 while True:
                     flag = input("game over. Retry? (Y/N)")
