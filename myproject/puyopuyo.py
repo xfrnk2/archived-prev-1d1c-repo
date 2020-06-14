@@ -14,6 +14,9 @@ class Block:
     def get_shape(self):
         return self.__block
 
+    def clear_block(self):
+        self.__block = "□"
+
     def __str__(self):
         return self.__block
 
@@ -24,8 +27,8 @@ field = deepcopy(empty_field)
 cursorX, cursorY = 2, 0
 subCursorX, subCursorY = cursorX, cursorY-1
 another_block = "■"
-
-
+shape_list = []
+blocked_list = []
 
 class AsyncTask:
 
@@ -42,20 +45,20 @@ class AsyncTask:
         self.__timer.cancel()
 
 
-def checkField(x, y):
-    # if x < 0 or y < 0 or n-1 < x or n-1 < y:
-    #     return False
-    # if grid[x][y] != imaged_pixel:
-    #     return False
-    # else:
-    #     grid[x][y] = already_checked
-    #     return 1+ func(x-1, y) + func(x-1, y+1) + func(x, y+1) + func(x+1, y+1) + func(x+1, y) + func(x+1, y-1) + func(x, y-1) + func(x-1, y-1)
-    #
-    pass
+def checkField(x: int, y: int, shape:str):
+
+    if x < 0 or y < 0 or field_width-1 < x or field_height-1 < y or field[y][x].get_shape() != shape or (x,y) in blocked_list or (x,y) in shape_list:
+        return False
+    else:
+        shape_list.append((x, y))
+        if checkField(x-1, y, shape) or checkField(x, y+1, shape) or checkField(x+1, y, shape)or checkField(x, y-1, shape):
+            return True
+        blocked_list.append((x, y))
+        return False
 
 
 def func():
-    global cursorX, cursorY, subCursorX, subCursorY, field
+    global cursorX, cursorY, subCursorX, subCursorY, field, shape_list, blocked_list
 
     at = AsyncTask()
     at.TaskA()
@@ -112,9 +115,44 @@ def func():
                         field[v][cursorX].set_block(current_block[0])
                         break
 
+
+
+
+            checkField(cursorX, cursorY, field[cursorY][cursorX].get_shape())
+            if 4 <= len(shape_list):
+                for value in shape_list:
+                    x, y = value
+                    field[y][x].clear_block()
+                    for i in range(y, 0, -1):
+                        field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
+            shape_list = []
+            blocked_list = []
+
+            checkField(subCursorX, subCursorY, field[subCursorY][subCursorX].get_shape())
+            if 4 <= len(shape_list):
+                for value in shape_list:
+                    x, y = value
+                    field[y][x].clear_block()
+                    for i in range(y, 0, -1):
+                        field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
+            shape_list = []
+            blocked_list = []
+
+
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
             current_block = (blocks[randrange(4)], blocks[randrange(4)])
+
+
+
+
+
+
+
+
+
+
+
 
 
 
