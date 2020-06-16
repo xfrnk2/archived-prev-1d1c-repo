@@ -4,6 +4,7 @@ import keyboard
 from copy import deepcopy
 from random import randrange
 import sys
+from time import sleep
 class Block:
     def __init__(self):
         self.__block = "□"
@@ -47,7 +48,7 @@ class AsyncTask:
 
 def checkField(x: int, y: int, shape:str):
 
-    if x < 0 or y < 0 or field_width-1 < x or field_height-1 < y or field[y][x].get_shape() != shape or (x,y) in blocked_list or (x,y) in shape_list:
+    if x < 0 or y < 0 or field_width-1< x or field_height-1 < y or field[y][x].get_shape() != shape or (x, y) in blocked_list or (x, y) in shape_list:
         return False
     else:
         shape_list.append((x, y))
@@ -55,6 +56,8 @@ def checkField(x: int, y: int, shape:str):
             return True
         blocked_list.append((x, y))
         return False
+
+
 
 
 def func():
@@ -104,39 +107,71 @@ def func():
 
                 for v in range(field_height-1, subCursorY, -1):
 
-                    if field[v][subCursorX] not in blocks:
+                    if field[v][subCursorX].get_shape() not in blocks:
                         field[v][subCursorX].set_block(current_block[1])
                         break
             elif field[subCursorY+1][subCursorX].get_shape() in blocks and field[cursorY+1][cursorX].get_shape() not in blocks:
                 field[subCursorY][subCursorX].set_block(current_block[1])
 
                 for v in range(field_height - 1, subCursorY, -1):
-                    if field[v][cursorX] not in blocks:
+                    if field[v][cursorX].get_shape() not in blocks:
                         field[v][cursorX].set_block(current_block[0])
                         break
 
 
 
+            #
+            # checkField(cursorX, cursorY, field[cursorY][cursorX].get_shape())
+            # if 4 <= len(shape_list):
+            #     for value in shape_list:
+            #         x, y = value
+            #         field[y][x].clear_block()
+            #         for i in range(y, 0, -1):
+            #             field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
+            # shape_list = []
+            # blocked_list = []
+            #
+            # checkField(subCursorX, subCursorY, field[subCursorY][subCursorX].get_shape())
+            # if 4 <= len(shape_list):
+            #     for value in shape_list:
+            #         x, y = value
+            #         field[y][x].clear_block()
+            #         for i in range(y, 0, -1):
+            #             field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
+            # shape_list = []
+            # blocked_list = []
 
-            checkField(cursorX, cursorY, field[cursorY][cursorX].get_shape())
-            if 4 <= len(shape_list):
-                for value in shape_list:
-                    x, y = value
-                    field[y][x].clear_block()
-                    for i in range(y, 0, -1):
-                        field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
-            shape_list = []
-            blocked_list = []
+            for y in range(field_height):
+                for x in range(field_width):
+                    if field[y][x].get_shape() in blocks:
+                        checkField(x, y, field[y][x].get_shape())
 
-            checkField(subCursorX, subCursorY, field[subCursorY][subCursorX].get_shape())
-            if 4 <= len(shape_list):
-                for value in shape_list:
-                    x, y = value
-                    field[y][x].clear_block()
-                    for i in range(y, 0, -1):
-                        field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
-            shape_list = []
-            blocked_list = []
+                        if 4 <= len(shape_list):
+                            # shape_list.sort(key = lambda value : (-value[1],value[0]))
+                            location = 0
+                            l, r = 11, 0
+                            for value in shape_list:
+                                x, y = value
+                                field[y][x].clear_block()
+                            for j in range(y):
+                                if field[j][x].get_shape() in blocks:
+                                    location = j
+                                    break
+                            for i in range(y, -1, -1):
+                                if field[i][x].get_shape() not in blocks:
+                                    l = i
+                                if field[i][x].get_shape() in blocks:
+                                    r = i + 1
+                            
+                            #모든 상쇄된 블록들은 일괄적으로 처리할수 있는 방법으로 구현하기
+                                # for i in range(y, 0, -1):
+                                #     field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
+
+
+
+                        shape_list = []
+                        blocked_list = []
+
 
 
             cursorX, cursorY = 2, -1
