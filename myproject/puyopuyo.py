@@ -46,20 +46,45 @@ class AsyncTask:
         self.__timer.cancel()
 
 
+# def checkField(x: int, y: int, shape:str):
+#
+#     if x < 0 or y < 0 or field_width-1< x or field_height-1 < y or field[y][x].get_shape() != shape or (x, y) in blocked_list or (x, y) in shape_list:
+#         return False
+#     else:
+#         shape_list.append((x, y))
+#         if checkField(x-1, y, shape) or checkField(x, y+1, shape) or checkField(x+1, y, shape)or checkField(x, y-1, shape):
+#             return True
+#         blocked_list.append((x, y))
+#         return False
+
 def checkField(x: int, y: int, shape:str):
+    target = []
+    visited = []
+    stack = [(x, y)]
 
-    if x < 0 or y < 0 or field_width-1< x or field_height-1 < y or field[y][x].get_shape() != shape or (x, y) in blocked_list or (x, y) in shape_list:
-        return False
-    else:
-        shape_list.append((x, y))
-        if checkField(x-1, y, shape) or checkField(x, y+1, shape) or checkField(x+1, y, shape)or checkField(x, y-1, shape):
-            return True
-        blocked_list.append((x, y))
-        return False
+    while stack:
+        node = stack.pop()
 
-def ignition():
-    if 4 <= len(shape_list):
-        for value in shape_list:
+        if node not in visited:
+            a, b = node
+            if a < 0 or b < 0 or field_width - 1 < a or field_height - 1 < b:
+                pass
+            else:
+                visited.append(node)
+
+                if field[b][a].get_shape() == shape:
+                    target.append(node)
+
+                stack.extend([(a - 1, b), (a + 1, b), (a, b + 1), (a, b - 1)])
+                stack = list(set(stack))
+    print(target)
+    return list(set(target))
+
+
+
+def ignition(target_list):
+    if 4 <= len(target_list):
+        for value in target_list:
             x, y = value
             field[y][x].clear_block()
             for i in range(y, 0, -1):
@@ -125,13 +150,15 @@ def func():
                         break
 
 
-
-            for pair in [("cursorX", "cursorY"), ("subCursorX", "subCursorY")]:
+            cursor_list =  [("cursorX", "cursorY"), ("subCursorX", "subCursorY")]
+            if cursorY < subCursorY:
+                cursor_list[0], cursor_list[1] = cursor_list[1], cursor_list[0]
+            for pair in cursor_list:
                 x, y = pair
-                eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")
-                ignition()
-                shape_list = []
-                blocked_list = []
+                target_list = eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")
+                ignition(target_list)
+                # shape_list = []
+                # blocked_list = []
 
             # for y in range(field_height):
             #     for x in range(field_width):
