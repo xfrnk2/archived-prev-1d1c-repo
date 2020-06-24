@@ -68,28 +68,29 @@ def checkField(x: int, y: int, shape:str):
         if node not in visited:
             a, b = node
             if a < 0 or b < 0 or field_width - 1 < a or field_height - 1 < b:
-                pass
+                continue
             else:
                 visited.append(node)
 
                 if field[b][a].get_shape() == shape:
                     target.append(node)
 
-                stack.extend([(a - 1, b), (a + 1, b), (a, b + 1), (a, b - 1)])
-                stack = list(set(stack))
+                    stack = list(set(stack))
+                    stack.extend([(a - 1, b), (a + 1, b), (a, b + 1), (a, b - 1)])
+
     print(target)
     return list(set(target))
 
 
 
 def ignition(target_list):
-    if 4 <= len(target_list):
-        for value in target_list:
-            x, y = value
-            field[y][x].clear_block()
-            for i in range(y, 0, -1):
-                field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
-    return
+    for l in target_list:
+        if 4 <= len(l):
+            for value in l:
+                x, y = value
+                field[y][x].clear_block()
+                for i in range(y, 0, -1):
+                    field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
 
 def func():
     global cursorX, cursorY, subCursorX, subCursorY, field, shape_list, blocked_list
@@ -140,23 +141,29 @@ def func():
 
                     if field[v][subCursorX].get_shape() not in blocks:
                         field[v][subCursorX].set_block(current_block[1])
+                        subCursorY = v
+
                         break
             elif field[subCursorY+1][subCursorX].get_shape() in blocks and field[cursorY+1][cursorX].get_shape() not in blocks:
                 field[subCursorY][subCursorX].set_block(current_block[1])
 
-                for v in range(field_height - 1, subCursorY, -1):
+                for v in range(field_height - 1, cursorY, -1):
                     if field[v][cursorX].get_shape() not in blocks:
                         field[v][cursorX].set_block(current_block[0])
+                        cursorY = v
+
                         break
 
 
             cursor_list =  [("cursorX", "cursorY"), ("subCursorX", "subCursorY")]
+            target_list = []
             if cursorY < subCursorY:
                 cursor_list[0], cursor_list[1] = cursor_list[1], cursor_list[0]
             for pair in cursor_list:
                 x, y = pair
-                target_list = eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")
-                ignition(target_list)
+                target_list += [eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")]
+            ignition(target_list)
+
                 # shape_list = []
                 # blocked_list = []
 
