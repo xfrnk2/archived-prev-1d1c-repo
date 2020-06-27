@@ -86,11 +86,24 @@ def checkField(x: int, y: int, shape:str):
 def ignition(target_list):
     for l in target_list:
         if 4 <= len(l):
+            v_index = {v:[0,0] for v in range(field_width)}#행 x에 해당하는 (y의 최저점, 블록의 양)
             for value in l:
                 x, y = value
                 field[y][x].clear_block()
-                for i in range(y, 0, -1):
-                    field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
+                if v_index[x][0] < y:
+                    v_index[x][0] = y
+                v_index[x][1] += 1
+            for x in range(field_width):
+                lowest, quantity = v_index[x]
+                while 0 < quantity:
+
+                    for i in range(lowest, 0, -1):
+                        field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
+                    quantity -= 1
+
+                # for i in range(y, 0, -1):
+                #     field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
+
 
 def func():
     global cursorX, cursorY, subCursorX, subCursorY, field, shape_list, blocked_list
@@ -157,8 +170,12 @@ def func():
 
             cursor_list =  [("cursorX", "cursorY"), ("subCursorX", "subCursorY")]
             target_list = []
-            if cursorY < subCursorY:
-                cursor_list[0], cursor_list[1] = cursor_list[1], cursor_list[0]
+            if not field[cursorY][cursorX].get_shape() == field[subCursorY][subCursorX].get_shape():
+                if cursorY < subCursorY:
+                    cursor_list[0], cursor_list[1] = cursor_list[1], cursor_list[0]
+            else:
+                cursor_list.pop()
+
             for pair in cursor_list:
                 x, y = pair
                 target_list += [eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")]
