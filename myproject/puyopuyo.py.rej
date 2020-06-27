@@ -1,0 +1,15 @@
+diff a/myproject/puyopuyo.py b/myproject/puyopuyo.py	(rejected hunks)
+@@ -57,6 +57,13 @@
+         blocked_list.append((x, y))
+         return False
+ 
++def ignition():
++    if 4 <= len(shape_list):
++        for value in shape_list:
++            x, y = value
++            field[y][x].clear_block()
++            for i in range(y, 0, -1):
++                field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
+     return
+ 
+ def func():
