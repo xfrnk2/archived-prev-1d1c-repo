@@ -84,22 +84,35 @@ def checkField(x: int, y: int, shape:str):
 
 
 def ignition(target_list):
-    for l in target_list:
-        if 4 <= len(l):
-            v_index = {v:[0,0] for v in range(field_width)}#행 x에 해당하는 (y의 최저점, 블록의 양)
-            for value in l:
+    for target in target_list:
+        if 4 <= len(target):
+            row_info = {v:[0,0] for v in range(field_width)}#행 x에 해당하는 (y의 최저점, 블록의 양)
+
+            for value in target:
                 x, y = value
                 field[y][x].clear_block()
-                if v_index[x][0] < y:
-                    v_index[x][0] = y
-                v_index[x][1] += 1
+
+                if row_info[x][0] < y:
+                    row_info[x][0] = y
+                row_info[x][1] += 1
             for x in range(field_width):
-                lowest, quantity = v_index[x]
-                while 0 < quantity:
+                lowest, quantity = row_info[x]
+
+                for _ in range(quantity):
 
                     for i in range(lowest, 0, -1):
                         field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
-                    quantity -= 1
+
+            rensa_target_list = []
+            for i in range(field_width):
+                if 0 < row_info[i][1]:
+                    for j in range(row_info[i][0], -1, -1):
+                        if field[j][i].get_shape() != "□":
+                           rensa_target_list += [eval(f"checkField({i}, {j}, field[{j}][{i}].get_shape())")]
+            ignition(rensa_target_list)
+
+
+
 
                 # for i in range(y, 0, -1):
                 #     field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
