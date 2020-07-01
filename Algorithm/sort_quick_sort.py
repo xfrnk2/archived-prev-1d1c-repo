@@ -16,6 +16,7 @@ def partition(arr, p, q):
             arr[i], arr[j] = arr[j], arr[i]
         else:
             j+=1
+        
     arr[i+1], arr[q] = arr[q], arr[i+1]
     return i+1
 
