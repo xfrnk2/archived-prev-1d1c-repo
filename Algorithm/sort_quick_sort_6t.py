@@ -62,7 +62,7 @@ length = len(arr)
 # 참고로 한 괜찮은 설명 : https://coding-factory.tistory.com/137
 
 def setMedian(arr, start, end):
-    mid = (end-start)//2
+    mid = (end+start)//2
 
     if arr[start] > arr[end]:
         arr[start], arr[end] = arr[end], arr[start]

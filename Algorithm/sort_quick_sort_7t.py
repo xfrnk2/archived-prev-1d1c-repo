@@ -1,13 +1,13 @@
 def partiton(arr, left, right):
-    p, q, k = left, left+1, arr[left]
+        p, q, k = left, left+1, arr[left]
 
-    while q <= right:
-        if arr[q] < k:
-            p += 1
-            arr[p], arr[q] = arr[q], arr[p]
-        q += 1
-    arr[p], arr[left] = arr[left], arr[p]
-    return p
+        while q <= right:
+            if arr[q] < k:
+                p += 1
+                arr[p], arr[q] = arr[q], arr[p]
+            q += 1
+        arr[p], arr[left] = arr[left], arr[p]
+        return p
 
 
 def quickSort(arr, left, right):
