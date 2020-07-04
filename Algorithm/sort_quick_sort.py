@@ -1,4 +1,4 @@
-arr = [100, 22, 55, 12, 0, 150, 12]
+arr = [11, 22, 55, 12, 0, 150, 52]
 length = len(arr)
 
 def quick_sort(arr, p, q):
@@ -14,9 +14,7 @@ def partition(arr, p, q):
         if arr[j] < k:
             i += 1
             arr[i], arr[j] = arr[j], arr[i]
-        else:
-            j+=1
-        
+        j += 1
     arr[i+1], arr[q] = arr[q], arr[i+1]
     return i+1
 
