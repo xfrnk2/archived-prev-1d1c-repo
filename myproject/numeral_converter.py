@@ -9,10 +9,13 @@ import os
 '''
 
 def check_value(num, numSet):
-    if int(numSet) < 16 and num[1:].isdecimal():
+    if int(numSet) in (2, 8, 10) and num.isdecimal():
         return not bool(list(filter(lambda x: int(numSet) - 1 < int(x), num)))
     elif numSet == '16':
-        return num[1:].isdecimal() or 0 == len(list(filter(lambda n: n.isalpha() and n not in ['A', 'B', 'C', 'D', 'E', 'F'], num)))
+        if num.isdecimal():
+            return True
+        else:
+            return not list(filter(lambda n: n.isalpha() and n not in ['A', 'B', 'C', 'D', 'E', 'F'], num))
     return False
 
 if __name__ == '__main__':
