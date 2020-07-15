@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/1463
+
 n = int(input())
 answers = [0]*(n+1)
 answers[1] = 0
