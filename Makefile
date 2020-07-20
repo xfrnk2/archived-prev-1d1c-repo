@@ -22,10 +22,10 @@ help:
 
 bootstrap:
 	python -m venv env
-	pip install --upgrade setuptools ;\
-	pip install --upgrade "pip>=19" ;\
-	pip install -r requirements.txt ;\
-	pip install -r requirements-test.txt ;\
+	pip install --upgrade setuptools
+	pip install --upgrade "pip>=19"
+	pip install -r requirements.txt
+	pip install -r requirements-test.txt
 	
 
 clean: clean-build clean-pyc clean-test
@@ -49,12 +49,12 @@ clean-test:
 
 lint:
 	$(OsConf)
-	$(VENV) ;\
+	$(VENV)
 	flake8 src tests
 
 test:	
 	$(OsConf)
-	$(VENV) ;\
+	$(VENV)
 	python setup.py test $(TEST_ARGS)
 
 
@@ -62,7 +62,7 @@ jenkins: test
 
 coverage: test
 	$(OsConf)
-	$(VENV) ;\
+	$(VENV)
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -73,12 +73,12 @@ release: clean
 
 install: clean
 	$(OsConf)
-	$(VENV) ;\
+	$(VENV)
 	python setup.py install
 
 cover:
 	$(OsConf)
-	$(VENV) ;\
+	$(VENV)
 	coverage run --source=src setup.py test
 	coverage xml -i
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
