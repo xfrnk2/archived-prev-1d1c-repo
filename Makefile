@@ -9,6 +9,10 @@ VENV=${test_path}
 
 .PHONY: help bootstrap clean lint test coverage docs release install jenkins 
 
+osconfset:
+	$(OsConf)
+
+
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
 	@echo "clean-build - remove build artifacts"
@@ -48,12 +52,12 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	$(OsConf)
+
 	$(VENV)
 	flake8 src tests
 
 test:	
-	$(OsConf)
+
 	$(VENV)
 	python setup.py test $(TEST_ARGS)
 
@@ -61,7 +65,7 @@ test:
 jenkins: test
 
 coverage: test
-	$(OsConf)
+
 	$(VENV)
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
@@ -72,12 +76,12 @@ release: clean
 	fullrelease
 
 install: clean
-	$(OsConf)
+
 	$(VENV)
 	python setup.py install
 
 cover:
-	$(OsConf)
+
 	$(VENV)
 	coverage run --source=src setup.py test ;\
 	coverage xml -i ;\
