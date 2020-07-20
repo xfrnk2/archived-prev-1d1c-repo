@@ -21,11 +21,8 @@ help:
 	@echo "install - install the package to the active Python's site-packages"
 
 bootstrap:
-	
-
 	python -m venv env
-	# $(VENV) ;\
-	$(OsConf)
+	$(OsConf) ;\
 	$(VENV) ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
