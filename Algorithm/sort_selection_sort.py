@@ -7,8 +7,7 @@ def selection_sort(arr):
             if arr[j] < arr[least_index]:
                 least_index = j
 
-        if arr[least_index] != arr[i]:
-            arr[i], arr[least_index] = arr[least_index], arr[i]
+        arr[i], arr[least_index] = arr[least_index], arr[i]
 
     return arr
 
