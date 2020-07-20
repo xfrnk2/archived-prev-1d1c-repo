@@ -5,22 +5,20 @@ language: python
 python: 3.8.1
 
 before_install:
-- chmod +x LinuxWindowsScript.sh
+  - chmod +x LinuxWindowsScript.sh
 
 install:
-- make bootstrap
-
-script:
-- make lint
-- make test
+- pip install -r requirements.txt
+- pip install flake8 pytest-cov codecov
+- pip install coveralls
 
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
     token: ${sonarcloud_token}
-
-
-after_script:
-- make cover
+script:
+- make test
 - sonar-scanner 
+- make cover
+after_script:
 - codecov --token=${codecov_token}

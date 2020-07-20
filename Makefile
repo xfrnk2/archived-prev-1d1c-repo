@@ -49,12 +49,12 @@ clean-test:
 
 lint:
 	$(OsConf)
-	$(VENV);\
+	$(VENV)
 	flake8 src tests
 
 test:	
 	$(OsConf)
-	$(VENV);\
+	$(VENV)
 	python setup.py test $(TEST_ARGS)
 
 
@@ -62,7 +62,7 @@ jenkins: test
 
 coverage: test
 	$(OsConf)
-	$(VENV);\
+	$(VENV)
 	coverage run --source src setup.py test ;\
 	coverage report -m ;\
 	coverage html ;\
@@ -73,14 +73,14 @@ release: clean
 
 install: clean
 	$(OsConf)
-	$(VENV);\
+	$(VENV)
 	python setup.py install
 
 cover:
 	$(OsConf)
-	$(VENV);\
-	coverage run --source=src setup.py test
-	coverage xml -i
+	$(VENV)
+	coverage run --source=src setup.py test ;\
+	coverage xml -i ;\
 	coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
 	#coveralls_token=${coveralls_token} coveralls --service=travis-ci ;\
 	

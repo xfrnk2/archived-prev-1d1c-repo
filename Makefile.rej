@@ -1,0 +1,10 @@
+diff a/Makefile b/Makefile	(rejected hunks)
+@@ -26,7 +26,7 @@
+ 	python -m venv env
+ 	# $(VENV) ;\
+ 	$(OsConf)
+-	$(VENV)
++	$(VENV) ;\
+ 	pip install --upgrade setuptools ;\
+ 	pip install --upgrade "pip>=19" ;\
+ 	pip install -r requirements.txt ;\
