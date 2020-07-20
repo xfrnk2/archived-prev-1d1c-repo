@@ -1,24 +1,20 @@
-# ln -s /bin/sh bash
-
 dist: xenial
 language: python
 python: 3.8.1
 
-before_install:
-- chmod +x LinuxWindowsScript.sh
-- make osconfset
-
 install:
 - make bootstrap
+
+script:
+- make lint
+- make test
+
+after_script:
+- make cover
+- sonar-scanner
+- codecov --token=${codecov_token}
 
 addons:
   sonarcloud:
     organization: "xfrnk2-github"
     token: ${sonarcloud_token}
-script:
-- make lint
-- make test
-- sonar-scanner
-- make cover
-after_script:
-- codecov --token=${codecov_token}
