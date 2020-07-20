@@ -5,7 +5,8 @@ language: python
 python: 3.8.1
 
 before_install:
-  - chmod +x LinuxWindowsScript.sh
+- chmod +x LinuxWindowsScript.sh
+- make osconfset
 
 install:
 - make bootstrap
