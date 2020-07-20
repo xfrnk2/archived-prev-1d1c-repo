@@ -5,7 +5,7 @@ def solution(priorities, location):
 
     while 1 < len(data_queue):
         J = data_queue.pop(0)
-        if J[1] < max(data_queue, key=lambda value: (value[1]))[1]:
+        if any(J[1] < x[1] for x in data_queue):
             data_queue.append(J)
         else:
             if J == target: break
