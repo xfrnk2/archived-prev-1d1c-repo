@@ -15,8 +15,9 @@ addons:
     organization: "xfrnk2-github"
     token: ${sonarcloud_token}
 script:
+- make lint
 - make test
-- sonar-scanner 
+- sonar-scanner
 - make cover
 after_script:
 - codecov --token=${codecov_token}
