@@ -39,6 +39,7 @@ setup(
             'py',                
             'flake8',
             'pyflakes',
+            'pep8',
     ],
     zip_safe=False,
     classifiers=[
