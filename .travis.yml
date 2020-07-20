@@ -1,4 +1,4 @@
- #!/bin/bash
+# ln -s /bin/sh bash
 
 dist: xenial
 language: python
