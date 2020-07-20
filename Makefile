@@ -22,10 +22,10 @@ help:
 
 bootstrap:
 	python -m venv env
-	pip install --upgrade setuptools
-	pip install --upgrade "pip>=19"
-	pip install -r requirements.txt
-	pip install -r requirements-test.txt
+	pip install --upgrade setuptools ;\
+	pip install --upgrade "pip>=19" ;\
+	pip install -r requirements.txt ;\
+	pip install -r requirements-test.txt ;\
 	
 
 clean: clean-build clean-pyc clean-test
