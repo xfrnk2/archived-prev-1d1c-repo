@@ -21,13 +21,13 @@ help:
 	@echo "install - install the package to the active Python's site-packages"
 
 bootstrap:
-	$(OsConf) ;\
-	$(VENV) ;\
-	python -m venv env ;\
 	pip install --upgrade setuptools ;\
 	pip install --upgrade "pip>=19" ;\
 	pip install -r requirements.txt ;\
 	pip install -r requirements-test.txt ;\
+	$(OsConf) ;\
+	$(VENV) ;\
+	python -m venv env
 
 clean: clean-build clean-pyc clean-test
 
