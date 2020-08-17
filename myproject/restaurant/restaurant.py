@@ -18,16 +18,38 @@ class Customer:
 
         self.__arrival_time = arrival_time
         self.__maximum_waiting_time = randrange(15, 41)
-        self.__customer_number = None
+        self.__customer_number = 0
         self.__is_eating :bool = False
-        self.__food_num = None
-        self.__food_eating_time = None
-        self.__waited_time = 0
-        #다시 생각
+        self.__food_num = 0
+        self.__food_eating_time = 0
+        self.__waited_time = -1
+        self.__waited_time_for_food = 0
+
+
         self.__is_bill_waiting: bool = False
         self.__is_billing: bool = False
-        self.__bill_waiting_time = None
-        self.__possible_waiting_time = None # 0?
+        self.__bill_waiting_time = 0
+        self.__is_waiting_food = False
+
+        self.__get_required_waiting_time = Kitchen.get_min_cooking_time()
+
+    def get_required_waiting_time(self):
+        return self.__get_required_waiting_time
+
+    def get_customer_number(self):
+        return self.__customer_number
+
+    def waiting_time_for_food_update(self):
+        self.__waited_time_for_food += 1
+
+    def get_waited_time_for_food(self):
+        return self.__waited_time_for_food
+
+    def change_is_waiting_food_status(self):
+        self.__is_waiting_food = not self.__is_waiting_food
+
+    def get_is_waiting_food(self):
+        return self.__is_waiting_food
 
     def change_is_billing_status(self):
         self.__is_billing = not self.__is_billing
@@ -37,9 +59,6 @@ class Customer:
 
     def set_waiting_time(self, value):
         self.__bill_waiting_time = value
-
-    def set_possible_waiting_time(self, value):
-        self.__possible_waiting_time = value
 
     def set_attribute(self, customer_info: tuple):
         self.__customer_number, self.__food_num, self.__food_eating_time = customer_info
@@ -75,17 +94,19 @@ class Customer:
         return self.__is_bill_waiting
 
     def update(self):
-        if self.__is_eating:
-            self.__food_eating_time -= 1
-            if self.__food_eating_time == 0:
-                # 손님이 음식을 다 먹음
-                return True
+        self.__food_eating_time -= 1
+        if self.__food_eating_time == 0:
+            # 손님이 음식을 다 먹음
+            return True
         return False
 
-
+    def waiting_update(self):
+        self.__waited_time += 1
 
     def change_is_eating_status(self):
         self.__is_eating = not self.__is_eating
+
+
 
 
 class CashDesk:
@@ -160,14 +181,14 @@ class TableManager:
 
     @staticmethod
     def init(table_amount):
-        __class__.table_queue = [0]*(table_amount) # 1번 테이블에서부터 시작하기 위해 0번은 비워두기로 했다.
+        __class__.table_queue = [0]*(table_amount)
 
 
 
     @staticmethod
     def set_customer(customer:Customer):
         for table_number, table in enumerate(__class__.table_queue):
-            if table:
+            if not table:
                 __class__.table_queue[table_number] = customer
                 return table_number
 
@@ -183,23 +204,50 @@ class TableManager:
 
     @staticmethod
     def update():
-        for customer in __class__.table_queue:
-            if customer.update():
-                #손님이 음식을 다먹었음
-                customer.change_is_eating_status()
 
-                BillManager.receive_customer(customer)
-                #계산대로 가자.
+        for num in range(len(__class__.table_queue)):
+            if isinstance(__class__.table_queue[num], Customer):
+                if __class__.table_queue[num].get_is_eating():
+                    if __class__.table_queue[num].update():
+                        # 손님이 음식을 다먹었음
+                        __class__.table_queue[num].change_is_eating_status()
+                        BillManager.receive_customer(__class__.table_queue[num])
+                        # 계산대로 가자.
+                        __class__.table_queue[num] = [0]
+                        # 테이블을 비워준다.
+
+                elif __class__.table_queue[num].get_is_waiting_food():  # 사실 else로 대체할수도 있음
+                    __class__.table_queue[num].waiting_time_for_food_update()
+
+
+
+        # 원래코드임
+        # for table_num, customer in enumerate(__class__.table_queue):
+        #     if customer and isinstance(customer, Customer):
+        #         if customer.get_is_eating():
+        #             if customer.update():
+        #                 #손님이 음식을 다먹었음
+        #                 customer.change_is_eating_status()
+        #                 BillManager.receive_customer(customer)
+        #
+        #                 # 계산대로 가자.
+        #
+
+                # elif customer.get_is_waiting_food(): #사실 else로 대체할수도 있음
+                #     customer.waiting_time_for_food_update()
+
+
+
 
 
 
 class Cook:
     def __init__(self, number):
         self.__cook_number = number
-        self.__food_number = None
-        self.__cooking_time = None
-        self.__customer_number = None
-        self.__table_number = None
+        self.__food_number = 0
+        self.__cooking_time = 0
+        self.__customer_number = 0
+        self.__table_number = 0
         self.__is_cooking = False
 
     def set_request(self, request): #업데이트보다 나중에 와야함
@@ -209,14 +257,7 @@ class Cook:
     def get_cook_number(self):
         return self.__cook_number
 
-    def update(self)-> bool: #업데이트가 True면 serve_food_to_custonmer를 실행
-        if self.__is_cooking:
-            self.__cooking_time -= 1
-            if self.__cooking_time == 0:
 
-                return True
-
-        return False
 
     def serve_food_to_customer(self):
         self.__is_cooking = not self.__is_cooking
@@ -225,7 +266,7 @@ class Cook:
         #다시 작성 필요
 
     def reset_cook(self):
-        self.__table_number, self.__food_number, self.__customer_number, self.__cooking_time = None, None, None, None
+        self.__table_number, self.__food_number, self.__customer_number, self.__cooking_time = 0, 0, 0, 0
 
     def is_cooking(self)-> bool:
         return self.__is_cooking
@@ -235,6 +276,14 @@ class Cook:
 
     def get_left_cooking_time(self):
         return self.__cooking_time
+
+    def update(self)-> bool: #업데이트가 True면 serve_food_to_custonmer를 실행
+        if self.__is_cooking:
+            self.__cooking_time -= 1
+            if self.__cooking_time == 0:
+                return True
+        return False
+
 
 class Kitchen:
 
@@ -254,6 +303,26 @@ class Kitchen:
     def get_min_cooking_time():
         return min([cook.get_left_cooking_time() for cook in __class__.cooks])
 
+    @staticmethod
+    def get_is_not_cooking_cook():
+
+        for cook_num, cook in enumerate(__class__.cooks):
+            if not cook.is_cooking():
+                return cook_num
+
+
+    @staticmethod
+    def update():
+        if __class__.cooks:
+            for cook in Kitchen.cooks:
+                if cook.update():  # 요리를 하고 있는지 확인해서 하고 있다면 조리시간이 0이 되었을 경우 True를 리턴한다.
+                    table_and_customer_info = cook.serve_food_to_customer()  # 전달할 손님과 테이블에 대한 정보를 얻어온다.
+                    if TableManager.customer_get_food(table_and_customer_info):
+                        return #손님이 식사중으로 바뀜
+
+
+
+
 class RestaurantManager:
 
     food_name = {1: "스테이크", 2: "스파게티" , 3: "마카로니", 4:"그라탱"}
@@ -262,6 +331,7 @@ class RestaurantManager:
     customer_ordinal_number = 0
     waiting_customers= []
 
+
     @staticmethod
     def init():
         pass
@@ -269,27 +339,40 @@ class RestaurantManager:
     @staticmethod
     def receive_customer(customer : Customer):
         __class__.customer_ordinal_number += 1
-        food_number = randrange(1, 5)
-        print(f"{__class__.customer_ordinal_number}번째 손님이 시각 {customer.get_arrival_time()}분에 레스토랑에 도착했습니다.")
-        customer.set_attribute((__class__.customer_ordinal_number, food_number, __class__.food_eating_time[food_number]))
+        food_num = randrange(1, 5)
 
+        customer.set_attribute((__class__.customer_ordinal_number, food_num, __class__.food_eating_time[food_num]))
+        __class__.waiting_customers.append(customer)
+
+
+    @staticmethod
+    def check_reception(customer: Customer):
         if __class__.is_table_full():
-            return print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {customer.get_waited_time()}분 / 대기 가능 시간 "
-                  "0분")
+            return False
 
-        if __class__.is_all_the_cooks_cooking():
+        elif __class__.is_all_the_cooks_cooking():
 
-            waiting_time = customer.get_food_waiting_time() + Kitchen.get_min_cooking_time()
-            if customer.get_maximum_waiting_time() < waiting_time:
-                return print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {customer.get_waited_time()}분 / 대기 가능 시간 "
-                      f"{waiting_time}분")
-            else:
-                customer.set_possible_waiting_time = waiting_time
-                return __class__.waiting_customers.append(customer)
+            if customer.get_maximum_waiting_time() < customer.get_required_waiting_time():
+                return False
 
-        #일반적인 경우라면.
-        #테이블배정 / 요리사 지정
+        return True
 
+    @staticmethod
+    def update():
+        if __class__.waiting_customers:
+            target_count = 0
+            for customer in __class__.waiting_customers:
+                customer.waiting_update()
+                if customer.get_required_waiting_time() == customer.get_waited_time() and not Kitchen.all_the_cooks_cooking():
+                    RestaurantManager.assignment_customer_to_cook(customer)
+                    target_count += 1
+
+            # n번째 손님을 내보내야하니 n-1번째 인덱스가 해당된다.
+            for _ in range(target_count):
+                __class__.waiting_customers.pop(0)
+
+
+            #웨이팅 리스트에 넣고나서 리셉션 하는것도 좋겠다. <<
 
 
     @staticmethod
@@ -299,7 +382,8 @@ class RestaurantManager:
         for cook in Kitchen.cooks:
             if not cook.is_cooking():
                 customer_num, customer_food_num = customer.get_request()
-                cook.set_request((table_num, customer_num, customer_food_num, __class__.food_cooking_time[customer_num]))
+                cook.set_request((table_num, customer_num, customer_food_num, __class__.food_cooking_time[customer_food_num]))
+                customer.change_is_waiting_food_status()
                 break
 
 
@@ -353,6 +437,7 @@ class Restaurant:
         Kitchen.init(__class__.cooks_number)
         BillManager.init(__class__.billing_period, __class__.cash_desk_number)
 
+
         elapsed_time = 0
 
 
@@ -360,39 +445,27 @@ class Restaurant:
         while elapsed_time <= 720:
             elapsed_time += 1
 
-
+            BillManager.update()
+            Kitchen.update()
             TableManager.update()
+            RestaurantManager.update()
 
 
             #대기큐의 손님들 대기 시간을 +1 시킨다.
             if RestaurantManager.waiting_customers:
                 RestaurantManager.update_waiting_customers()
-            #요리사가 비어있다면 대기큐의 손님의 대기시간
-            if Kitchen.cooks:
-                for cook in Kitchen.cooks:
-                    if cook.update(): #요리를 하고 있는지 확인해서 하고 있다면 조리시간이 0이 되었을 경우 True를 리턴한다.
-                        table_and_customer_info = cook.serve_food_to_customer() #전달할 손님과 테이블에 대한 정보를 얻어온다.
 
-                        if TableManager.customer_get_food(table_and_customer_info): #테이블 손님과 요리사의 info간의 값이 일치하는지 확인한다.
-
-                            # 손님의 식사시간이 줄어들수 있도록 한다.
-
-                            #RestaurantManager.assignment_customer_to_cook(customer)??
-
-
-
-                #TODO-대기 시간만을 +1해주는 것이 아닌 매 순회마다 요리사가 비어있는지를 체크해서 요리사에게 요청을 전달하도록 하기.
             # 새로운 손님을 받는다.
             if elapsed_time % __class__.visiting_period == 0:
-                new_customer = RestaurantManager.receive_customer(Customer(elapsed_time))
+                new_customer = Customer(elapsed_time)
+                if RestaurantManager.check_reception(new_customer):
+                    RestaurantManager.receive_customer(new_customer)
+                else:
+                    print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {new_customer.get_waited_time()+1}분 / 대기 가능 시간 "
+                          f"{new_customer.get_required_waiting_time()}분")
 
 
-            # #어디 붙일지 필요/ 필요 없을듯...
-            # if not Kitchen.all_the_cooks_cooking():
-            #     for cook in Kitchen.cooks:
-            #         if not cook.is_cooking():
-            #             cook.set_is_cooking()
-
+            RestaurantManager.update()
 
 Restaurant.init(15)
 Restaurant.run()
