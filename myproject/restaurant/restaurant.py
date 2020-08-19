@@ -134,7 +134,7 @@ class BillManager(SimulationObject):
 
 
 
-class TableManager:
+class TableManager(SimulationObject):
 
 
     def __init__(self, table_amount):
@@ -187,7 +187,7 @@ class TableManager:
         return target_customer_queue
 
 
-class Cook:
+class Cook(SimulationObject):
     def __init__(self, number):
         self.__cook_number = number
         self.__food_number = 0
@@ -225,7 +225,7 @@ class Cook:
 
 
 
-class Kitchen:
+class Kitchen(SimulationObject):
 
     def __init__(self, cook_num):
 
@@ -297,9 +297,9 @@ class Restaurant:
 
 
     def receive_customer(self, customer : Customer):
-        food_num = randrange(1, 5)
-
-        customer.set_attribute((food_num, self.__food_eating_time[food_num]))
+        # food_num = randrange(1, 5)
+        #
+        # customer.set_attribute((food_num, self.__food_eating_time[food_num]))
         self.__waiting_customers.append(customer)
 
 
@@ -309,7 +309,7 @@ class Restaurant:
 
             for customer in self.__waiting_customers:
                 customer.waiting_update()
-                if customer.get_required_waiting_time() <= customer.get_waited_time() + 1 and not self.__kitchen.all_the_cooks_cooking():
+                if customer.get_required_waiting_time() <= customer.get_waited_time()  and not self.__kitchen.all_the_cooks_cooking():
                     customer_count += 1
 
                     table_num = self.__table_manager.set_customer(customer)

@@ -38,7 +38,7 @@ class Renderer:
         __class__.__prev_tick += elapsed_time
 
         # 5FPS(1초에 5번) 화면에 그리기 위해서
-        if __class__.__accumulated_elapsed_render_time < 0.5:
+        if __class__.__accumulated_elapsed_render_time < 0.2:
             return False
 
 
