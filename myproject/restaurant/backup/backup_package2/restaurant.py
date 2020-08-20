@@ -30,23 +30,62 @@ class Restaurant:
 
         required_waiting_time = 0
 
-        waiting_copy = [c.get_food_cooking_time() for c in self.__waiting_customers]
-        group = self.__kitchen.get_cooks_current_cooking_time()
-        waiting_copy += [new_customer.get_food_cooking_time()]
-        while waiting_copy:
-            group.sort()
-            target = group.pop(0)
-            required_waiting_time += target
-            group = [i - target for i in group]
-            group.append(waiting_copy.pop(0))
+        if __class__.table_quantity <= len(self.__waiting_customers):
+
+            n = len(self.__waiting_customers) - __class__.table_quantity
+            table_detail = []
+
+            for waiting_customer in self.__waiting_customers:
+                left_waiting_time = waiting_customer.get_required_waiting_time() - waiting_customer.get_elapsed_waiting_time()
+                total_required_time = waiting_customer.get_total_required_time()
+                table_detail.append(left_waiting_time + total_required_time)
 
 
+
+            required_waiting_time = sorted(table_detail)[n]
+
+        else:
+            n = len(self.__waiting_customers)
+
+            table_detail = []
+            for customer in self.__table_manager.get_table_queue():
+                if customer.get_is_eating():
+                    table_detail.append(customer.get_food_eating_time() - customer.get_elapsed_eating_time())
+
+                else:
+                    #########
+                    # result = 0
+                    # waiting_copy = self.__waiting_customers
+                    # group = sorted(self.__kitchen.get_cooks_current_cooking_time())
+                    # waiting_copy += [new_customer.get_cooking_time()]
+                    # while waiting_copy:
+                    #     target= group.pop(0)
+                    #     result += target
+                    #     group = [i - target for i in group]
+                    #     group.append(waiting_copy.pop(0))
+                    #     group.sort()
+
+                    ############
+
+
+
+                    # print(customer.get_waited_time_for_food())에서 사단이 난다..
+
+                    table_detail.append(customer.get_food_cooking_time() + customer.get_food_eating_time() - customer.get_waited_time_for_food() )
+            required_waiting_time = sorted(table_detail)[n]
 
         if new_customer.get_maximum_waiting_time() < required_waiting_time:
-            print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {new_customer.get_elapsed_waiting_time()}분 / 대기 가능 시간 "
-                  f"{required_waiting_time}분")
-            print(f"손님 최대 대기시간 : {new_customer.get_maximum_waiting_time()}")
+            print(f"대기를 못하니 돌아간다. 대기가능시간 {required_waiting_time}")
             return False
+
+        # TODO - 현재 손님을 포함하지 않고 대기자수(n)을 계산한다면, 0명-> 0번째인덱스, 1명 -> 1번째 인덱스로 가능
+        # TODO - 만약 현 대기자의 수가 테이블의 갯수 이상인 경우, xxx(현존 대기자 - 테이블수)번째xxx 현존 대기자의 남은 대기시간+
+        # TODO -  요리시간+식사시간 중 최소값을 반환 -> 남은 대기자들의 (남은 대기시간+(요리+식사의 시간))을 구하여 그중 최소값 반환
+        #
+        # TODO - 만약 21번째 대기자인 경우라면 현존 대기자들의 요리시간+식사시간 중 1번째 인덱스 값을 반환
+        #
+        # TODO-1. 현재 손님을 포함하지 않고 대기자수(n)를 계산, 테이블에 착석중인 손님들의
+        # TODO-  일어나기까지의 시간을 구한 오름차순 정렬 리스트에서 (n)번째의 인덱스에 해당하는 값만큼 기다리게 한다.
 
         else:
             new_customer.set_required_waiting_time(required_waiting_time)

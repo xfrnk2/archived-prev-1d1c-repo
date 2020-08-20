@@ -54,9 +54,6 @@ class BillManager(RestaurantObject):
             print(f"{self.__cash_desk_object.get_customer_info()}번 손님이 계산을 마치고 레스토랑을 떠났습니다.")
 
         if self.__bill_waiting_queue and not self.__cash_desk_object.is_working():
-            target = self.__bill_waiting_queue.pop(0)
-            target.change_is_billing_status()
-            target.change_is_bill_waiting_status()
-            self.__cash_desk_object.receive_customer(target)
+            self.__cash_desk_object.receive_customer(self.__bill_waiting_queue.pop(0))
             self.__cash_desk_object.change_cash_desk_status()
 

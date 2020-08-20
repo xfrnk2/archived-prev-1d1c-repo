@@ -4,5 +4,5 @@ if __name__ == "__main__":
     visiting_period = 5
 
     restaurant = Restaurant(visiting_period)
-    # for _ in range(1):
-    restaurant.run()
+    for _ in range(1):
+        restaurant.run()
