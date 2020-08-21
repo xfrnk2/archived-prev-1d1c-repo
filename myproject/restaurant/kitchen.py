@@ -10,6 +10,10 @@ class Kitchen(RestaurantObject):
         self.__cooks = [Cook(i) for i in range(1, cook_num+1)]
         self.__food_cooking_time = {1: 30, 2: 20, 3: 10, 4: 15}
         self.__food_name = {1: "스테이크", 2: "스파게티", 3: "마카로니", 4: "그라탱"}
+        self.__order_queue = []
+
+    def get_order_queue(self):
+        return self.__order_queue
 
     def all_the_cooks_cooking(self)-> bool:
         return all(cook.is_cooking() for cook in self.__cooks)
@@ -20,12 +24,26 @@ class Kitchen(RestaurantObject):
     def get_cooks_current_cooking_time(self)-> list:
         return [cook.get_left_cooking_time() for cook in self.__cooks]
 
-    def assign_customer_to_cook(self, customer : Customer, table_number : int):
-        for cook in self.__cooks:
-            if not cook.is_cooking() :
-                customer_num, customer_food_num = customer.get_request()
-                cook.set_request((table_number, customer_num, customer_food_num, self.__food_cooking_time[customer_food_num]))
-                break
+    def get_order_from_new_customer(self, customer: Customer, table_number : int):
+        customer_num, customer_food_num = customer.get_request()
+        info = table_number, customer_num, customer_food_num
+        self.__order_queue.append(info)
+
+    def start_cooking_update(self):
+        if self.__order_queue and not self.all_the_cooks_cooking():
+            for cook in self.__cooks:
+                if self.__order_queue:
+                    if not cook.is_cooking():
+                        table_number, customer_num, customer_food_num = self.__order_queue.pop(0)
+                        cook.set_request((table_number, customer_num, customer_food_num, self.__food_cooking_time[customer_food_num]))
+                else:
+                    break
+    # def assign_customer_to_cook(self, customer : Customer, table_number : int):
+    #     for cook in self.__cooks:
+    #         if not cook.is_cooking() :
+    #             customer_num, customer_food_num = customer.get_request()
+    #             cook.set_request((table_number, customer_num, customer_food_num, self.__food_cooking_time[customer_food_num]))
+    #             break
 
 
 
@@ -35,7 +53,7 @@ class Kitchen(RestaurantObject):
 
         for cook in self.__cooks:
             if cook.update():
-                info = cook.serve_food_to_customer()
+                info = cook.get_order_info()
                 table_num, customer_num, food_num = info
 
                 print(f"{customer_num}번 손님의 {food_num}번 요리({self.__food_name[food_num]}) 조리가 끝났습니다.")

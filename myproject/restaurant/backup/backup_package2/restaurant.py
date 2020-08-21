@@ -116,6 +116,7 @@ class Restaurant:
         print(f"{customer_number}번 손님이 {table_num}번 테이블에 앉습니다.")
         print(f"{customer_number}번 손님이 {food_num}번 요리"
               f" ({self.__food_name[food_num]})를 주문합니다.")
+        self.__kitchen.get_
         self.__kitchen.assign_customer_to_cook(customer, table_num)
 
     def receive_customer(self, customer : Customer):

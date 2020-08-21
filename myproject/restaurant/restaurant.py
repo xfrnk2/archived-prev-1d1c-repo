@@ -40,17 +40,12 @@ class Restaurant:
             group = [i - target for i in group]
             group.append(waiting_copy.pop(0))
 
-
+        new_customer.set_required_waiting_time(required_waiting_time)
 
         if new_customer.get_maximum_waiting_time() < required_waiting_time:
-            print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {new_customer.get_elapsed_waiting_time()}분 / 대기 가능 시간 "
-                  f"{required_waiting_time}분")
-            print(f"손님 최대 대기시간 : {new_customer.get_maximum_waiting_time()}")
             return False
 
         else:
-            new_customer.set_required_waiting_time(required_waiting_time)
-            print(f"대기가능시간 {required_waiting_time}")
             return True
             # 착석 후 주문
 
@@ -74,10 +69,37 @@ class Restaurant:
         table_num = self.__table_manager.set_customer(customer)
         customer_number = customer.get_customer_number()
 
+        ####
+        q = self.__kitchen.get_order_queue()
+        q = [self.__food_cooking_time[o[2]] for o in q]
+        group = self.__kitchen.get_cooks_current_cooking_time()
+        q.append(0)
+        result = 0
+        while q:
+            group.sort()
+            target = group.pop(0)
+            result += target
+            group = [i - target for i in group]
+
+            group.append(q.pop(0))
+            print(group)
+
+        print(result)
+        print(f"요리사에게 배당되기까지의 시간{result}")
+
+        #####
+
+
+
+
+
         print(f"{customer_number}번 손님이 {table_num}번 테이블에 앉습니다.")
         print(f"{customer_number}번 손님이 {food_num}번 요리"
               f" ({self.__food_name[food_num]})를 주문합니다.")
-        self.__kitchen.assign_customer_to_cook(customer, table_num)
+        #예상소요시간 출력하기, 키친의 대기큐에 넣어두기
+        self.__kitchen.get_order_from_new_customer(customer, table_num)
+        #self.__kitchen.start_cooking_update()
+        #self.__kitchen.assign_customer_to_cook(customer, table_num)
 
     def receive_customer(self, customer : Customer):
         self.__waiting_customers.append(customer)
@@ -90,6 +112,10 @@ class Restaurant:
             for customer in self.__waiting_customers:
                 customer.waiting_update()
 
+                print("웨이팅업데이트이후,")
+                print(f"{customer.get_elapsed_waiting_time()}")
+                print(f"{customer.get_required_waiting_time()}")
+                print([c.get_customer_number() for c in self.__waiting_customers])
                 if customer.get_elapsed_waiting_time() == customer.get_required_waiting_time() and not self.__table_manager.is_table_full():
 
                     self.customer_entrance(customer)
@@ -131,17 +157,47 @@ class Restaurant:
                 new_customer = self.customer_visiting(elapsed_time)
 
                 if self.__table_manager.is_table_full():
+                    print("테이블이 꽉차서 돌아갑니다.")
+                else:
                     if self.is_possible_to_wait(new_customer):
-                        self.receive_customer(new_customer)
+
+
+                        
+                        if self.__waiting_customers:
+                            print(f"대기가능시간 {new_customer.get_required_waiting_time()}")
+                            print("먼저 대기하시는 분이 있으니 대기큐로 집어넣는다")
+                            self.receive_customer(new_customer)
+                        else:
+                            print("대기하시는 분이 없으므로 테이블에 착석하여 주문한다")
+                            self.customer_entrance(new_customer)
+                            # q = self.__kitchen.get_order_queue()
+                            # q = [self.__food_cooking_time[o[2]] for o in q]
+                            # group = self.__kitchen.get_cooks_current_cooking_time()
+                            # q.append(0)
+                            # result = 0
+                            # while q:
+                            #     group.sort()
+                            #     target = group.pop(0)
+                            #     result += target
+                            #     group = [i - target for i in group]
+                            #
+                            #     group.append(q.pop(0))
+                            #     print(group)
+                            #
+                            # print(result)
+                            # print(f"요리사에게 배당되기까지의 시간{result}")
+
+
 
                     else:
                         #손님은 돌아감
-                        print("기다릴 수 없어서 돌아갑니다")
-                        #print(f"대기시간 : 00분, 대기가능시간 : {required_waiting_time}")
+                        print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {new_customer.get_elapsed_waiting_time()}분 / 대기 가능 시간 "
+                              f"{new_customer.get_required_waiting_time()}분")
+                        print(f"손님 최대 대기시간 : {new_customer.get_maximum_waiting_time()}")
 
-                else:
-                    self.customer_entrance(new_customer)
+                # else:
+                #      self.customer_entrance(new_customer)
 
-
+            self.__kitchen.start_cooking_update()
 
 
