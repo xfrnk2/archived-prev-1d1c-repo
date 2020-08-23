@@ -100,7 +100,7 @@ class Customer(RestaurantObject):
         self.__waited_time_for_food += 1
 
     def waiting_update(self):
-        self.__elapsed_waiting_time += 1 ######
+        self.__elapsed_waiting_time += 1
 
     def change_status_is_eating(self):
         self.__is_eating = not self.__is_eating

@@ -5,7 +5,7 @@ from customer import Customer
 class CashDesk(RestaurantObject):
 
 
-    def __init__(self, billing_time):
+    def __init__(self, billing_time: int):
         self.__customer_number = None
         self.__billing_time = billing_time
         self.__elapsed_billing_time = 0

@@ -4,7 +4,7 @@ from cook import Cook
 
 class Kitchen(RestaurantObject):
 
-    def __init__(self, cook_num):
+    def __init__(self, cook_num: int):
 
         self.__cook_number = cook_num
         self.__cooks = [Cook(i) for i in range(1, cook_num+1)]
@@ -26,7 +26,7 @@ class Kitchen(RestaurantObject):
 
     def get_order_from_new_customer(self, customer: Customer, table_number : int):
         customer_num, customer_food_num = customer.get_request()
-        info = table_number, customer_num, customer_food_num
+        info = customer_food_num, customer_num, table_number
         self.__order_queue.append(info)
 
     def start_cooking_update(self):
@@ -34,18 +34,10 @@ class Kitchen(RestaurantObject):
             for cook in self.__cooks:
                 if self.__order_queue:
                     if not cook.is_cooking():
-                        table_number, customer_num, customer_food_num = self.__order_queue.pop(0)
+                        customer_food_num, customer_num, table_number = self.__order_queue.pop(0)
                         cook.set_request((table_number, customer_num, customer_food_num, self.__food_cooking_time[customer_food_num]))
                 else:
                     break
-    # def assign_customer_to_cook(self, customer : Customer, table_number : int):
-    #     for cook in self.__cooks:
-    #         if not cook.is_cooking() :
-    #             customer_num, customer_food_num = customer.get_request()
-    #             cook.set_request((table_number, customer_num, customer_food_num, self.__food_cooking_time[customer_food_num]))
-    #             break
-
-
 
     def update(self)-> list:
 

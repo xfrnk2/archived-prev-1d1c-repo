@@ -5,7 +5,7 @@ from customer import Customer
 class TableManager(RestaurantObject):
 
 
-    def __init__(self, table_amount):
+    def __init__(self, table_amount: int):
         self.__table_queue = [0]*(table_amount)
 
     def get_table_queue(self):
