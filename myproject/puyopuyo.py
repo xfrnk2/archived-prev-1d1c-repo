@@ -4,7 +4,7 @@ import keyboard
 from copy import deepcopy
 from random import randrange
 import sys
-from time import sleep
+
 class Block:
     def __init__(self):
         self.__block = "□"
@@ -46,17 +46,6 @@ class AsyncTask:
         self.__timer.cancel()
 
 
-# def checkField(x: int, y: int, shape:str):
-#
-#     if x < 0 or y < 0 or field_width-1< x or field_height-1 < y or field[y][x].get_shape() != shape or (x, y) in blocked_list or (x, y) in shape_list:
-#         return False
-#     else:
-#         shape_list.append((x, y))
-#         if checkField(x-1, y, shape) or checkField(x, y+1, shape) or checkField(x+1, y, shape)or checkField(x, y-1, shape):
-#             return True
-#         blocked_list.append((x, y))
-#         return False
-
 def checkField(x: int, y: int, shape:str):
     target = []
     visited = []
@@ -78,7 +67,6 @@ def checkField(x: int, y: int, shape:str):
                     stack = list(set(stack))
                     stack.extend([(a - 1, b), (a + 1, b), (a, b + 1), (a, b - 1)])
 
-    # print(target)
     return list(set(target))
 
 
@@ -103,9 +91,6 @@ def ignition(target_list, at):
                     for i in range(lowest, 0, -1):
                         field[i][x], field[i-1][x] = field[i-1][x], field[i][x]
 
-            # at.stopTaskA()
-            # sleep(0.3)
-            # at.TaskA()
 
             rensa_target_list = []
             for i in range(field_width):
@@ -115,11 +100,6 @@ def ignition(target_list, at):
                            rensa_target_list += [eval(f"checkField({i}, {j}, field[{j}][{i}].get_shape())")]
             ignition(rensa_target_list, at)
 
-
-
-
-                # for i in range(y, 0, -1):
-                #     field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
 
 
 def func():
@@ -202,60 +182,11 @@ def func():
                 target_list += [eval(f"checkField({x}, {y}, field[{y}][{x}].get_shape())")]
             ignition(target_list, at)
 
-                # shape_list = []
-                # blocked_list = []
-
-            # for y in range(field_height):
-            #     for x in range(field_width):
-            #         if field[y][x].get_shape() in blocks:
-            #             checkField(x, y, field[y][x].get_shape())
-            #
-            #             if 4 <= len(shape_list):
-            #                 # shape_list.sort(key = lambda value : (-value[1],value[0]))
-            #                 location = 0
-            #                 l, r = 11, 0
-            #                 for value in shape_list:
-            #                     x, y = value
-            #                     field[y][x].clear_block()
-            #                 for j in range(y):
-            #                     if field[j][x].get_shape() in blocks:
-            #                         location = j
-            #                         break
-            #                 for i in range(y, -1, -1):
-            #                     if field[i][x].get_shape() not in blocks:
-            #                         l = i
-            #                     if field[i][x].get_shape() in blocks:
-            #                         r = i + 1
-            #
-            #                 #모든 상쇄된 블록들은 일괄적으로 처리할수 있는 방법으로 구현하기
-            #                     # for i in range(y, 0, -1):
-            #                     #     field[i][x], field[i - 1][x] = field[i - 1][x], field[i][x]
-
-
-                        #
-                        # shape_list = []
-                        # blocked_list = []
-
-
-
             cursorX, cursorY = 2, -1
             subCursorX, subCursorY = cursorX, cursorY+1
             current_block = (blocks[randrange(4)], blocks[randrange(4)])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-        # if set(field[x][2] for x in range(field_height)) == set(another_block):
         if "□" not in [field[x][2].get_shape() for x in range(field_height)]:
 
                 while True:
