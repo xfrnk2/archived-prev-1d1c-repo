@@ -52,7 +52,7 @@ class Restaurant:
                 return True
 
         applicable_index = sorted(higher_time_group)[len(self.__waiting_customers) - n]
-        new_customer.set_new_left_time_to_table([applicable_index])
+        new_customer.set_new_left_time_to_table(applicable_index)
         return False
 
 
