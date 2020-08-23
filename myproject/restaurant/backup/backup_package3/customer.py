@@ -21,21 +21,6 @@ class Customer(RestaurantObject):
         self.__is_bill_waiting: bool = False
         self.__is_billing: bool = False
 
-        self.__all_time = 0
-        self.__new_left_time_to_table = 0
-
-    def set_new_left_time_to_table(self, value):
-        self.__new_left_time_to_table = value
-
-    def get_new_left_time_to_table(self):
-        return self.__new_left_time_to_table
-
-    def set_all_time(self, value):
-        self.__all_time = value
-
-    def get_all_time(self):
-        return self.__all_time
-
     def get_elapsed_waited_time_for_food(self):
         return self.__waited_time_for_food
 
@@ -48,6 +33,9 @@ class Customer(RestaurantObject):
     def get_food_cooking_time(self):
         return self.__food_cooking_time
 
+    def get_waited_time_for_food(self):
+        return self.__waited_time_for_food
+
     def get_food_eating_time(self):
         return self.__food_eating_time
 
@@ -59,6 +47,9 @@ class Customer(RestaurantObject):
 
     def set_required_waiting_time(self, required_waiting_time):
         self.__required_waiting_time = required_waiting_time
+
+    def get_food_number(self)-> int:
+        return self.__food_num
 
     def change_is_bill_waiting_status(self):
         self.__is_bill_waiting = not self.__is_bill_waiting

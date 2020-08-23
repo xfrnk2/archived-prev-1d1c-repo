@@ -48,6 +48,9 @@ class Customer(RestaurantObject):
     def get_food_cooking_time(self):
         return self.__food_cooking_time
 
+    def get_waited_time_for_food(self):
+        return self.__waited_time_for_food
+
     def get_food_eating_time(self):
         return self.__food_eating_time
 
@@ -59,6 +62,9 @@ class Customer(RestaurantObject):
 
     def set_required_waiting_time(self, required_waiting_time):
         self.__required_waiting_time = required_waiting_time
+
+    def get_food_number(self)-> int:
+        return self.__food_num
 
     def change_is_bill_waiting_status(self):
         self.__is_bill_waiting = not self.__is_bill_waiting

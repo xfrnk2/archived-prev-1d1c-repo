@@ -13,6 +13,7 @@ class Restaurant:
         cash_desk_num = 1
         cooks_num = 3
 
+
         self.__visiting_period = customer_visiting_period
         self.__table_manager = TableManager(__class__.table_quantity)
         self.__kitchen = Kitchen(cooks_num)
@@ -27,32 +28,39 @@ class Restaurant:
 
     def is_possible_to_wait(self, new_customer: Customer):
         n = 0
-        lower_time_group = []
-        higher_time_group = []
-
+        group = []
+        group2 = []
         for table in self.__table_manager.get_table_queue():
             left_time = table.get_all_time() - (table.get_elapsed_waited_time_for_food() + table.get_elapsed_eating_time())
 
             if left_time < new_customer.get_maximum_waiting_time():
                 n += 1
-                lower_time_group.append(left_time)
+                group.append(left_time)
             else:
-                higher_time_group.append(left_time)
-
+                group2.append(left_time)
+        print(f"n : {n}, group : {group}, group2 : {group2}")
         if self.__waiting_customers:
             if len(self.__waiting_customers) < n:
-                new_customer.set_new_left_time_to_table(sorted(lower_time_group)[len(self.__waiting_customers)])
+                new_customer.set_new_left_time_to_table(sorted(group)[len(self.__waiting_customers)])
                 return True
 
         else:
             if 1 <= n:
-                new_customer.set_new_left_time_to_table(min(lower_time_group))
+                new_customer.set_new_left_time_to_table(min(group))
                 return True
 
-        applicable_index = sorted(higher_time_group)[len(self.__waiting_customers) - n]
-        new_customer.set_new_left_time_to_table([applicable_index])
+        # new_customer.set_new_left_time_to_table(group2[len(self.__waiting_customers) - n])
+        v = sorted(group2)[len(self.__waiting_customers) - n]
+        new_customer.set_new_left_time_to_table([v])
         return False
 
+        #
+        # if new_customer.get_maximum_waiting_time() < required_waiting_time:
+        #     return False
+        #
+        # else:
+        #     return True
+            # 착석 후 주문
 
 
     def customer_visiting(self, elapsed_time: int):
@@ -80,18 +88,21 @@ class Restaurant:
         return result
 
     def customer_entrance(self, customer: Customer):
+        # 착석후 주문
 
         food_num = randrange(1, 5)
         food_eating_time = self.__food_eating_time[food_num]
         food_cooking_time = self.__food_cooking_time[food_num]
         customer.set_attribute((food_num, food_eating_time, food_cooking_time))
-
+        # 손님 주문 정보 설정
 
         table_num = self.__table_manager.set_customer(customer)
         customer_number = customer.get_customer_number()
-        result = self.get_time_until_being_allocated_to_cook()
 
-        customer.set_all_time(result + customer.get_food_cooking_time() + customer.get_food_eating_time())
+        result = self.get_time_until_being_allocated_to_cook()
+        print(f"요리사에게 배당되기까지의 시간{result}")
+
+        customer.set_all_time(result+customer.get_food_cooking_time() + customer.get_food_eating_time())
 
 
         print(f"{customer_number}번 손님이 {table_num}번 테이블에 앉습니다.")
@@ -107,6 +118,7 @@ class Restaurant:
             pass
         else:
             for _ in range(value):
+                print("지워진다~")
                 self.__waiting_customers.pop(0)
     
     def waiting_update(self):
@@ -115,17 +127,35 @@ class Restaurant:
 
             for customer in self.__waiting_customers:
                 customer.waiting_update()
+                print(f"{customer.get_customer_number()}번 손님인데")
 
-
+                print(f"{customer.get_elapsed_waiting_time()} 만큼 기다렸꼬")
+                print(f"{customer.get_new_left_time_to_table()}가 처음 대기 남은시간이다")
             for customer in self.__waiting_customers:
+
+
+                print([c.get_customer_number() for c in self.__waiting_customers])
+                print(f"{customer.get_customer_number()}번 손님인데")
+                print(f"{customer.get_elapsed_waiting_time()} 만큼 기다렸꼬")
+                print(f"{customer.get_new_left_time_to_table()}가 처음 대기 남은시간이다")
                 if customer.get_elapsed_waiting_time() < customer.get_new_left_time_to_table():
+                    print("때가 아니거늘.")
                     break
+                if customer.get_elapsed_waiting_time() > customer.get_new_left_time_to_table():
+                    print("웃기지마라!!")
+
+
 
 
                 if customer.get_elapsed_waiting_time() == customer.get_new_left_time_to_table() and not self.__table_manager.is_table_full():
+                    print(f"그캄 테이블 얼마나 남았나?{self.__table_manager.get_table_left()}")
                     self.customer_entrance(customer)
                     customer_count += 1
+                    print(f"지금 테이블 꽉찻나?{self.__table_manager.is_table_full()}")
+                    print(f"그캄 테이블 얼마나 남았나?{self.__table_manager.get_table_left()}")
 
+            print("커스토머카운트는")
+            print(customer_count)
             self.pop_queue(customer_count)
 
     def run(self):
@@ -166,6 +196,8 @@ class Restaurant:
                         print(f"대기가능시간 {new_customer.get_new_left_time_to_table()}")
                         self.receive_customer(new_customer)
                     else:
+                        #self.customer_entrance(new_customer)
+                        #손님은 돌아감
                         print(f"손님이 기다릴 수 없어 돌아갑니다.\n현재 대기 시간 {new_customer.get_elapsed_waiting_time()}분 / 대기 가능 시간 "
                               f"{new_customer.get_new_left_time_to_table()}분")
                         print(f"손님 최대 대기시간 : {new_customer.get_maximum_waiting_time()}")

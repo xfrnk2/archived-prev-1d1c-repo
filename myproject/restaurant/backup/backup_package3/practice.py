@@ -15,10 +15,6 @@ while waiting_queue:
 print(result)
 
 
-bbb = ccc = []
-
-
-
 # #같지만 초기에 짠 코드, 지금은 이 상태로부터 순서가 변경되었음
 # while waiting_queue:
 #     target = group.pop(0)
