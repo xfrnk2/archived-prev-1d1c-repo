@@ -35,11 +35,11 @@ class CashDesk(RestaurantObject):
 
 class BillManager(RestaurantObject):
 
-    def __init__(self, waiting_time, cash_desk):
+    def __init__(self, waiting_time, cash_desk_num):
 
         self.__bill_waiting_queue = []
-        self.__cash_desk_num = cash_desk
-        self.__cash_desk_object = CashDesk(billing_time = waiting_time)
+        self.__cash_desk_num = cash_desk_num
+        self.__cash_desk_object = CashDesk(waiting_time)
 
 
     def receive_customer(self, customer: Customer):

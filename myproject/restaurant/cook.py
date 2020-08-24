@@ -2,8 +2,7 @@ from restaurant_object import RestaurantObject
 
 
 class Cook(RestaurantObject):
-    def __init__(self, number):
-        self.__cook_number = number
+    def __init__(self):
         self.__food_number = 0
         self.__cooking_time = 0
         self.__customer_number = 0
