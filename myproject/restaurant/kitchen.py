@@ -54,4 +54,3 @@ class Kitchen(RestaurantObject):
                 finished_order_queue.append(info)
 
         return finished_order_queue
-

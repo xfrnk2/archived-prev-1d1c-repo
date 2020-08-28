@@ -167,5 +167,3 @@ class Restaurant:
                     self.customer_entrance(new_customer)
 
             self.__kitchen.start_cooking_update()
-
-

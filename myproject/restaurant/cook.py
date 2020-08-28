@@ -35,4 +35,3 @@ class Cook(RestaurantObject):
                 self.__is_cooking = not self.__is_cooking
                 return True
         return False
-

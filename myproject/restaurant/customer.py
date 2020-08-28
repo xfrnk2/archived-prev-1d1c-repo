@@ -89,7 +89,7 @@ class Customer(RestaurantObject):
     def get_elapsed_waited_time_for_food(self):
         return self.__waited_time_for_food
 
-    def get_is_billing(self) -> bool:
+    def is_billing(self) -> bool:
         return self.__is_billing
 
     def get_is_bill_waiting(self) -> bool:

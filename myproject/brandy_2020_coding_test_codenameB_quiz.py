@@ -12,3 +12,7 @@ def func(arr, N, k):
 
 print(func([2, 3, 1, 4], 4, 3))
 print(func([7, 3, 1, 8, 4, 6, 2, 5], 8, 3))
+
+example3 = [5]*37
+example3[4] = 1
+print(func(example3, 37, 4))
