@@ -29,8 +29,6 @@ class TableManager(RestaurantObject):
 
                 print(f"{customer_number}번 손님이 식사를 시작합니다.")
                 self.__table_queue[table_number].change_status_is_eating()
-        else:
-            pass
 
 
     def is_table_full(self)-> bool:
