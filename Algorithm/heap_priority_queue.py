@@ -20,7 +20,7 @@ print(arr)
 def extract_max(arr):
     size = len(arr)
     if size < 1:
-        print("error")
+        raise IndexError
     arr[0], arr[size-1] = arr[size-1], arr[0]
     arr.pop()
     max_heapify(arr, 0, size-1)
