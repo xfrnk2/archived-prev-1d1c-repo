@@ -20,3 +20,8 @@ for x in queue:
 #풀이 결과 : 성공
 #소요 시간 : 30분
 
+'''
+나와 다른 풀이지만 흥미로웠던 것
+https://www.acmicpc.net/source/13249709
+
+'''
