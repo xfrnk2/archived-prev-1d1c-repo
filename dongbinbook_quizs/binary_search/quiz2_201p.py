@@ -1,6 +1,5 @@
 # 12:31
 import sys
-import timeit
 '''
 input
 4 6
@@ -9,12 +8,13 @@ input
 output
 15
 '''
-start_time = timeit.default_timer()
+
 r_input = sys.stdin.readline
 n, m = map(int, r_input().split())
 arr = list(map(int, r_input().split()))
 answer = 0
 start, end = 0, max(arr)
+
 while start <= end:
     total = 0
     mid = (start + end)//2
@@ -50,8 +50,3 @@ print(answer)
 
 
 
-
-
-end_time = timeit.default_timer()
-
-print(f'걸린 시간 : {end_time - start_time}')
