@@ -46,7 +46,7 @@ c = 0
 for i in range(len(rope)):
     c = max(c, rope[i] * (i+1))
 
-print(c)
+print(c) #
 
 
 
