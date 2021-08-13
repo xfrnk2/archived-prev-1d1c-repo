@@ -14,4 +14,4 @@ while 1 <= K:
             K = b
             count += a
             continue
-print(count)
+print(count) #
