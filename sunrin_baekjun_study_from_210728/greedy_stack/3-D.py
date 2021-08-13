@@ -93,6 +93,6 @@ for _ in range(int(sys.stdin.readline().rstrip())):
    elif order == "size":
        stack.get_size()
    elif order == "top":
-       stack.top()
+       stack.top() #
 
 
