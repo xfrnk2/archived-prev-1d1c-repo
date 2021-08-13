@@ -14,7 +14,7 @@ for i in range(1, len(c)):
         now = y
         count += 1
 
-print(count)
+print(count) #
 
 
 
