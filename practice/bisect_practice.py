@@ -22,4 +22,5 @@ print('2~5사이의 원소 갯수', count_two_to_five)
 카운트 하거나
 일정 범위안에 있는 원소 갯수
 '''
+# https://velog.io/@peterpictor/Python-bisect-%ED%99%9C%EC%9A%A9%ED%95%B4-%EB%B2%94%EC%9C%84-%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0
 
