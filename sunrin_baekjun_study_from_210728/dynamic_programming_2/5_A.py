@@ -19,6 +19,6 @@ def func():
     print(dp[1][K])
 for _ in range(int(sys.stdin.readline())):
     func()
-
+ 
 
 
