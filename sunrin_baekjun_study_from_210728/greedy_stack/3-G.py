@@ -52,20 +52,44 @@
 
 # 검색해서 나온 코드를 보지 않고, 이해했던 느낌을 살려서 짜 보는 코드.
 
+# N, K = map(int, input().split())
+# num = list(map(int, input()))
+# stack = []
+# t = K
+# for i in range(N):
+#
+#
+#     while stack and 0 < K:
+#         if stack[-1] < num[i]:
+#             stack.pop()
+#             K -= 1
+#         else:
+#             break
+#
+#     stack.append(num[i])
+# for i in range(N-t):
+#     print(stack[i], end='')
+
+
+# 시험 대비 복습하기
 N, K = map(int, input().split())
 num = list(map(int, input()))
-stack = []
 t = K
+stack = []
 for i in range(N):
-
-
     while stack and 0 < K:
         if stack[-1] < num[i]:
             stack.pop()
-            K -= 1
+            K-= 1
         else:
             break
-
     stack.append(num[i])
 for i in range(N-t):
-    print(stack[i], end='')
+    print(stack[i],end='')
+
+    '''
+    10 4
+    4177252841
+
+    775841
+    '''

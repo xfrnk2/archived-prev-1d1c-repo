@@ -37,18 +37,29 @@
 40
 '''
 # 세번째 풀이. 성공
-N = int(input())
+# N = int(input())
+# rope = []
+# for _ in range(N):
+#     rope.append(int(input()))
+# rope.sort(reverse=True)
+# c = 0
+# for i in range(len(rope)):
+#     c = max(c, rope[i] * (i+1))
+#
+# print(c) #
+
+
+
+
+# 시험 대비 복습하기
 rope = []
+ans = 0
+N = int(input())
 for _ in range(N):
     rope.append(int(input()))
+
 rope.sort(reverse=True)
-c = 0
-for i in range(len(rope)):
-    c = max(c, rope[i] * (i+1))
 
-print(c) #
-
-
-
-
-
+for i in range(N):
+    ans = max(ans, rope[i] * (i+1))
+print(ans)
