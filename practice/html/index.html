@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+	        <style>
+            #판 {width: 1000px; height: 1000px; overflow: hidden; position: relative;}
+            #핀 {width: 0; height: 0; top: 170px; left: calc(50% - 16px); position: absolute; border-radius: 32px 32px 0 0; border-top: 70px solid crimson; border-left: 16px solid transparent; border-right: 16px solid transparent; border-bottom: 0; z-index: 1;}
+        </style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+	  <div id="판"><div id="핀"></div><canvas id="canvas" width="1000px" height="1000px"></canvas></div>
+	  <canvas id="canvas" width="1000px" height="1000px"></canvas>
+	  <script>            
+     var canvas = document.getElementById('canvas');
+     var ctx = canvas.getContext('2d');
+        
+
+            var 사은품목록 = new Array(
+                {
+                    품명: '　　　　　옌',
+                    색상: 'red'
+                },
+                {
+                    품명: '　　　　　준',
+                    색상: 'blue'
+                },
+                {
+                    품명: '　　　　　좀드',
+                    색상: 'green'
+                },
+                {
+                    품명: '　　　　　준',
+                    색상: 'purple'
+                },
+                {
+                    품명: '　　　　　옌',
+                    색상: 'yellow'
+                },
+                {
+                    품명: '　　　　　로드',
+                    색상: 'orange'
+                },
+                {
+                    품명: '　　　　　좀드',
+                    색상: 'pink'
+                },
+				                {
+                    품명: '　　　　　로드',
+                    색상: 'black'
+                }
+            );
+            ctx.translate(500, 500);
+            
+            사은품목록.forEach(function(e, i) {
+                ctx.beginPath();
+                ctx.arc(0, 0, 300, 0, (360/사은품목록.length)*(Math.PI/180), false);
+                ctx.lineTo(0, 0);
+                ctx.closePath();
+                ctx.fillStyle = e.색상;
+                ctx.fill();
+							                ctx.fillStyle = 'white';
+                ctx.textAlign = 'left';
+                ctx.font = '35px sanserif';
+                ctx.fillText(e.품명, 50, 50);
+
+                ctx.rotate( (360/사은품목록.length) * (Math.PI/180) );
+            });
+			 ctx.beginPath();
+            ctx.arc(0, 0, 200, 0, 2*Math.PI, false);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = '30px sanserif';
+            
+            ctx.strokeStyle = '#FFADC5';
+            ctx.strokeText('즉석          ', 0, 0);
+            ctx.strokeStyle = '#B8F3B8';
+            ctx.strokeText('       룰렛      ', 0, 0);
+            ctx.strokeStyle = '#CCD1FF';
+            ctx.strokeText('             뽑기!', 0, 0);
+            
+            var 랜덤 = 0;
+            $('#canvas').on({
+                'click': function() {
+                    랜덤 += Math.random()*360 + 720;
+                    $(this).css({'transition-timing-function': 'ease-in-out', 'transition': '5s', 'transform': 'rotate('+랜덤+'deg)'});
+                },
+                'transitionend': function() {alert('당첨!');}
+            });
+        </script>
+
+</script>
+
+    </div>
+  </body>
+</html>
